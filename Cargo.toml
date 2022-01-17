@@ -2,6 +2,8 @@
 name = "max3263x"
 version = "0.1.0"
 edition = "2021"
+description = "svd2rust generated peripheral crate for the max3263x"
+respository = "https://github.com/arron-speake-bluefruit/max3263x"
 
 [dependencies]
 cortex-m = "0.7"
