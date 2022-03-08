@@ -16779,7 +16779,8 @@
                 <enumeratedValue>
                   <name>Invert</name>
                   <description>Inverts the TX transmit clock such that outgoing data is updated on the opposite clock edge from that specified by spi_mode. Effectively, this inverts the value of the Clock Polarity bit from the value specified in spi_mode.</description>
-                  <value>1</value>                </enumeratedValue>
+                  <value>1</value>
+                </enumeratedValue>
               </enumeratedValues>
               <bitRange>[20:20]</bitRange>
               <access>read-write</access>
