@@ -67,7 +67,7 @@ impl<'a> TX_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_UNSTALLED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_FIFO_AE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_FIFO_NOT_EMPTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RX_STALLED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RX_FIFO_AF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RX_FIFO_OVERFLOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_FRAMING_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> RX_PARITY_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - TX Done Interrupt Flag"]
     #[inline(always)]
     pub fn tx_done(&self) -> TX_DONE_R {
-        TX_DONE_R::new((self.bits & 0x01) != 0)
+        TX_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - TX Unstalled Interrupt Flag"]
     #[inline(always)]
     pub fn tx_unstalled(&self) -> TX_UNSTALLED_R {
-        TX_UNSTALLED_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_UNSTALLED_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TX FIFO Almost Empty Interrupt Flag"]
     #[inline(always)]
     pub fn tx_fifo_ae(&self) -> TX_FIFO_AE_R {
-        TX_FIFO_AE_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_FIFO_AE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RX FIFO Not Empty Interrupt Flag"]
     #[inline(always)]
     pub fn rx_fifo_not_empty(&self) -> RX_FIFO_NOT_EMPTY_R {
-        RX_FIFO_NOT_EMPTY_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FIFO_NOT_EMPTY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RX Stalled Interrupt Flag"]
     #[inline(always)]
     pub fn rx_stalled(&self) -> RX_STALLED_R {
-        RX_STALLED_R::new(((self.bits >> 4) & 0x01) != 0)
+        RX_STALLED_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RX FIFO Almost Full Interrupt Flag"]
     #[inline(always)]
     pub fn rx_fifo_af(&self) -> RX_FIFO_AF_R {
-        RX_FIFO_AF_R::new(((self.bits >> 5) & 0x01) != 0)
+        RX_FIFO_AF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RX FIFO Overflow Interrupt Flag"]
     #[inline(always)]
     pub fn rx_fifo_overflow(&self) -> RX_FIFO_OVERFLOW_R {
-        RX_FIFO_OVERFLOW_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_FIFO_OVERFLOW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - RX Framing Error Interrupt Flag"]
     #[inline(always)]
     pub fn rx_framing_err(&self) -> RX_FRAMING_ERR_R {
-        RX_FRAMING_ERR_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_FRAMING_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RX Parity Error Interrupt Flag"]
     #[inline(always)]
     pub fn rx_parity_err(&self) -> RX_PARITY_ERR_R {
-        RX_PARITY_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        RX_PARITY_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

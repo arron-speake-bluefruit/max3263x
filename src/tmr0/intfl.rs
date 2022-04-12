@@ -67,7 +67,7 @@ impl<'a> TIMER0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TIMER1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Interrupt Flag for 32-bit Timer / 16-bit Timer 0"]
     #[inline(always)]
     pub fn timer0(&self) -> TIMER0_R {
-        TIMER0_R::new((self.bits & 0x01) != 0)
+        TIMER0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt Flag for 16-bit Timer 1"]
     #[inline(always)]
     pub fn timer1(&self) -> TIMER1_R {
-        TIMER1_R::new(((self.bits >> 1) & 0x01) != 0)
+        TIMER1_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

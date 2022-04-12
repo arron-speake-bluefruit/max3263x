@@ -67,7 +67,7 @@ impl<'a> IO_MAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CTS_MAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RTS_MAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CTS_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RTS_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - UART2 TX/RX I/O Mapping Select"]
     #[inline(always)]
     pub fn io_map(&self) -> IO_MAP_R {
-        IO_MAP_R::new((self.bits & 0x01) != 0)
+        IO_MAP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - UART2 CTS I/O Mapping Select"]
     #[inline(always)]
     pub fn cts_map(&self) -> CTS_MAP_R {
-        CTS_MAP_R::new(((self.bits >> 1) & 0x01) != 0)
+        CTS_MAP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - UART2 RTS I/O Mapping Select"]
     #[inline(always)]
     pub fn rts_map(&self) -> RTS_MAP_R {
-        RTS_MAP_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTS_MAP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - UART2 TX/RX I/O Request"]
     #[inline(always)]
     pub fn io_req(&self) -> IO_REQ_R {
-        IO_REQ_R::new(((self.bits >> 4) & 0x01) != 0)
+        IO_REQ_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - UART2 CTS I/O Request"]
     #[inline(always)]
     pub fn cts_io_req(&self) -> CTS_IO_REQ_R {
-        CTS_IO_REQ_R::new(((self.bits >> 5) & 0x01) != 0)
+        CTS_IO_REQ_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - UART2 RTS I/O Request"]
     #[inline(always)]
     pub fn rts_io_req(&self) -> RTS_IO_REQ_R {
-        RTS_IO_REQ_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTS_IO_REQ_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

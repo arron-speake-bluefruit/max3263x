@@ -67,7 +67,7 @@ impl<'a> OSC_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> OSC_DISABLE_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -188,7 +188,7 @@ impl<'a> OSC_DISABLE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -211,22 +211,22 @@ impl R {
     #[doc = "Bit 0 - Bypass RTC oscillator"]
     #[inline(always)]
     pub fn osc_bypass(&self) -> OSC_BYPASS_R {
-        OSC_BYPASS_R::new((self.bits & 0x01) != 0)
+        OSC_BYPASS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - if osc_disable_sel = 1, this will hold the RTC in reset."]
     #[inline(always)]
     pub fn osc_disable_r(&self) -> OSC_DISABLE_R_R {
-        OSC_DISABLE_R_R::new(((self.bits >> 1) & 0x01) != 0)
+        OSC_DISABLE_R_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Select RTC Oscillator Disable Control Source"]
     #[inline(always)]
     pub fn osc_disable_sel(&self) -> OSC_DISABLE_SEL_R {
-        OSC_DISABLE_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        OSC_DISABLE_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Reset RTC Oscillator"]
     #[inline(always)]
     pub fn osc_disable_o(&self) -> OSC_DISABLE_O_R {
-        OSC_DISABLE_O_R::new(((self.bits >> 3) & 0x01) != 0)
+        OSC_DISABLE_O_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

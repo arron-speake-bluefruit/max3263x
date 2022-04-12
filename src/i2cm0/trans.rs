@@ -67,7 +67,7 @@ impl<'a> TX_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -150,32 +150,32 @@ impl R {
     #[doc = "Bit 0 - Start Transaction"]
     #[inline(always)]
     pub fn tx_start(&self) -> TX_START_R {
-        TX_START_R::new((self.bits & 0x01) != 0)
+        TX_START_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Transaction In Progress"]
     #[inline(always)]
     pub fn tx_in_progress(&self) -> TX_IN_PROGRESS_R {
-        TX_IN_PROGRESS_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_IN_PROGRESS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Transaction Done"]
     #[inline(always)]
     pub fn tx_done(&self) -> TX_DONE_R {
-        TX_DONE_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Transaction Nacked"]
     #[inline(always)]
     pub fn tx_nacked(&self) -> TX_NACKED_R {
-        TX_NACKED_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_NACKED_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Transaction Lost Arbitration"]
     #[inline(always)]
     pub fn tx_lost_arbitr(&self) -> TX_LOST_ARBITR_R {
-        TX_LOST_ARBITR_R::new(((self.bits >> 4) & 0x01) != 0)
+        TX_LOST_ARBITR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Transaction Timed Out"]
     #[inline(always)]
     pub fn tx_timeout(&self) -> TX_TIMEOUT_R {
-        TX_TIMEOUT_R::new(((self.bits >> 5) & 0x01) != 0)
+        TX_TIMEOUT_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

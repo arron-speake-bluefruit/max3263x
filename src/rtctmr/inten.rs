@@ -67,7 +67,7 @@ impl<'a> COMP0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> COMP1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRESCALE_COMP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> OVERFLOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TRIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - RTC Time of Day Alarm (Compare 0) Interrupt Enable"]
     #[inline(always)]
     pub fn comp0(&self) -> COMP0_R {
-        COMP0_R::new((self.bits & 0x01) != 0)
+        COMP0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTC Time of Day Alarm (Compare 1) Interrupt Enable"]
     #[inline(always)]
     pub fn comp1(&self) -> COMP1_R {
-        COMP1_R::new(((self.bits >> 1) & 0x01) != 0)
+        COMP1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Prescale Compare Int Enable"]
     #[inline(always)]
     pub fn prescale_comp(&self) -> PRESCALE_COMP_R {
-        PRESCALE_COMP_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRESCALE_COMP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn overflow(&self) -> OVERFLOW_R {
-        OVERFLOW_R::new(((self.bits >> 3) & 0x01) != 0)
+        OVERFLOW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC Trim Adjust Event Interrupt Enable"]
     #[inline(always)]
     pub fn trim(&self) -> TRIM_R {
-        TRIM_R::new(((self.bits >> 4) & 0x01) != 0)
+        TRIM_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

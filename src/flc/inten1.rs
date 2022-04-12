@@ -67,7 +67,7 @@ impl<'a> SRAM_ADDR_WRAPPED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> INVALID_FLASH_ADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FLASH_READ_LOCKED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TRIM_UPDATE_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FLC_STATE_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FLC_PROG_COMPLETE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - SRAM Address Wrapped Interrupt Enable/Disable"]
     #[inline(always)]
     pub fn sram_addr_wrapped(&self) -> SRAM_ADDR_WRAPPED_R {
-        SRAM_ADDR_WRAPPED_R::new((self.bits & 0x01) != 0)
+        SRAM_ADDR_WRAPPED_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Invalid Flash Address Interrupt Enable/Disable"]
     #[inline(always)]
     pub fn invalid_flash_addr(&self) -> INVALID_FLASH_ADDR_R {
-        INVALID_FLASH_ADDR_R::new(((self.bits >> 1) & 0x01) != 0)
+        INVALID_FLASH_ADDR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Flash Read from Locked Area Interrupt Enable/Disable"]
     #[inline(always)]
     pub fn flash_read_locked(&self) -> FLASH_READ_LOCKED_R {
-        FLASH_READ_LOCKED_R::new(((self.bits >> 2) & 0x01) != 0)
+        FLASH_READ_LOCKED_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Trim Update Complete Interrupt Enable/Disable"]
     #[inline(always)]
     pub fn trim_update_done(&self) -> TRIM_UPDATE_DONE_R {
-        TRIM_UPDATE_DONE_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRIM_UPDATE_DONE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - FLC State Machine Reached DONE Interrupt Enable/Disable"]
     #[inline(always)]
     pub fn flc_state_done(&self) -> FLC_STATE_DONE_R {
-        FLC_STATE_DONE_R::new(((self.bits >> 4) & 0x01) != 0)
+        FLC_STATE_DONE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Program (Write or Erase) Op Completed Int Enable/Disable"]
     #[inline(always)]
     pub fn flc_prog_complete(&self) -> FLC_PROG_COMPLETE_R {
-        FLC_PROG_COMPLETE_R::new(((self.bits >> 5) & 0x01) != 0)
+        FLC_PROG_COMPLETE_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> PIN0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PIN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PIN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PIN3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PIN4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PIN5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> PIN6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> PIN7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -334,42 +334,42 @@ impl R {
     #[doc = "Bit 0 - P1.0 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin0(&self) -> PIN0_R {
-        PIN0_R::new((self.bits & 0x01) != 0)
+        PIN0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - P1.1 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin1(&self) -> PIN1_R {
-        PIN1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PIN1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - P1.2 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin2(&self) -> PIN2_R {
-        PIN2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PIN2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - P1.3 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin3(&self) -> PIN3_R {
-        PIN3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PIN3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - P1.4 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin4(&self) -> PIN4_R {
-        PIN4_R::new(((self.bits >> 4) & 0x01) != 0)
+        PIN4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - P1.5 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin5(&self) -> PIN5_R {
-        PIN5_R::new(((self.bits >> 5) & 0x01) != 0)
+        PIN5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - P1.6 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin6(&self) -> PIN6_R {
-        PIN6_R::new(((self.bits >> 6) & 0x01) != 0)
+        PIN6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - P1.7 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin7(&self) -> PIN7_R {
-        PIN7_R::new(((self.bits >> 7) & 0x01) != 0)
+        PIN7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

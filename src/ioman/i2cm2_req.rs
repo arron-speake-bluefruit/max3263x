@@ -67,7 +67,7 @@ impl<'a> MAPPING_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 4 - I2C Master 2 I/O Request"]
     #[inline(always)]
     pub fn mapping_req(&self) -> MAPPING_REQ_R {
-        MAPPING_REQ_R::new(((self.bits >> 4) & 0x01) != 0)
+        MAPPING_REQ_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

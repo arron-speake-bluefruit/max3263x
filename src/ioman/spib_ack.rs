@@ -83,17 +83,17 @@ impl R {
     #[doc = "Bit 4 - SPI Bridge Core I/O Acknowledge"]
     #[inline(always)]
     pub fn core_io_ack(&self) -> CORE_IO_ACK_R {
-        CORE_IO_ACK_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE_IO_ACK_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 8 - SPI Bridge Quad I/O Acknowledge"]
     #[inline(always)]
     pub fn quad_io_ack(&self) -> QUAD_IO_ACK_R {
-        QUAD_IO_ACK_R::new(((self.bits >> 8) & 0x01) != 0)
+        QUAD_IO_ACK_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12 - SPI Bridge Fast Mode Acknowledge"]
     #[inline(always)]
     pub fn fast_mode(&self) -> FAST_MODE_R {
-        FAST_MODE_R::new(((self.bits >> 12) & 0x01) != 0)
+        FAST_MODE_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {

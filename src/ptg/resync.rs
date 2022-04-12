@@ -67,7 +67,7 @@ impl<'a> PT0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PT1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PT2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PT3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PT4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PT5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> PT6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> PT7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> PT8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> PT9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> PT10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> PT11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> PT12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> PT13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> PT14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> PT15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -630,82 +630,82 @@ impl R {
     #[doc = "Bit 0 - Resync control for PT0"]
     #[inline(always)]
     pub fn pt0(&self) -> PT0_R {
-        PT0_R::new((self.bits & 0x01) != 0)
+        PT0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Resync control for PT1"]
     #[inline(always)]
     pub fn pt1(&self) -> PT1_R {
-        PT1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PT1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Resync control for PT2"]
     #[inline(always)]
     pub fn pt2(&self) -> PT2_R {
-        PT2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PT2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Resync control for PT3"]
     #[inline(always)]
     pub fn pt3(&self) -> PT3_R {
-        PT3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PT3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Resync control for PT4"]
     #[inline(always)]
     pub fn pt4(&self) -> PT4_R {
-        PT4_R::new(((self.bits >> 4) & 0x01) != 0)
+        PT4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Resync control for PT5"]
     #[inline(always)]
     pub fn pt5(&self) -> PT5_R {
-        PT5_R::new(((self.bits >> 5) & 0x01) != 0)
+        PT5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Resync control for PT6"]
     #[inline(always)]
     pub fn pt6(&self) -> PT6_R {
-        PT6_R::new(((self.bits >> 6) & 0x01) != 0)
+        PT6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Resync control for PT7"]
     #[inline(always)]
     pub fn pt7(&self) -> PT7_R {
-        PT7_R::new(((self.bits >> 7) & 0x01) != 0)
+        PT7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Resync control for PT8"]
     #[inline(always)]
     pub fn pt8(&self) -> PT8_R {
-        PT8_R::new(((self.bits >> 8) & 0x01) != 0)
+        PT8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Resync control for PT9"]
     #[inline(always)]
     pub fn pt9(&self) -> PT9_R {
-        PT9_R::new(((self.bits >> 9) & 0x01) != 0)
+        PT9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Resync control for PT10"]
     #[inline(always)]
     pub fn pt10(&self) -> PT10_R {
-        PT10_R::new(((self.bits >> 10) & 0x01) != 0)
+        PT10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Resync control for PT11"]
     #[inline(always)]
     pub fn pt11(&self) -> PT11_R {
-        PT11_R::new(((self.bits >> 11) & 0x01) != 0)
+        PT11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Resync control for PT12"]
     #[inline(always)]
     pub fn pt12(&self) -> PT12_R {
-        PT12_R::new(((self.bits >> 12) & 0x01) != 0)
+        PT12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Resync control for PT13"]
     #[inline(always)]
     pub fn pt13(&self) -> PT13_R {
-        PT13_R::new(((self.bits >> 13) & 0x01) != 0)
+        PT13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Resync control for PT14"]
     #[inline(always)]
     pub fn pt14(&self) -> PT14_R {
-        PT14_R::new(((self.bits >> 14) & 0x01) != 0)
+        PT14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Resync control for PT15"]
     #[inline(always)]
     pub fn pt15(&self) -> PT15_R {
-        PT15_R::new(((self.bits >> 15) & 0x01) != 0)
+        PT15_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

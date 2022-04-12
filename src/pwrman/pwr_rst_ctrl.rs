@@ -67,7 +67,7 @@ impl<'a> AFE_POWERED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> IO_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> USB_POWERED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PULLUPS_ENABLED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FIRMWARE_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> ARM_LOCKUP_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -394,7 +394,7 @@ impl<'a> LOW_POWER_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -402,72 +402,72 @@ impl R {
     #[doc = "Bit 2 - AFE Powered"]
     #[inline(always)]
     pub fn afe_powered(&self) -> AFE_POWERED_R {
-        AFE_POWERED_R::new(((self.bits >> 2) & 0x01) != 0)
+        AFE_POWERED_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - I/O Active"]
     #[inline(always)]
     pub fn io_active(&self) -> IO_ACTIVE_R {
-        IO_ACTIVE_R::new(((self.bits >> 3) & 0x01) != 0)
+        IO_ACTIVE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB Powered"]
     #[inline(always)]
     pub fn usb_powered(&self) -> USB_POWERED_R {
-        USB_POWERED_R::new(((self.bits >> 4) & 0x01) != 0)
+        USB_POWERED_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Static Pullups Enabled"]
     #[inline(always)]
     pub fn pullups_enabled(&self) -> PULLUPS_ENABLED_R {
-        PULLUPS_ENABLED_R::new(((self.bits >> 5) & 0x01) != 0)
+        PULLUPS_ENABLED_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - Firmware Initiated Reset"]
     #[inline(always)]
     pub fn firmware_reset(&self) -> FIRMWARE_RESET_R {
-        FIRMWARE_RESET_R::new(((self.bits >> 8) & 0x01) != 0)
+        FIRMWARE_RESET_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - ARM Lockup Reset"]
     #[inline(always)]
     pub fn arm_lockup_reset(&self) -> ARM_LOCKUP_RESET_R {
-        ARM_LOCKUP_RESET_R::new(((self.bits >> 9) & 0x01) != 0)
+        ARM_LOCKUP_RESET_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 16 - Reset Caused By - Tamper Detect"]
     #[inline(always)]
     pub fn tamper_detect(&self) -> TAMPER_DETECT_R {
-        TAMPER_DETECT_R::new(((self.bits >> 16) & 0x01) != 0)
+        TAMPER_DETECT_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Reset Caused By - Firmware Commanded Reset (SysMan)"]
     #[inline(always)]
     pub fn fw_command_sysman(&self) -> FW_COMMAND_SYSMAN_R {
-        FW_COMMAND_SYSMAN_R::new(((self.bits >> 17) & 0x01) != 0)
+        FW_COMMAND_SYSMAN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Reset Caused By - Watchdog Timeout"]
     #[inline(always)]
     pub fn watchdog_timeout(&self) -> WATCHDOG_TIMEOUT_R {
-        WATCHDOG_TIMEOUT_R::new(((self.bits >> 18) & 0x01) != 0)
+        WATCHDOG_TIMEOUT_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Reset Caused By - Firmware Commanded Reset (ARM Core)"]
     #[inline(always)]
     pub fn fw_command_arm(&self) -> FW_COMMAND_ARM_R {
-        FW_COMMAND_ARM_R::new(((self.bits >> 19) & 0x01) != 0)
+        FW_COMMAND_ARM_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Reset Caused By - ARM Lockup"]
     #[inline(always)]
     pub fn arm_lockup(&self) -> ARM_LOCKUP_R {
-        ARM_LOCKUP_R::new(((self.bits >> 20) & 0x01) != 0)
+        ARM_LOCKUP_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Reset Caused By - External System Reset"]
     #[inline(always)]
     pub fn srstn_assertion(&self) -> SRSTN_ASSERTION_R {
-        SRSTN_ASSERTION_R::new(((self.bits >> 21) & 0x01) != 0)
+        SRSTN_ASSERTION_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Reset Caused By - Power On Reset (POR)"]
     #[inline(always)]
     pub fn por(&self) -> POR_R {
-        POR_R::new(((self.bits >> 22) & 0x01) != 0)
+        POR_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 31 - Power Manager Dynamic Clock Gating Enable"]
     #[inline(always)]
     pub fn low_power_mode(&self) -> LOW_POWER_MODE_R {
-        LOW_POWER_MODE_R::new(((self.bits >> 31) & 0x01) != 0)
+        LOW_POWER_MODE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

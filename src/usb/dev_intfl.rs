@@ -67,7 +67,7 @@ impl<'a> DPACT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RWU_DN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BACT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> SUSP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> NO_VBUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> VBUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> BRST_DN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> SETUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> EP_IN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> EP_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> EP_NAK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> DMA_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> BUF_OVR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -571,77 +571,77 @@ impl R {
     #[doc = "Bit 0 - DPLUS Activity Interrupt Flag"]
     #[inline(always)]
     pub fn dpact(&self) -> DPACT_R {
-        DPACT_R::new((self.bits & 0x01) != 0)
+        DPACT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Remote Wakeup Done Interrupt Flag"]
     #[inline(always)]
     pub fn rwu_dn(&self) -> RWU_DN_R {
-        RWU_DN_R::new(((self.bits >> 1) & 0x01) != 0)
+        RWU_DN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB Bus Activity Interrupt Flag"]
     #[inline(always)]
     pub fn bact(&self) -> BACT_R {
-        BACT_R::new(((self.bits >> 2) & 0x01) != 0)
+        BACT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USB Bus Reset In Progress Interrupt Flag"]
     #[inline(always)]
     pub fn brst(&self) -> BRST_R {
-        BRST_R::new(((self.bits >> 3) & 0x01) != 0)
+        BRST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB Suspend Interrupt Flag"]
     #[inline(always)]
     pub fn susp(&self) -> SUSP_R {
-        SUSP_R::new(((self.bits >> 4) & 0x01) != 0)
+        SUSP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - No VBUS Interrupt Flag"]
     #[inline(always)]
     pub fn no_vbus(&self) -> NO_VBUS_R {
-        NO_VBUS_R::new(((self.bits >> 5) & 0x01) != 0)
+        NO_VBUS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - VBUS Detect Interrupt Flag"]
     #[inline(always)]
     pub fn vbus(&self) -> VBUS_R {
-        VBUS_R::new(((self.bits >> 6) & 0x01) != 0)
+        VBUS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - USB Bus Reset Completed Interrupt Flag"]
     #[inline(always)]
     pub fn brst_dn(&self) -> BRST_DN_R {
-        BRST_DN_R::new(((self.bits >> 7) & 0x01) != 0)
+        BRST_DN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Setup Packet Interrupt Flag"]
     #[inline(always)]
     pub fn setup(&self) -> SETUP_R {
-        SETUP_R::new(((self.bits >> 8) & 0x01) != 0)
+        SETUP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Endpoint IN Interrupt Flag"]
     #[inline(always)]
     pub fn ep_in(&self) -> EP_IN_R {
-        EP_IN_R::new(((self.bits >> 9) & 0x01) != 0)
+        EP_IN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Endpoint OUT Interrupt Flag"]
     #[inline(always)]
     pub fn ep_out(&self) -> EP_OUT_R {
-        EP_OUT_R::new(((self.bits >> 10) & 0x01) != 0)
+        EP_OUT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Endpoint NAK Interrupt Flag"]
     #[inline(always)]
     pub fn ep_nak(&self) -> EP_NAK_R {
-        EP_NAK_R::new(((self.bits >> 11) & 0x01) != 0)
+        EP_NAK_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err(&self) -> DMA_ERR_R {
-        DMA_ERR_R::new(((self.bits >> 12) & 0x01) != 0)
+        DMA_ERR_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Buffer Overflow Interrupt Flag"]
     #[inline(always)]
     pub fn buf_ovr(&self) -> BUF_OVR_R {
-        BUF_OVR_R::new(((self.bits >> 13) & 0x01) != 0)
+        BUF_OVR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 16 - VBUS Status"]
     #[inline(always)]
     pub fn vbus_st(&self) -> VBUS_ST_R {
-        VBUS_ST_R::new(((self.bits >> 16) & 0x01) != 0)
+        VBUS_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

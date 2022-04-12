@@ -67,7 +67,7 @@ impl<'a> DELAY_SE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FAST_READ_MODE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> EN_PREVENT_FAIL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> EN_BACK2BACK_RDS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> EN_BACK2BACK_WRS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> EN_MERGE_GRAB_GNT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> AUTO_TACC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> AUTO_CLKDIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -334,42 +334,42 @@ impl R {
     #[doc = "Bit 0 - Delay SE Enable (Deprecated)"]
     #[inline(always)]
     pub fn delay_se_en(&self) -> DELAY_SE_EN_R {
-        DELAY_SE_EN_R::new((self.bits & 0x01) != 0)
+        DELAY_SE_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 8 - Fast Read Mode Enable (Deprecated)"]
     #[inline(always)]
     pub fn fast_read_mode_en(&self) -> FAST_READ_MODE_EN_R {
-        FAST_READ_MODE_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        FAST_READ_MODE_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12 - Prevent Fail Flag Set on FLC Busy"]
     #[inline(always)]
     pub fn en_prevent_fail(&self) -> EN_PREVENT_FAIL_R {
-        EN_PREVENT_FAIL_R::new(((self.bits >> 12) & 0x01) != 0)
+        EN_PREVENT_FAIL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 16 - Enable Back To Back Reads"]
     #[inline(always)]
     pub fn en_back2back_rds(&self) -> EN_BACK2BACK_RDS_R {
-        EN_BACK2BACK_RDS_R::new(((self.bits >> 16) & 0x01) != 0)
+        EN_BACK2BACK_RDS_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 20 - Enable Back To Back Writes"]
     #[inline(always)]
     pub fn en_back2back_wrs(&self) -> EN_BACK2BACK_WRS_R {
-        EN_BACK2BACK_WRS_R::new(((self.bits >> 20) & 0x01) != 0)
+        EN_BACK2BACK_WRS_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 24 - Enable Merge Grab GNT"]
     #[inline(always)]
     pub fn en_merge_grab_gnt(&self) -> EN_MERGE_GRAB_GNT_R {
-        EN_MERGE_GRAB_GNT_R::new(((self.bits >> 24) & 0x01) != 0)
+        EN_MERGE_GRAB_GNT_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 28 - Auto TACC"]
     #[inline(always)]
     pub fn auto_tacc(&self) -> AUTO_TACC_R {
-        AUTO_TACC_R::new(((self.bits >> 28) & 0x01) != 0)
+        AUTO_TACC_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Auto CLKDIV"]
     #[inline(always)]
     pub fn auto_clkdiv(&self) -> AUTO_CLKDIV_R {
-        AUTO_CLKDIV_R::new(((self.bits >> 29) & 0x01) != 0)
+        AUTO_CLKDIV_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

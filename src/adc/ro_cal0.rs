@@ -67,7 +67,7 @@ impl<'a> RO_CAL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RO_CAL_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RO_CAL_LOAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RO_CAL_ATOMIC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
         self.w
     }
 }
@@ -267,27 +267,27 @@ impl R {
     #[doc = "Bit 0 - RO Calibration Enable"]
     #[inline(always)]
     pub fn ro_cal_en(&self) -> RO_CAL_EN_R {
-        RO_CAL_EN_R::new((self.bits & 0x01) != 0)
+        RO_CAL_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RO Calibration Run"]
     #[inline(always)]
     pub fn ro_cal_run(&self) -> RO_CAL_RUN_R {
-        RO_CAL_RUN_R::new(((self.bits >> 1) & 0x01) != 0)
+        RO_CAL_RUN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RO Calibration Load Initial Value"]
     #[inline(always)]
     pub fn ro_cal_load(&self) -> RO_CAL_LOAD_R {
-        RO_CAL_LOAD_R::new(((self.bits >> 2) & 0x01) != 0)
+        RO_CAL_LOAD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - RO Calibration Run Atomic"]
     #[inline(always)]
     pub fn ro_cal_atomic(&self) -> RO_CAL_ATOMIC_R {
-        RO_CAL_ATOMIC_R::new(((self.bits >> 4) & 0x01) != 0)
+        RO_CAL_ATOMIC_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:7 - Dummy Write Field"]
     #[inline(always)]
     pub fn dummy(&self) -> DUMMY_R {
-        DUMMY_R::new(((self.bits >> 5) & 0x07) as u8)
+        DUMMY_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bits 8:19 - RO Trim Adaptation Gain"]
     #[inline(always)]

@@ -67,7 +67,7 @@ impl<'a> SS_SAMPLE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MISO_FC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -166,12 +166,12 @@ impl R {
     #[doc = "Bit 0 - SS Sample Mode"]
     #[inline(always)]
     pub fn ss_sample_mode(&self) -> SS_SAMPLE_MODE_R {
-        SS_SAMPLE_MODE_R::new((self.bits & 0x01) != 0)
+        SS_SAMPLE_MODE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SDIO(1) to SR(0) Mode"]
     #[inline(always)]
     pub fn miso_fc_en(&self) -> MISO_FC_EN_R {
-        MISO_FC_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        MISO_FC_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 4:7 - SDIO Active Output Value"]
     #[inline(always)]

@@ -98,22 +98,22 @@ impl R {
     #[doc = "Bit 0 - ADC Conversion In Progress"]
     #[inline(always)]
     pub fn adc_active(&self) -> ADC_ACTIVE_R {
-        ADC_ACTIVE_R::new((self.bits & 0x01) != 0)
+        ADC_ACTIVE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RO Frequency Calibration Active (If Atomic)"]
     #[inline(always)]
     pub fn ro_cal_atomic_active(&self) -> RO_CAL_ATOMIC_ACTIVE_R {
-        RO_CAL_ATOMIC_ACTIVE_R::new(((self.bits >> 1) & 0x01) != 0)
+        RO_CAL_ATOMIC_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - AFE Power Up Delay Active"]
     #[inline(always)]
     pub fn afe_pwr_up_active(&self) -> AFE_PWR_UP_ACTIVE_R {
-        AFE_PWR_UP_ACTIVE_R::new(((self.bits >> 2) & 0x01) != 0)
+        AFE_PWR_UP_ACTIVE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - ADC Overflow"]
     #[inline(always)]
     pub fn adc_overflow(&self) -> ADC_OVERFLOW_R {
-        ADC_OVERFLOW_R::new(((self.bits >> 3) & 0x01) != 0)
+        ADC_OVERFLOW_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

@@ -518,162 +518,162 @@ impl R {
     #[doc = "Bit 0 - Wake-Up Detect Status for P0.0"]
     #[inline(always)]
     pub fn gpio0(&self) -> GPIO0_R {
-        GPIO0_R::new((self.bits & 0x01) != 0)
+        GPIO0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Wake-Up Detect Status for P0.1"]
     #[inline(always)]
     pub fn gpio1(&self) -> GPIO1_R {
-        GPIO1_R::new(((self.bits >> 1) & 0x01) != 0)
+        GPIO1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Wake-Up Detect Status for P0.2"]
     #[inline(always)]
     pub fn gpio2(&self) -> GPIO2_R {
-        GPIO2_R::new(((self.bits >> 2) & 0x01) != 0)
+        GPIO2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Wake-Up Detect Status for P0.3"]
     #[inline(always)]
     pub fn gpio3(&self) -> GPIO3_R {
-        GPIO3_R::new(((self.bits >> 3) & 0x01) != 0)
+        GPIO3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Wake-Up Detect Status for P0.4"]
     #[inline(always)]
     pub fn gpio4(&self) -> GPIO4_R {
-        GPIO4_R::new(((self.bits >> 4) & 0x01) != 0)
+        GPIO4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Wake-Up Detect Status for P0.5"]
     #[inline(always)]
     pub fn gpio5(&self) -> GPIO5_R {
-        GPIO5_R::new(((self.bits >> 5) & 0x01) != 0)
+        GPIO5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Wake-Up Detect Status for P0.6"]
     #[inline(always)]
     pub fn gpio6(&self) -> GPIO6_R {
-        GPIO6_R::new(((self.bits >> 6) & 0x01) != 0)
+        GPIO6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Wake-Up Detect Status for P0.7"]
     #[inline(always)]
     pub fn gpio7(&self) -> GPIO7_R {
-        GPIO7_R::new(((self.bits >> 7) & 0x01) != 0)
+        GPIO7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Wake-Up Detect Status for P1.0"]
     #[inline(always)]
     pub fn gpio8(&self) -> GPIO8_R {
-        GPIO8_R::new(((self.bits >> 8) & 0x01) != 0)
+        GPIO8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Wake-Up Detect Status for P1.1"]
     #[inline(always)]
     pub fn gpio9(&self) -> GPIO9_R {
-        GPIO9_R::new(((self.bits >> 9) & 0x01) != 0)
+        GPIO9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Wake-Up Detect Status for P1.2"]
     #[inline(always)]
     pub fn gpio10(&self) -> GPIO10_R {
-        GPIO10_R::new(((self.bits >> 10) & 0x01) != 0)
+        GPIO10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Wake-Up Detect Status for P1.3"]
     #[inline(always)]
     pub fn gpio11(&self) -> GPIO11_R {
-        GPIO11_R::new(((self.bits >> 11) & 0x01) != 0)
+        GPIO11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Wake-Up Detect Status for P1.4"]
     #[inline(always)]
     pub fn gpio12(&self) -> GPIO12_R {
-        GPIO12_R::new(((self.bits >> 12) & 0x01) != 0)
+        GPIO12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Wake-Up Detect Status for P1.5"]
     #[inline(always)]
     pub fn gpio13(&self) -> GPIO13_R {
-        GPIO13_R::new(((self.bits >> 13) & 0x01) != 0)
+        GPIO13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Wake-Up Detect Status for P1.6"]
     #[inline(always)]
     pub fn gpio14(&self) -> GPIO14_R {
-        GPIO14_R::new(((self.bits >> 14) & 0x01) != 0)
+        GPIO14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Wake-Up Detect Status for P1.7"]
     #[inline(always)]
     pub fn gpio15(&self) -> GPIO15_R {
-        GPIO15_R::new(((self.bits >> 15) & 0x01) != 0)
+        GPIO15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Wake-Up Detect Status for P2.0"]
     #[inline(always)]
     pub fn gpio16(&self) -> GPIO16_R {
-        GPIO16_R::new(((self.bits >> 16) & 0x01) != 0)
+        GPIO16_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Wake-Up Detect Status for P2.1"]
     #[inline(always)]
     pub fn gpio17(&self) -> GPIO17_R {
-        GPIO17_R::new(((self.bits >> 17) & 0x01) != 0)
+        GPIO17_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Wake-Up Detect Status for P2.2"]
     #[inline(always)]
     pub fn gpio18(&self) -> GPIO18_R {
-        GPIO18_R::new(((self.bits >> 18) & 0x01) != 0)
+        GPIO18_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Wake-Up Detect Status for P2.3"]
     #[inline(always)]
     pub fn gpio19(&self) -> GPIO19_R {
-        GPIO19_R::new(((self.bits >> 19) & 0x01) != 0)
+        GPIO19_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Wake-Up Detect Status for P2.4"]
     #[inline(always)]
     pub fn gpio20(&self) -> GPIO20_R {
-        GPIO20_R::new(((self.bits >> 20) & 0x01) != 0)
+        GPIO20_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Wake-Up Detect Status for P2.5"]
     #[inline(always)]
     pub fn gpio21(&self) -> GPIO21_R {
-        GPIO21_R::new(((self.bits >> 21) & 0x01) != 0)
+        GPIO21_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Wake-Up Detect Status for P2.6"]
     #[inline(always)]
     pub fn gpio22(&self) -> GPIO22_R {
-        GPIO22_R::new(((self.bits >> 22) & 0x01) != 0)
+        GPIO22_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Wake-Up Detect Status for P2.7"]
     #[inline(always)]
     pub fn gpio23(&self) -> GPIO23_R {
-        GPIO23_R::new(((self.bits >> 23) & 0x01) != 0)
+        GPIO23_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Wake-Up Detect Status for P3.0"]
     #[inline(always)]
     pub fn gpio24(&self) -> GPIO24_R {
-        GPIO24_R::new(((self.bits >> 24) & 0x01) != 0)
+        GPIO24_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Wake-Up Detect Status for P3.1"]
     #[inline(always)]
     pub fn gpio25(&self) -> GPIO25_R {
-        GPIO25_R::new(((self.bits >> 25) & 0x01) != 0)
+        GPIO25_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Wake-Up Detect Status for P3.2"]
     #[inline(always)]
     pub fn gpio26(&self) -> GPIO26_R {
-        GPIO26_R::new(((self.bits >> 26) & 0x01) != 0)
+        GPIO26_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Wake-Up Detect Status for P3.3"]
     #[inline(always)]
     pub fn gpio27(&self) -> GPIO27_R {
-        GPIO27_R::new(((self.bits >> 27) & 0x01) != 0)
+        GPIO27_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Wake-Up Detect Status for P3.4"]
     #[inline(always)]
     pub fn gpio28(&self) -> GPIO28_R {
-        GPIO28_R::new(((self.bits >> 28) & 0x01) != 0)
+        GPIO28_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Wake-Up Detect Status for P3.5"]
     #[inline(always)]
     pub fn gpio29(&self) -> GPIO29_R {
-        GPIO29_R::new(((self.bits >> 29) & 0x01) != 0)
+        GPIO29_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Wake-Up Detect Status for P3.6"]
     #[inline(always)]
     pub fn gpio30(&self) -> GPIO30_R {
-        GPIO30_R::new(((self.bits >> 30) & 0x01) != 0)
+        GPIO30_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Wake-Up Detect Status for P3.7"]
     #[inline(always)]
     pub fn gpio31(&self) -> GPIO31_R {
-        GPIO31_R::new(((self.bits >> 31) & 0x01) != 0)
+        GPIO31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

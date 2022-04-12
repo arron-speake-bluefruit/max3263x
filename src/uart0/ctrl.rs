@@ -67,7 +67,7 @@ impl<'a> UART_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> DATA_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> EXTRA_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> PARITY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> CTS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> CTS_POLARITY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> RTS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> RTS_POLARITY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -415,52 +415,52 @@ impl R {
     #[doc = "Bit 0 - UART Enable"]
     #[inline(always)]
     pub fn uart_en(&self) -> UART_EN_R {
-        UART_EN_R::new((self.bits & 0x01) != 0)
+        UART_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RX FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&self) -> RX_FIFO_EN_R {
-        RX_FIFO_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        RX_FIFO_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TX FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&self) -> TX_FIFO_EN_R {
-        TX_FIFO_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_FIFO_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 4:5 - Data Size"]
     #[inline(always)]
     pub fn data_size(&self) -> DATA_SIZE_R {
-        DATA_SIZE_R::new(((self.bits >> 4) & 0x03) as u8)
+        DATA_SIZE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 8 - Extra Stop Enable"]
     #[inline(always)]
     pub fn extra_stop(&self) -> EXTRA_STOP_R {
-        EXTRA_STOP_R::new(((self.bits >> 8) & 0x01) != 0)
+        EXTRA_STOP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 12:13 - Parity Mode"]
     #[inline(always)]
     pub fn parity(&self) -> PARITY_R {
-        PARITY_R::new(((self.bits >> 12) & 0x03) as u8)
+        PARITY_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 16 - CTS Enable"]
     #[inline(always)]
     pub fn cts_en(&self) -> CTS_EN_R {
-        CTS_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        CTS_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - CTS Polarity"]
     #[inline(always)]
     pub fn cts_polarity(&self) -> CTS_POLARITY_R {
-        CTS_POLARITY_R::new(((self.bits >> 17) & 0x01) != 0)
+        CTS_POLARITY_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - RTS Enable"]
     #[inline(always)]
     pub fn rts_en(&self) -> RTS_EN_R {
-        RTS_EN_R::new(((self.bits >> 18) & 0x01) != 0)
+        RTS_EN_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - RTS Polarity"]
     #[inline(always)]
     pub fn rts_polarity(&self) -> RTS_POLARITY_R {
-        RTS_POLARITY_R::new(((self.bits >> 19) & 0x01) != 0)
+        RTS_POLARITY_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bits 20:25 - RX FIFO LTE Level for RTS Assert"]
     #[inline(always)]

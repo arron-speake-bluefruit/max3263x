@@ -67,7 +67,7 @@ impl<'a> ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -90,12 +90,12 @@ impl R {
     #[doc = "Bit 0 - Cache Enable"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new((self.bits & 0x01) != 0)
+        ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 16 - Cache Ready Status"]
     #[inline(always)]
     pub fn ready(&self) -> READY_R {
-        READY_R::new(((self.bits >> 16) & 0x01) != 0)
+        READY_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

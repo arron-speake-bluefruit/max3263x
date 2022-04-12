@@ -93,7 +93,7 @@ impl R {
     #[doc = "Bit 16 - Analog In Mode Acknowledge: P6\\[0\\]"]
     #[inline(always)]
     pub fn ali_ack_p6(&self) -> ALI_ACK_P6_R {
-        ALI_ACK_P6_R::new(((self.bits >> 16) & 0x01) != 0)
+        ALI_ACK_P6_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

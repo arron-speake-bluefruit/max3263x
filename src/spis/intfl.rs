@@ -67,7 +67,7 @@ impl<'a> TX_FIFO_AE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_FIFO_AF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_NO_DATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_LOST_DATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> SS_ASSERTED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> SS_DEASSERTED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - TX FIFO Almost Empty"]
     #[inline(always)]
     pub fn tx_fifo_ae(&self) -> TX_FIFO_AE_R {
-        TX_FIFO_AE_R::new((self.bits & 0x01) != 0)
+        TX_FIFO_AE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RX FIFO Almost Full"]
     #[inline(always)]
     pub fn rx_fifo_af(&self) -> RX_FIFO_AF_R {
-        RX_FIFO_AF_R::new(((self.bits >> 1) & 0x01) != 0)
+        RX_FIFO_AF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TX FIFO Empty"]
     #[inline(always)]
     pub fn tx_no_data(&self) -> TX_NO_DATA_R {
-        TX_NO_DATA_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_NO_DATA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RX FIFO Overflow"]
     #[inline(always)]
     pub fn rx_lost_data(&self) -> RX_LOST_DATA_R {
-        RX_LOST_DATA_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_LOST_DATA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - Slave Select Asserted"]
     #[inline(always)]
     pub fn ss_asserted(&self) -> SS_ASSERTED_R {
-        SS_ASSERTED_R::new(((self.bits >> 5) & 0x01) != 0)
+        SS_ASSERTED_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Slave Select Deasserted"]
     #[inline(always)]
     pub fn ss_deasserted(&self) -> SS_DEASSERTED_R {
-        SS_DEASSERTED_R::new(((self.bits >> 6) & 0x01) != 0)
+        SS_DEASSERTED_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

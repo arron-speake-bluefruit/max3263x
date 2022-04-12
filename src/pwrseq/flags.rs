@@ -97,7 +97,7 @@ impl<'a> PWR_POWER_FAIL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> PWR_BOOT_FAIL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -171,7 +171,7 @@ impl<'a> PWR_FLASH_DISCHARGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> PWR_IOWAKEUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -245,7 +245,7 @@ impl<'a> PWR_VDD12_RST_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> PWR_VDD18_RST_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -319,7 +319,7 @@ impl<'a> PWR_VRTC_RST_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -356,7 +356,7 @@ impl<'a> PWR_VDDB_RST_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -393,7 +393,7 @@ impl<'a> PWR_TVDD12_RST_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -430,7 +430,7 @@ impl<'a> PWR_POR18Z_FAIL_LATCH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -527,7 +527,7 @@ impl<'a> PWR_USB_PLUG_WAKEUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -564,7 +564,7 @@ impl<'a> PWR_USB_REMOVE_WAKEUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -601,7 +601,7 @@ impl<'a> PWR_TVDD12_BAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -609,97 +609,97 @@ impl R {
     #[doc = "Bit 0 - Initial Boot event detected flag"]
     #[inline(always)]
     pub fn pwr_first_boot(&self) -> PWR_FIRST_BOOT_R {
-        PWR_FIRST_BOOT_R::new((self.bits & 0x01) != 0)
+        PWR_FIRST_BOOT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Firmware Reset event detected flag"]
     #[inline(always)]
     pub fn pwr_sys_reboot(&self) -> PWR_SYS_REBOOT_R {
-        PWR_SYS_REBOOT_R::new(((self.bits >> 1) & 0x01) != 0)
+        PWR_SYS_REBOOT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Power Fail event detected flag"]
     #[inline(always)]
     pub fn pwr_power_fail(&self) -> PWR_POWER_FAIL_R {
-        PWR_POWER_FAIL_R::new(((self.bits >> 2) & 0x01) != 0)
+        PWR_POWER_FAIL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Boot Fail event detected flag"]
     #[inline(always)]
     pub fn pwr_boot_fail(&self) -> PWR_BOOT_FAIL_R {
-        PWR_BOOT_FAIL_R::new(((self.bits >> 3) & 0x01) != 0)
+        PWR_BOOT_FAIL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Flash Discharged During Powerfail event detected flag"]
     #[inline(always)]
     pub fn pwr_flash_discharge(&self) -> PWR_FLASH_DISCHARGE_R {
-        PWR_FLASH_DISCHARGE_R::new(((self.bits >> 4) & 0x01) != 0)
+        PWR_FLASH_DISCHARGE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - GPIO Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_iowakeup(&self) -> PWR_IOWAKEUP_R {
-        PWR_IOWAKEUP_R::new(((self.bits >> 5) & 0x01) != 0)
+        PWR_IOWAKEUP_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - VDD12_SW Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vdd12_rst_bad(&self) -> PWR_VDD12_RST_BAD_R {
-        PWR_VDD12_RST_BAD_R::new(((self.bits >> 6) & 0x01) != 0)
+        PWR_VDD12_RST_BAD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - VDD18_SW Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vdd18_rst_bad(&self) -> PWR_VDD18_RST_BAD_R {
-        PWR_VDD18_RST_BAD_R::new(((self.bits >> 7) & 0x01) != 0)
+        PWR_VDD18_RST_BAD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - VRTC Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vrtc_rst_bad(&self) -> PWR_VRTC_RST_BAD_R {
-        PWR_VRTC_RST_BAD_R::new(((self.bits >> 8) & 0x01) != 0)
+        PWR_VRTC_RST_BAD_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - VDDB Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vddb_rst_bad(&self) -> PWR_VDDB_RST_BAD_R {
-        PWR_VDDB_RST_BAD_R::new(((self.bits >> 9) & 0x01) != 0)
+        PWR_VDDB_RST_BAD_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - TVDD12 Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_tvdd12_rst_bad(&self) -> PWR_TVDD12_RST_BAD_R {
-        PWR_TVDD12_RST_BAD_R::new(((self.bits >> 10) & 0x01) != 0)
+        PWR_TVDD12_RST_BAD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - POR18 and POR18_bg have been tripped"]
     #[inline(always)]
     pub fn pwr_por18z_fail_latch(&self) -> PWR_POR18Z_FAIL_LATCH_R {
-        PWR_POR18Z_FAIL_LATCH_R::new(((self.bits >> 11) & 0x01) != 0)
+        PWR_POR18Z_FAIL_LATCH_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - RTC Comparator 0 Match event detected flag"]
     #[inline(always)]
     pub fn rtc_cmpr0(&self) -> RTC_CMPR0_R {
-        RTC_CMPR0_R::new(((self.bits >> 12) & 0x01) != 0)
+        RTC_CMPR0_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - RTC Comparator 1 Match event detected flag"]
     #[inline(always)]
     pub fn rtc_cmpr1(&self) -> RTC_CMPR1_R {
-        RTC_CMPR1_R::new(((self.bits >> 13) & 0x01) != 0)
+        RTC_CMPR1_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - RTC Prescale Comparator Match event detected flag"]
     #[inline(always)]
     pub fn rtc_prescale_cmp(&self) -> RTC_PRESCALE_CMP_R {
-        RTC_PRESCALE_CMP_R::new(((self.bits >> 14) & 0x01) != 0)
+        RTC_PRESCALE_CMP_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - RTC Rollover event detected flag"]
     #[inline(always)]
     pub fn rtc_rollover(&self) -> RTC_ROLLOVER_R {
-        RTC_ROLLOVER_R::new(((self.bits >> 15) & 0x01) != 0)
+        RTC_ROLLOVER_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - USB Power Connect Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_usb_plug_wakeup(&self) -> PWR_USB_PLUG_WAKEUP_R {
-        PWR_USB_PLUG_WAKEUP_R::new(((self.bits >> 16) & 0x01) != 0)
+        PWR_USB_PLUG_WAKEUP_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - USB Power Remove Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_usb_remove_wakeup(&self) -> PWR_USB_REMOVE_WAKEUP_R {
-        PWR_USB_REMOVE_WAKEUP_R::new(((self.bits >> 17) & 0x01) != 0)
+        PWR_USB_REMOVE_WAKEUP_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Retention Regulator POR Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_tvdd12_bad(&self) -> PWR_TVDD12_BAD_R {
-        PWR_TVDD12_BAD_R::new(((self.bits >> 18) & 0x01) != 0)
+        PWR_TVDD12_BAD_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {

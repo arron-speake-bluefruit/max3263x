@@ -67,7 +67,7 @@ impl<'a> TMON_INTBIAS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TMON_EXTBIAS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 8 - Enable internal temperature measurement bias generator"]
     #[inline(always)]
     pub fn tmon_intbias_en(&self) -> TMON_INTBIAS_EN_R {
-        TMON_INTBIAS_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        TMON_INTBIAS_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Enable external temperature measurement bias generator"]
     #[inline(always)]
     pub fn tmon_extbias_en(&self) -> TMON_EXTBIAS_EN_R {
-        TMON_EXTBIAS_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        TMON_EXTBIAS_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

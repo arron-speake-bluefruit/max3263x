@@ -67,7 +67,7 @@ impl<'a> START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> OPSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 1)) | ((value as u32 & 0x07) << 1);
+        self.w.bits = (self.w.bits & !(7 << 1)) | ((value as u32 & 7) << 1);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> OCALC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> IF_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> INTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> IF_ERROR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -370,7 +370,7 @@ impl<'a> OFS_A_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -397,7 +397,7 @@ impl<'a> OFS_B_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> OFS_EXP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -451,7 +451,7 @@ impl<'a> OFS_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -567,52 +567,52 @@ impl R {
     #[doc = "Bit 0 - Start MAA Calculation"]
     #[inline(always)]
     pub fn start(&self) -> START_R {
-        START_R::new((self.bits & 0x01) != 0)
+        START_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:3 - Select Operation Type"]
     #[inline(always)]
     pub fn opsel(&self) -> OPSEL_R {
-        OPSEL_R::new(((self.bits >> 1) & 0x07) as u8)
+        OPSEL_R::new(((self.bits >> 1) & 7) as u8)
     }
     #[doc = "Bit 4 - Optimized Calculation Control"]
     #[inline(always)]
     pub fn ocalc(&self) -> OCALC_R {
-        OCALC_R::new(((self.bits >> 4) & 0x01) != 0)
+        OCALC_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Interrupt Flag - Calculation Done"]
     #[inline(always)]
     pub fn if_done(&self) -> IF_DONE_R {
-        IF_DONE_R::new(((self.bits >> 5) & 0x01) != 0)
+        IF_DONE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - MAA Interrupt Enable"]
     #[inline(always)]
     pub fn inten(&self) -> INTEN_R {
-        INTEN_R::new(((self.bits >> 6) & 0x01) != 0)
+        INTEN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Interrupt Flag - Error"]
     #[inline(always)]
     pub fn if_error(&self) -> IF_ERROR_R {
-        IF_ERROR_R::new(((self.bits >> 7) & 0x01) != 0)
+        IF_ERROR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:9 - Operand A Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_a(&self) -> OFS_A_R {
-        OFS_A_R::new(((self.bits >> 8) & 0x03) as u8)
+        OFS_A_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Operand B Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_b(&self) -> OFS_B_R {
-        OFS_B_R::new(((self.bits >> 10) & 0x03) as u8)
+        OFS_B_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Exponent Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_exp(&self) -> OFS_EXP_R {
-        OFS_EXP_R::new(((self.bits >> 12) & 0x03) as u8)
+        OFS_EXP_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Modulus Memory Select"]
     #[inline(always)]
     pub fn ofs_mod(&self) -> OFS_MOD_R {
-        OFS_MOD_R::new(((self.bits >> 14) & 0x03) as u8)
+        OFS_MOD_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:19 - Operand A Memory Segment Select"]
     #[inline(always)]

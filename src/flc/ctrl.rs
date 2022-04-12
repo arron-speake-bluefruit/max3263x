@@ -67,7 +67,7 @@ impl<'a> WRITE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MASS_ERASE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PAGE_ERASE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -265,7 +265,7 @@ impl<'a> AUTO_INCRE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -300,17 +300,17 @@ impl R {
     #[doc = "Bit 0 - Start Flash Write Operation"]
     #[inline(always)]
     pub fn write(&self) -> WRITE_R {
-        WRITE_R::new((self.bits & 0x01) != 0)
+        WRITE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Start Flash Mass Erase Operation"]
     #[inline(always)]
     pub fn mass_erase(&self) -> MASS_ERASE_R {
-        MASS_ERASE_R::new(((self.bits >> 1) & 0x01) != 0)
+        MASS_ERASE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Start Flash Page Erase Operation"]
     #[inline(always)]
     pub fn page_erase(&self) -> PAGE_ERASE_R {
-        PAGE_ERASE_R::new(((self.bits >> 2) & 0x01) != 0)
+        PAGE_ERASE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 8:15 - Flash Erase Code"]
     #[inline(always)]
@@ -320,27 +320,27 @@ impl R {
     #[doc = "Bit 16 - Flash Info Block Locked"]
     #[inline(always)]
     pub fn info_block_unlock(&self) -> INFO_BLOCK_UNLOCK_R {
-        INFO_BLOCK_UNLOCK_R::new(((self.bits >> 16) & 0x01) != 0)
+        INFO_BLOCK_UNLOCK_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Flash Writes Enabled"]
     #[inline(always)]
     pub fn write_enable(&self) -> WRITE_ENABLE_R {
-        WRITE_ENABLE_R::new(((self.bits >> 17) & 0x01) != 0)
+        WRITE_ENABLE_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 24 - Flash Controller Status"]
     #[inline(always)]
     pub fn pending(&self) -> PENDING_R {
-        PENDING_R::new(((self.bits >> 24) & 0x01) != 0)
+        PENDING_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Info Block Valid Status"]
     #[inline(always)]
     pub fn info_block_valid(&self) -> INFO_BLOCK_VALID_R {
-        INFO_BLOCK_VALID_R::new(((self.bits >> 25) & 0x01) != 0)
+        INFO_BLOCK_VALID_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 27 - Address Auto-Increment Mode"]
     #[inline(always)]
     pub fn auto_incre_mode(&self) -> AUTO_INCRE_MODE_R {
-        AUTO_INCRE_MODE_R::new(((self.bits >> 27) & 0x01) != 0)
+        AUTO_INCRE_MODE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bits 28:31 - Flash Write/Erase Enable"]
     #[inline(always)]

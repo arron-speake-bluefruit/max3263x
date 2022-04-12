@@ -67,7 +67,7 @@ impl<'a> BB_SCL_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> BB_SDA_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -157,22 +157,22 @@ impl R {
     #[doc = "Bit 0 - Bit Bang SCL Output"]
     #[inline(always)]
     pub fn bb_scl_out(&self) -> BB_SCL_OUT_R {
-        BB_SCL_OUT_R::new((self.bits & 0x01) != 0)
+        BB_SCL_OUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Bit Bang SDA Output"]
     #[inline(always)]
     pub fn bb_sda_out(&self) -> BB_SDA_OUT_R {
-        BB_SDA_OUT_R::new(((self.bits >> 1) & 0x01) != 0)
+        BB_SDA_OUT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Bit Bang SCL Input Value"]
     #[inline(always)]
     pub fn bb_scl_in_val(&self) -> BB_SCL_IN_VAL_R {
-        BB_SCL_IN_VAL_R::new(((self.bits >> 2) & 0x01) != 0)
+        BB_SCL_IN_VAL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Bit Bang SCL Input Value"]
     #[inline(always)]
     pub fn bb_sda_in_val(&self) -> BB_SDA_IN_VAL_R {
-        BB_SDA_IN_VAL_R::new(((self.bits >> 3) & 0x01) != 0)
+        BB_SDA_IN_VAL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 16:20 - Results FIFO Data Received Count"]
     #[inline(always)]

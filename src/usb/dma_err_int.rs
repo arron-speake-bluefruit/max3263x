@@ -67,7 +67,7 @@ impl<'a> DMA_ERR0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DMA_ERR1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DMA_ERR2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> DMA_ERR3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DMA_ERR4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> DMA_ERR5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> DMA_ERR6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> DMA_ERR7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -334,42 +334,42 @@ impl R {
     #[doc = "Bit 0 - Endpoint 0 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err0(&self) -> DMA_ERR0_R {
-        DMA_ERR0_R::new((self.bits & 0x01) != 0)
+        DMA_ERR0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Endpoint 1 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err1(&self) -> DMA_ERR1_R {
-        DMA_ERR1_R::new(((self.bits >> 1) & 0x01) != 0)
+        DMA_ERR1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Endpoint 2 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err2(&self) -> DMA_ERR2_R {
-        DMA_ERR2_R::new(((self.bits >> 2) & 0x01) != 0)
+        DMA_ERR2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Endpoint 3 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err3(&self) -> DMA_ERR3_R {
-        DMA_ERR3_R::new(((self.bits >> 3) & 0x01) != 0)
+        DMA_ERR3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Endpoint 4 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err4(&self) -> DMA_ERR4_R {
-        DMA_ERR4_R::new(((self.bits >> 4) & 0x01) != 0)
+        DMA_ERR4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Endpoint 5 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err5(&self) -> DMA_ERR5_R {
-        DMA_ERR5_R::new(((self.bits >> 5) & 0x01) != 0)
+        DMA_ERR5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Endpoint 6 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err6(&self) -> DMA_ERR6_R {
-        DMA_ERR6_R::new(((self.bits >> 6) & 0x01) != 0)
+        DMA_ERR6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Endpoint 7 DMA Error Interrupt Flag"]
     #[inline(always)]
     pub fn dma_err7(&self) -> DMA_ERR7_R {
-        DMA_ERR7_R::new(((self.bits >> 7) & 0x01) != 0)
+        DMA_ERR7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

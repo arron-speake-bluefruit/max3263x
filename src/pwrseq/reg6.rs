@@ -57,7 +57,7 @@ impl<'a> PWR_TRIM_USB_BIAS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -173,7 +173,7 @@ impl R {
     #[doc = "Bits 0:2 - USB Bias Current trim setting"]
     #[inline(always)]
     pub fn pwr_trim_usb_bias(&self) -> PWR_TRIM_USB_BIAS_R {
-        PWR_TRIM_USB_BIAS_R::new((self.bits & 0x07) as u8)
+        PWR_TRIM_USB_BIAS_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:6 - USB Data Plus Slew Rate trim setting"]
     #[inline(always)]

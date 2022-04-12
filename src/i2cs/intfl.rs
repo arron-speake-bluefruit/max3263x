@@ -67,7 +67,7 @@ impl<'a> BYTE0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> BYTE1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BYTE2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BYTE3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> BYTE4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> BYTE5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BYTE6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> BYTE7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> BYTE8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> BYTE9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> BYTE10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> BYTE11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> BYTE12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> BYTE13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> BYTE14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> BYTE15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> BYTE16_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> BYTE17_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> BYTE18_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> BYTE19_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> BYTE20_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> BYTE21_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> BYTE22_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> BYTE23_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> BYTE24_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -992,7 +992,7 @@ impl<'a> BYTE25_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -1029,7 +1029,7 @@ impl<'a> BYTE26_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -1066,7 +1066,7 @@ impl<'a> BYTE27_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1103,7 +1103,7 @@ impl<'a> BYTE28_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1140,7 +1140,7 @@ impl<'a> BYTE29_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -1177,7 +1177,7 @@ impl<'a> BYTE30_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -1214,7 +1214,7 @@ impl<'a> BYTE31_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -1222,162 +1222,162 @@ impl R {
     #[doc = "Bit 0 - Updated Byte 0"]
     #[inline(always)]
     pub fn byte0(&self) -> BYTE0_R {
-        BYTE0_R::new((self.bits & 0x01) != 0)
+        BYTE0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Updated Byte 1"]
     #[inline(always)]
     pub fn byte1(&self) -> BYTE1_R {
-        BYTE1_R::new(((self.bits >> 1) & 0x01) != 0)
+        BYTE1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Updated Byte 2"]
     #[inline(always)]
     pub fn byte2(&self) -> BYTE2_R {
-        BYTE2_R::new(((self.bits >> 2) & 0x01) != 0)
+        BYTE2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Updated Byte 3"]
     #[inline(always)]
     pub fn byte3(&self) -> BYTE3_R {
-        BYTE3_R::new(((self.bits >> 3) & 0x01) != 0)
+        BYTE3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Updated Byte 4"]
     #[inline(always)]
     pub fn byte4(&self) -> BYTE4_R {
-        BYTE4_R::new(((self.bits >> 4) & 0x01) != 0)
+        BYTE4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Updated Byte 5"]
     #[inline(always)]
     pub fn byte5(&self) -> BYTE5_R {
-        BYTE5_R::new(((self.bits >> 5) & 0x01) != 0)
+        BYTE5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Updated Byte 6"]
     #[inline(always)]
     pub fn byte6(&self) -> BYTE6_R {
-        BYTE6_R::new(((self.bits >> 6) & 0x01) != 0)
+        BYTE6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Updated Byte 7"]
     #[inline(always)]
     pub fn byte7(&self) -> BYTE7_R {
-        BYTE7_R::new(((self.bits >> 7) & 0x01) != 0)
+        BYTE7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Updated Byte 8"]
     #[inline(always)]
     pub fn byte8(&self) -> BYTE8_R {
-        BYTE8_R::new(((self.bits >> 8) & 0x01) != 0)
+        BYTE8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Updated Byte 9"]
     #[inline(always)]
     pub fn byte9(&self) -> BYTE9_R {
-        BYTE9_R::new(((self.bits >> 9) & 0x01) != 0)
+        BYTE9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Updated Byte 10"]
     #[inline(always)]
     pub fn byte10(&self) -> BYTE10_R {
-        BYTE10_R::new(((self.bits >> 10) & 0x01) != 0)
+        BYTE10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Updated Byte 11"]
     #[inline(always)]
     pub fn byte11(&self) -> BYTE11_R {
-        BYTE11_R::new(((self.bits >> 11) & 0x01) != 0)
+        BYTE11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Updated Byte 12"]
     #[inline(always)]
     pub fn byte12(&self) -> BYTE12_R {
-        BYTE12_R::new(((self.bits >> 12) & 0x01) != 0)
+        BYTE12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Updated Byte 13"]
     #[inline(always)]
     pub fn byte13(&self) -> BYTE13_R {
-        BYTE13_R::new(((self.bits >> 13) & 0x01) != 0)
+        BYTE13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Updated Byte 14"]
     #[inline(always)]
     pub fn byte14(&self) -> BYTE14_R {
-        BYTE14_R::new(((self.bits >> 14) & 0x01) != 0)
+        BYTE14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Updated Byte 15"]
     #[inline(always)]
     pub fn byte15(&self) -> BYTE15_R {
-        BYTE15_R::new(((self.bits >> 15) & 0x01) != 0)
+        BYTE15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Updated Byte 16"]
     #[inline(always)]
     pub fn byte16(&self) -> BYTE16_R {
-        BYTE16_R::new(((self.bits >> 16) & 0x01) != 0)
+        BYTE16_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Updated Byte 17"]
     #[inline(always)]
     pub fn byte17(&self) -> BYTE17_R {
-        BYTE17_R::new(((self.bits >> 17) & 0x01) != 0)
+        BYTE17_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Updated Byte 18"]
     #[inline(always)]
     pub fn byte18(&self) -> BYTE18_R {
-        BYTE18_R::new(((self.bits >> 18) & 0x01) != 0)
+        BYTE18_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Updated Byte 19"]
     #[inline(always)]
     pub fn byte19(&self) -> BYTE19_R {
-        BYTE19_R::new(((self.bits >> 19) & 0x01) != 0)
+        BYTE19_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Updated Byte 20"]
     #[inline(always)]
     pub fn byte20(&self) -> BYTE20_R {
-        BYTE20_R::new(((self.bits >> 20) & 0x01) != 0)
+        BYTE20_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Updated Byte 21"]
     #[inline(always)]
     pub fn byte21(&self) -> BYTE21_R {
-        BYTE21_R::new(((self.bits >> 21) & 0x01) != 0)
+        BYTE21_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Updated Byte 22"]
     #[inline(always)]
     pub fn byte22(&self) -> BYTE22_R {
-        BYTE22_R::new(((self.bits >> 22) & 0x01) != 0)
+        BYTE22_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Updated Byte 23"]
     #[inline(always)]
     pub fn byte23(&self) -> BYTE23_R {
-        BYTE23_R::new(((self.bits >> 23) & 0x01) != 0)
+        BYTE23_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Updated Byte 24"]
     #[inline(always)]
     pub fn byte24(&self) -> BYTE24_R {
-        BYTE24_R::new(((self.bits >> 24) & 0x01) != 0)
+        BYTE24_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Updated Byte 25"]
     #[inline(always)]
     pub fn byte25(&self) -> BYTE25_R {
-        BYTE25_R::new(((self.bits >> 25) & 0x01) != 0)
+        BYTE25_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Updated Byte 26"]
     #[inline(always)]
     pub fn byte26(&self) -> BYTE26_R {
-        BYTE26_R::new(((self.bits >> 26) & 0x01) != 0)
+        BYTE26_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Updated Byte 27"]
     #[inline(always)]
     pub fn byte27(&self) -> BYTE27_R {
-        BYTE27_R::new(((self.bits >> 27) & 0x01) != 0)
+        BYTE27_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Updated Byte 28"]
     #[inline(always)]
     pub fn byte28(&self) -> BYTE28_R {
-        BYTE28_R::new(((self.bits >> 28) & 0x01) != 0)
+        BYTE28_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Updated Byte 29"]
     #[inline(always)]
     pub fn byte29(&self) -> BYTE29_R {
-        BYTE29_R::new(((self.bits >> 29) & 0x01) != 0)
+        BYTE29_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Updated Byte 30"]
     #[inline(always)]
     pub fn byte30(&self) -> BYTE30_R {
-        BYTE30_R::new(((self.bits >> 30) & 0x01) != 0)
+        BYTE30_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Updated Byte 31"]
     #[inline(always)]
     pub fn byte31(&self) -> BYTE31_R {
-        BYTE31_R::new(((self.bits >> 31) & 0x01) != 0)
+        BYTE31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

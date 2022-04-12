@@ -67,7 +67,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MSTR_RESET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 2 - Master Transaction FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&self) -> TX_FIFO_EN_R {
-        TX_FIFO_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_FIFO_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Master Results FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&self) -> RX_FIFO_EN_R {
-        RX_FIFO_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FIFO_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - Master Reset"]
     #[inline(always)]
     pub fn mstr_reset_en(&self) -> MSTR_RESET_EN_R {
-        MSTR_RESET_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        MSTR_RESET_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

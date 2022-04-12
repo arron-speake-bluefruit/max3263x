@@ -68,12 +68,12 @@ impl R {
     #[doc = "Bits 0:1 - I2C Slave I/O Mapping Acknowledge"]
     #[inline(always)]
     pub fn io_sel(&self) -> IO_SEL_R {
-        IO_SEL_R::new((self.bits & 0x03) as u8)
+        IO_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 4 - I2C Slave I/O Acknowledge"]
     #[inline(always)]
     pub fn mapping_ack(&self) -> MAPPING_ACK_R {
-        MAPPING_ACK_R::new(((self.bits >> 4) & 0x01) != 0)
+        MAPPING_ACK_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

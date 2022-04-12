@@ -57,7 +57,7 @@ impl<'a> PWR_ROSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> PWR_FLTRROSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> PWR_SVM_CLK_MUX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> PWR_RO_CLK_MUX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> PWR_FAILSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 10)) | ((value as u32 & 0x07) << 10);
+        self.w.bits = (self.w.bits & !(7 << 10)) | ((value as u32 & 7) << 10);
         self.w
     }
 }
@@ -173,27 +173,27 @@ impl R {
     #[doc = "Bits 0:2 - Relaxation Oscillator Stable Timeout"]
     #[inline(always)]
     pub fn pwr_rosel(&self) -> PWR_ROSEL_R {
-        PWR_ROSEL_R::new((self.bits & 0x07) as u8)
+        PWR_ROSEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - Window of time power must be valid before entering Run mode."]
     #[inline(always)]
     pub fn pwr_fltrrosel(&self) -> PWR_FLTRROSEL_R {
-        PWR_FLTRROSEL_R::new(((self.bits >> 3) & 0x07) as u8)
+        PWR_FLTRROSEL_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:7 - SVM Clock Mux"]
     #[inline(always)]
     pub fn pwr_svm_clk_mux(&self) -> PWR_SVM_CLK_MUX_R {
-        PWR_SVM_CLK_MUX_R::new(((self.bits >> 6) & 0x03) as u8)
+        PWR_SVM_CLK_MUX_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Relaxation Clock Mux"]
     #[inline(always)]
     pub fn pwr_ro_clk_mux(&self) -> PWR_RO_CLK_MUX_R {
-        PWR_RO_CLK_MUX_R::new(((self.bits >> 8) & 0x03) as u8)
+        PWR_RO_CLK_MUX_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:12 - Timeout before rebooting during PowerFail/BootFail events."]
     #[inline(always)]
     pub fn pwr_failsel(&self) -> PWR_FAILSEL_R {
-        PWR_FAILSEL_R::new(((self.bits >> 10) & 0x07) as u8)
+        PWR_FAILSEL_R::new(((self.bits >> 10) & 7) as u8)
     }
 }
 impl W {

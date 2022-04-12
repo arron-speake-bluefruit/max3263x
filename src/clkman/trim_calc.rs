@@ -67,7 +67,7 @@ impl<'a> TRIM_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TRIM_CALC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -156,7 +156,7 @@ impl<'a> TRIM_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -179,22 +179,22 @@ impl R {
     #[doc = "Bit 0 - Trim Clock Select"]
     #[inline(always)]
     pub fn trim_clk_sel(&self) -> TRIM_CLK_SEL_R {
-        TRIM_CLK_SEL_R::new((self.bits & 0x01) != 0)
+        TRIM_CLK_SEL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Start Trim Calculation"]
     #[inline(always)]
     pub fn trim_calc_start(&self) -> TRIM_CALC_START_R {
-        TRIM_CALC_START_R::new(((self.bits >> 1) & 0x01) != 0)
+        TRIM_CALC_START_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Trim Calculation Completed"]
     #[inline(always)]
     pub fn trim_calc_completed(&self) -> TRIM_CALC_COMPLETED_R {
-        TRIM_CALC_COMPLETED_R::new(((self.bits >> 2) & 0x01) != 0)
+        TRIM_CALC_COMPLETED_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Trim Logic Enable"]
     #[inline(always)]
     pub fn trim_enable(&self) -> TRIM_ENABLE_R {
-        TRIM_ENABLE_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRIM_ENABLE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 16:25 - Trim Calculation Results"]
     #[inline(always)]

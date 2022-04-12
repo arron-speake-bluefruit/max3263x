@@ -114,7 +114,7 @@ impl<'a> SPI_SLAVE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -198,7 +198,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -384,7 +384,7 @@ impl<'a> DATA_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -411,7 +411,7 @@ impl<'a> SPI_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -495,7 +495,7 @@ impl<'a> TX_CLK_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -532,7 +532,7 @@ impl<'a> DISABLE_PARKING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -540,37 +540,37 @@ impl R {
     #[doc = "Bit 0 - SPI Slave Enable"]
     #[inline(always)]
     pub fn spi_slave_en(&self) -> SPI_SLAVE_EN_R {
-        SPI_SLAVE_EN_R::new((self.bits & 0x01) != 0)
+        SPI_SLAVE_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - TX FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&self) -> TX_FIFO_EN_R {
-        TX_FIFO_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_FIFO_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SPI RX FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&self) -> RX_FIFO_EN_R {
-        RX_FIFO_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_FIFO_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 4:5 - Width of SPI Slave Data Transfers"]
     #[inline(always)]
     pub fn data_width(&self) -> DATA_WIDTH_R {
-        DATA_WIDTH_R::new(((self.bits >> 4) & 0x03) as u8)
+        DATA_WIDTH_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Defines Clock Polarity (bit 17) and Clock Phase (bit 16), collectively referred to as SPI Mode."]
     #[inline(always)]
     pub fn spi_mode(&self) -> SPI_MODE_R {
-        SPI_MODE_R::new(((self.bits >> 16) & 0x03) as u8)
+        SPI_MODE_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 20 - Invert TX Clock"]
     #[inline(always)]
     pub fn tx_clk_invert(&self) -> TX_CLK_INVERT_R {
-        TX_CLK_INVERT_R::new(((self.bits >> 20) & 0x01) != 0)
+        TX_CLK_INVERT_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 31 - Disable automatic resetting of SPI Slave on exit from LP Modes"]
     #[inline(always)]
     pub fn disable_parking(&self) -> DISABLE_PARKING_R {
-        DISABLE_PARKING_R::new(((self.bits >> 31) & 0x01) != 0)
+        DISABLE_PARKING_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

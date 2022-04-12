@@ -57,7 +57,7 @@ impl<'a> PIN0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> PIN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> PIN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> PIN3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> PIN4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> PIN5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> PIN6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> PIN7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -254,42 +254,42 @@ impl R {
     #[doc = "Bits 0:1 - P2.0 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin0(&self) -> PIN0_R {
-        PIN0_R::new((self.bits & 0x03) as u8)
+        PIN0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 4:5 - P2.1 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin1(&self) -> PIN1_R {
-        PIN1_R::new(((self.bits >> 4) & 0x03) as u8)
+        PIN1_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 8:9 - P2.2 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin2(&self) -> PIN2_R {
-        PIN2_R::new(((self.bits >> 8) & 0x03) as u8)
+        PIN2_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 12:13 - P2.3 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin3(&self) -> PIN3_R {
-        PIN3_R::new(((self.bits >> 12) & 0x03) as u8)
+        PIN3_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 16:17 - P2.4 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin4(&self) -> PIN4_R {
-        PIN4_R::new(((self.bits >> 16) & 0x03) as u8)
+        PIN4_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 20:21 - P2.5 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin5(&self) -> PIN5_R {
-        PIN5_R::new(((self.bits >> 20) & 0x03) as u8)
+        PIN5_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 24:25 - P2.6 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin6(&self) -> PIN6_R {
-        PIN6_R::new(((self.bits >> 24) & 0x03) as u8)
+        PIN6_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 28:29 - P2.7 Input Monitoring Mode"]
     #[inline(always)]
     pub fn pin7(&self) -> PIN7_R {
-        PIN7_R::new(((self.bits >> 28) & 0x03) as u8)
+        PIN7_R::new(((self.bits >> 28) & 3) as u8)
     }
 }
 impl W {

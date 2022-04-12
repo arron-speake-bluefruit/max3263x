@@ -57,7 +57,7 @@ impl<'a> PWR_VDD12_HYST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> PWR_VDD18_HYST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> PWR_VRTC_HYST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> PWR_VDDB_HYST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> PWR_TVDD12_HYST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -173,27 +173,27 @@ impl R {
     #[doc = "Bits 0:1 - VDD12_SW Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vdd12_hyst(&self) -> PWR_VDD12_HYST_R {
-        PWR_VDD12_HYST_R::new((self.bits & 0x03) as u8)
+        PWR_VDD12_HYST_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - VDD18_SW Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vdd18_hyst(&self) -> PWR_VDD18_HYST_R {
-        PWR_VDD18_HYST_R::new(((self.bits >> 2) & 0x03) as u8)
+        PWR_VDD18_HYST_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - VRTC Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vrtc_hyst(&self) -> PWR_VRTC_HYST_R {
-        PWR_VRTC_HYST_R::new(((self.bits >> 4) & 0x03) as u8)
+        PWR_VRTC_HYST_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - VDDB Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vddb_hyst(&self) -> PWR_VDDB_HYST_R {
-        PWR_VDDB_HYST_R::new(((self.bits >> 6) & 0x03) as u8)
+        PWR_VDDB_HYST_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - TVDD12 Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_tvdd12_hyst(&self) -> PWR_TVDD12_HYST_R {
-        PWR_TVDD12_HYST_R::new(((self.bits >> 8) & 0x03) as u8)
+        PWR_TVDD12_HYST_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
 impl W {

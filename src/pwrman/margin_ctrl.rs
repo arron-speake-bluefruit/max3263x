@@ -57,7 +57,7 @@ impl<'a> EXTRA_MARGIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> EXTRA_WRITE_MARGIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> WRITE_ASSIST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> WRITE_ASSIST_MARGIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -156,22 +156,22 @@ impl R {
     #[doc = "Bits 0:2 - Extra Margin Adjustment"]
     #[inline(always)]
     pub fn extra_margin(&self) -> EXTRA_MARGIN_R {
-        EXTRA_MARGIN_R::new((self.bits & 0x07) as u8)
+        EXTRA_MARGIN_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:4 - Extra Write Margin Adjustment"]
     #[inline(always)]
     pub fn extra_write_margin(&self) -> EXTRA_WRITE_MARGIN_R {
-        EXTRA_WRITE_MARGIN_R::new(((self.bits >> 3) & 0x03) as u8)
+        EXTRA_WRITE_MARGIN_R::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 5 - Write Assist Enable"]
     #[inline(always)]
     pub fn write_assist_en(&self) -> WRITE_ASSIST_EN_R {
-        WRITE_ASSIST_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        WRITE_ASSIST_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Write Assist Margin Adjustment"]
     #[inline(always)]
     pub fn write_assist_margin(&self) -> WRITE_ASSIST_MARGIN_R {
-        WRITE_ASSIST_MARGIN_R::new(((self.bits >> 6) & 0x03) as u8)
+        WRITE_ASSIST_MARGIN_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
 impl W {

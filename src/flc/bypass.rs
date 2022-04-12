@@ -98,22 +98,22 @@ impl R {
     #[doc = "Bit 0 - Destructive Security Bypass In Progress"]
     #[inline(always)]
     pub fn destruct_bypass_erase(&self) -> DESTRUCT_BYPASS_ERASE_R {
-        DESTRUCT_BYPASS_ERASE_R::new((self.bits & 0x01) != 0)
+        DESTRUCT_BYPASS_ERASE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Superwipe Erase In Progress"]
     #[inline(always)]
     pub fn superwipe_erase(&self) -> SUPERWIPE_ERASE_R {
-        SUPERWIPE_ERASE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SUPERWIPE_ERASE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Destructive Security Bypass Erase Complete"]
     #[inline(always)]
     pub fn destruct_bypass_complete(&self) -> DESTRUCT_BYPASS_COMPLETE_R {
-        DESTRUCT_BYPASS_COMPLETE_R::new(((self.bits >> 2) & 0x01) != 0)
+        DESTRUCT_BYPASS_COMPLETE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Superwipe Erase Complete"]
     #[inline(always)]
     pub fn superwipe_complete(&self) -> SUPERWIPE_COMPLETE_R {
-        SUPERWIPE_COMPLETE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SUPERWIPE_COMPLETE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

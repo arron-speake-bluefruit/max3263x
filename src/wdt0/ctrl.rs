@@ -583,7 +583,7 @@ impl<'a> EN_TIMER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -667,7 +667,7 @@ impl<'a> EN_CLOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -943,12 +943,12 @@ impl R {
     #[doc = "Bit 8 - Watchdg Timer Enable"]
     #[inline(always)]
     pub fn en_timer(&self) -> EN_TIMER_R {
-        EN_TIMER_R::new(((self.bits >> 8) & 0x01) != 0)
+        EN_TIMER_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Watchdog Clock Gate"]
     #[inline(always)]
     pub fn en_clock(&self) -> EN_CLOCK_R {
-        EN_CLOCK_R::new(((self.bits >> 9) & 0x01) != 0)
+        EN_CLOCK_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 12:15 - Period from WDT Clear to Clear Window Begin"]
     #[inline(always)]

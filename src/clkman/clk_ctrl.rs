@@ -57,7 +57,7 @@ impl<'a> SYSTEM_SOURCE_SELECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> USB_CLOCK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> USB_CLOCK_SELECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> CRYPTO_CLOCK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> RTOS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> CPU_DYNAMIC_CLOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> WDT0_CLOCK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> WDT0_CLOCK_SELECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> WDT1_CLOCK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -370,7 +370,7 @@ impl<'a> WDT1_CLOCK_SELECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 21)) | ((value as u32 & 0x03) << 21);
+        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
         self.w
     }
 }
@@ -407,7 +407,7 @@ impl<'a> ADC_CLOCK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -415,57 +415,57 @@ impl R {
     #[doc = "Bits 0:1 - System Clock Source Select"]
     #[inline(always)]
     pub fn system_source_select(&self) -> SYSTEM_SOURCE_SELECT_R {
-        SYSTEM_SOURCE_SELECT_R::new((self.bits & 0x03) as u8)
+        SYSTEM_SOURCE_SELECT_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 4 - USB Clock Enable"]
     #[inline(always)]
     pub fn usb_clock_enable(&self) -> USB_CLOCK_ENABLE_R {
-        USB_CLOCK_ENABLE_R::new(((self.bits >> 4) & 0x01) != 0)
+        USB_CLOCK_ENABLE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USB Clock Select"]
     #[inline(always)]
     pub fn usb_clock_select(&self) -> USB_CLOCK_SELECT_R {
-        USB_CLOCK_SELECT_R::new(((self.bits >> 5) & 0x01) != 0)
+        USB_CLOCK_SELECT_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - Crypto Clock Enable"]
     #[inline(always)]
     pub fn crypto_clock_enable(&self) -> CRYPTO_CLOCK_ENABLE_R {
-        CRYPTO_CLOCK_ENABLE_R::new(((self.bits >> 8) & 0x01) != 0)
+        CRYPTO_CLOCK_ENABLE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12 - Enable RTOS Mode for SysTick Timers"]
     #[inline(always)]
     pub fn rtos_mode(&self) -> RTOS_MODE_R {
-        RTOS_MODE_R::new(((self.bits >> 12) & 0x01) != 0)
+        RTOS_MODE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Enable CPU Dynamic Clock Gating"]
     #[inline(always)]
     pub fn cpu_dynamic_clock(&self) -> CPU_DYNAMIC_CLOCK_R {
-        CPU_DYNAMIC_CLOCK_R::new(((self.bits >> 13) & 0x01) != 0)
+        CPU_DYNAMIC_CLOCK_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 16 - Watchdog 0 Clock Enable"]
     #[inline(always)]
     pub fn wdt0_clock_enable(&self) -> WDT0_CLOCK_ENABLE_R {
-        WDT0_CLOCK_ENABLE_R::new(((self.bits >> 16) & 0x01) != 0)
+        WDT0_CLOCK_ENABLE_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - Watchdog 0 Clock Source Select"]
     #[inline(always)]
     pub fn wdt0_clock_select(&self) -> WDT0_CLOCK_SELECT_R {
-        WDT0_CLOCK_SELECT_R::new(((self.bits >> 17) & 0x03) as u8)
+        WDT0_CLOCK_SELECT_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 20 - Watchdog 1 Clock Enable"]
     #[inline(always)]
     pub fn wdt1_clock_enable(&self) -> WDT1_CLOCK_ENABLE_R {
-        WDT1_CLOCK_ENABLE_R::new(((self.bits >> 20) & 0x01) != 0)
+        WDT1_CLOCK_ENABLE_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - Watchdog 1 Clock Source Select"]
     #[inline(always)]
     pub fn wdt1_clock_select(&self) -> WDT1_CLOCK_SELECT_R {
-        WDT1_CLOCK_SELECT_R::new(((self.bits >> 21) & 0x03) as u8)
+        WDT1_CLOCK_SELECT_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bit 24 - ADC Clock Enable"]
     #[inline(always)]
     pub fn adc_clock_enable(&self) -> ADC_CLOCK_ENABLE_R {
-        ADC_CLOCK_ENABLE_R::new(((self.bits >> 24) & 0x01) != 0)
+        ADC_CLOCK_ENABLE_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

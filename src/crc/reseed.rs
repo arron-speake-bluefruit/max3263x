@@ -67,7 +67,7 @@ impl<'a> CRC16_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CRC32_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> REV_ENDIAN16_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> REV_ENDIAN32_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CCITT_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - Reseed CRC16 Generator"]
     #[inline(always)]
     pub fn crc16(&self) -> CRC16_R {
-        CRC16_R::new((self.bits & 0x01) != 0)
+        CRC16_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reseed CRC32 Generator"]
     #[inline(always)]
     pub fn crc32(&self) -> CRC32_R {
-        CRC32_R::new(((self.bits >> 1) & 0x01) != 0)
+        CRC32_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4 - Reverse Endianness for CRC16"]
     #[inline(always)]
     pub fn rev_endian16(&self) -> REV_ENDIAN16_R {
-        REV_ENDIAN16_R::new(((self.bits >> 4) & 0x01) != 0)
+        REV_ENDIAN16_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Reverse Endianness for CRC32"]
     #[inline(always)]
     pub fn rev_endian32(&self) -> REV_ENDIAN32_R {
-        REV_ENDIAN32_R::new(((self.bits >> 5) & 0x01) != 0)
+        REV_ENDIAN32_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - CRC16-CCITT Mode"]
     #[inline(always)]
     pub fn ccitt_mode(&self) -> CCITT_MODE_R {
-        CCITT_MODE_R::new(((self.bits >> 8) & 0x01) != 0)
+        CCITT_MODE_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

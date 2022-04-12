@@ -67,7 +67,7 @@ impl<'a> PWR_LP1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PWR_FIRST_BOOT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> PWR_SYS_REBOOT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -163,7 +163,7 @@ impl<'a> PWR_FLASHEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -200,7 +200,7 @@ impl<'a> PWR_FLASHEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -237,7 +237,7 @@ impl<'a> PWR_RETREGEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -274,7 +274,7 @@ impl<'a> PWR_RETREGEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -311,7 +311,7 @@ impl<'a> PWR_ROEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -348,7 +348,7 @@ impl<'a> PWR_ROEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -385,7 +385,7 @@ impl<'a> PWR_NREN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -422,7 +422,7 @@ impl<'a> PWR_NREN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -459,7 +459,7 @@ impl<'a> PWR_RTCEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -496,7 +496,7 @@ impl<'a> PWR_RTCEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -533,7 +533,7 @@ impl<'a> PWR_SVM12EN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -570,7 +570,7 @@ impl<'a> PWR_SVM18EN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -607,7 +607,7 @@ impl<'a> PWR_SVMRTCEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -644,7 +644,7 @@ impl<'a> PWR_SVM_VDDB_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -681,7 +681,7 @@ impl<'a> PWR_SVMTVDD12EN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -718,7 +718,7 @@ impl<'a> PWR_VDD12_SWEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -755,7 +755,7 @@ impl<'a> PWR_VDD12_SWEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -792,7 +792,7 @@ impl<'a> PWR_VDD18_SWEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -829,7 +829,7 @@ impl<'a> PWR_VDD18_SWEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -866,7 +866,7 @@ impl<'a> PWR_TVDD12_SWEN_RUN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -903,7 +903,7 @@ impl<'a> PWR_TVDD12_SWEN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -911,117 +911,117 @@ impl R {
     #[doc = "Bit 0 - Shutdown Power Mode Select"]
     #[inline(always)]
     pub fn pwr_lp1(&self) -> PWR_LP1_R {
-        PWR_LP1_R::new((self.bits & 0x01) != 0)
+        PWR_LP1_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Wake on First Boot"]
     #[inline(always)]
     pub fn pwr_first_boot(&self) -> PWR_FIRST_BOOT_R {
-        PWR_FIRST_BOOT_R::new(((self.bits >> 1) & 0x01) != 0)
+        PWR_FIRST_BOOT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - Enable Flash Operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_flashen_run(&self) -> PWR_FLASHEN_RUN_R {
-        PWR_FLASHEN_RUN_R::new(((self.bits >> 3) & 0x01) != 0)
+        PWR_FLASHEN_RUN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Enable Flash Operation during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_flashen_slp(&self) -> PWR_FLASHEN_SLP_R {
-        PWR_FLASHEN_SLP_R::new(((self.bits >> 4) & 0x01) != 0)
+        PWR_FLASHEN_SLP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Enable Retention Regulator Operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_retregen_run(&self) -> PWR_RETREGEN_RUN_R {
-        PWR_RETREGEN_RUN_R::new(((self.bits >> 5) & 0x01) != 0)
+        PWR_RETREGEN_RUN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Enable Retention Regulator Operation during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_retregen_slp(&self) -> PWR_RETREGEN_SLP_R {
-        PWR_RETREGEN_SLP_R::new(((self.bits >> 6) & 0x01) != 0)
+        PWR_RETREGEN_SLP_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Enable 96MHz System Relaxation Oscillator in Run Mode"]
     #[inline(always)]
     pub fn pwr_roen_run(&self) -> PWR_ROEN_RUN_R {
-        PWR_ROEN_RUN_R::new(((self.bits >> 7) & 0x01) != 0)
+        PWR_ROEN_RUN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Enable 96MHz System Relaxation Oscillator in Sleep Mode"]
     #[inline(always)]
     pub fn pwr_roen_slp(&self) -> PWR_ROEN_SLP_R {
-        PWR_ROEN_SLP_R::new(((self.bits >> 8) & 0x01) != 0)
+        PWR_ROEN_SLP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Enable Nano Oscillator in Run Mode"]
     #[inline(always)]
     pub fn pwr_nren_run(&self) -> PWR_NREN_RUN_R {
-        PWR_NREN_RUN_R::new(((self.bits >> 9) & 0x01) != 0)
+        PWR_NREN_RUN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Enable Nano Oscillator in Sleep Mode"]
     #[inline(always)]
     pub fn pwr_nren_slp(&self) -> PWR_NREN_SLP_R {
-        PWR_NREN_SLP_R::new(((self.bits >> 10) & 0x01) != 0)
+        PWR_NREN_SLP_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Enable Real Time Clock Operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_rtcen_run(&self) -> PWR_RTCEN_RUN_R {
-        PWR_RTCEN_RUN_R::new(((self.bits >> 11) & 0x01) != 0)
+        PWR_RTCEN_RUN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Enable Real Time Clock Operation during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_rtcen_slp(&self) -> PWR_RTCEN_SLP_R {
-        PWR_RTCEN_SLP_R::new(((self.bits >> 12) & 0x01) != 0)
+        PWR_RTCEN_SLP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Enable VDD12_SW SVM operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_svm12en_run(&self) -> PWR_SVM12EN_RUN_R {
-        PWR_SVM12EN_RUN_R::new(((self.bits >> 13) & 0x01) != 0)
+        PWR_SVM12EN_RUN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 15 - Enable VDD18_SW SVM operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_svm18en_run(&self) -> PWR_SVM18EN_RUN_R {
-        PWR_SVM18EN_RUN_R::new(((self.bits >> 15) & 0x01) != 0)
+        PWR_SVM18EN_RUN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 17 - Enable VRTC SVM operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_svmrtcen_run(&self) -> PWR_SVMRTCEN_RUN_R {
-        PWR_SVMRTCEN_RUN_R::new(((self.bits >> 17) & 0x01) != 0)
+        PWR_SVMRTCEN_RUN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 19 - Enable VDDB SVM operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_svm_vddb_run(&self) -> PWR_SVM_VDDB_RUN_R {
-        PWR_SVM_VDDB_RUN_R::new(((self.bits >> 19) & 0x01) != 0)
+        PWR_SVM_VDDB_RUN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 21 - Enable TVDD12 SVM operation during Run Mode"]
     #[inline(always)]
     pub fn pwr_svmtvdd12en_run(&self) -> PWR_SVMTVDD12EN_RUN_R {
-        PWR_SVMTVDD12EN_RUN_R::new(((self.bits >> 21) & 0x01) != 0)
+        PWR_SVMTVDD12EN_RUN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 23 - Enable VDD12 switching during Run Mode"]
     #[inline(always)]
     pub fn pwr_vdd12_swen_run(&self) -> PWR_VDD12_SWEN_RUN_R {
-        PWR_VDD12_SWEN_RUN_R::new(((self.bits >> 23) & 0x01) != 0)
+        PWR_VDD12_SWEN_RUN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Enable VDD12 switching during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_vdd12_swen_slp(&self) -> PWR_VDD12_SWEN_SLP_R {
-        PWR_VDD12_SWEN_SLP_R::new(((self.bits >> 24) & 0x01) != 0)
+        PWR_VDD12_SWEN_SLP_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Enable VDD18 switching during Run Mode"]
     #[inline(always)]
     pub fn pwr_vdd18_swen_run(&self) -> PWR_VDD18_SWEN_RUN_R {
-        PWR_VDD18_SWEN_RUN_R::new(((self.bits >> 25) & 0x01) != 0)
+        PWR_VDD18_SWEN_RUN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Enable VDD18 switching during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_vdd18_swen_slp(&self) -> PWR_VDD18_SWEN_SLP_R {
-        PWR_VDD18_SWEN_SLP_R::new(((self.bits >> 26) & 0x01) != 0)
+        PWR_VDD18_SWEN_SLP_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Enable TVDD12 switching during Run Mode"]
     #[inline(always)]
     pub fn pwr_tvdd12_swen_run(&self) -> PWR_TVDD12_SWEN_RUN_R {
-        PWR_TVDD12_SWEN_RUN_R::new(((self.bits >> 27) & 0x01) != 0)
+        PWR_TVDD12_SWEN_RUN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Enable TVDD12 switching during Sleep Mode"]
     #[inline(always)]
     pub fn pwr_tvdd12_swen_slp(&self) -> PWR_TVDD12_SWEN_SLP_R {
-        PWR_TVDD12_SWEN_SLP_R::new(((self.bits >> 28) & 0x01) != 0)
+        PWR_TVDD12_SWEN_SLP_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

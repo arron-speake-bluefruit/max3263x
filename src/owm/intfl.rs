@@ -67,7 +67,7 @@ impl<'a> OW_RESET_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_DATA_EMPTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RX_DATA_READY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> LINE_SHORT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> LINE_LOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - OW Reset Sequence Completed"]
     #[inline(always)]
     pub fn ow_reset_done(&self) -> OW_RESET_DONE_R {
-        OW_RESET_DONE_R::new((self.bits & 0x01) != 0)
+        OW_RESET_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Tx Data Empty Interrupt Flag"]
     #[inline(always)]
     pub fn tx_data_empty(&self) -> TX_DATA_EMPTY_R {
-        TX_DATA_EMPTY_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_DATA_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Rx Data Ready Interrupt Flag"]
     #[inline(always)]
     pub fn rx_data_ready(&self) -> RX_DATA_READY_R {
-        RX_DATA_READY_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_DATA_READY_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - OW Line Short Detected Interrupt Flag"]
     #[inline(always)]
     pub fn line_short(&self) -> LINE_SHORT_R {
-        LINE_SHORT_R::new(((self.bits >> 3) & 0x01) != 0)
+        LINE_SHORT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - OW Line Low Detected Interrupt Flag"]
     #[inline(always)]
     pub fn line_low(&self) -> LINE_LOW_R {
-        LINE_LOW_R::new(((self.bits >> 4) & 0x01) != 0)
+        LINE_LOW_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

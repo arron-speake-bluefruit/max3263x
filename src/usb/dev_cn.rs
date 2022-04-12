@@ -67,7 +67,7 @@ impl<'a> SIGRWU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CONNECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ULPM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> URST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> VBGATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FIFO_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 2 - USB Signal Remote Wakeup"]
     #[inline(always)]
     pub fn sigrwu(&self) -> SIGRWU_R {
-        SIGRWU_R::new(((self.bits >> 2) & 0x01) != 0)
+        SIGRWU_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Connect to USB"]
     #[inline(always)]
     pub fn connect(&self) -> CONNECT_R {
-        CONNECT_R::new(((self.bits >> 3) & 0x01) != 0)
+        CONNECT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB Low Power Mode"]
     #[inline(always)]
     pub fn ulpm(&self) -> ULPM_R {
-        ULPM_R::new(((self.bits >> 4) & 0x01) != 0)
+        ULPM_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USB Device Controller Reset"]
     #[inline(always)]
     pub fn urst(&self) -> URST_R {
-        URST_R::new(((self.bits >> 5) & 0x01) != 0)
+        URST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - VBUS Gate"]
     #[inline(always)]
     pub fn vbgate(&self) -> VBGATE_R {
-        VBGATE_R::new(((self.bits >> 6) & 0x01) != 0)
+        VBGATE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 9 - FIFO Mode"]
     #[inline(always)]
     pub fn fifo_mode(&self) -> FIFO_MODE_R {
-        FIFO_MODE_R::new(((self.bits >> 9) & 0x01) != 0)
+        FIFO_MODE_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

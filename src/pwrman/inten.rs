@@ -67,7 +67,7 @@ impl<'a> V1_2_WARNING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> V1_8_WARNING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RTC_WARNING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> VDDA_WARNING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> VDDB_WARNING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - 1.2V Warning Monitor Int Enable"]
     #[inline(always)]
     pub fn v1_2_warning(&self) -> V1_2_WARNING_R {
-        V1_2_WARNING_R::new((self.bits & 0x01) != 0)
+        V1_2_WARNING_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1.8V Warning Monitor Int Enable"]
     #[inline(always)]
     pub fn v1_8_warning(&self) -> V1_8_WARNING_R {
-        V1_8_WARNING_R::new(((self.bits >> 1) & 0x01) != 0)
+        V1_8_WARNING_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Warning Monitor Int Enable"]
     #[inline(always)]
     pub fn rtc_warning(&self) -> RTC_WARNING_R {
-        RTC_WARNING_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTC_WARNING_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - VDDA Warning Monitor Int Enable"]
     #[inline(always)]
     pub fn vdda_warning(&self) -> VDDA_WARNING_R {
-        VDDA_WARNING_R::new(((self.bits >> 3) & 0x01) != 0)
+        VDDA_WARNING_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - VDDB Warning Monitor Int Enable"]
     #[inline(always)]
     pub fn vddb_warning(&self) -> VDDB_WARNING_R {
-        VDDB_WARNING_R::new(((self.bits >> 4) & 0x01) != 0)
+        VDDB_WARNING_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

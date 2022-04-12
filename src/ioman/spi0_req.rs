@@ -67,7 +67,7 @@ impl<'a> CORE_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> SS0_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -145,7 +145,7 @@ impl<'a> SS1_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -184,7 +184,7 @@ impl<'a> SS2_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -223,7 +223,7 @@ impl<'a> SS3_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -262,7 +262,7 @@ impl<'a> SS4_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -299,7 +299,7 @@ impl<'a> QUAD_IO_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -336,7 +336,7 @@ impl<'a> FAST_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -344,47 +344,47 @@ impl R {
     #[doc = "Bit 4 - SPI Master 0 Core I/O Request"]
     #[inline(always)]
     pub fn core_io_req(&self) -> CORE_IO_REQ_R {
-        CORE_IO_REQ_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE_IO_REQ_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 8 - SPI Master 0 SS\\[0\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss0_io_req(&self) -> SS0_IO_REQ_R {
-        SS0_IO_REQ_R::new(((self.bits >> 8) & 0x01) != 0)
+        SS0_IO_REQ_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - SPI Master 0 SS\\[1\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss1_io_req(&self) -> SS1_IO_REQ_R {
-        SS1_IO_REQ_R::new(((self.bits >> 9) & 0x01) != 0)
+        SS1_IO_REQ_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - SPI Master 0 SS\\[2\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss2_io_req(&self) -> SS2_IO_REQ_R {
-        SS2_IO_REQ_R::new(((self.bits >> 10) & 0x01) != 0)
+        SS2_IO_REQ_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - SPI Master 0 SS\\[3\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss3_io_req(&self) -> SS3_IO_REQ_R {
-        SS3_IO_REQ_R::new(((self.bits >> 11) & 0x01) != 0)
+        SS3_IO_REQ_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - SPI Master 0 SS\\[4\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss4_io_req(&self) -> SS4_IO_REQ_R {
-        SS4_IO_REQ_R::new(((self.bits >> 12) & 0x01) != 0)
+        SS4_IO_REQ_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 20 - SPI Master 0 Quad I/O Request"]
     #[inline(always)]
     pub fn quad_io_req(&self) -> QUAD_IO_REQ_R {
-        QUAD_IO_REQ_R::new(((self.bits >> 20) & 0x01) != 0)
+        QUAD_IO_REQ_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 24 - SPI Master 0 Fast Mode Request"]
     #[inline(always)]
     pub fn fast_mode(&self) -> FAST_MODE_R {
-        FAST_MODE_R::new(((self.bits >> 24) & 0x01) != 0)
+        FAST_MODE_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

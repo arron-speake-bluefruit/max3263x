@@ -94,7 +94,7 @@ impl<'a> TRIM_CONTROL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 18 - Trim Direction"]
     #[inline(always)]
     pub fn trim_control(&self) -> TRIM_CONTROL_R {
-        TRIM_CONTROL_R::new(((self.bits >> 18) & 0x01) != 0)
+        TRIM_CONTROL_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {

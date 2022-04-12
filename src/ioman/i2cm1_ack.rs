@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bit 4 - I2C Master 1 I/O Acknowledge"]
     #[inline(always)]
     pub fn mapping_ack(&self) -> MAPPING_ACK_R {
-        MAPPING_ACK_R::new(((self.bits >> 4) & 0x01) != 0)
+        MAPPING_ACK_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

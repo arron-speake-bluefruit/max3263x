@@ -94,7 +94,7 @@ impl<'a> TEN_BIT_ID_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SLAVE_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 12 - 10-bit ID Mode"]
     #[inline(always)]
     pub fn ten_bit_id_mode(&self) -> TEN_BIT_ID_MODE_R {
-        TEN_BIT_ID_MODE_R::new(((self.bits >> 12) & 0x01) != 0)
+        TEN_BIT_ID_MODE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 14 - Slave Reset"]
     #[inline(always)]
     pub fn slave_reset(&self) -> SLAVE_RESET_R {
-        SLAVE_RESET_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLAVE_RESET_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {

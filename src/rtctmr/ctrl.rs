@@ -67,7 +67,7 @@ impl<'a> ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -89,7 +89,7 @@ impl<'a> CLEAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> USE_ASYNC_FLAGS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> AGGRESSIVE_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -351,77 +351,77 @@ impl R {
     #[doc = "Bit 0 - RTC Timer Enable"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new((self.bits & 0x01) != 0)
+        ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Transaction Pending"]
     #[inline(always)]
     pub fn pending(&self) -> PENDING_R {
-        PENDING_R::new(((self.bits >> 2) & 0x01) != 0)
+        PENDING_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Use Async RTC Flags"]
     #[inline(always)]
     pub fn use_async_flags(&self) -> USE_ASYNC_FLAGS_R {
-        USE_ASYNC_FLAGS_R::new(((self.bits >> 3) & 0x01) != 0)
+        USE_ASYNC_FLAGS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Use Aggressive Reset Mode"]
     #[inline(always)]
     pub fn aggressive_rst(&self) -> AGGRESSIVE_RST_R {
-        AGGRESSIVE_RST_R::new(((self.bits >> 4) & 0x01) != 0)
+        AGGRESSIVE_RST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 16 - Enable RTC in Active Modes"]
     #[inline(always)]
     pub fn en_active(&self) -> EN_ACTIVE_R {
-        EN_ACTIVE_R::new(((self.bits >> 16) & 0x01) != 0)
+        EN_ACTIVE_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - osc_goto_low_r transaction is pending"]
     #[inline(always)]
     pub fn osc_goto_low_active(&self) -> OSC_GOTO_LOW_ACTIVE_R {
-        OSC_GOTO_LOW_ACTIVE_R::new(((self.bits >> 17) & 0x01) != 0)
+        OSC_GOTO_LOW_ACTIVE_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - osc_force_mode transaction is pending"]
     #[inline(always)]
     pub fn osc_frce_sm_en_active(&self) -> OSC_FRCE_SM_EN_ACTIVE_R {
-        OSC_FRCE_SM_EN_ACTIVE_R::new(((self.bits >> 18) & 0x01) != 0)
+        OSC_FRCE_SM_EN_ACTIVE_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - osc_force_state transaction is pending"]
     #[inline(always)]
     pub fn osc_frce_st_active(&self) -> OSC_FRCE_ST_ACTIVE_R {
-        OSC_FRCE_ST_ACTIVE_R::new(((self.bits >> 19) & 0x01) != 0)
+        OSC_FRCE_ST_ACTIVE_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - timer_set_active"]
     #[inline(always)]
     pub fn set_active(&self) -> SET_ACTIVE_R {
-        SET_ACTIVE_R::new(((self.bits >> 20) & 0x01) != 0)
+        SET_ACTIVE_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - RTC clear is pending"]
     #[inline(always)]
     pub fn clr_active(&self) -> CLR_ACTIVE_R {
-        CLR_ACTIVE_R::new(((self.bits >> 21) & 0x01) != 0)
+        CLR_ACTIVE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - rollover clr is pending"]
     #[inline(always)]
     pub fn rollover_clr_active(&self) -> ROLLOVER_CLR_ACTIVE_R {
-        ROLLOVER_CLR_ACTIVE_R::new(((self.bits >> 22) & 0x01) != 0)
+        ROLLOVER_CLR_ACTIVE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - prescale cmpr0 is pending"]
     #[inline(always)]
     pub fn prescale_cmpr0_active(&self) -> PRESCALE_CMPR0_ACTIVE_R {
-        PRESCALE_CMPR0_ACTIVE_R::new(((self.bits >> 23) & 0x01) != 0)
+        PRESCALE_CMPR0_ACTIVE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - prescale update transaction is pending"]
     #[inline(always)]
     pub fn prescale_update_active(&self) -> PRESCALE_UPDATE_ACTIVE_R {
-        PRESCALE_UPDATE_ACTIVE_R::new(((self.bits >> 24) & 0x01) != 0)
+        PRESCALE_UPDATE_ACTIVE_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - cmpr1 clear transaction is pending"]
     #[inline(always)]
     pub fn cmpr1_clr_active(&self) -> CMPR1_CLR_ACTIVE_R {
-        CMPR1_CLR_ACTIVE_R::new(((self.bits >> 25) & 0x01) != 0)
+        CMPR1_CLR_ACTIVE_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - cmpr0 clear transaction is pending"]
     #[inline(always)]
     pub fn cmpr0_clr_active(&self) -> CMPR0_CLR_ACTIVE_R {
-        CMPR0_CLR_ACTIVE_R::new(((self.bits >> 26) & 0x01) != 0)
+        CMPR0_CLR_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
 impl W {

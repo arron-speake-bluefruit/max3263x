@@ -94,7 +94,7 @@ impl<'a> READ_ONLY_FL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -122,12 +122,12 @@ impl R {
     #[doc = "Bit 8 - Read Only Flag"]
     #[inline(always)]
     pub fn read_only_fl(&self) -> READ_ONLY_FL_R {
-        READ_ONLY_FL_R::new(((self.bits >> 8) & 0x01) != 0)
+        READ_ONLY_FL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Byte Updated Flag"]
     #[inline(always)]
     pub fn data_updated_fl(&self) -> DATA_UPDATED_FL_R {
-        DATA_UPDATED_FL_R::new(((self.bits >> 9) & 0x01) != 0)
+        DATA_UPDATED_FL_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

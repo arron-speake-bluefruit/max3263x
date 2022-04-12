@@ -67,7 +67,7 @@ impl<'a> I2C_1MS_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - I2C 1ms Timer Enable"]
     #[inline(always)]
     pub fn i2c_1ms_timer_en(&self) -> I2C_1MS_TIMER_EN_R {
-        I2C_1MS_TIMER_EN_R::new((self.bits & 0x01) != 0)
+        I2C_1MS_TIMER_EN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> START_OW_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SRA_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BIT_BANG_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -193,7 +193,7 @@ impl<'a> PRESENCE_DETECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -201,27 +201,27 @@ impl R {
     #[doc = "Bit 0 - Start OW Reset"]
     #[inline(always)]
     pub fn start_ow_reset(&self) -> START_OW_RESET_R {
-        START_OW_RESET_R::new((self.bits & 0x01) != 0)
+        START_OW_RESET_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SRA Mode"]
     #[inline(always)]
     pub fn sra_mode(&self) -> SRA_MODE_R {
-        SRA_MODE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SRA_MODE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Bit Bang Output Enable"]
     #[inline(always)]
     pub fn bit_bang_oe(&self) -> BIT_BANG_OE_R {
-        BIT_BANG_OE_R::new(((self.bits >> 2) & 0x01) != 0)
+        BIT_BANG_OE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - OW Input State"]
     #[inline(always)]
     pub fn ow_input(&self) -> OW_INPUT_R {
-        OW_INPUT_R::new(((self.bits >> 3) & 0x01) != 0)
+        OW_INPUT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - Presence Pulse Detected"]
     #[inline(always)]
     pub fn presence_detect(&self) -> PRESENCE_DETECT_R {
-        PRESENCE_DETECT_R::new(((self.bits >> 7) & 0x01) != 0)
+        PRESENCE_DETECT_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

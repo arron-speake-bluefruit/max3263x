@@ -94,7 +94,7 @@ impl<'a> BYTESWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 15 - Big Endian Byte Mode"]
     #[inline(always)]
     pub fn byteswap(&self) -> BYTESWAP_R {
-        BYTESWAP_R::new(((self.bits >> 15) & 0x01) != 0)
+        BYTESWAP_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

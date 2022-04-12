@@ -67,7 +67,7 @@ impl<'a> TX_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_NACKED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_LOST_ARBITR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TX_TIMEOUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TX_FIFO_EMPTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> TX_FIFO_3Q_EMPTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RX_FIFO_NOT_EMPTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_FIFO_2Q_FULL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> RX_FIFO_3Q_FULL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RX_FIFO_FULL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -408,52 +408,52 @@ impl R {
     #[doc = "Bit 0 - Transaction Done Int Enable"]
     #[inline(always)]
     pub fn tx_done(&self) -> TX_DONE_R {
-        TX_DONE_R::new((self.bits & 0x01) != 0)
+        TX_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Transaction NACKed Int Enable"]
     #[inline(always)]
     pub fn tx_nacked(&self) -> TX_NACKED_R {
-        TX_NACKED_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_NACKED_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Transaction Lost Arbitration IntEnable"]
     #[inline(always)]
     pub fn tx_lost_arbitr(&self) -> TX_LOST_ARBITR_R {
-        TX_LOST_ARBITR_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_LOST_ARBITR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Transaction Timed Out Int Enable"]
     #[inline(always)]
     pub fn tx_timeout(&self) -> TX_TIMEOUT_R {
-        TX_TIMEOUT_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_TIMEOUT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Transaction FIFO Empty Int Enable"]
     #[inline(always)]
     pub fn tx_fifo_empty(&self) -> TX_FIFO_EMPTY_R {
-        TX_FIFO_EMPTY_R::new(((self.bits >> 4) & 0x01) != 0)
+        TX_FIFO_EMPTY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Transaction FIFO 3Q Empty Int Enable"]
     #[inline(always)]
     pub fn tx_fifo_3q_empty(&self) -> TX_FIFO_3Q_EMPTY_R {
-        TX_FIFO_3Q_EMPTY_R::new(((self.bits >> 5) & 0x01) != 0)
+        TX_FIFO_3Q_EMPTY_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Results FIFO Not Empty Int Enable"]
     #[inline(always)]
     pub fn rx_fifo_not_empty(&self) -> RX_FIFO_NOT_EMPTY_R {
-        RX_FIFO_NOT_EMPTY_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_FIFO_NOT_EMPTY_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Results FIFO 2Q Full Int Enable"]
     #[inline(always)]
     pub fn rx_fifo_2q_full(&self) -> RX_FIFO_2Q_FULL_R {
-        RX_FIFO_2Q_FULL_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_FIFO_2Q_FULL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Results FIFO 3Q Full Int Enable"]
     #[inline(always)]
     pub fn rx_fifo_3q_full(&self) -> RX_FIFO_3Q_FULL_R {
-        RX_FIFO_3Q_FULL_R::new(((self.bits >> 8) & 0x01) != 0)
+        RX_FIFO_3Q_FULL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Results FIFO Full Int Enable"]
     #[inline(always)]
     pub fn rx_fifo_full(&self) -> RX_FIFO_FULL_R {
-        RX_FIFO_FULL_R::new(((self.bits >> 9) & 0x01) != 0)
+        RX_FIFO_FULL_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

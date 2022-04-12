@@ -67,7 +67,7 @@ impl<'a> ADC_DONE_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ADC_REF_READY_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ADC_HI_LIMIT_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> ADC_LO_LIMIT_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> ADC_OVERFLOW_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RO_CAL_DONE_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> ADC_DONE_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> ADC_REF_READY_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> ADC_HI_LIMIT_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> ADC_LO_LIMIT_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> ADC_OVERFLOW_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> RO_CAL_DONE_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -497,67 +497,67 @@ impl R {
     #[doc = "Bit 0 - ADC Done Interrupt Enable"]
     #[inline(always)]
     pub fn adc_done_ie(&self) -> ADC_DONE_IE_R {
-        ADC_DONE_IE_R::new((self.bits & 0x01) != 0)
+        ADC_DONE_IE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ADC Reference Ready Interrupt Enable"]
     #[inline(always)]
     pub fn adc_ref_ready_ie(&self) -> ADC_REF_READY_IE_R {
-        ADC_REF_READY_IE_R::new(((self.bits >> 1) & 0x01) != 0)
+        ADC_REF_READY_IE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - ADC Hi Limit Monitor Interrupt Enable"]
     #[inline(always)]
     pub fn adc_hi_limit_ie(&self) -> ADC_HI_LIMIT_IE_R {
-        ADC_HI_LIMIT_IE_R::new(((self.bits >> 2) & 0x01) != 0)
+        ADC_HI_LIMIT_IE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - ADC Lo Limit Monitor Interrupt Enable"]
     #[inline(always)]
     pub fn adc_lo_limit_ie(&self) -> ADC_LO_LIMIT_IE_R {
-        ADC_LO_LIMIT_IE_R::new(((self.bits >> 3) & 0x01) != 0)
+        ADC_LO_LIMIT_IE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - ADC Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn adc_overflow_ie(&self) -> ADC_OVERFLOW_IE_R {
-        ADC_OVERFLOW_IE_R::new(((self.bits >> 4) & 0x01) != 0)
+        ADC_OVERFLOW_IE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RO Cal Done Interrupt Enable"]
     #[inline(always)]
     pub fn ro_cal_done_ie(&self) -> RO_CAL_DONE_IE_R {
-        RO_CAL_DONE_IE_R::new(((self.bits >> 5) & 0x01) != 0)
+        RO_CAL_DONE_IE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 16 - ADC Done Interrupt Flag"]
     #[inline(always)]
     pub fn adc_done_if(&self) -> ADC_DONE_IF_R {
-        ADC_DONE_IF_R::new(((self.bits >> 16) & 0x01) != 0)
+        ADC_DONE_IF_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - ADC Reference Ready Interrupt Flag"]
     #[inline(always)]
     pub fn adc_ref_ready_if(&self) -> ADC_REF_READY_IF_R {
-        ADC_REF_READY_IF_R::new(((self.bits >> 17) & 0x01) != 0)
+        ADC_REF_READY_IF_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - ADC Hi Limit Monitor Interrupt Flag"]
     #[inline(always)]
     pub fn adc_hi_limit_if(&self) -> ADC_HI_LIMIT_IF_R {
-        ADC_HI_LIMIT_IF_R::new(((self.bits >> 18) & 0x01) != 0)
+        ADC_HI_LIMIT_IF_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - ADC Lo Limit Monitor Interrupt Flag"]
     #[inline(always)]
     pub fn adc_lo_limit_if(&self) -> ADC_LO_LIMIT_IF_R {
-        ADC_LO_LIMIT_IF_R::new(((self.bits >> 19) & 0x01) != 0)
+        ADC_LO_LIMIT_IF_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - ADC Overflow Interrupt Flag"]
     #[inline(always)]
     pub fn adc_overflow_if(&self) -> ADC_OVERFLOW_IF_R {
-        ADC_OVERFLOW_IF_R::new(((self.bits >> 20) & 0x01) != 0)
+        ADC_OVERFLOW_IF_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - RO Cal Done Interrupt Flag"]
     #[inline(always)]
     pub fn ro_cal_done_if(&self) -> RO_CAL_DONE_IF_R {
-        RO_CAL_DONE_IF_R::new(((self.bits >> 21) & 0x01) != 0)
+        RO_CAL_DONE_IF_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - ADC Interrupt Pending Status"]
     #[inline(always)]
     pub fn adc_int_pending(&self) -> ADC_INT_PENDING_R {
-        ADC_INT_PENDING_R::new(((self.bits >> 22) & 0x01) != 0)
+        ADC_INT_PENDING_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {

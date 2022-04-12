@@ -57,7 +57,7 @@ impl<'a> CM4_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> AHB32_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> ICACHE_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> FLASH_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> SRAM_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> APB_BRIDGE_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> SYSMAN_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> PTP_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> SSB_MUX_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -300,7 +300,7 @@ impl<'a> PAD_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -327,7 +327,7 @@ impl<'a> SPIX_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -354,7 +354,7 @@ impl<'a> PMU_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -381,7 +381,7 @@ impl<'a> USB_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -408,7 +408,7 @@ impl<'a> CRC_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -435,7 +435,7 @@ impl<'a> TPU_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -462,7 +462,7 @@ impl<'a> WATCHDOG0_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -470,82 +470,82 @@ impl R {
     #[doc = "Bits 0:1 - Clock Gating Control for CM4 CPU"]
     #[inline(always)]
     pub fn cm4_clk_gater(&self) -> CM4_CLK_GATER_R {
-        CM4_CLK_GATER_R::new((self.bits & 0x03) as u8)
+        CM4_CLK_GATER_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Clock Gating Control for AHB32"]
     #[inline(always)]
     pub fn ahb32_clk_gater(&self) -> AHB32_CLK_GATER_R {
-        AHB32_CLK_GATER_R::new(((self.bits >> 2) & 0x03) as u8)
+        AHB32_CLK_GATER_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Clock Gating Control for Instruction Cache"]
     #[inline(always)]
     pub fn icache_clk_gater(&self) -> ICACHE_CLK_GATER_R {
-        ICACHE_CLK_GATER_R::new(((self.bits >> 4) & 0x03) as u8)
+        ICACHE_CLK_GATER_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Clock Gating Control for Flash Memory"]
     #[inline(always)]
     pub fn flash_clk_gater(&self) -> FLASH_CLK_GATER_R {
-        FLASH_CLK_GATER_R::new(((self.bits >> 6) & 0x03) as u8)
+        FLASH_CLK_GATER_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Clock Gating Control for SRAM"]
     #[inline(always)]
     pub fn sram_clk_gater(&self) -> SRAM_CLK_GATER_R {
-        SRAM_CLK_GATER_R::new(((self.bits >> 8) & 0x03) as u8)
+        SRAM_CLK_GATER_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Clock Gating Control for AHB-to-APB Bridge"]
     #[inline(always)]
     pub fn apb_bridge_clk_gater(&self) -> APB_BRIDGE_CLK_GATER_R {
-        APB_BRIDGE_CLK_GATER_R::new(((self.bits >> 10) & 0x03) as u8)
+        APB_BRIDGE_CLK_GATER_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Clock Gating Control for CLKMAN, PWRMAN, and IOMAN"]
     #[inline(always)]
     pub fn sysman_clk_gater(&self) -> SYSMAN_CLK_GATER_R {
-        SYSMAN_CLK_GATER_R::new(((self.bits >> 12) & 0x03) as u8)
+        SYSMAN_CLK_GATER_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Clock Gating Control for PTP Logic"]
     #[inline(always)]
     pub fn ptp_clk_gater(&self) -> PTP_CLK_GATER_R {
-        PTP_CLK_GATER_R::new(((self.bits >> 14) & 0x03) as u8)
+        PTP_CLK_GATER_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Clock Gating Control for SSB Mux"]
     #[inline(always)]
     pub fn ssb_mux_clk_gater(&self) -> SSB_MUX_CLK_GATER_R {
-        SSB_MUX_CLK_GATER_R::new(((self.bits >> 16) & 0x03) as u8)
+        SSB_MUX_CLK_GATER_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - Clock Gating Control for Pad Mode Filter"]
     #[inline(always)]
     pub fn pad_clk_gater(&self) -> PAD_CLK_GATER_R {
-        PAD_CLK_GATER_R::new(((self.bits >> 18) & 0x03) as u8)
+        PAD_CLK_GATER_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - Clock Gating Control for SPI XIP"]
     #[inline(always)]
     pub fn spix_clk_gater(&self) -> SPIX_CLK_GATER_R {
-        SPIX_CLK_GATER_R::new(((self.bits >> 20) & 0x03) as u8)
+        SPIX_CLK_GATER_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Clock Gating Control for PMU"]
     #[inline(always)]
     pub fn pmu_clk_gater(&self) -> PMU_CLK_GATER_R {
-        PMU_CLK_GATER_R::new(((self.bits >> 22) & 0x03) as u8)
+        PMU_CLK_GATER_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - Clock Gating Control for USB"]
     #[inline(always)]
     pub fn usb_clk_gater(&self) -> USB_CLK_GATER_R {
-        USB_CLK_GATER_R::new(((self.bits >> 24) & 0x03) as u8)
+        USB_CLK_GATER_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - Clock Gating Control for CRC"]
     #[inline(always)]
     pub fn crc_clk_gater(&self) -> CRC_CLK_GATER_R {
-        CRC_CLK_GATER_R::new(((self.bits >> 26) & 0x03) as u8)
+        CRC_CLK_GATER_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - Clock Gating Control for TPU"]
     #[inline(always)]
     pub fn tpu_clk_gater(&self) -> TPU_CLK_GATER_R {
-        TPU_CLK_GATER_R::new(((self.bits >> 28) & 0x03) as u8)
+        TPU_CLK_GATER_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - Clock Gating Control for Watchdog Timer 0"]
     #[inline(always)]
     pub fn watchdog0_clk_gater(&self) -> WATCHDOG0_CLK_GATER_R {
-        WATCHDOG0_CLK_GATER_R::new(((self.bits >> 30) & 0x03) as u8)
+        WATCHDOG0_CLK_GATER_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

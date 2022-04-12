@@ -131,35 +131,35 @@ impl R {
     #[doc = "Bit 4 - SPIX Core I/O Acknowledge"]
     #[inline(always)]
     pub fn core_io_ack(&self) -> CORE_IO_ACK_R {
-        CORE_IO_ACK_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE_IO_ACK_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 8 - SPIX SS\\[0\\]
 I/O Acknowledge"]
     #[inline(always)]
     pub fn ss0_io_ack(&self) -> SS0_IO_ACK_R {
-        SS0_IO_ACK_R::new(((self.bits >> 8) & 0x01) != 0)
+        SS0_IO_ACK_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - SPIX SS\\[1\\]
 I/O Acknowledge"]
     #[inline(always)]
     pub fn ss1_io_ack(&self) -> SS1_IO_ACK_R {
-        SS1_IO_ACK_R::new(((self.bits >> 9) & 0x01) != 0)
+        SS1_IO_ACK_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - SPIX SS\\[2\\]
 I/O Acknowledge"]
     #[inline(always)]
     pub fn ss2_io_ack(&self) -> SS2_IO_ACK_R {
-        SS2_IO_ACK_R::new(((self.bits >> 10) & 0x01) != 0)
+        SS2_IO_ACK_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - SPIX Quad I/O Acknowledge"]
     #[inline(always)]
     pub fn quad_io_ack(&self) -> QUAD_IO_ACK_R {
-        QUAD_IO_ACK_R::new(((self.bits >> 12) & 0x01) != 0)
+        QUAD_IO_ACK_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 16 - SPIX Fast Mode Acknowledge"]
     #[inline(always)]
     pub fn fast_mode(&self) -> FAST_MODE_R {
-        FAST_MODE_R::new(((self.bits >> 16) & 0x01) != 0)
+        FAST_MODE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> NANO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 2 - Enable nanoring oscillator output"]
     #[inline(always)]
     pub fn nano_en(&self) -> NANO_EN_R {
-        NANO_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        NANO_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

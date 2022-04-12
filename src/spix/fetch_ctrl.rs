@@ -146,7 +146,7 @@ impl<'a> CMD_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -235,7 +235,7 @@ impl<'a> ADDR_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -324,7 +324,7 @@ impl<'a> DATA_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -337,17 +337,17 @@ impl R {
     #[doc = "Bits 8:9 - Command Width"]
     #[inline(always)]
     pub fn cmd_width(&self) -> CMD_WIDTH_R {
-        CMD_WIDTH_R::new(((self.bits >> 8) & 0x03) as u8)
+        CMD_WIDTH_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Address Width"]
     #[inline(always)]
     pub fn addr_width(&self) -> ADDR_WIDTH_R {
-        ADDR_WIDTH_R::new(((self.bits >> 10) & 0x03) as u8)
+        ADDR_WIDTH_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Data Width"]
     #[inline(always)]
     pub fn data_width(&self) -> DATA_WIDTH_R {
-        DATA_WIDTH_R::new(((self.bits >> 12) & 0x03) as u8)
+        DATA_WIDTH_R::new(((self.bits >> 12) & 3) as u8)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> CPU_ADC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ADC_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BUF_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> ADC_REFBUF_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> ADC_CHGPUMP_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> BUF_CHOP_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BUF_PUMP_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> BUF_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> ADC_REFSCL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> ADC_SCALE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> ADC_REFSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> ADC_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -538,7 +538,7 @@ impl<'a> ADC_XREF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -575,7 +575,7 @@ impl<'a> ADC_DATAALIGN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -610,62 +610,62 @@ impl R {
     #[doc = "Bit 0 - Start ADC Conversion"]
     #[inline(always)]
     pub fn cpu_adc_start(&self) -> CPU_ADC_START_R {
-        CPU_ADC_START_R::new((self.bits & 0x01) != 0)
+        CPU_ADC_START_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ADC Power Up"]
     #[inline(always)]
     pub fn adc_pu(&self) -> ADC_PU_R {
-        ADC_PU_R::new(((self.bits >> 1) & 0x01) != 0)
+        ADC_PU_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - ADC Input Buffer Power Up"]
     #[inline(always)]
     pub fn buf_pu(&self) -> BUF_PU_R {
-        BUF_PU_R::new(((self.bits >> 2) & 0x01) != 0)
+        BUF_PU_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - ADC Reference Buffer Power Up"]
     #[inline(always)]
     pub fn adc_refbuf_pu(&self) -> ADC_REFBUF_PU_R {
-        ADC_REFBUF_PU_R::new(((self.bits >> 3) & 0x01) != 0)
+        ADC_REFBUF_PU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - ADC Charge Pump Power Up"]
     #[inline(always)]
     pub fn adc_chgpump_pu(&self) -> ADC_CHGPUMP_PU_R {
-        ADC_CHGPUMP_PU_R::new(((self.bits >> 4) & 0x01) != 0)
+        ADC_CHGPUMP_PU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ADC Input Buffer Chop Disable (INTERNAL ONLY)"]
     #[inline(always)]
     pub fn buf_chop_dis(&self) -> BUF_CHOP_DIS_R {
-        BUF_CHOP_DIS_R::new(((self.bits >> 5) & 0x01) != 0)
+        BUF_CHOP_DIS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Disable Use of Charge Pump Output by Input Buffer (INTERNAL)"]
     #[inline(always)]
     pub fn buf_pump_dis(&self) -> BUF_PUMP_DIS_R {
-        BUF_PUMP_DIS_R::new(((self.bits >> 6) & 0x01) != 0)
+        BUF_PUMP_DIS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Bypass Input Buffer"]
     #[inline(always)]
     pub fn buf_bypass(&self) -> BUF_BYPASS_R {
-        BUF_BYPASS_R::new(((self.bits >> 7) & 0x01) != 0)
+        BUF_BYPASS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - ADC Reference Scale"]
     #[inline(always)]
     pub fn adc_refscl(&self) -> ADC_REFSCL_R {
-        ADC_REFSCL_R::new(((self.bits >> 8) & 0x01) != 0)
+        ADC_REFSCL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - ADC Scale"]
     #[inline(always)]
     pub fn adc_scale(&self) -> ADC_SCALE_R {
-        ADC_SCALE_R::new(((self.bits >> 9) & 0x01) != 0)
+        ADC_SCALE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - ADC Reference (VRef) Select (INTERNAL ONLY)"]
     #[inline(always)]
     pub fn adc_refsel(&self) -> ADC_REFSEL_R {
-        ADC_REFSEL_R::new(((self.bits >> 10) & 0x01) != 0)
+        ADC_REFSEL_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - ADC Clock Enable"]
     #[inline(always)]
     pub fn adc_clk_en(&self) -> ADC_CLK_EN_R {
-        ADC_CLK_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        ADC_CLK_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:15 - ADC Channel Select"]
     #[inline(always)]
@@ -675,12 +675,12 @@ impl R {
     #[doc = "Bit 16 - Enable Use of ADC External Reference"]
     #[inline(always)]
     pub fn adc_xref(&self) -> ADC_XREF_R {
-        ADC_XREF_R::new(((self.bits >> 16) & 0x01) != 0)
+        ADC_XREF_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - ADC Data Alignment Select"]
     #[inline(always)]
     pub fn adc_dataalign(&self) -> ADC_DATAALIGN_R {
-        ADC_DATAALIGN_R::new(((self.bits >> 17) & 0x01) != 0)
+        ADC_DATAALIGN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 24:31 - Delay from ADC Powerup Until ADC Ready Asserted"]
     #[inline(always)]

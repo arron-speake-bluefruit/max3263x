@@ -67,7 +67,7 @@ impl<'a> TIMEOUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRE_WIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RESET_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Watchdog Timeout Interrupt Flag"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
-        TIMEOUT_R::new((self.bits & 0x01) != 0)
+        TIMEOUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Watchdog Pre-Window Clear Interrupt Flag"]
     #[inline(always)]
     pub fn pre_win(&self) -> PRE_WIN_R {
-        PRE_WIN_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRE_WIN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Watchdog Reset Flag"]
     #[inline(always)]
     pub fn reset_out(&self) -> RESET_OUT_R {
-        RESET_OUT_R::new(((self.bits >> 2) & 0x01) != 0)
+        RESET_OUT_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

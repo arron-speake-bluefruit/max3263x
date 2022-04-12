@@ -57,7 +57,7 @@ impl<'a> I2CS_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> SPI0_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> SPI1_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> SPI2_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> SPI_BRIDGE_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> OWM_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> ADC_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> SPIS_CLK_GATER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -254,42 +254,42 @@ impl R {
     #[doc = "Bits 0:1 - Clock Gating Control for I2C Slave"]
     #[inline(always)]
     pub fn i2cs_clk_gater(&self) -> I2CS_CLK_GATER_R {
-        I2CS_CLK_GATER_R::new((self.bits & 0x03) as u8)
+        I2CS_CLK_GATER_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Clock Gating Control for SPI Master 0"]
     #[inline(always)]
     pub fn spi0_clk_gater(&self) -> SPI0_CLK_GATER_R {
-        SPI0_CLK_GATER_R::new(((self.bits >> 2) & 0x03) as u8)
+        SPI0_CLK_GATER_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Clock Gating Control for SPI Master 1"]
     #[inline(always)]
     pub fn spi1_clk_gater(&self) -> SPI1_CLK_GATER_R {
-        SPI1_CLK_GATER_R::new(((self.bits >> 4) & 0x03) as u8)
+        SPI1_CLK_GATER_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Clock Gating Control for SPI Master 2"]
     #[inline(always)]
     pub fn spi2_clk_gater(&self) -> SPI2_CLK_GATER_R {
-        SPI2_CLK_GATER_R::new(((self.bits >> 6) & 0x03) as u8)
+        SPI2_CLK_GATER_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Clock Gating Control for SPI Bridge"]
     #[inline(always)]
     pub fn spi_bridge_clk_gater(&self) -> SPI_BRIDGE_CLK_GATER_R {
-        SPI_BRIDGE_CLK_GATER_R::new(((self.bits >> 8) & 0x03) as u8)
+        SPI_BRIDGE_CLK_GATER_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Clock Gating Control for 1-Wire Master (OWM)"]
     #[inline(always)]
     pub fn owm_clk_gater(&self) -> OWM_CLK_GATER_R {
-        OWM_CLK_GATER_R::new(((self.bits >> 10) & 0x03) as u8)
+        OWM_CLK_GATER_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Clock Gating Control for ADC"]
     #[inline(always)]
     pub fn adc_clk_gater(&self) -> ADC_CLK_GATER_R {
-        ADC_CLK_GATER_R::new(((self.bits >> 12) & 0x03) as u8)
+        ADC_CLK_GATER_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Clock Gating Control for SPI Slave"]
     #[inline(always)]
     pub fn spis_clk_gater(&self) -> SPIS_CLK_GATER_R {
-        SPIS_CLK_GATER_R::new(((self.bits >> 14) & 0x03) as u8)
+        SPIS_CLK_GATER_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {

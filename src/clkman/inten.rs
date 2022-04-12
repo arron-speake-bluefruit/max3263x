@@ -67,7 +67,7 @@ impl<'a> CRYPTO_STABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SYS_RO_STABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Crypto Oscillator Stable Interrupt Enable"]
     #[inline(always)]
     pub fn crypto_stable(&self) -> CRYPTO_STABLE_R {
-        CRYPTO_STABLE_R::new((self.bits & 0x01) != 0)
+        CRYPTO_STABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - System Oscillator Stable Interrupt Enable"]
     #[inline(always)]
     pub fn sys_ro_stable(&self) -> SYS_RO_STABLE_R {
-        SYS_RO_STABLE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SYS_RO_STABLE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

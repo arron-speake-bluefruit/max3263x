@@ -67,7 +67,7 @@ impl<'a> PWR_CLR_IO_EVENT_LATCH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PWR_CLR_IO_CFG_LATCH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PWR_MBUS_GATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PWR_DISCHARGE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PWR_TVDD12_WELL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - Clear all GPIO Event Seen Latches"]
     #[inline(always)]
     pub fn pwr_clr_io_event_latch(&self) -> PWR_CLR_IO_EVENT_LATCH_R {
-        PWR_CLR_IO_EVENT_LATCH_R::new((self.bits & 0x01) != 0)
+        PWR_CLR_IO_EVENT_LATCH_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Clear all GPIO Configuration Latches"]
     #[inline(always)]
     pub fn pwr_clr_io_cfg_latch(&self) -> PWR_CLR_IO_CFG_LATCH_R {
-        PWR_CLR_IO_CFG_LATCH_R::new(((self.bits >> 1) & 0x01) != 0)
+        PWR_CLR_IO_CFG_LATCH_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Freeze GPIO MBus State"]
     #[inline(always)]
     pub fn pwr_mbus_gate(&self) -> PWR_MBUS_GATE_R {
-        PWR_MBUS_GATE_R::new(((self.bits >> 2) & 0x01) != 0)
+        PWR_MBUS_GATE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Enable Flash Discharge During Powerfail Event"]
     #[inline(always)]
     pub fn pwr_discharge_en(&self) -> PWR_DISCHARGE_EN_R {
-        PWR_DISCHARGE_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        PWR_DISCHARGE_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - TVDD12 Well Switch"]
     #[inline(always)]
     pub fn pwr_tvdd12_well(&self) -> PWR_TVDD12_WELL_R {
-        PWR_TVDD12_WELL_R::new(((self.bits >> 4) & 0x01) != 0)
+        PWR_TVDD12_WELL_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

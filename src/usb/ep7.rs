@@ -57,7 +57,7 @@ impl<'a> EP_DIR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> EP_BUF2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> EP_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> EP_NAK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> EP_DT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> EP_STALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> EP_ST_STALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> EP_ST_ACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -324,42 +324,42 @@ impl R {
     #[doc = "Bits 0:1 - Endpoint Direction"]
     #[inline(always)]
     pub fn ep_dir(&self) -> EP_DIR_R {
-        EP_DIR_R::new((self.bits & 0x03) as u8)
+        EP_DIR_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 3 - Endpoint Double Buffered Enable"]
     #[inline(always)]
     pub fn ep_buf2(&self) -> EP_BUF2_R {
-        EP_BUF2_R::new(((self.bits >> 3) & 0x01) != 0)
+        EP_BUF2_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Endpoint Transfer Complete Interrupt Enable"]
     #[inline(always)]
     pub fn ep_int_en(&self) -> EP_INT_EN_R {
-        EP_INT_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        EP_INT_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Endpoint NAK Interrupt Enable"]
     #[inline(always)]
     pub fn ep_nak_en(&self) -> EP_NAK_EN_R {
-        EP_NAK_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        EP_NAK_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Endpoint Data Toggle Clear"]
     #[inline(always)]
     pub fn ep_dt(&self) -> EP_DT_R {
-        EP_DT_R::new(((self.bits >> 6) & 0x01) != 0)
+        EP_DT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 8 - Endpoint Stall"]
     #[inline(always)]
     pub fn ep_stall(&self) -> EP_STALL_R {
-        EP_STALL_R::new(((self.bits >> 8) & 0x01) != 0)
+        EP_STALL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Endpoint Stall Status Stage of Control Transfer"]
     #[inline(always)]
     pub fn ep_st_stall(&self) -> EP_ST_STALL_R {
-        EP_ST_STALL_R::new(((self.bits >> 9) & 0x01) != 0)
+        EP_ST_STALL_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Endpoint Acknowledge Status Stage of Control Transfer"]
     #[inline(always)]
     pub fn ep_st_ack(&self) -> EP_ST_ACK_R {
-        EP_ST_ACK_R::new(((self.bits >> 10) & 0x01) != 0)
+        EP_ST_ACK_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

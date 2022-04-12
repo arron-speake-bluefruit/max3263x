@@ -67,7 +67,7 @@ impl<'a> ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LL_STOPPED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MANUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BUS_ERROR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TO_STAT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> TO_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> PS_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> INTERRUPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -378,47 +378,47 @@ impl R {
     #[doc = "Bit 0 - PMU Channel Enable"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new((self.bits & 0x01) != 0)
+        ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - Linked List Engine Status"]
     #[inline(always)]
     pub fn ll_stopped(&self) -> LL_STOPPED_R {
-        LL_STOPPED_R::new(((self.bits >> 2) & 0x01) != 0)
+        LL_STOPPED_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Manual Mode Enable"]
     #[inline(always)]
     pub fn manual(&self) -> MANUAL_R {
-        MANUAL_R::new(((self.bits >> 3) & 0x01) != 0)
+        MANUAL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - AHB Bus Error Interrupt Flag"]
     #[inline(always)]
     pub fn bus_error(&self) -> BUS_ERROR_R {
-        BUS_ERROR_R::new(((self.bits >> 4) & 0x01) != 0)
+        BUS_ERROR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - AHB Bus Timeout Interrupt Flag"]
     #[inline(always)]
     pub fn to_stat(&self) -> TO_STAT_R {
-        TO_STAT_R::new(((self.bits >> 6) & 0x01) != 0)
+        TO_STAT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 11:13 - Time Out Interval Select"]
     #[inline(always)]
     pub fn to_sel(&self) -> TO_SEL_R {
-        TO_SEL_R::new(((self.bits >> 11) & 0x07) as u8)
+        TO_SEL_R::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bits 14:15 - Time Out Interval Prescale Select"]
     #[inline(always)]
     pub fn ps_sel(&self) -> PS_SEL_R {
-        PS_SEL_R::new(((self.bits >> 14) & 0x03) as u8)
+        PS_SEL_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bit 16 - Descriptor Interrupt Flag"]
     #[inline(always)]
     pub fn interrupt(&self) -> INTERRUPT_R {
-        INTERRUPT_R::new(((self.bits >> 16) & 0x01) != 0)
+        INTERRUPT_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - PMU Channel Interrupt Enable"]
     #[inline(always)]
     pub fn int_en(&self) -> INT_EN_R {
-        INT_EN_R::new(((self.bits >> 17) & 0x01) != 0)
+        INT_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 24:28 - DMA Maximum Burst Size"]
     #[inline(always)]

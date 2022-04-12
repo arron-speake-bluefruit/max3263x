@@ -121,7 +121,7 @@ impl<'a> ALI_REQ_P6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl R {
     #[doc = "Bit 16 - Analog Input Mode Request: P6\\[0\\]"]
     #[inline(always)]
     pub fn ali_req_p6(&self) -> ALI_REQ_P6_R {
-        ALI_REQ_P6_R::new(((self.bits >> 16) & 0x01) != 0)
+        ALI_REQ_P6_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

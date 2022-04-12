@@ -84,7 +84,7 @@ impl<'a> PAD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> CLEAR_ALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> CTRL_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -171,17 +171,17 @@ impl R {
     #[doc = "Bits 8:9 - Wake-Up Pad Signal Mode"]
     #[inline(always)]
     pub fn pad_mode(&self) -> PAD_MODE_R {
-        PAD_MODE_R::new(((self.bits >> 8) & 0x03) as u8)
+        PAD_MODE_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 12 - Clear All WUD Pad States"]
     #[inline(always)]
     pub fn clear_all(&self) -> CLEAR_ALL_R {
-        CLEAR_ALL_R::new(((self.bits >> 12) & 0x01) != 0)
+        CLEAR_ALL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 16 - Enable WUD Control Modification"]
     #[inline(always)]
     pub fn ctrl_enable(&self) -> CTRL_ENABLE_R {
-        CTRL_ENABLE_R::new(((self.bits >> 16) & 0x01) != 0)
+        CTRL_ENABLE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

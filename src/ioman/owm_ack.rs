@@ -67,7 +67,7 @@ impl<'a> MAPPING_ACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> EPU_IO_ACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 4 - 1-Wire Line I/O Acknowledge"]
     #[inline(always)]
     pub fn mapping_ack(&self) -> MAPPING_ACK_R {
-        MAPPING_ACK_R::new(((self.bits >> 4) & 0x01) != 0)
+        MAPPING_ACK_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - External Pullup Control Line I/O Acknowledge"]
     #[inline(always)]
     pub fn epu_io_ack(&self) -> EPU_IO_ACK_R {
-        EPU_IO_ACK_R::new(((self.bits >> 5) & 0x01) != 0)
+        EPU_IO_ACK_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

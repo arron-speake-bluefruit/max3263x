@@ -67,7 +67,7 @@ impl<'a> TRIM_ENABLE_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TRIM_FASTER_OVR_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -127,17 +127,17 @@ impl R {
     #[doc = "Bit 0 - Enable RTL Trim of RTC Timer"]
     #[inline(always)]
     pub fn trim_enable_r(&self) -> TRIM_ENABLE_R_R {
-        TRIM_ENABLE_R_R::new((self.bits & 0x01) != 0)
+        TRIM_ENABLE_R_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Force RTC Trim to Faster"]
     #[inline(always)]
     pub fn trim_faster_ovr_r(&self) -> TRIM_FASTER_OVR_R_R {
-        TRIM_FASTER_OVR_R_R::new(((self.bits >> 1) & 0x01) != 0)
+        TRIM_FASTER_OVR_R_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Trim Direction Status"]
     #[inline(always)]
     pub fn trim_slower_r(&self) -> TRIM_SLOWER_R_R {
-        TRIM_SLOWER_R_R::new(((self.bits >> 2) & 0x01) != 0)
+        TRIM_SLOWER_R_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

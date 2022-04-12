@@ -128,32 +128,32 @@ impl R {
     #[doc = "Bit 0 - UART0 TX/RX I/O Mapping Acknowledge"]
     #[inline(always)]
     pub fn io_map(&self) -> IO_MAP_R {
-        IO_MAP_R::new((self.bits & 0x01) != 0)
+        IO_MAP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - UART0 CTS I/O Mapping Acknowledge"]
     #[inline(always)]
     pub fn cts_map(&self) -> CTS_MAP_R {
-        CTS_MAP_R::new(((self.bits >> 1) & 0x01) != 0)
+        CTS_MAP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - UART0 RTS I/O Mapping Acknowledge"]
     #[inline(always)]
     pub fn rts_map(&self) -> RTS_MAP_R {
-        RTS_MAP_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTS_MAP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - UART0 TX/RX I/O Acknowledge"]
     #[inline(always)]
     pub fn io_req(&self) -> IO_REQ_R {
-        IO_REQ_R::new(((self.bits >> 4) & 0x01) != 0)
+        IO_REQ_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - UART0 CTS I/O Acknowledge"]
     #[inline(always)]
     pub fn cts_io_req(&self) -> CTS_IO_REQ_R {
-        CTS_IO_REQ_R::new(((self.bits >> 5) & 0x01) != 0)
+        CTS_IO_REQ_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - UART0 RTS I/O Acknowledge"]
     #[inline(always)]
     pub fn rts_io_req(&self) -> RTS_IO_REQ_R {
-        RTS_IO_REQ_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTS_IO_REQ_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> SPI_MSTR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BIT_BANG_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> BB_SS_IN_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -267,7 +267,7 @@ impl<'a> BB_SCK_IN_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -344,37 +344,37 @@ impl R {
     #[doc = "Bit 0 - Enable/Disable SPI Master"]
     #[inline(always)]
     pub fn spi_mstr_en(&self) -> SPI_MSTR_EN_R {
-        SPI_MSTR_EN_R::new((self.bits & 0x01) != 0)
+        SPI_MSTR_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Transaction FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&self) -> TX_FIFO_EN_R {
-        TX_FIFO_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_FIFO_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Results FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&self) -> RX_FIFO_EN_R {
-        RX_FIFO_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_FIFO_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Bit Bang Mode Enable"]
     #[inline(always)]
     pub fn bit_bang_mode(&self) -> BIT_BANG_MODE_R {
-        BIT_BANG_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        BIT_BANG_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Bit Bang SS Input/Output"]
     #[inline(always)]
     pub fn bb_ss_in_out(&self) -> BB_SS_IN_OUT_R {
-        BB_SS_IN_OUT_R::new(((self.bits >> 4) & 0x01) != 0)
+        BB_SS_IN_OUT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Bit Bang SR Input"]
     #[inline(always)]
     pub fn bb_sr_in(&self) -> BB_SR_IN_R {
-        BB_SR_IN_R::new(((self.bits >> 5) & 0x01) != 0)
+        BB_SR_IN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Bit Bang SCK Input/Output"]
     #[inline(always)]
     pub fn bb_sck_in_out(&self) -> BB_SCK_IN_OUT_R {
-        BB_SCK_IN_OUT_R::new(((self.bits >> 6) & 0x01) != 0)
+        BB_SCK_IN_OUT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 8:11 - Bit Bang SDIO Input"]
     #[inline(always)]

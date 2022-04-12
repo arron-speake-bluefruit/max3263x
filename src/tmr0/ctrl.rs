@@ -57,7 +57,7 @@ impl<'a> MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> TMR2X16_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> POLARITY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> ENABLE0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> ENABLE1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -240,12 +240,12 @@ impl R {
     #[doc = "Bits 0:2 - Operating Modes for 32-bit/16-bit Timers"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new((self.bits & 0x07) as u8)
+        MODE_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - Dual 16-bit Timer Mode"]
     #[inline(always)]
     pub fn tmr2x16(&self) -> TMR2X16_R {
-        TMR2X16_R::new(((self.bits >> 3) & 0x01) != 0)
+        TMR2X16_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:7 - Timer Clock Prescale Setting"]
     #[inline(always)]
@@ -255,17 +255,17 @@ impl R {
     #[doc = "Bit 8 - Timer I/O Polarity"]
     #[inline(always)]
     pub fn polarity(&self) -> POLARITY_R {
-        POLARITY_R::new(((self.bits >> 8) & 0x01) != 0)
+        POLARITY_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12 - Enable 32-bit timer / 16-bit timer 0"]
     #[inline(always)]
     pub fn enable0(&self) -> ENABLE0_R {
-        ENABLE0_R::new(((self.bits >> 12) & 0x01) != 0)
+        ENABLE0_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Enable 16-bit timer 1"]
     #[inline(always)]
     pub fn enable1(&self) -> ENABLE1_R {
-        ENABLE1_R::new(((self.bits >> 13) & 0x01) != 0)
+        ENABLE1_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

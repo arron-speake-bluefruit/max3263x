@@ -93,7 +93,7 @@ impl R {
     #[doc = "Bit 16 - WUD Mode Acknowledge: P6\\[7:0\\]"]
     #[inline(always)]
     pub fn wud_ack_p6(&self) -> WUD_ACK_P6_R {
-        WUD_ACK_P6_R::new(((self.bits >> 16) & 0x01) != 0)
+        WUD_ACK_P6_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

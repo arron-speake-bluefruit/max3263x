@@ -158,42 +158,42 @@ impl R {
     #[doc = "Bit 0 - P2.0 Input Value"]
     #[inline(always)]
     pub fn pin0(&self) -> PIN0_R {
-        PIN0_R::new((self.bits & 0x01) != 0)
+        PIN0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - P2.1 Input Value"]
     #[inline(always)]
     pub fn pin1(&self) -> PIN1_R {
-        PIN1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PIN1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - P2.2 Input Value"]
     #[inline(always)]
     pub fn pin2(&self) -> PIN2_R {
-        PIN2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PIN2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - P2.3 Input Value"]
     #[inline(always)]
     pub fn pin3(&self) -> PIN3_R {
-        PIN3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PIN3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - P2.4 Input Value"]
     #[inline(always)]
     pub fn pin4(&self) -> PIN4_R {
-        PIN4_R::new(((self.bits >> 4) & 0x01) != 0)
+        PIN4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - P2.5 Input Value"]
     #[inline(always)]
     pub fn pin5(&self) -> PIN5_R {
-        PIN5_R::new(((self.bits >> 5) & 0x01) != 0)
+        PIN5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - P2.6 Input Value"]
     #[inline(always)]
     pub fn pin6(&self) -> PIN6_R {
-        PIN6_R::new(((self.bits >> 6) & 0x01) != 0)
+        PIN6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - P2.7 Input Value"]
     #[inline(always)]
     pub fn pin7(&self) -> PIN7_R {
-        PIN7_R::new(((self.bits >> 7) & 0x01) != 0)
+        PIN7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

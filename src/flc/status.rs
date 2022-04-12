@@ -113,27 +113,27 @@ impl R {
     #[doc = "Bit 0 - Debug Locked - Hardware Window"]
     #[inline(always)]
     pub fn jtag_lock_window(&self) -> JTAG_LOCK_WINDOW_R {
-        JTAG_LOCK_WINDOW_R::new((self.bits & 0x01) != 0)
+        JTAG_LOCK_WINDOW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Debug Locked - Firmware Lockout"]
     #[inline(always)]
     pub fn jtag_lock_static(&self) -> JTAG_LOCK_STATIC_R {
-        JTAG_LOCK_STATIC_R::new(((self.bits >> 1) & 0x01) != 0)
+        JTAG_LOCK_STATIC_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - Debug Locked - Auto Lock"]
     #[inline(always)]
     pub fn auto_lock(&self) -> AUTO_LOCK_R {
-        AUTO_LOCK_R::new(((self.bits >> 3) & 0x01) != 0)
+        AUTO_LOCK_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 29 - Trim Update Done"]
     #[inline(always)]
     pub fn trim_update_done(&self) -> TRIM_UPDATE_DONE_R {
-        TRIM_UPDATE_DONE_R::new(((self.bits >> 29) & 0x01) != 0)
+        TRIM_UPDATE_DONE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Info Block Valid"]
     #[inline(always)]
     pub fn info_block_valid(&self) -> INFO_BLOCK_VALID_R {
-        INFO_BLOCK_VALID_R::new(((self.bits >> 30) & 0x01) != 0)
+        INFO_BLOCK_VALID_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

@@ -113,27 +113,27 @@ impl R {
     #[doc = "Bit 0 - 1.2V Warning Monitor Event Input"]
     #[inline(always)]
     pub fn v1_2_warning(&self) -> V1_2_WARNING_R {
-        V1_2_WARNING_R::new((self.bits & 0x01) != 0)
+        V1_2_WARNING_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1.8V Warning Monitor Event Input"]
     #[inline(always)]
     pub fn v1_8_warning(&self) -> V1_8_WARNING_R {
-        V1_8_WARNING_R::new(((self.bits >> 1) & 0x01) != 0)
+        V1_8_WARNING_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Warning Monitor Event Input"]
     #[inline(always)]
     pub fn rtc_warning(&self) -> RTC_WARNING_R {
-        RTC_WARNING_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTC_WARNING_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - VDDA Warning Monitor Event Input"]
     #[inline(always)]
     pub fn vdda_warning(&self) -> VDDA_WARNING_R {
-        VDDA_WARNING_R::new(((self.bits >> 3) & 0x01) != 0)
+        VDDA_WARNING_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - VDDB Warning Monitor Event Input"]
     #[inline(always)]
     pub fn vddb_warning(&self) -> VDDB_WARNING_R {
-        VDDB_WARNING_R::new(((self.bits >> 4) & 0x01) != 0)
+        VDDB_WARNING_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

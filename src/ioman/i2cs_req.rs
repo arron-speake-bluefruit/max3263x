@@ -57,7 +57,7 @@ impl<'a> IO_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> MAPPING_REQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 0:1 - I2C Slave I/O Mapping Select"]
     #[inline(always)]
     pub fn io_sel(&self) -> IO_SEL_R {
-        IO_SEL_R::new((self.bits & 0x03) as u8)
+        IO_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 4 - I2C Slave I/O Request"]
     #[inline(always)]
     pub fn mapping_req(&self) -> MAPPING_REQ_R {
-        MAPPING_REQ_R::new(((self.bits >> 4) & 0x01) != 0)
+        MAPPING_REQ_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

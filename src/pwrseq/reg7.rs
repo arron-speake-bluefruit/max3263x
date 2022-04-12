@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bit 0 - Flash Powerdown Lookahead Flag"]
     #[inline(always)]
     pub fn pwr_flash_pd_lookahead(&self) -> PWR_FLASH_PD_LOOKAHEAD_R {
-        PWR_FLASH_PD_LOOKAHEAD_R::new((self.bits & 0x01) != 0)
+        PWR_FLASH_PD_LOOKAHEAD_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

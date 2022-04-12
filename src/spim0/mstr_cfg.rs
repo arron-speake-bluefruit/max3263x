@@ -57,7 +57,7 @@ impl<'a> SLAVE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> THREE_WIRE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> SPI_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> PAGE_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -229,7 +229,7 @@ impl<'a> ACT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -256,7 +256,7 @@ impl<'a> INACT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -318,22 +318,22 @@ impl R {
     #[doc = "Bits 0:2 - SPI Slave Select"]
     #[inline(always)]
     pub fn slave_sel(&self) -> SLAVE_SEL_R {
-        SLAVE_SEL_R::new((self.bits & 0x07) as u8)
+        SLAVE_SEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - 3-Wire Mode"]
     #[inline(always)]
     pub fn three_wire_mode(&self) -> THREE_WIRE_MODE_R {
-        THREE_WIRE_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        THREE_WIRE_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - SPI Mode"]
     #[inline(always)]
     pub fn spi_mode(&self) -> SPI_MODE_R {
-        SPI_MODE_R::new(((self.bits >> 4) & 0x03) as u8)
+        SPI_MODE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Page Size"]
     #[inline(always)]
     pub fn page_size(&self) -> PAGE_SIZE_R {
-        PAGE_SIZE_R::new(((self.bits >> 6) & 0x03) as u8)
+        PAGE_SIZE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:11 - SCK High Clocks"]
     #[inline(always)]
@@ -348,12 +348,12 @@ impl R {
     #[doc = "Bits 16:17 - SS Active Timing"]
     #[inline(always)]
     pub fn act_delay(&self) -> ACT_DELAY_R {
-        ACT_DELAY_R::new(((self.bits >> 16) & 0x03) as u8)
+        ACT_DELAY_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - SS Inactive Timing"]
     #[inline(always)]
     pub fn inact_delay(&self) -> INACT_DELAY_R {
-        INACT_DELAY_R::new(((self.bits >> 18) & 0x03) as u8)
+        INACT_DELAY_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:23 - Alt SCK High Clocks"]
     #[inline(always)]

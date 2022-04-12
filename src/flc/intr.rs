@@ -67,7 +67,7 @@ impl<'a> FINISHED_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FAILED_IF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FINISHED_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FAILED_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -201,22 +201,22 @@ impl R {
     #[doc = "Bit 0 - Flash Write/Erase Operation Finished"]
     #[inline(always)]
     pub fn finished_if(&self) -> FINISHED_IF_R {
-        FINISHED_IF_R::new((self.bits & 0x01) != 0)
+        FINISHED_IF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Flash Operation Failed"]
     #[inline(always)]
     pub fn failed_if(&self) -> FAILED_IF_R {
-        FAILED_IF_R::new(((self.bits >> 1) & 0x01) != 0)
+        FAILED_IF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8 - Flash Write/Erase Operation Finished Interrupt Enable"]
     #[inline(always)]
     pub fn finished_ie(&self) -> FINISHED_IE_R {
-        FINISHED_IE_R::new(((self.bits >> 8) & 0x01) != 0)
+        FINISHED_IE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Flash Operation Failed Interrupt Enable"]
     #[inline(always)]
     pub fn failed_ie(&self) -> FAILED_IE_R {
-        FAILED_IE_R::new(((self.bits >> 9) & 0x01) != 0)
+        FAILED_IE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 16:31 - Flash Operation Failure Details"]
     #[inline(always)]

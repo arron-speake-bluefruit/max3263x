@@ -82,7 +82,7 @@ impl<'a> MASK_ID_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -95,7 +95,7 @@ impl R {
     #[doc = "Bit 31 - Enable Mask ID"]
     #[inline(always)]
     pub fn mask_id_enable(&self) -> MASK_ID_ENABLE_R {
-        MASK_ID_ENABLE_R::new(((self.bits >> 31) & 0x01) != 0)
+        MASK_ID_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

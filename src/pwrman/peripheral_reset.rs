@@ -67,7 +67,7 @@ impl<'a> SSB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPIX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PMU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> USB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CRC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> TPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> WATCHDOG0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> GPIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TIMER0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> TIMER1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> TIMER2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> TIMER3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> TIMER4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> TIMER5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> PULSE_TRAIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> UART0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> UART1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> UART2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> UART3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> I2CM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> I2CM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> I2CM2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> I2CS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> SPIM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> SPIM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -992,7 +992,7 @@ impl<'a> SPIM2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -1029,7 +1029,7 @@ impl<'a> SPIB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -1066,7 +1066,7 @@ impl<'a> OWM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1103,7 +1103,7 @@ impl<'a> ADC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1111,147 +1111,147 @@ impl R {
     #[doc = "Bit 0 - Reset SSB"]
     #[inline(always)]
     pub fn ssb(&self) -> SSB_R {
-        SSB_R::new((self.bits & 0x01) != 0)
+        SSB_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reset SPI XIP"]
     #[inline(always)]
     pub fn spix(&self) -> SPIX_R {
-        SPIX_R::new(((self.bits >> 1) & 0x01) != 0)
+        SPIX_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Reset PMU"]
     #[inline(always)]
     pub fn pmu(&self) -> PMU_R {
-        PMU_R::new(((self.bits >> 2) & 0x01) != 0)
+        PMU_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Reset USB"]
     #[inline(always)]
     pub fn usb(&self) -> USB_R {
-        USB_R::new(((self.bits >> 3) & 0x01) != 0)
+        USB_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Reset CRC"]
     #[inline(always)]
     pub fn crc(&self) -> CRC_R {
-        CRC_R::new(((self.bits >> 4) & 0x01) != 0)
+        CRC_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Reset TPU"]
     #[inline(always)]
     pub fn tpu(&self) -> TPU_R {
-        TPU_R::new(((self.bits >> 5) & 0x01) != 0)
+        TPU_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Reset Watchdog Timer 0"]
     #[inline(always)]
     pub fn watchdog0(&self) -> WATCHDOG0_R {
-        WATCHDOG0_R::new(((self.bits >> 6) & 0x01) != 0)
+        WATCHDOG0_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Reset GPIO"]
     #[inline(always)]
     pub fn gpio(&self) -> GPIO_R {
-        GPIO_R::new(((self.bits >> 7) & 0x01) != 0)
+        GPIO_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Reset Timer/Counter Module 0"]
     #[inline(always)]
     pub fn timer0(&self) -> TIMER0_R {
-        TIMER0_R::new(((self.bits >> 8) & 0x01) != 0)
+        TIMER0_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Reset Timer/Counter Module 1"]
     #[inline(always)]
     pub fn timer1(&self) -> TIMER1_R {
-        TIMER1_R::new(((self.bits >> 9) & 0x01) != 0)
+        TIMER1_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Reset Timer/Counter Module 2"]
     #[inline(always)]
     pub fn timer2(&self) -> TIMER2_R {
-        TIMER2_R::new(((self.bits >> 10) & 0x01) != 0)
+        TIMER2_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Reset Timer/Counter Module 3"]
     #[inline(always)]
     pub fn timer3(&self) -> TIMER3_R {
-        TIMER3_R::new(((self.bits >> 11) & 0x01) != 0)
+        TIMER3_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Reset Timer/Counter Module 4"]
     #[inline(always)]
     pub fn timer4(&self) -> TIMER4_R {
-        TIMER4_R::new(((self.bits >> 12) & 0x01) != 0)
+        TIMER4_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Reset Timer/Counter Module 5"]
     #[inline(always)]
     pub fn timer5(&self) -> TIMER5_R {
-        TIMER5_R::new(((self.bits >> 13) & 0x01) != 0)
+        TIMER5_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Reset All Pulse Trains"]
     #[inline(always)]
     pub fn pulse_train(&self) -> PULSE_TRAIN_R {
-        PULSE_TRAIN_R::new(((self.bits >> 14) & 0x01) != 0)
+        PULSE_TRAIN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Reset UART 0"]
     #[inline(always)]
     pub fn uart0(&self) -> UART0_R {
-        UART0_R::new(((self.bits >> 15) & 0x01) != 0)
+        UART0_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Reset UART 1"]
     #[inline(always)]
     pub fn uart1(&self) -> UART1_R {
-        UART1_R::new(((self.bits >> 16) & 0x01) != 0)
+        UART1_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Reset UART 2"]
     #[inline(always)]
     pub fn uart2(&self) -> UART2_R {
-        UART2_R::new(((self.bits >> 17) & 0x01) != 0)
+        UART2_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Reset UART 3"]
     #[inline(always)]
     pub fn uart3(&self) -> UART3_R {
-        UART3_R::new(((self.bits >> 18) & 0x01) != 0)
+        UART3_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Reset I2C Master 0"]
     #[inline(always)]
     pub fn i2cm0(&self) -> I2CM0_R {
-        I2CM0_R::new(((self.bits >> 19) & 0x01) != 0)
+        I2CM0_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Reset I2C Master 1"]
     #[inline(always)]
     pub fn i2cm1(&self) -> I2CM1_R {
-        I2CM1_R::new(((self.bits >> 20) & 0x01) != 0)
+        I2CM1_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Reset I2C Master 2"]
     #[inline(always)]
     pub fn i2cm2(&self) -> I2CM2_R {
-        I2CM2_R::new(((self.bits >> 21) & 0x01) != 0)
+        I2CM2_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Reset I2C Slave"]
     #[inline(always)]
     pub fn i2cs(&self) -> I2CS_R {
-        I2CS_R::new(((self.bits >> 22) & 0x01) != 0)
+        I2CS_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Reset SPI Master 0"]
     #[inline(always)]
     pub fn spim0(&self) -> SPIM0_R {
-        SPIM0_R::new(((self.bits >> 23) & 0x01) != 0)
+        SPIM0_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Reset SPI Master 1"]
     #[inline(always)]
     pub fn spim1(&self) -> SPIM1_R {
-        SPIM1_R::new(((self.bits >> 24) & 0x01) != 0)
+        SPIM1_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Reset SPI Master 2"]
     #[inline(always)]
     pub fn spim2(&self) -> SPIM2_R {
-        SPIM2_R::new(((self.bits >> 25) & 0x01) != 0)
+        SPIM2_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Reset SPI Bridge"]
     #[inline(always)]
     pub fn spib(&self) -> SPIB_R {
-        SPIB_R::new(((self.bits >> 26) & 0x01) != 0)
+        SPIB_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Reset 1-Wire Master"]
     #[inline(always)]
     pub fn owm(&self) -> OWM_R {
-        OWM_R::new(((self.bits >> 27) & 0x01) != 0)
+        OWM_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Reset ADC"]
     #[inline(always)]
     pub fn adc(&self) -> ADC_R {
-        ADC_R::new(((self.bits >> 28) & 0x01) != 0)
+        ADC_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {
