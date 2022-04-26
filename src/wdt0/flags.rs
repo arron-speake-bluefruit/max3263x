@@ -35,7 +35,7 @@ impl From<crate::W<FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `timeout` reader - Watchdog Timeout Interrupt Flag"]
-pub struct TIMEOUT_R(crate::FieldReader<bool, bool>);
+pub struct TIMEOUT_R(crate::FieldReader<bool>);
 impl TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TIMEOUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `pre_win` reader - Watchdog Pre-Window Clear Interrupt Flag"]
-pub struct PRE_WIN_R(crate::FieldReader<bool, bool>);
+pub struct PRE_WIN_R(crate::FieldReader<bool>);
 impl PRE_WIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRE_WIN_R {
     }
 }
 impl core::ops::Deref for PRE_WIN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PRE_WIN_W<'a> {
     }
 }
 #[doc = "Field `reset_out` reader - Watchdog Reset Flag"]
-pub struct RESET_OUT_R(crate::FieldReader<bool, bool>);
+pub struct RESET_OUT_R(crate::FieldReader<bool>);
 impl RESET_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RESET_OUT_R {
     }
 }
 impl core::ops::Deref for RESET_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `cpu_adc_start` reader - Start ADC Conversion"]
-pub struct CPU_ADC_START_R(crate::FieldReader<bool, bool>);
+pub struct CPU_ADC_START_R(crate::FieldReader<bool>);
 impl CPU_ADC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CPU_ADC_START_R {
     }
 }
 impl core::ops::Deref for CPU_ADC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CPU_ADC_START_W<'a> {
     }
 }
 #[doc = "Field `adc_pu` reader - ADC Power Up"]
-pub struct ADC_PU_R(crate::FieldReader<bool, bool>);
+pub struct ADC_PU_R(crate::FieldReader<bool>);
 impl ADC_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC_PU_R {
     }
 }
 impl core::ops::Deref for ADC_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC_PU_W<'a> {
     }
 }
 #[doc = "Field `buf_pu` reader - ADC Input Buffer Power Up"]
-pub struct BUF_PU_R(crate::FieldReader<bool, bool>);
+pub struct BUF_PU_R(crate::FieldReader<bool>);
 impl BUF_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BUF_PU_R {
     }
 }
 impl core::ops::Deref for BUF_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BUF_PU_W<'a> {
     }
 }
 #[doc = "Field `adc_refbuf_pu` reader - ADC Reference Buffer Power Up"]
-pub struct ADC_REFBUF_PU_R(crate::FieldReader<bool, bool>);
+pub struct ADC_REFBUF_PU_R(crate::FieldReader<bool>);
 impl ADC_REFBUF_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ADC_REFBUF_PU_R {
     }
 }
 impl core::ops::Deref for ADC_REFBUF_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> ADC_REFBUF_PU_W<'a> {
     }
 }
 #[doc = "Field `adc_chgpump_pu` reader - ADC Charge Pump Power Up"]
-pub struct ADC_CHGPUMP_PU_R(crate::FieldReader<bool, bool>);
+pub struct ADC_CHGPUMP_PU_R(crate::FieldReader<bool>);
 impl ADC_CHGPUMP_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl ADC_CHGPUMP_PU_R {
     }
 }
 impl core::ops::Deref for ADC_CHGPUMP_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> ADC_CHGPUMP_PU_W<'a> {
     }
 }
 #[doc = "Field `buf_chop_dis` reader - ADC Input Buffer Chop Disable (INTERNAL ONLY)"]
-pub struct BUF_CHOP_DIS_R(crate::FieldReader<bool, bool>);
+pub struct BUF_CHOP_DIS_R(crate::FieldReader<bool>);
 impl BUF_CHOP_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl BUF_CHOP_DIS_R {
     }
 }
 impl core::ops::Deref for BUF_CHOP_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> BUF_CHOP_DIS_W<'a> {
     }
 }
 #[doc = "Field `buf_pump_dis` reader - Disable Use of Charge Pump Output by Input Buffer (INTERNAL)"]
-pub struct BUF_PUMP_DIS_R(crate::FieldReader<bool, bool>);
+pub struct BUF_PUMP_DIS_R(crate::FieldReader<bool>);
 impl BUF_PUMP_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BUF_PUMP_DIS_R {
     }
 }
 impl core::ops::Deref for BUF_PUMP_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BUF_PUMP_DIS_W<'a> {
     }
 }
 #[doc = "Field `buf_bypass` reader - Bypass Input Buffer"]
-pub struct BUF_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct BUF_BYPASS_R(crate::FieldReader<bool>);
 impl BUF_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BUF_BYPASS_R {
     }
 }
 impl core::ops::Deref for BUF_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BUF_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `adc_refscl` reader - ADC Reference Scale"]
-pub struct ADC_REFSCL_R(crate::FieldReader<bool, bool>);
+pub struct ADC_REFSCL_R(crate::FieldReader<bool>);
 impl ADC_REFSCL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl ADC_REFSCL_R {
     }
 }
 impl core::ops::Deref for ADC_REFSCL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> ADC_REFSCL_W<'a> {
     }
 }
 #[doc = "Field `adc_scale` reader - ADC Scale"]
-pub struct ADC_SCALE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_SCALE_R(crate::FieldReader<bool>);
 impl ADC_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl ADC_SCALE_R {
     }
 }
 impl core::ops::Deref for ADC_SCALE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> ADC_SCALE_W<'a> {
     }
 }
 #[doc = "Field `adc_refsel` reader - ADC Reference (VRef) Select (INTERNAL ONLY)"]
-pub struct ADC_REFSEL_R(crate::FieldReader<bool, bool>);
+pub struct ADC_REFSEL_R(crate::FieldReader<bool>);
 impl ADC_REFSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl ADC_REFSEL_R {
     }
 }
 impl core::ops::Deref for ADC_REFSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> ADC_REFSEL_W<'a> {
     }
 }
 #[doc = "Field `adc_clk_en` reader - ADC Clock Enable"]
-pub struct ADC_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC_CLK_EN_R(crate::FieldReader<bool>);
 impl ADC_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl ADC_CLK_EN_R {
     }
 }
 impl core::ops::Deref for ADC_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> ADC_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `adc_chsel` reader - ADC Channel Select"]
-pub struct ADC_CHSEL_R(crate::FieldReader<u8, u8>);
+pub struct ADC_CHSEL_R(crate::FieldReader<u8>);
 impl ADC_CHSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -487,7 +487,7 @@ impl ADC_CHSEL_R {
     }
 }
 impl core::ops::Deref for ADC_CHSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -506,7 +506,7 @@ impl<'a> ADC_CHSEL_W<'a> {
     }
 }
 #[doc = "Field `adc_xref` reader - Enable Use of ADC External Reference"]
-pub struct ADC_XREF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_XREF_R(crate::FieldReader<bool>);
 impl ADC_XREF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -514,7 +514,7 @@ impl ADC_XREF_R {
     }
 }
 impl core::ops::Deref for ADC_XREF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -543,7 +543,7 @@ impl<'a> ADC_XREF_W<'a> {
     }
 }
 #[doc = "Field `adc_dataalign` reader - ADC Data Alignment Select"]
-pub struct ADC_DATAALIGN_R(crate::FieldReader<bool, bool>);
+pub struct ADC_DATAALIGN_R(crate::FieldReader<bool>);
 impl ADC_DATAALIGN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -551,7 +551,7 @@ impl ADC_DATAALIGN_R {
     }
 }
 impl core::ops::Deref for ADC_DATAALIGN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -580,7 +580,7 @@ impl<'a> ADC_DATAALIGN_W<'a> {
     }
 }
 #[doc = "Field `afe_pwr_up_dly` reader - Delay from ADC Powerup Until ADC Ready Asserted"]
-pub struct AFE_PWR_UP_DLY_R(crate::FieldReader<u8, u8>);
+pub struct AFE_PWR_UP_DLY_R(crate::FieldReader<u8>);
 impl AFE_PWR_UP_DLY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -588,7 +588,7 @@ impl AFE_PWR_UP_DLY_R {
     }
 }
 impl core::ops::Deref for AFE_PWR_UP_DLY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<PWR_RST_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `afe_powered` reader - AFE Powered"]
-pub struct AFE_POWERED_R(crate::FieldReader<bool, bool>);
+pub struct AFE_POWERED_R(crate::FieldReader<bool>);
 impl AFE_POWERED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl AFE_POWERED_R {
     }
 }
 impl core::ops::Deref for AFE_POWERED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> AFE_POWERED_W<'a> {
     }
 }
 #[doc = "Field `io_active` reader - I/O Active"]
-pub struct IO_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct IO_ACTIVE_R(crate::FieldReader<bool>);
 impl IO_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl IO_ACTIVE_R {
     }
 }
 impl core::ops::Deref for IO_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> IO_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `usb_powered` reader - USB Powered"]
-pub struct USB_POWERED_R(crate::FieldReader<bool, bool>);
+pub struct USB_POWERED_R(crate::FieldReader<bool>);
 impl USB_POWERED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl USB_POWERED_R {
     }
 }
 impl core::ops::Deref for USB_POWERED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> USB_POWERED_W<'a> {
     }
 }
 #[doc = "Field `pullups_enabled` reader - Static Pullups Enabled"]
-pub struct PULLUPS_ENABLED_R(crate::FieldReader<bool, bool>);
+pub struct PULLUPS_ENABLED_R(crate::FieldReader<bool>);
 impl PULLUPS_ENABLED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PULLUPS_ENABLED_R {
     }
 }
 impl core::ops::Deref for PULLUPS_ENABLED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PULLUPS_ENABLED_W<'a> {
     }
 }
 #[doc = "Field `firmware_reset` reader - Firmware Initiated Reset"]
-pub struct FIRMWARE_RESET_R(crate::FieldReader<bool, bool>);
+pub struct FIRMWARE_RESET_R(crate::FieldReader<bool>);
 impl FIRMWARE_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FIRMWARE_RESET_R {
     }
 }
 impl core::ops::Deref for FIRMWARE_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FIRMWARE_RESET_W<'a> {
     }
 }
 #[doc = "Field `arm_lockup_reset` reader - ARM Lockup Reset"]
-pub struct ARM_LOCKUP_RESET_R(crate::FieldReader<bool, bool>);
+pub struct ARM_LOCKUP_RESET_R(crate::FieldReader<bool>);
 impl ARM_LOCKUP_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl ARM_LOCKUP_RESET_R {
     }
 }
 impl core::ops::Deref for ARM_LOCKUP_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> ARM_LOCKUP_RESET_W<'a> {
     }
 }
 #[doc = "Field `tamper_detect` reader - Reset Caused By - Tamper Detect"]
-pub struct TAMPER_DETECT_R(crate::FieldReader<bool, bool>);
+pub struct TAMPER_DETECT_R(crate::FieldReader<bool>);
 impl TAMPER_DETECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,14 +265,14 @@ impl TAMPER_DETECT_R {
     }
 }
 impl core::ops::Deref for TAMPER_DETECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `fw_command_sysman` reader - Reset Caused By - Firmware Commanded Reset (SysMan)"]
-pub struct FW_COMMAND_SYSMAN_R(crate::FieldReader<bool, bool>);
+pub struct FW_COMMAND_SYSMAN_R(crate::FieldReader<bool>);
 impl FW_COMMAND_SYSMAN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -280,14 +280,14 @@ impl FW_COMMAND_SYSMAN_R {
     }
 }
 impl core::ops::Deref for FW_COMMAND_SYSMAN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `watchdog_timeout` reader - Reset Caused By - Watchdog Timeout"]
-pub struct WATCHDOG_TIMEOUT_R(crate::FieldReader<bool, bool>);
+pub struct WATCHDOG_TIMEOUT_R(crate::FieldReader<bool>);
 impl WATCHDOG_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -295,14 +295,14 @@ impl WATCHDOG_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for WATCHDOG_TIMEOUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `fw_command_arm` reader - Reset Caused By - Firmware Commanded Reset (ARM Core)"]
-pub struct FW_COMMAND_ARM_R(crate::FieldReader<bool, bool>);
+pub struct FW_COMMAND_ARM_R(crate::FieldReader<bool>);
 impl FW_COMMAND_ARM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -310,14 +310,14 @@ impl FW_COMMAND_ARM_R {
     }
 }
 impl core::ops::Deref for FW_COMMAND_ARM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `arm_lockup` reader - Reset Caused By - ARM Lockup"]
-pub struct ARM_LOCKUP_R(crate::FieldReader<bool, bool>);
+pub struct ARM_LOCKUP_R(crate::FieldReader<bool>);
 impl ARM_LOCKUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -325,14 +325,14 @@ impl ARM_LOCKUP_R {
     }
 }
 impl core::ops::Deref for ARM_LOCKUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `srstn_assertion` reader - Reset Caused By - External System Reset"]
-pub struct SRSTN_ASSERTION_R(crate::FieldReader<bool, bool>);
+pub struct SRSTN_ASSERTION_R(crate::FieldReader<bool>);
 impl SRSTN_ASSERTION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -340,14 +340,14 @@ impl SRSTN_ASSERTION_R {
     }
 }
 impl core::ops::Deref for SRSTN_ASSERTION_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `por` reader - Reset Caused By - Power On Reset (POR)"]
-pub struct POR_R(crate::FieldReader<bool, bool>);
+pub struct POR_R(crate::FieldReader<bool>);
 impl POR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -355,14 +355,14 @@ impl POR_R {
     }
 }
 impl core::ops::Deref for POR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `low_power_mode` reader - Power Manager Dynamic Clock Gating Enable"]
-pub struct LOW_POWER_MODE_R(crate::FieldReader<bool, bool>);
+pub struct LOW_POWER_MODE_R(crate::FieldReader<bool>);
 impl LOW_POWER_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -370,7 +370,7 @@ impl LOW_POWER_MODE_R {
     }
 }
 impl core::ops::Deref for LOW_POWER_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

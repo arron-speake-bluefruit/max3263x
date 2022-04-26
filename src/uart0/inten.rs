@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_done` reader - TX Done Interrupt Enable/Disable"]
-pub struct TX_DONE_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_R(crate::FieldReader<bool>);
 impl TX_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_DONE_R {
     }
 }
 impl core::ops::Deref for TX_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_DONE_W<'a> {
     }
 }
 #[doc = "Field `tx_unstalled` reader - TX Unstalled Interrupt Enable/Disable"]
-pub struct TX_UNSTALLED_R(crate::FieldReader<bool, bool>);
+pub struct TX_UNSTALLED_R(crate::FieldReader<bool>);
 impl TX_UNSTALLED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_UNSTALLED_R {
     }
 }
 impl core::ops::Deref for TX_UNSTALLED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_UNSTALLED_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_ae` reader - TX FIFO Almost Empty Interrupt Enable/Disable"]
-pub struct TX_FIFO_AE_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_AE_R(crate::FieldReader<bool>);
 impl TX_FIFO_AE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_FIFO_AE_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_AE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_FIFO_AE_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_not_empty` reader - RX FIFO Not Empty Interrupt Enable/Disable"]
-pub struct RX_FIFO_NOT_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_NOT_EMPTY_R(crate::FieldReader<bool>);
 impl RX_FIFO_NOT_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RX_FIFO_NOT_EMPTY_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_NOT_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RX_FIFO_NOT_EMPTY_W<'a> {
     }
 }
 #[doc = "Field `rx_stalled` reader - RX Stalled Interrupt Enable/Disable"]
-pub struct RX_STALLED_R(crate::FieldReader<bool, bool>);
+pub struct RX_STALLED_R(crate::FieldReader<bool>);
 impl RX_STALLED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RX_STALLED_R {
     }
 }
 impl core::ops::Deref for RX_STALLED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RX_STALLED_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_af` reader - RX FIFO Almost Full Interrupt Enable/Disable"]
-pub struct RX_FIFO_AF_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_AF_R(crate::FieldReader<bool>);
 impl RX_FIFO_AF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RX_FIFO_AF_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_AF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RX_FIFO_AF_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_overflow` reader - RX FIFO Overflow Interrupt Enable/Disable"]
-pub struct RX_FIFO_OVERFLOW_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_OVERFLOW_R(crate::FieldReader<bool>);
 impl RX_FIFO_OVERFLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RX_FIFO_OVERFLOW_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_OVERFLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RX_FIFO_OVERFLOW_W<'a> {
     }
 }
 #[doc = "Field `rx_framing_err` reader - RX Framing Error Interrupt Enable/Disable"]
-pub struct RX_FRAMING_ERR_R(crate::FieldReader<bool, bool>);
+pub struct RX_FRAMING_ERR_R(crate::FieldReader<bool>);
 impl RX_FRAMING_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RX_FRAMING_ERR_R {
     }
 }
 impl core::ops::Deref for RX_FRAMING_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> RX_FRAMING_ERR_W<'a> {
     }
 }
 #[doc = "Field `rx_parity_err` reader - RX Parity Error Interrupt Enable/Disable"]
-pub struct RX_PARITY_ERR_R(crate::FieldReader<bool, bool>);
+pub struct RX_PARITY_ERR_R(crate::FieldReader<bool>);
 impl RX_PARITY_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl RX_PARITY_ERR_R {
     }
 }
 impl core::ops::Deref for RX_PARITY_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

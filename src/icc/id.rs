@@ -35,7 +35,7 @@ impl From<crate::W<ID_SPEC>> for W {
     }
 }
 #[doc = "Field `rtl_version` reader - RTL Release Version"]
-pub struct RTL_VERSION_R(crate::FieldReader<u8, u8>);
+pub struct RTL_VERSION_R(crate::FieldReader<u8>);
 impl RTL_VERSION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl RTL_VERSION_R {
     }
 }
 impl core::ops::Deref for RTL_VERSION_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `part_num` reader - Part Number ID"]
-pub struct PART_NUM_R(crate::FieldReader<u8, u8>);
+pub struct PART_NUM_R(crate::FieldReader<u8>);
 impl PART_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,14 +58,14 @@ impl PART_NUM_R {
     }
 }
 impl core::ops::Deref for PART_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `cache_id` reader - Cache ID"]
-pub struct CACHE_ID_R(crate::FieldReader<u8, u8>);
+pub struct CACHE_ID_R(crate::FieldReader<u8>);
 impl CACHE_ID_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -73,7 +73,7 @@ impl CACHE_ID_R {
     }
 }
 impl core::ops::Deref for CACHE_ID_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

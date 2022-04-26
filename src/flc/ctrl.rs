@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `write` reader - Start Flash Write Operation"]
-pub struct WRITE_R(crate::FieldReader<bool, bool>);
+pub struct WRITE_R(crate::FieldReader<bool>);
 impl WRITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl WRITE_R {
     }
 }
 impl core::ops::Deref for WRITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> WRITE_W<'a> {
     }
 }
 #[doc = "Field `mass_erase` reader - Start Flash Mass Erase Operation"]
-pub struct MASS_ERASE_R(crate::FieldReader<bool, bool>);
+pub struct MASS_ERASE_R(crate::FieldReader<bool>);
 impl MASS_ERASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MASS_ERASE_R {
     }
 }
 impl core::ops::Deref for MASS_ERASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MASS_ERASE_W<'a> {
     }
 }
 #[doc = "Field `page_erase` reader - Start Flash Page Erase Operation"]
-pub struct PAGE_ERASE_R(crate::FieldReader<bool, bool>);
+pub struct PAGE_ERASE_R(crate::FieldReader<bool>);
 impl PAGE_ERASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PAGE_ERASE_R {
     }
 }
 impl core::ops::Deref for PAGE_ERASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PAGE_ERASE_W<'a> {
     }
 }
 #[doc = "Field `erase_code` reader - Flash Erase Code"]
-pub struct ERASE_CODE_R(crate::FieldReader<u8, u8>);
+pub struct ERASE_CODE_R(crate::FieldReader<u8>);
 impl ERASE_CODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl ERASE_CODE_R {
     }
 }
 impl core::ops::Deref for ERASE_CODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ERASE_CODE_W<'a> {
     }
 }
 #[doc = "Field `info_block_unlock` reader - Flash Info Block Locked"]
-pub struct INFO_BLOCK_UNLOCK_R(crate::FieldReader<bool, bool>);
+pub struct INFO_BLOCK_UNLOCK_R(crate::FieldReader<bool>);
 impl INFO_BLOCK_UNLOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,14 +181,14 @@ impl INFO_BLOCK_UNLOCK_R {
     }
 }
 impl core::ops::Deref for INFO_BLOCK_UNLOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `write_enable` reader - Flash Writes Enabled"]
-pub struct WRITE_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct WRITE_ENABLE_R(crate::FieldReader<bool>);
 impl WRITE_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -196,14 +196,14 @@ impl WRITE_ENABLE_R {
     }
 }
 impl core::ops::Deref for WRITE_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `pending` reader - Flash Controller Status"]
-pub struct PENDING_R(crate::FieldReader<bool, bool>);
+pub struct PENDING_R(crate::FieldReader<bool>);
 impl PENDING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -211,14 +211,14 @@ impl PENDING_R {
     }
 }
 impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `info_block_valid` reader - Info Block Valid Status"]
-pub struct INFO_BLOCK_VALID_R(crate::FieldReader<bool, bool>);
+pub struct INFO_BLOCK_VALID_R(crate::FieldReader<bool>);
 impl INFO_BLOCK_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -226,14 +226,14 @@ impl INFO_BLOCK_VALID_R {
     }
 }
 impl core::ops::Deref for INFO_BLOCK_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `auto_incre_mode` reader - Address Auto-Increment Mode"]
-pub struct AUTO_INCRE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct AUTO_INCRE_MODE_R(crate::FieldReader<bool>);
 impl AUTO_INCRE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -241,7 +241,7 @@ impl AUTO_INCRE_MODE_R {
     }
 }
 impl core::ops::Deref for AUTO_INCRE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -270,7 +270,7 @@ impl<'a> AUTO_INCRE_MODE_W<'a> {
     }
 }
 #[doc = "Field `flsh_unlock` reader - Flash Write/Erase Enable"]
-pub struct FLSH_UNLOCK_R(crate::FieldReader<u8, u8>);
+pub struct FLSH_UNLOCK_R(crate::FieldReader<u8>);
 impl FLSH_UNLOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -278,7 +278,7 @@ impl FLSH_UNLOCK_R {
     }
 }
 impl core::ops::Deref for FLSH_UNLOCK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

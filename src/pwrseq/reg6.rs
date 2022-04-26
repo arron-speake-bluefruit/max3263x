@@ -35,7 +35,7 @@ impl From<crate::W<REG6_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_trim_usb_bias` reader - USB Bias Current trim setting"]
-pub struct PWR_TRIM_USB_BIAS_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TRIM_USB_BIAS_R(crate::FieldReader<u8>);
 impl PWR_TRIM_USB_BIAS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PWR_TRIM_USB_BIAS_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_USB_BIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PWR_TRIM_USB_BIAS_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_usb_pm_res` reader - USB Data Plus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_PM_RES_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TRIM_USB_PM_RES_R(crate::FieldReader<u8>);
 impl PWR_TRIM_USB_PM_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PWR_TRIM_USB_PM_RES_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_USB_PM_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PWR_TRIM_USB_PM_RES_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_usb_dm_res` reader - USB Data Minus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_DM_RES_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TRIM_USB_DM_RES_R(crate::FieldReader<u8>);
 impl PWR_TRIM_USB_DM_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PWR_TRIM_USB_DM_RES_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_USB_DM_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PWR_TRIM_USB_DM_RES_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_osc_vref` reader - Relaxation Oscillator trim setting"]
-pub struct PWR_TRIM_OSC_VREF_R(crate::FieldReader<u16, u16>);
+pub struct PWR_TRIM_OSC_VREF_R(crate::FieldReader<u16>);
 impl PWR_TRIM_OSC_VREF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -124,7 +124,7 @@ impl PWR_TRIM_OSC_VREF_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_OSC_VREF_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> PWR_TRIM_OSC_VREF_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_crypto_osc` reader - Crypto Oscillator trim setting"]
-pub struct PWR_TRIM_CRYPTO_OSC_R(crate::FieldReader<u16, u16>);
+pub struct PWR_TRIM_CRYPTO_OSC_R(crate::FieldReader<u16>);
 impl PWR_TRIM_CRYPTO_OSC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -151,7 +151,7 @@ impl PWR_TRIM_CRYPTO_OSC_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_CRYPTO_OSC_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

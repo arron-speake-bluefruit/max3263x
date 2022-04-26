@@ -35,7 +35,7 @@ impl From<crate::W<WUD_ACK1_SPEC>> for W {
     }
 }
 #[doc = "Field `wud_ack_p4` reader - WUD Mode Acknowledge: P4\\[7:0\\]"]
-pub struct WUD_ACK_P4_R(crate::FieldReader<u8, u8>);
+pub struct WUD_ACK_P4_R(crate::FieldReader<u8>);
 impl WUD_ACK_P4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl WUD_ACK_P4_R {
     }
 }
 impl core::ops::Deref for WUD_ACK_P4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `wud_ack_p5` reader - WUD Mode Acknowledge: P5\\[7:0\\]"]
-pub struct WUD_ACK_P5_R(crate::FieldReader<u8, u8>);
+pub struct WUD_ACK_P5_R(crate::FieldReader<u8>);
 impl WUD_ACK_P5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,14 +58,14 @@ impl WUD_ACK_P5_R {
     }
 }
 impl core::ops::Deref for WUD_ACK_P5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `wud_ack_p6` reader - WUD Mode Acknowledge: P6\\[7:0\\]"]
-pub struct WUD_ACK_P6_R(crate::FieldReader<bool, bool>);
+pub struct WUD_ACK_P6_R(crate::FieldReader<bool>);
 impl WUD_ACK_P6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,7 +73,7 @@ impl WUD_ACK_P6_R {
     }
 }
 impl core::ops::Deref for WUD_ACK_P6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<FUNC_SEL_P8_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P8.0 Output Function Select"]
-pub struct PIN0_R(crate::FieldReader<u8, u8>);
+pub struct PIN0_R(crate::FieldReader<u8>);
 impl PIN0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PIN0_R {
     }
 }
 impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PIN0_W<'a> {
     }
 }
 #[doc = "Field `pin1` reader - P8.1 Output Function Select"]
-pub struct PIN1_R(crate::FieldReader<u8, u8>);
+pub struct PIN1_R(crate::FieldReader<u8>);
 impl PIN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PIN1_R {
     }
 }
 impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

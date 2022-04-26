@@ -35,7 +35,7 @@ impl From<crate::W<ALI_REQ1_SPEC>> for W {
     }
 }
 #[doc = "Field `ali_req_p4` reader - Analog Input Mode Request: P4\\[7:0\\]"]
-pub struct ALI_REQ_P4_R(crate::FieldReader<u8, u8>);
+pub struct ALI_REQ_P4_R(crate::FieldReader<u8>);
 impl ALI_REQ_P4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ALI_REQ_P4_R {
     }
 }
 impl core::ops::Deref for ALI_REQ_P4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ALI_REQ_P4_W<'a> {
     }
 }
 #[doc = "Field `ali_req_p5` reader - Analog Input Mode Request: P5\\[7:0\\]"]
-pub struct ALI_REQ_P5_R(crate::FieldReader<u8, u8>);
+pub struct ALI_REQ_P5_R(crate::FieldReader<u8>);
 impl ALI_REQ_P5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ALI_REQ_P5_R {
     }
 }
 impl core::ops::Deref for ALI_REQ_P5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> ALI_REQ_P5_W<'a> {
     }
 }
 #[doc = "Field `ali_req_p6` reader - Analog Input Mode Request: P6\\[0\\]"]
-pub struct ALI_REQ_P6_R(crate::FieldReader<bool, bool>);
+pub struct ALI_REQ_P6_R(crate::FieldReader<bool>);
 impl ALI_REQ_P6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl ALI_REQ_P6_R {
     }
 }
 impl core::ops::Deref for ALI_REQ_P6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -15641,6 +15641,12 @@
               <bitRange>[19:16]</bitRange>
               <access>read-write</access>
             </field>
+            <field>
+              <name>enable_sck_fb_mode</name>
+              <description>Enable SCK_FB Mode</description>
+              <bitRange>[24:24]</bitRange>
+              <access>read-write</access>
+            </field>
           </fields>
         </register>
 

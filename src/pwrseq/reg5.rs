@@ -35,7 +35,7 @@ impl From<crate::W<REG5_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_trim_svm_bg` reader - Power Manager Bandgap trim setting"]
-pub struct PWR_TRIM_SVM_BG_R(crate::FieldReader<u16, u16>);
+pub struct PWR_TRIM_SVM_BG_R(crate::FieldReader<u16>);
 impl PWR_TRIM_SVM_BG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PWR_TRIM_SVM_BG_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_SVM_BG_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PWR_TRIM_SVM_BG_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_bias` reader - Power Manager Bias Current trim setting"]
-pub struct PWR_TRIM_BIAS_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TRIM_BIAS_R(crate::FieldReader<u8>);
 impl PWR_TRIM_BIAS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PWR_TRIM_BIAS_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_BIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PWR_TRIM_BIAS_W<'a> {
     }
 }
 #[doc = "Field `pwr_trim_retreg` reader - Retention Regulator trim setting"]
-pub struct PWR_TRIM_RETREG_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TRIM_RETREG_R(crate::FieldReader<u8>);
 impl PWR_TRIM_RETREG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PWR_TRIM_RETREG_R {
     }
 }
 impl core::ops::Deref for PWR_TRIM_RETREG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PWR_TRIM_RETREG_W<'a> {
     }
 }
 #[doc = "Field `pwr_rtc_trim` reader - Real Time Clock trim setting"]
-pub struct PWR_RTC_TRIM_R(crate::FieldReader<u8, u8>);
+pub struct PWR_RTC_TRIM_R(crate::FieldReader<u8>);
 impl PWR_RTC_TRIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl PWR_RTC_TRIM_R {
     }
 }
 impl core::ops::Deref for PWR_RTC_TRIM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<WUD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `pad_select` reader - Wake-Up Pad Select"]
-pub struct PAD_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct PAD_SELECT_R(crate::FieldReader<u8>);
 impl PAD_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PAD_SELECT_R {
     }
 }
 impl core::ops::Deref for PAD_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PAD_SELECT_W<'a> {
     }
 }
 #[doc = "Field `pad_mode` reader - Wake-Up Pad Signal Mode"]
-pub struct PAD_MODE_R(crate::FieldReader<u8, u8>);
+pub struct PAD_MODE_R(crate::FieldReader<u8>);
 impl PAD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PAD_MODE_R {
     }
 }
 impl core::ops::Deref for PAD_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PAD_MODE_W<'a> {
     }
 }
 #[doc = "Field `clear_all` reader - Clear All WUD Pad States"]
-pub struct CLEAR_ALL_R(crate::FieldReader<bool, bool>);
+pub struct CLEAR_ALL_R(crate::FieldReader<bool>);
 impl CLEAR_ALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl CLEAR_ALL_R {
     }
 }
 impl core::ops::Deref for CLEAR_ALL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> CLEAR_ALL_W<'a> {
     }
 }
 #[doc = "Field `ctrl_enable` reader - Enable WUD Control Modification"]
-pub struct CTRL_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct CTRL_ENABLE_R(crate::FieldReader<bool>);
 impl CTRL_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl CTRL_ENABLE_R {
     }
 }
 impl core::ops::Deref for CTRL_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

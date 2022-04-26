@@ -35,7 +35,7 @@ impl From<crate::W<FETCH_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `cmd_value` reader - Command Value"]
-pub struct CMD_VALUE_R(crate::FieldReader<u8, u8>);
+pub struct CMD_VALUE_R(crate::FieldReader<u8>);
 impl CMD_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CMD_VALUE_R {
     }
 }
 impl core::ops::Deref for CMD_VALUE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -79,7 +79,7 @@ impl From<CMD_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `cmd_width` reader - Command Width"]
-pub struct CMD_WIDTH_R(crate::FieldReader<u8, CMD_WIDTH_A>);
+pub struct CMD_WIDTH_R(crate::FieldReader<u8>);
 impl CMD_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,7 +112,7 @@ impl CMD_WIDTH_R {
     }
 }
 impl core::ops::Deref for CMD_WIDTH_R {
-    type Target = crate::FieldReader<u8, CMD_WIDTH_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -168,7 +168,7 @@ impl From<ADDR_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `addr_width` reader - Address Width"]
-pub struct ADDR_WIDTH_R(crate::FieldReader<u8, ADDR_WIDTH_A>);
+pub struct ADDR_WIDTH_R(crate::FieldReader<u8>);
 impl ADDR_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -201,7 +201,7 @@ impl ADDR_WIDTH_R {
     }
 }
 impl core::ops::Deref for ADDR_WIDTH_R {
-    type Target = crate::FieldReader<u8, ADDR_WIDTH_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl From<DATA_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `data_width` reader - Data Width"]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8, DATA_WIDTH_A>);
+pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
 impl DATA_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -290,7 +290,7 @@ impl DATA_WIDTH_R {
     }
 }
 impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8, DATA_WIDTH_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

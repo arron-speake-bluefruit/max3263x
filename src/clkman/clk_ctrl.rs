@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `system_source_select` reader - System Clock Source Select"]
-pub struct SYSTEM_SOURCE_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct SYSTEM_SOURCE_SELECT_R(crate::FieldReader<u8>);
 impl SYSTEM_SOURCE_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SYSTEM_SOURCE_SELECT_R {
     }
 }
 impl core::ops::Deref for SYSTEM_SOURCE_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SYSTEM_SOURCE_SELECT_W<'a> {
     }
 }
 #[doc = "Field `usb_clock_enable` reader - USB Clock Enable"]
-pub struct USB_CLOCK_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct USB_CLOCK_ENABLE_R(crate::FieldReader<bool>);
 impl USB_CLOCK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl USB_CLOCK_ENABLE_R {
     }
 }
 impl core::ops::Deref for USB_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> USB_CLOCK_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `usb_clock_select` reader - USB Clock Select"]
-pub struct USB_CLOCK_SELECT_R(crate::FieldReader<bool, bool>);
+pub struct USB_CLOCK_SELECT_R(crate::FieldReader<bool>);
 impl USB_CLOCK_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl USB_CLOCK_SELECT_R {
     }
 }
 impl core::ops::Deref for USB_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> USB_CLOCK_SELECT_W<'a> {
     }
 }
 #[doc = "Field `crypto_clock_enable` reader - Crypto Clock Enable"]
-pub struct CRYPTO_CLOCK_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_CLOCK_ENABLE_R(crate::FieldReader<bool>);
 impl CRYPTO_CLOCK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl CRYPTO_CLOCK_ENABLE_R {
     }
 }
 impl core::ops::Deref for CRYPTO_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> CRYPTO_CLOCK_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `rtos_mode` reader - Enable RTOS Mode for SysTick Timers"]
-pub struct RTOS_MODE_R(crate::FieldReader<bool, bool>);
+pub struct RTOS_MODE_R(crate::FieldReader<bool>);
 impl RTOS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl RTOS_MODE_R {
     }
 }
 impl core::ops::Deref for RTOS_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> RTOS_MODE_W<'a> {
     }
 }
 #[doc = "Field `cpu_dynamic_clock` reader - Enable CPU Dynamic Clock Gating"]
-pub struct CPU_DYNAMIC_CLOCK_R(crate::FieldReader<bool, bool>);
+pub struct CPU_DYNAMIC_CLOCK_R(crate::FieldReader<bool>);
 impl CPU_DYNAMIC_CLOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl CPU_DYNAMIC_CLOCK_R {
     }
 }
 impl core::ops::Deref for CPU_DYNAMIC_CLOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> CPU_DYNAMIC_CLOCK_W<'a> {
     }
 }
 #[doc = "Field `wdt0_clock_enable` reader - Watchdog 0 Clock Enable"]
-pub struct WDT0_CLOCK_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct WDT0_CLOCK_ENABLE_R(crate::FieldReader<bool>);
 impl WDT0_CLOCK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl WDT0_CLOCK_ENABLE_R {
     }
 }
 impl core::ops::Deref for WDT0_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> WDT0_CLOCK_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `wdt0_clock_select` reader - Watchdog 0 Clock Source Select"]
-pub struct WDT0_CLOCK_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct WDT0_CLOCK_SELECT_R(crate::FieldReader<u8>);
 impl WDT0_CLOCK_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl WDT0_CLOCK_SELECT_R {
     }
 }
 impl core::ops::Deref for WDT0_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> WDT0_CLOCK_SELECT_W<'a> {
     }
 }
 #[doc = "Field `wdt1_clock_enable` reader - Watchdog 1 Clock Enable"]
-pub struct WDT1_CLOCK_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct WDT1_CLOCK_ENABLE_R(crate::FieldReader<bool>);
 impl WDT1_CLOCK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl WDT1_CLOCK_ENABLE_R {
     }
 }
 impl core::ops::Deref for WDT1_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> WDT1_CLOCK_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `wdt1_clock_select` reader - Watchdog 1 Clock Source Select"]
-pub struct WDT1_CLOCK_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct WDT1_CLOCK_SELECT_R(crate::FieldReader<u8>);
 impl WDT1_CLOCK_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -356,7 +356,7 @@ impl WDT1_CLOCK_SELECT_R {
     }
 }
 impl core::ops::Deref for WDT1_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -375,7 +375,7 @@ impl<'a> WDT1_CLOCK_SELECT_W<'a> {
     }
 }
 #[doc = "Field `adc_clock_enable` reader - ADC Clock Enable"]
-pub struct ADC_CLOCK_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_CLOCK_ENABLE_R(crate::FieldReader<bool>);
 impl ADC_CLOCK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -383,7 +383,7 @@ impl ADC_CLOCK_ENABLE_R {
     }
 }
 impl core::ops::Deref for ADC_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `pt0` reader - Pulse Train 0 Stopped Interrupt Enable/Disable"]
-pub struct PT0_R(crate::FieldReader<bool, bool>);
+pub struct PT0_R(crate::FieldReader<bool>);
 impl PT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PT0_R {
     }
 }
 impl core::ops::Deref for PT0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PT0_W<'a> {
     }
 }
 #[doc = "Field `pt1` reader - Pulse Train 1 Stopped Interrupt Enable/Disable"]
-pub struct PT1_R(crate::FieldReader<bool, bool>);
+pub struct PT1_R(crate::FieldReader<bool>);
 impl PT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PT1_R {
     }
 }
 impl core::ops::Deref for PT1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PT1_W<'a> {
     }
 }
 #[doc = "Field `pt2` reader - Pulse Train 2 Stopped Interrupt Enable/Disable"]
-pub struct PT2_R(crate::FieldReader<bool, bool>);
+pub struct PT2_R(crate::FieldReader<bool>);
 impl PT2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PT2_R {
     }
 }
 impl core::ops::Deref for PT2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PT2_W<'a> {
     }
 }
 #[doc = "Field `pt3` reader - Pulse Train 3 Stopped Interrupt Enable/Disable"]
-pub struct PT3_R(crate::FieldReader<bool, bool>);
+pub struct PT3_R(crate::FieldReader<bool>);
 impl PT3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PT3_R {
     }
 }
 impl core::ops::Deref for PT3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PT3_W<'a> {
     }
 }
 #[doc = "Field `pt4` reader - Pulse Train 4 Stopped Interrupt Enable/Disable"]
-pub struct PT4_R(crate::FieldReader<bool, bool>);
+pub struct PT4_R(crate::FieldReader<bool>);
 impl PT4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PT4_R {
     }
 }
 impl core::ops::Deref for PT4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PT4_W<'a> {
     }
 }
 #[doc = "Field `pt5` reader - Pulse Train 5 Stopped Interrupt Enable/Disable"]
-pub struct PT5_R(crate::FieldReader<bool, bool>);
+pub struct PT5_R(crate::FieldReader<bool>);
 impl PT5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PT5_R {
     }
 }
 impl core::ops::Deref for PT5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PT5_W<'a> {
     }
 }
 #[doc = "Field `pt6` reader - Pulse Train 6 Stopped Interrupt Enable/Disable"]
-pub struct PT6_R(crate::FieldReader<bool, bool>);
+pub struct PT6_R(crate::FieldReader<bool>);
 impl PT6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PT6_R {
     }
 }
 impl core::ops::Deref for PT6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PT6_W<'a> {
     }
 }
 #[doc = "Field `pt7` reader - Pulse Train 7 Stopped Interrupt Enable/Disable"]
-pub struct PT7_R(crate::FieldReader<bool, bool>);
+pub struct PT7_R(crate::FieldReader<bool>);
 impl PT7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl PT7_R {
     }
 }
 impl core::ops::Deref for PT7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> PT7_W<'a> {
     }
 }
 #[doc = "Field `pt8` reader - Pulse Train 8 Stopped Interrupt Enable/Disable"]
-pub struct PT8_R(crate::FieldReader<bool, bool>);
+pub struct PT8_R(crate::FieldReader<bool>);
 impl PT8_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PT8_R {
     }
 }
 impl core::ops::Deref for PT8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PT8_W<'a> {
     }
 }
 #[doc = "Field `pt9` reader - Pulse Train 9 Stopped Interrupt Enable/Disable"]
-pub struct PT9_R(crate::FieldReader<bool, bool>);
+pub struct PT9_R(crate::FieldReader<bool>);
 impl PT9_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl PT9_R {
     }
 }
 impl core::ops::Deref for PT9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> PT9_W<'a> {
     }
 }
 #[doc = "Field `pt10` reader - Pulse Train 10 Stopped Interrupt Enable/Disable"]
-pub struct PT10_R(crate::FieldReader<bool, bool>);
+pub struct PT10_R(crate::FieldReader<bool>);
 impl PT10_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl PT10_R {
     }
 }
 impl core::ops::Deref for PT10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> PT10_W<'a> {
     }
 }
 #[doc = "Field `pt11` reader - Pulse Train 11 Stopped Interrupt Enable/Disable"]
-pub struct PT11_R(crate::FieldReader<bool, bool>);
+pub struct PT11_R(crate::FieldReader<bool>);
 impl PT11_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl PT11_R {
     }
 }
 impl core::ops::Deref for PT11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> PT11_W<'a> {
     }
 }
 #[doc = "Field `pt12` reader - Pulse Train 12 Stopped Interrupt Enable/Disable"]
-pub struct PT12_R(crate::FieldReader<bool, bool>);
+pub struct PT12_R(crate::FieldReader<bool>);
 impl PT12_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl PT12_R {
     }
 }
 impl core::ops::Deref for PT12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> PT12_W<'a> {
     }
 }
 #[doc = "Field `pt13` reader - Pulse Train 13 Stopped Interrupt Enable/Disable"]
-pub struct PT13_R(crate::FieldReader<bool, bool>);
+pub struct PT13_R(crate::FieldReader<bool>);
 impl PT13_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl PT13_R {
     }
 }
 impl core::ops::Deref for PT13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> PT13_W<'a> {
     }
 }
 #[doc = "Field `pt14` reader - Pulse Train 14 Stopped Interrupt Enable/Disable"]
-pub struct PT14_R(crate::FieldReader<bool, bool>);
+pub struct PT14_R(crate::FieldReader<bool>);
 impl PT14_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl PT14_R {
     }
 }
 impl core::ops::Deref for PT14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> PT14_W<'a> {
     }
 }
 #[doc = "Field `pt15` reader - Pulse Train 15 Stopped Interrupt Enable/Disable"]
-pub struct PT15_R(crate::FieldReader<bool, bool>);
+pub struct PT15_R(crate::FieldReader<bool>);
 impl PT15_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl PT15_R {
     }
 }
 impl core::ops::Deref for PT15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

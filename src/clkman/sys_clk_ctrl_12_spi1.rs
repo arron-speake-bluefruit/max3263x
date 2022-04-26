@@ -35,7 +35,7 @@ impl From<crate::W<SYS_CLK_CTRL_12_SPI1_SPEC>> for W {
     }
 }
 #[doc = "Field `spi1_clk_scale` reader - Control Settings for CLK12 - SPI Master 1"]
-pub struct SPI1_CLK_SCALE_R(crate::FieldReader<u8, u8>);
+pub struct SPI1_CLK_SCALE_R(crate::FieldReader<u8>);
 impl SPI1_CLK_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SPI1_CLK_SCALE_R {
     }
 }
 impl core::ops::Deref for SPI1_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

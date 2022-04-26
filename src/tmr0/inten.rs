@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `timer0` reader - Interrupt Enable for 32-bit Timer / 16-bit Timer 0"]
-pub struct TIMER0_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_R(crate::FieldReader<bool>);
 impl TIMER0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMER0_R {
     }
 }
 impl core::ops::Deref for TIMER0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMER0_W<'a> {
     }
 }
 #[doc = "Field `timer1` reader - Interrupt Enable for 16-bit Timer 1"]
-pub struct TIMER1_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_R(crate::FieldReader<bool>);
 impl TIMER1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TIMER1_R {
     }
 }
 impl core::ops::Deref for TIMER1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

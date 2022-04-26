@@ -35,7 +35,7 @@ impl From<crate::W<AFE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tmon_intbias_en` reader - Enable internal temperature measurement bias generator"]
-pub struct TMON_INTBIAS_EN_R(crate::FieldReader<bool, bool>);
+pub struct TMON_INTBIAS_EN_R(crate::FieldReader<bool>);
 impl TMON_INTBIAS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TMON_INTBIAS_EN_R {
     }
 }
 impl core::ops::Deref for TMON_INTBIAS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TMON_INTBIAS_EN_W<'a> {
     }
 }
 #[doc = "Field `tmon_extbias_en` reader - Enable external temperature measurement bias generator"]
-pub struct TMON_EXTBIAS_EN_R(crate::FieldReader<bool, bool>);
+pub struct TMON_EXTBIAS_EN_R(crate::FieldReader<bool>);
 impl TMON_EXTBIAS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TMON_EXTBIAS_EN_R {
     }
 }
 impl core::ops::Deref for TMON_EXTBIAS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

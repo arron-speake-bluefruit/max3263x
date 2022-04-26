@@ -35,7 +35,7 @@ impl From<crate::W<INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `adc_done_ie` reader - ADC Done Interrupt Enable"]
-pub struct ADC_DONE_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_DONE_IE_R(crate::FieldReader<bool>);
 impl ADC_DONE_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ADC_DONE_IE_R {
     }
 }
 impl core::ops::Deref for ADC_DONE_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ADC_DONE_IE_W<'a> {
     }
 }
 #[doc = "Field `adc_ref_ready_ie` reader - ADC Reference Ready Interrupt Enable"]
-pub struct ADC_REF_READY_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_REF_READY_IE_R(crate::FieldReader<bool>);
 impl ADC_REF_READY_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC_REF_READY_IE_R {
     }
 }
 impl core::ops::Deref for ADC_REF_READY_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC_REF_READY_IE_W<'a> {
     }
 }
 #[doc = "Field `adc_hi_limit_ie` reader - ADC Hi Limit Monitor Interrupt Enable"]
-pub struct ADC_HI_LIMIT_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_HI_LIMIT_IE_R(crate::FieldReader<bool>);
 impl ADC_HI_LIMIT_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ADC_HI_LIMIT_IE_R {
     }
 }
 impl core::ops::Deref for ADC_HI_LIMIT_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ADC_HI_LIMIT_IE_W<'a> {
     }
 }
 #[doc = "Field `adc_lo_limit_ie` reader - ADC Lo Limit Monitor Interrupt Enable"]
-pub struct ADC_LO_LIMIT_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_LO_LIMIT_IE_R(crate::FieldReader<bool>);
 impl ADC_LO_LIMIT_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ADC_LO_LIMIT_IE_R {
     }
 }
 impl core::ops::Deref for ADC_LO_LIMIT_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> ADC_LO_LIMIT_IE_W<'a> {
     }
 }
 #[doc = "Field `adc_overflow_ie` reader - ADC Overflow Interrupt Enable"]
-pub struct ADC_OVERFLOW_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_OVERFLOW_IE_R(crate::FieldReader<bool>);
 impl ADC_OVERFLOW_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl ADC_OVERFLOW_IE_R {
     }
 }
 impl core::ops::Deref for ADC_OVERFLOW_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> ADC_OVERFLOW_IE_W<'a> {
     }
 }
 #[doc = "Field `ro_cal_done_ie` reader - RO Cal Done Interrupt Enable"]
-pub struct RO_CAL_DONE_IE_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_DONE_IE_R(crate::FieldReader<bool>);
 impl RO_CAL_DONE_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RO_CAL_DONE_IE_R {
     }
 }
 impl core::ops::Deref for RO_CAL_DONE_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RO_CAL_DONE_IE_W<'a> {
     }
 }
 #[doc = "Field `adc_done_if` reader - ADC Done Interrupt Flag"]
-pub struct ADC_DONE_IF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_DONE_IF_R(crate::FieldReader<bool>);
 impl ADC_DONE_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl ADC_DONE_IF_R {
     }
 }
 impl core::ops::Deref for ADC_DONE_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> ADC_DONE_IF_W<'a> {
     }
 }
 #[doc = "Field `adc_ref_ready_if` reader - ADC Reference Ready Interrupt Flag"]
-pub struct ADC_REF_READY_IF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_REF_READY_IF_R(crate::FieldReader<bool>);
 impl ADC_REF_READY_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl ADC_REF_READY_IF_R {
     }
 }
 impl core::ops::Deref for ADC_REF_READY_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> ADC_REF_READY_IF_W<'a> {
     }
 }
 #[doc = "Field `adc_hi_limit_if` reader - ADC Hi Limit Monitor Interrupt Flag"]
-pub struct ADC_HI_LIMIT_IF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_HI_LIMIT_IF_R(crate::FieldReader<bool>);
 impl ADC_HI_LIMIT_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl ADC_HI_LIMIT_IF_R {
     }
 }
 impl core::ops::Deref for ADC_HI_LIMIT_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> ADC_HI_LIMIT_IF_W<'a> {
     }
 }
 #[doc = "Field `adc_lo_limit_if` reader - ADC Lo Limit Monitor Interrupt Flag"]
-pub struct ADC_LO_LIMIT_IF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_LO_LIMIT_IF_R(crate::FieldReader<bool>);
 impl ADC_LO_LIMIT_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl ADC_LO_LIMIT_IF_R {
     }
 }
 impl core::ops::Deref for ADC_LO_LIMIT_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> ADC_LO_LIMIT_IF_W<'a> {
     }
 }
 #[doc = "Field `adc_overflow_if` reader - ADC Overflow Interrupt Flag"]
-pub struct ADC_OVERFLOW_IF_R(crate::FieldReader<bool, bool>);
+pub struct ADC_OVERFLOW_IF_R(crate::FieldReader<bool>);
 impl ADC_OVERFLOW_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl ADC_OVERFLOW_IF_R {
     }
 }
 impl core::ops::Deref for ADC_OVERFLOW_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> ADC_OVERFLOW_IF_W<'a> {
     }
 }
 #[doc = "Field `ro_cal_done_if` reader - RO Cal Done Interrupt Flag"]
-pub struct RO_CAL_DONE_IF_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_DONE_IF_R(crate::FieldReader<bool>);
 impl RO_CAL_DONE_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl RO_CAL_DONE_IF_R {
     }
 }
 impl core::ops::Deref for RO_CAL_DONE_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> RO_CAL_DONE_IF_W<'a> {
     }
 }
 #[doc = "Field `adc_int_pending` reader - ADC Interrupt Pending Status"]
-pub struct ADC_INT_PENDING_R(crate::FieldReader<bool, bool>);
+pub struct ADC_INT_PENDING_R(crate::FieldReader<bool>);
 impl ADC_INT_PENDING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl ADC_INT_PENDING_R {
     }
 }
 impl core::ops::Deref for ADC_INT_PENDING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

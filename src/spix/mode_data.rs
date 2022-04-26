@@ -35,7 +35,7 @@ impl From<crate::W<MODE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `mode_data_bits` reader - Mode Data"]
-pub struct MODE_DATA_BITS_R(crate::FieldReader<u16, u16>);
+pub struct MODE_DATA_BITS_R(crate::FieldReader<u16>);
 impl MODE_DATA_BITS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl MODE_DATA_BITS_R {
     }
 }
 impl core::ops::Deref for MODE_DATA_BITS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MODE_DATA_BITS_W<'a> {
     }
 }
 #[doc = "Field `mode_data_oe` reader - Mode Output Enable"]
-pub struct MODE_DATA_OE_R(crate::FieldReader<u16, u16>);
+pub struct MODE_DATA_OE_R(crate::FieldReader<u16>);
 impl MODE_DATA_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl MODE_DATA_OE_R {
     }
 }
 impl core::ops::Deref for MODE_DATA_OE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

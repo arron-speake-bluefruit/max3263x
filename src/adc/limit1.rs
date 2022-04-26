@@ -35,7 +35,7 @@ impl From<crate::W<LIMIT1_SPEC>> for W {
     }
 }
 #[doc = "Field `ch_lo_limit` reader - Low Limit Threshold"]
-pub struct CH_LO_LIMIT_R(crate::FieldReader<u16, u16>);
+pub struct CH_LO_LIMIT_R(crate::FieldReader<u16>);
 impl CH_LO_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CH_LO_LIMIT_R {
     }
 }
 impl core::ops::Deref for CH_LO_LIMIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CH_LO_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `ch_hi_limit` reader - High Limit Threshold"]
-pub struct CH_HI_LIMIT_R(crate::FieldReader<u16, u16>);
+pub struct CH_HI_LIMIT_R(crate::FieldReader<u16>);
 impl CH_HI_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl CH_HI_LIMIT_R {
     }
 }
 impl core::ops::Deref for CH_HI_LIMIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CH_HI_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `ch_sel` reader - ADC Channel Select"]
-pub struct CH_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CH_SEL_R(crate::FieldReader<u8>);
 impl CH_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CH_SEL_R {
     }
 }
 impl core::ops::Deref for CH_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CH_SEL_W<'a> {
     }
 }
 #[doc = "Field `ch_lo_limit_en` reader - Low Limit Monitoring Enable"]
-pub struct CH_LO_LIMIT_EN_R(crate::FieldReader<bool, bool>);
+pub struct CH_LO_LIMIT_EN_R(crate::FieldReader<bool>);
 impl CH_LO_LIMIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl CH_LO_LIMIT_EN_R {
     }
 }
 impl core::ops::Deref for CH_LO_LIMIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> CH_LO_LIMIT_EN_W<'a> {
     }
 }
 #[doc = "Field `ch_hi_limit_en` reader - High Limit Monitoring Enable"]
-pub struct CH_HI_LIMIT_EN_R(crate::FieldReader<bool, bool>);
+pub struct CH_HI_LIMIT_EN_R(crate::FieldReader<bool>);
 impl CH_HI_LIMIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl CH_HI_LIMIT_EN_R {
     }
 }
 impl core::ops::Deref for CH_HI_LIMIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

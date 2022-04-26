@@ -35,7 +35,7 @@ impl From<crate::W<UART2_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `io_map` reader - UART2 TX/RX I/O Mapping Select"]
-pub struct IO_MAP_R(crate::FieldReader<bool, bool>);
+pub struct IO_MAP_R(crate::FieldReader<bool>);
 impl IO_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl IO_MAP_R {
     }
 }
 impl core::ops::Deref for IO_MAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> IO_MAP_W<'a> {
     }
 }
 #[doc = "Field `cts_map` reader - UART2 CTS I/O Mapping Select"]
-pub struct CTS_MAP_R(crate::FieldReader<bool, bool>);
+pub struct CTS_MAP_R(crate::FieldReader<bool>);
 impl CTS_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CTS_MAP_R {
     }
 }
 impl core::ops::Deref for CTS_MAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CTS_MAP_W<'a> {
     }
 }
 #[doc = "Field `rts_map` reader - UART2 RTS I/O Mapping Select"]
-pub struct RTS_MAP_R(crate::FieldReader<bool, bool>);
+pub struct RTS_MAP_R(crate::FieldReader<bool>);
 impl RTS_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RTS_MAP_R {
     }
 }
 impl core::ops::Deref for RTS_MAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RTS_MAP_W<'a> {
     }
 }
 #[doc = "Field `io_req` reader - UART2 TX/RX I/O Request"]
-pub struct IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct IO_REQ_R(crate::FieldReader<bool>);
 impl IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl IO_REQ_R {
     }
 }
 impl core::ops::Deref for IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> IO_REQ_W<'a> {
     }
 }
 #[doc = "Field `cts_io_req` reader - UART2 CTS I/O Request"]
-pub struct CTS_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct CTS_IO_REQ_R(crate::FieldReader<bool>);
 impl CTS_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CTS_IO_REQ_R {
     }
 }
 impl core::ops::Deref for CTS_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CTS_IO_REQ_W<'a> {
     }
 }
 #[doc = "Field `rts_io_req` reader - UART2 RTS I/O Request"]
-pub struct RTS_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct RTS_IO_REQ_R(crate::FieldReader<bool>);
 impl RTS_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RTS_IO_REQ_R {
     }
 }
 impl core::ops::Deref for RTS_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `crypto_stable` reader - Crypto Oscillator Stable Interrupt Flag"]
-pub struct CRYPTO_STABLE_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_STABLE_R(crate::FieldReader<bool>);
 impl CRYPTO_STABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CRYPTO_STABLE_R {
     }
 }
 impl core::ops::Deref for CRYPTO_STABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CRYPTO_STABLE_W<'a> {
     }
 }
 #[doc = "Field `sys_ro_stable` reader - System Oscillator Stable Interrupt Flag"]
-pub struct SYS_RO_STABLE_R(crate::FieldReader<bool, bool>);
+pub struct SYS_RO_STABLE_R(crate::FieldReader<bool>);
 impl SYS_RO_STABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SYS_RO_STABLE_R {
     }
 }
 impl core::ops::Deref for SYS_RO_STABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

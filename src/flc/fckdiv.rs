@@ -35,7 +35,7 @@ impl From<crate::W<FCKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fckdiv` reader - Flash Clock Pulse Divisor"]
-pub struct FCKDIV_R(crate::FieldReader<u8, u8>);
+pub struct FCKDIV_R(crate::FieldReader<u8>);
 impl FCKDIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl FCKDIV_R {
     }
 }
 impl core::ops::Deref for FCKDIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FCKDIV_W<'a> {
     }
 }
 #[doc = "Field `auto_fckdiv_result` reader - Auto FCKDIV Calculation Result"]
-pub struct AUTO_FCKDIV_RESULT_R(crate::FieldReader<u16, u16>);
+pub struct AUTO_FCKDIV_RESULT_R(crate::FieldReader<u16>);
 impl AUTO_FCKDIV_RESULT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl AUTO_FCKDIV_RESULT_R {
     }
 }
 impl core::ops::Deref for AUTO_FCKDIV_RESULT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

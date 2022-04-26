@@ -35,7 +35,7 @@ impl From<crate::W<CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `long_line_mode` reader - Long Line Mode"]
-pub struct LONG_LINE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct LONG_LINE_MODE_R(crate::FieldReader<bool>);
 impl LONG_LINE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl LONG_LINE_MODE_R {
     }
 }
 impl core::ops::Deref for LONG_LINE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> LONG_LINE_MODE_W<'a> {
     }
 }
 #[doc = "Field `force_pres_det` reader - Force Line During Presence Detect"]
-pub struct FORCE_PRES_DET_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_PRES_DET_R(crate::FieldReader<bool>);
 impl FORCE_PRES_DET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FORCE_PRES_DET_R {
     }
 }
 impl core::ops::Deref for FORCE_PRES_DET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FORCE_PRES_DET_W<'a> {
     }
 }
 #[doc = "Field `bit_bang_en` reader - Bit Bang Enable"]
-pub struct BIT_BANG_EN_R(crate::FieldReader<bool, bool>);
+pub struct BIT_BANG_EN_R(crate::FieldReader<bool>);
 impl BIT_BANG_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BIT_BANG_EN_R {
     }
 }
 impl core::ops::Deref for BIT_BANG_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BIT_BANG_EN_W<'a> {
     }
 }
 #[doc = "Field `ext_pullup_mode` reader - Provide an extra output to control an external pullup."]
-pub struct EXT_PULLUP_MODE_R(crate::FieldReader<bool, bool>);
+pub struct EXT_PULLUP_MODE_R(crate::FieldReader<bool>);
 impl EXT_PULLUP_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl EXT_PULLUP_MODE_R {
     }
 }
 impl core::ops::Deref for EXT_PULLUP_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> EXT_PULLUP_MODE_W<'a> {
     }
 }
 #[doc = "Field `ext_pullup_enable` reader - Enable External Pullup"]
-pub struct EXT_PULLUP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct EXT_PULLUP_ENABLE_R(crate::FieldReader<bool>);
 impl EXT_PULLUP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl EXT_PULLUP_ENABLE_R {
     }
 }
 impl core::ops::Deref for EXT_PULLUP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> EXT_PULLUP_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `single_bit_mode` reader - Enable Single Bit TX/RX Mode"]
-pub struct SINGLE_BIT_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SINGLE_BIT_MODE_R(crate::FieldReader<bool>);
 impl SINGLE_BIT_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SINGLE_BIT_MODE_R {
     }
 }
 impl core::ops::Deref for SINGLE_BIT_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SINGLE_BIT_MODE_W<'a> {
     }
 }
 #[doc = "Field `overdrive` reader - Enables overdrive speed for 1-Wire operations."]
-pub struct OVERDRIVE_R(crate::FieldReader<bool, bool>);
+pub struct OVERDRIVE_R(crate::FieldReader<bool>);
 impl OVERDRIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl OVERDRIVE_R {
     }
 }
 impl core::ops::Deref for OVERDRIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> OVERDRIVE_W<'a> {
     }
 }
 #[doc = "Field `int_pullup_enable` reader - Enable internal pullup."]
-pub struct INT_PULLUP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct INT_PULLUP_ENABLE_R(crate::FieldReader<bool>);
 impl INT_PULLUP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl INT_PULLUP_ENABLE_R {
     }
 }
 impl core::ops::Deref for INT_PULLUP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

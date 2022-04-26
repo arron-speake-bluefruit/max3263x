@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `nano_en` reader - Enable nanoring oscillator output"]
-pub struct NANO_EN_R(crate::FieldReader<bool, bool>);
+pub struct NANO_EN_R(crate::FieldReader<bool>);
 impl NANO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl NANO_EN_R {
     }
 }
 impl core::ops::Deref for NANO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

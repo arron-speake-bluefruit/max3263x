@@ -35,7 +35,7 @@ impl From<crate::W<REG2_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_vdd12_hyst` reader - VDD12_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD12_HYST_R(crate::FieldReader<u8, u8>);
+pub struct PWR_VDD12_HYST_R(crate::FieldReader<u8>);
 impl PWR_VDD12_HYST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PWR_VDD12_HYST_R {
     }
 }
 impl core::ops::Deref for PWR_VDD12_HYST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PWR_VDD12_HYST_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd18_hyst` reader - VDD18_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD18_HYST_R(crate::FieldReader<u8, u8>);
+pub struct PWR_VDD18_HYST_R(crate::FieldReader<u8>);
 impl PWR_VDD18_HYST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PWR_VDD18_HYST_R {
     }
 }
 impl core::ops::Deref for PWR_VDD18_HYST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PWR_VDD18_HYST_W<'a> {
     }
 }
 #[doc = "Field `pwr_vrtc_hyst` reader - VRTC Comparator Hysteresis Setting"]
-pub struct PWR_VRTC_HYST_R(crate::FieldReader<u8, u8>);
+pub struct PWR_VRTC_HYST_R(crate::FieldReader<u8>);
 impl PWR_VRTC_HYST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PWR_VRTC_HYST_R {
     }
 }
 impl core::ops::Deref for PWR_VRTC_HYST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PWR_VRTC_HYST_W<'a> {
     }
 }
 #[doc = "Field `pwr_vddb_hyst` reader - VDDB Comparator Hysteresis Setting"]
-pub struct PWR_VDDB_HYST_R(crate::FieldReader<u8, u8>);
+pub struct PWR_VDDB_HYST_R(crate::FieldReader<u8>);
 impl PWR_VDDB_HYST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl PWR_VDDB_HYST_R {
     }
 }
 impl core::ops::Deref for PWR_VDDB_HYST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> PWR_VDDB_HYST_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_hyst` reader - TVDD12 Comparator Hysteresis Setting"]
-pub struct PWR_TVDD12_HYST_R(crate::FieldReader<u8, u8>);
+pub struct PWR_TVDD12_HYST_R(crate::FieldReader<u8>);
 impl PWR_TVDD12_HYST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl PWR_TVDD12_HYST_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_HYST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

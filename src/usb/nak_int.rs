@@ -35,7 +35,7 @@ impl From<crate::W<NAK_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `nak0` reader - Endpoint 0 NAK Interrupt Flag"]
-pub struct NAK0_R(crate::FieldReader<bool, bool>);
+pub struct NAK0_R(crate::FieldReader<bool>);
 impl NAK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl NAK0_R {
     }
 }
 impl core::ops::Deref for NAK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> NAK0_W<'a> {
     }
 }
 #[doc = "Field `nak1` reader - Endpoint 1 NAK Interrupt Flag"]
-pub struct NAK1_R(crate::FieldReader<bool, bool>);
+pub struct NAK1_R(crate::FieldReader<bool>);
 impl NAK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl NAK1_R {
     }
 }
 impl core::ops::Deref for NAK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> NAK1_W<'a> {
     }
 }
 #[doc = "Field `nak2` reader - Endpoint 2 NAK Interrupt Flag"]
-pub struct NAK2_R(crate::FieldReader<bool, bool>);
+pub struct NAK2_R(crate::FieldReader<bool>);
 impl NAK2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl NAK2_R {
     }
 }
 impl core::ops::Deref for NAK2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> NAK2_W<'a> {
     }
 }
 #[doc = "Field `nak3` reader - Endpoint 3 NAK Interrupt Flag"]
-pub struct NAK3_R(crate::FieldReader<bool, bool>);
+pub struct NAK3_R(crate::FieldReader<bool>);
 impl NAK3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl NAK3_R {
     }
 }
 impl core::ops::Deref for NAK3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> NAK3_W<'a> {
     }
 }
 #[doc = "Field `nak4` reader - Endpoint 4 NAK Interrupt Flag"]
-pub struct NAK4_R(crate::FieldReader<bool, bool>);
+pub struct NAK4_R(crate::FieldReader<bool>);
 impl NAK4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl NAK4_R {
     }
 }
 impl core::ops::Deref for NAK4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> NAK4_W<'a> {
     }
 }
 #[doc = "Field `nak5` reader - Endpoint 5 NAK Interrupt Flag"]
-pub struct NAK5_R(crate::FieldReader<bool, bool>);
+pub struct NAK5_R(crate::FieldReader<bool>);
 impl NAK5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl NAK5_R {
     }
 }
 impl core::ops::Deref for NAK5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> NAK5_W<'a> {
     }
 }
 #[doc = "Field `nak6` reader - Endpoint 6 NAK Interrupt Flag"]
-pub struct NAK6_R(crate::FieldReader<bool, bool>);
+pub struct NAK6_R(crate::FieldReader<bool>);
 impl NAK6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl NAK6_R {
     }
 }
 impl core::ops::Deref for NAK6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> NAK6_W<'a> {
     }
 }
 #[doc = "Field `nak7` reader - Endpoint 7 NAK Interrupt Flag"]
-pub struct NAK7_R(crate::FieldReader<bool, bool>);
+pub struct NAK7_R(crate::FieldReader<bool>);
 impl NAK7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl NAK7_R {
     }
 }
 impl core::ops::Deref for NAK7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

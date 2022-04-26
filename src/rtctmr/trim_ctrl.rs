@@ -35,7 +35,7 @@ impl From<crate::W<TRIM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_enable_r` reader - Enable RTL Trim of RTC Timer"]
-pub struct TRIM_ENABLE_R_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_ENABLE_R_R(crate::FieldReader<bool>);
 impl TRIM_ENABLE_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TRIM_ENABLE_R_R {
     }
 }
 impl core::ops::Deref for TRIM_ENABLE_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TRIM_ENABLE_R_W<'a> {
     }
 }
 #[doc = "Field `trim_faster_ovr_r` reader - Force RTC Trim to Faster"]
-pub struct TRIM_FASTER_OVR_R_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_FASTER_OVR_R_R(crate::FieldReader<bool>);
 impl TRIM_FASTER_OVR_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TRIM_FASTER_OVR_R_R {
     }
 }
 impl core::ops::Deref for TRIM_FASTER_OVR_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TRIM_FASTER_OVR_R_W<'a> {
     }
 }
 #[doc = "Field `trim_slower_r` reader - RTC Trim Direction Status"]
-pub struct TRIM_SLOWER_R_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_SLOWER_R_R(crate::FieldReader<bool>);
 impl TRIM_SLOWER_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TRIM_SLOWER_R_R {
     }
 }
 impl core::ops::Deref for TRIM_SLOWER_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<SECURITY_SPEC>> for W {
     }
 }
 #[doc = "Field `debug_disable` reader - Debug Lockout"]
-pub struct DEBUG_DISABLE_R(crate::FieldReader<u8, u8>);
+pub struct DEBUG_DISABLE_R(crate::FieldReader<u8>);
 impl DEBUG_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DEBUG_DISABLE_R {
     }
 }
 impl core::ops::Deref for DEBUG_DISABLE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DEBUG_DISABLE_W<'a> {
     }
 }
 #[doc = "Field `mass_erase_lock` reader - Mass Erase Lockout"]
-pub struct MASS_ERASE_LOCK_R(crate::FieldReader<u8, u8>);
+pub struct MASS_ERASE_LOCK_R(crate::FieldReader<u8>);
 impl MASS_ERASE_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl MASS_ERASE_LOCK_R {
     }
 }
 impl core::ops::Deref for MASS_ERASE_LOCK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> MASS_ERASE_LOCK_W<'a> {
     }
 }
 #[doc = "Field `disable_ahb_wr` reader - Disable AHB Flash Write Operations"]
-pub struct DISABLE_AHB_WR_R(crate::FieldReader<u8, u8>);
+pub struct DISABLE_AHB_WR_R(crate::FieldReader<u8>);
 impl DISABLE_AHB_WR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DISABLE_AHB_WR_R {
     }
 }
 impl core::ops::Deref for DISABLE_AHB_WR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DISABLE_AHB_WR_W<'a> {
     }
 }
 #[doc = "Field `flc_settings_lock` reader - FLC Settings Lock"]
-pub struct FLC_SETTINGS_LOCK_R(crate::FieldReader<u8, u8>);
+pub struct FLC_SETTINGS_LOCK_R(crate::FieldReader<u8>);
 impl FLC_SETTINGS_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl FLC_SETTINGS_LOCK_R {
     }
 }
 impl core::ops::Deref for FLC_SETTINGS_LOCK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> FLC_SETTINGS_LOCK_W<'a> {
     }
 }
 #[doc = "Field `security_lock` reader - Security Lock"]
-pub struct SECURITY_LOCK_R(crate::FieldReader<u8, u8>);
+pub struct SECURITY_LOCK_R(crate::FieldReader<u8>);
 impl SECURITY_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl SECURITY_LOCK_R {
     }
 }
 impl core::ops::Deref for SECURITY_LOCK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

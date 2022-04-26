@@ -35,7 +35,7 @@ impl From<crate::W<CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `enable` reader - PMU Channel Enable"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ENABLE_W<'a> {
     }
 }
 #[doc = "Field `ll_stopped` reader - Linked List Engine Status"]
-pub struct LL_STOPPED_R(crate::FieldReader<bool, bool>);
+pub struct LL_STOPPED_R(crate::FieldReader<bool>);
 impl LL_STOPPED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LL_STOPPED_R {
     }
 }
 impl core::ops::Deref for LL_STOPPED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LL_STOPPED_W<'a> {
     }
 }
 #[doc = "Field `manual` reader - Manual Mode Enable"]
-pub struct MANUAL_R(crate::FieldReader<bool, bool>);
+pub struct MANUAL_R(crate::FieldReader<bool>);
 impl MANUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MANUAL_R {
     }
 }
 impl core::ops::Deref for MANUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MANUAL_W<'a> {
     }
 }
 #[doc = "Field `bus_error` reader - AHB Bus Error Interrupt Flag"]
-pub struct BUS_ERROR_R(crate::FieldReader<bool, bool>);
+pub struct BUS_ERROR_R(crate::FieldReader<bool>);
 impl BUS_ERROR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BUS_ERROR_R {
     }
 }
 impl core::ops::Deref for BUS_ERROR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BUS_ERROR_W<'a> {
     }
 }
 #[doc = "Field `to_stat` reader - AHB Bus Timeout Interrupt Flag"]
-pub struct TO_STAT_R(crate::FieldReader<bool, bool>);
+pub struct TO_STAT_R(crate::FieldReader<bool>);
 impl TO_STAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TO_STAT_R {
     }
 }
 impl core::ops::Deref for TO_STAT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TO_STAT_W<'a> {
     }
 }
 #[doc = "Field `to_sel` reader - Time Out Interval Select"]
-pub struct TO_SEL_R(crate::FieldReader<u8, u8>);
+pub struct TO_SEL_R(crate::FieldReader<u8>);
 impl TO_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl TO_SEL_R {
     }
 }
 impl core::ops::Deref for TO_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> TO_SEL_W<'a> {
     }
 }
 #[doc = "Field `ps_sel` reader - Time Out Interval Prescale Select"]
-pub struct PS_SEL_R(crate::FieldReader<u8, u8>);
+pub struct PS_SEL_R(crate::FieldReader<u8>);
 impl PS_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -255,7 +255,7 @@ impl PS_SEL_R {
     }
 }
 impl core::ops::Deref for PS_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> PS_SEL_W<'a> {
     }
 }
 #[doc = "Field `interrupt` reader - Descriptor Interrupt Flag"]
-pub struct INTERRUPT_R(crate::FieldReader<bool, bool>);
+pub struct INTERRUPT_R(crate::FieldReader<bool>);
 impl INTERRUPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl INTERRUPT_R {
     }
 }
 impl core::ops::Deref for INTERRUPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> INTERRUPT_W<'a> {
     }
 }
 #[doc = "Field `int_en` reader - PMU Channel Interrupt Enable"]
-pub struct INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_EN_R(crate::FieldReader<bool>);
 impl INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl INT_EN_R {
     }
 }
 impl core::ops::Deref for INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> INT_EN_W<'a> {
     }
 }
 #[doc = "Field `burst_size` reader - DMA Maximum Burst Size"]
-pub struct BURST_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct BURST_SIZE_R(crate::FieldReader<u8>);
 impl BURST_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -356,7 +356,7 @@ impl BURST_SIZE_R {
     }
 }
 impl core::ops::Deref for BURST_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

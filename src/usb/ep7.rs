@@ -35,7 +35,7 @@ impl From<crate::W<EP7_SPEC>> for W {
     }
 }
 #[doc = "Field `ep_dir` reader - Endpoint Direction"]
-pub struct EP_DIR_R(crate::FieldReader<u8, u8>);
+pub struct EP_DIR_R(crate::FieldReader<u8>);
 impl EP_DIR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl EP_DIR_R {
     }
 }
 impl core::ops::Deref for EP_DIR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> EP_DIR_W<'a> {
     }
 }
 #[doc = "Field `ep_buf2` reader - Endpoint Double Buffered Enable"]
-pub struct EP_BUF2_R(crate::FieldReader<bool, bool>);
+pub struct EP_BUF2_R(crate::FieldReader<bool>);
 impl EP_BUF2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl EP_BUF2_R {
     }
 }
 impl core::ops::Deref for EP_BUF2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> EP_BUF2_W<'a> {
     }
 }
 #[doc = "Field `ep_int_en` reader - Endpoint Transfer Complete Interrupt Enable"]
-pub struct EP_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct EP_INT_EN_R(crate::FieldReader<bool>);
 impl EP_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl EP_INT_EN_R {
     }
 }
 impl core::ops::Deref for EP_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> EP_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `ep_nak_en` reader - Endpoint NAK Interrupt Enable"]
-pub struct EP_NAK_EN_R(crate::FieldReader<bool, bool>);
+pub struct EP_NAK_EN_R(crate::FieldReader<bool>);
 impl EP_NAK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl EP_NAK_EN_R {
     }
 }
 impl core::ops::Deref for EP_NAK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> EP_NAK_EN_W<'a> {
     }
 }
 #[doc = "Field `ep_dt` reader - Endpoint Data Toggle Clear"]
-pub struct EP_DT_R(crate::FieldReader<bool, bool>);
+pub struct EP_DT_R(crate::FieldReader<bool>);
 impl EP_DT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl EP_DT_R {
     }
 }
 impl core::ops::Deref for EP_DT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> EP_DT_W<'a> {
     }
 }
 #[doc = "Field `ep_stall` reader - Endpoint Stall"]
-pub struct EP_STALL_R(crate::FieldReader<bool, bool>);
+pub struct EP_STALL_R(crate::FieldReader<bool>);
 impl EP_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl EP_STALL_R {
     }
 }
 impl core::ops::Deref for EP_STALL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> EP_STALL_W<'a> {
     }
 }
 #[doc = "Field `ep_st_stall` reader - Endpoint Stall Status Stage of Control Transfer"]
-pub struct EP_ST_STALL_R(crate::FieldReader<bool, bool>);
+pub struct EP_ST_STALL_R(crate::FieldReader<bool>);
 impl EP_ST_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl EP_ST_STALL_R {
     }
 }
 impl core::ops::Deref for EP_ST_STALL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> EP_ST_STALL_W<'a> {
     }
 }
 #[doc = "Field `ep_st_ack` reader - Endpoint Acknowledge Status Stage of Control Transfer"]
-pub struct EP_ST_ACK_R(crate::FieldReader<bool, bool>);
+pub struct EP_ST_ACK_R(crate::FieldReader<bool>);
 impl EP_ST_ACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl EP_ST_ACK_R {
     }
 }
 impl core::ops::Deref for EP_ST_ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

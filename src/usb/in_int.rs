@@ -35,7 +35,7 @@ impl From<crate::W<IN_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `inbav0` reader - Endpoint 0 Buffer Available Interrupt Flag"]
-pub struct INBAV0_R(crate::FieldReader<bool, bool>);
+pub struct INBAV0_R(crate::FieldReader<bool>);
 impl INBAV0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl INBAV0_R {
     }
 }
 impl core::ops::Deref for INBAV0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> INBAV0_W<'a> {
     }
 }
 #[doc = "Field `inbav1` reader - Endpoint 1 Buffer Available Interrupt Flag"]
-pub struct INBAV1_R(crate::FieldReader<bool, bool>);
+pub struct INBAV1_R(crate::FieldReader<bool>);
 impl INBAV1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl INBAV1_R {
     }
 }
 impl core::ops::Deref for INBAV1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> INBAV1_W<'a> {
     }
 }
 #[doc = "Field `inbav2` reader - Endpoint 2 Buffer Available Interrupt Flag"]
-pub struct INBAV2_R(crate::FieldReader<bool, bool>);
+pub struct INBAV2_R(crate::FieldReader<bool>);
 impl INBAV2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl INBAV2_R {
     }
 }
 impl core::ops::Deref for INBAV2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> INBAV2_W<'a> {
     }
 }
 #[doc = "Field `inbav3` reader - Endpoint 3 Buffer Available Interrupt Flag"]
-pub struct INBAV3_R(crate::FieldReader<bool, bool>);
+pub struct INBAV3_R(crate::FieldReader<bool>);
 impl INBAV3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl INBAV3_R {
     }
 }
 impl core::ops::Deref for INBAV3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> INBAV3_W<'a> {
     }
 }
 #[doc = "Field `inbav4` reader - Endpoint 4 Buffer Available Interrupt Flag"]
-pub struct INBAV4_R(crate::FieldReader<bool, bool>);
+pub struct INBAV4_R(crate::FieldReader<bool>);
 impl INBAV4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl INBAV4_R {
     }
 }
 impl core::ops::Deref for INBAV4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> INBAV4_W<'a> {
     }
 }
 #[doc = "Field `inbav5` reader - Endpoint 5 Buffer Available Interrupt Flag"]
-pub struct INBAV5_R(crate::FieldReader<bool, bool>);
+pub struct INBAV5_R(crate::FieldReader<bool>);
 impl INBAV5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl INBAV5_R {
     }
 }
 impl core::ops::Deref for INBAV5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> INBAV5_W<'a> {
     }
 }
 #[doc = "Field `inbav6` reader - Endpoint 6 Buffer Available Interrupt Flag"]
-pub struct INBAV6_R(crate::FieldReader<bool, bool>);
+pub struct INBAV6_R(crate::FieldReader<bool>);
 impl INBAV6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl INBAV6_R {
     }
 }
 impl core::ops::Deref for INBAV6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> INBAV6_W<'a> {
     }
 }
 #[doc = "Field `inbav7` reader - Endpoint 7 Buffer Available Interrupt Flag"]
-pub struct INBAV7_R(crate::FieldReader<bool, bool>);
+pub struct INBAV7_R(crate::FieldReader<bool>);
 impl INBAV7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl INBAV7_R {
     }
 }
 impl core::ops::Deref for INBAV7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

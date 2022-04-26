@@ -35,7 +35,7 @@ impl From<crate::W<BB_SPEC>> for W {
     }
 }
 #[doc = "Field `bb_scl_out` reader - Bit Bang SCL Output"]
-pub struct BB_SCL_OUT_R(crate::FieldReader<bool, bool>);
+pub struct BB_SCL_OUT_R(crate::FieldReader<bool>);
 impl BB_SCL_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BB_SCL_OUT_R {
     }
 }
 impl core::ops::Deref for BB_SCL_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BB_SCL_OUT_W<'a> {
     }
 }
 #[doc = "Field `bb_sda_out` reader - Bit Bang SDA Output"]
-pub struct BB_SDA_OUT_R(crate::FieldReader<bool, bool>);
+pub struct BB_SDA_OUT_R(crate::FieldReader<bool>);
 impl BB_SDA_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl BB_SDA_OUT_R {
     }
 }
 impl core::ops::Deref for BB_SDA_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> BB_SDA_OUT_W<'a> {
     }
 }
 #[doc = "Field `bb_scl_in_val` reader - Bit Bang SCL Input Value"]
-pub struct BB_SCL_IN_VAL_R(crate::FieldReader<bool, bool>);
+pub struct BB_SCL_IN_VAL_R(crate::FieldReader<bool>);
 impl BB_SCL_IN_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,14 +117,14 @@ impl BB_SCL_IN_VAL_R {
     }
 }
 impl core::ops::Deref for BB_SCL_IN_VAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `bb_sda_in_val` reader - Bit Bang SCL Input Value"]
-pub struct BB_SDA_IN_VAL_R(crate::FieldReader<bool, bool>);
+pub struct BB_SDA_IN_VAL_R(crate::FieldReader<bool>);
 impl BB_SDA_IN_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,14 +132,14 @@ impl BB_SDA_IN_VAL_R {
     }
 }
 impl core::ops::Deref for BB_SDA_IN_VAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `rx_fifo_cnt` reader - Results FIFO Data Received Count"]
-pub struct RX_FIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct RX_FIFO_CNT_R(crate::FieldReader<u8>);
 impl RX_FIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -147,7 +147,7 @@ impl RX_FIFO_CNT_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

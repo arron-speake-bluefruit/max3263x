@@ -35,7 +35,7 @@ impl From<crate::W<TRANS_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_start` reader - Start Transaction"]
-pub struct TX_START_R(crate::FieldReader<bool, bool>);
+pub struct TX_START_R(crate::FieldReader<bool>);
 impl TX_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_START_R {
     }
 }
 impl core::ops::Deref for TX_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_START_W<'a> {
     }
 }
 #[doc = "Field `tx_in_progress` reader - Transaction In Progress"]
-pub struct TX_IN_PROGRESS_R(crate::FieldReader<bool, bool>);
+pub struct TX_IN_PROGRESS_R(crate::FieldReader<bool>);
 impl TX_IN_PROGRESS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,14 +80,14 @@ impl TX_IN_PROGRESS_R {
     }
 }
 impl core::ops::Deref for TX_IN_PROGRESS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `tx_done` reader - Transaction Done"]
-pub struct TX_DONE_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_R(crate::FieldReader<bool>);
 impl TX_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -95,14 +95,14 @@ impl TX_DONE_R {
     }
 }
 impl core::ops::Deref for TX_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `tx_nacked` reader - Transaction Nacked"]
-pub struct TX_NACKED_R(crate::FieldReader<bool, bool>);
+pub struct TX_NACKED_R(crate::FieldReader<bool>);
 impl TX_NACKED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -110,14 +110,14 @@ impl TX_NACKED_R {
     }
 }
 impl core::ops::Deref for TX_NACKED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `tx_lost_arbitr` reader - Transaction Lost Arbitration"]
-pub struct TX_LOST_ARBITR_R(crate::FieldReader<bool, bool>);
+pub struct TX_LOST_ARBITR_R(crate::FieldReader<bool>);
 impl TX_LOST_ARBITR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -125,14 +125,14 @@ impl TX_LOST_ARBITR_R {
     }
 }
 impl core::ops::Deref for TX_LOST_ARBITR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `tx_timeout` reader - Transaction Timed Out"]
-pub struct TX_TIMEOUT_R(crate::FieldReader<bool, bool>);
+pub struct TX_TIMEOUT_R(crate::FieldReader<bool>);
 impl TX_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -140,7 +140,7 @@ impl TX_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TX_TIMEOUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

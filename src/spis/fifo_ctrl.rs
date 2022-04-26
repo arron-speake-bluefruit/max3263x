@@ -35,7 +35,7 @@ impl From<crate::W<FIFO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_ae_lvl` reader - Transaction FIFO Almost Empty Flag Level"]
-pub struct TX_FIFO_AE_LVL_R(crate::FieldReader<u8, u8>);
+pub struct TX_FIFO_AE_LVL_R(crate::FieldReader<u8>);
 impl TX_FIFO_AE_LVL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_FIFO_AE_LVL_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_AE_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_FIFO_AE_LVL_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_af_lvl` reader - Receive FIFO Almost Full Flag Level"]
-pub struct RX_FIFO_AF_LVL_R(crate::FieldReader<u8, u8>);
+pub struct RX_FIFO_AF_LVL_R(crate::FieldReader<u8>);
 impl RX_FIFO_AF_LVL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RX_FIFO_AF_LVL_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_AF_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

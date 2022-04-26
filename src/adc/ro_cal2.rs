@@ -35,7 +35,7 @@ impl From<crate::W<RO_CAL2_SPEC>> for W {
     }
 }
 #[doc = "Field `auto_cal_done_cnt` reader - Auto Cal Time Delay for Atomic Calibration (in milliseconds)"]
-pub struct AUTO_CAL_DONE_CNT_R(crate::FieldReader<u8, u8>);
+pub struct AUTO_CAL_DONE_CNT_R(crate::FieldReader<u8>);
 impl AUTO_CAL_DONE_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl AUTO_CAL_DONE_CNT_R {
     }
 }
 impl core::ops::Deref for AUTO_CAL_DONE_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

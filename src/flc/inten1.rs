@@ -35,7 +35,7 @@ impl From<crate::W<INTEN1_SPEC>> for W {
     }
 }
 #[doc = "Field `sram_addr_wrapped` reader - SRAM Address Wrapped Interrupt Enable/Disable"]
-pub struct SRAM_ADDR_WRAPPED_R(crate::FieldReader<bool, bool>);
+pub struct SRAM_ADDR_WRAPPED_R(crate::FieldReader<bool>);
 impl SRAM_ADDR_WRAPPED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SRAM_ADDR_WRAPPED_R {
     }
 }
 impl core::ops::Deref for SRAM_ADDR_WRAPPED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SRAM_ADDR_WRAPPED_W<'a> {
     }
 }
 #[doc = "Field `invalid_flash_addr` reader - Invalid Flash Address Interrupt Enable/Disable"]
-pub struct INVALID_FLASH_ADDR_R(crate::FieldReader<bool, bool>);
+pub struct INVALID_FLASH_ADDR_R(crate::FieldReader<bool>);
 impl INVALID_FLASH_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl INVALID_FLASH_ADDR_R {
     }
 }
 impl core::ops::Deref for INVALID_FLASH_ADDR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> INVALID_FLASH_ADDR_W<'a> {
     }
 }
 #[doc = "Field `flash_read_locked` reader - Flash Read from Locked Area Interrupt Enable/Disable"]
-pub struct FLASH_READ_LOCKED_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_READ_LOCKED_R(crate::FieldReader<bool>);
 impl FLASH_READ_LOCKED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FLASH_READ_LOCKED_R {
     }
 }
 impl core::ops::Deref for FLASH_READ_LOCKED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FLASH_READ_LOCKED_W<'a> {
     }
 }
 #[doc = "Field `trim_update_done` reader - Trim Update Complete Interrupt Enable/Disable"]
-pub struct TRIM_UPDATE_DONE_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_UPDATE_DONE_R(crate::FieldReader<bool>);
 impl TRIM_UPDATE_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TRIM_UPDATE_DONE_R {
     }
 }
 impl core::ops::Deref for TRIM_UPDATE_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TRIM_UPDATE_DONE_W<'a> {
     }
 }
 #[doc = "Field `flc_state_done` reader - FLC State Machine Reached DONE Interrupt Enable/Disable"]
-pub struct FLC_STATE_DONE_R(crate::FieldReader<bool, bool>);
+pub struct FLC_STATE_DONE_R(crate::FieldReader<bool>);
 impl FLC_STATE_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FLC_STATE_DONE_R {
     }
 }
 impl core::ops::Deref for FLC_STATE_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FLC_STATE_DONE_W<'a> {
     }
 }
 #[doc = "Field `flc_prog_complete` reader - Program (Write or Erase) Op Completed Int Enable/Disable"]
-pub struct FLC_PROG_COMPLETE_R(crate::FieldReader<bool, bool>);
+pub struct FLC_PROG_COMPLETE_R(crate::FieldReader<bool>);
 impl FLC_PROG_COMPLETE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FLC_PROG_COMPLETE_R {
     }
 }
 impl core::ops::Deref for FLC_PROG_COMPLETE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

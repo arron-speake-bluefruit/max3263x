@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `start` reader - Start MAA Calculation"]
-pub struct START_R(crate::FieldReader<bool, bool>);
+pub struct START_R(crate::FieldReader<bool>);
 impl START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_R {
     }
 }
 impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,7 +95,7 @@ impl From<OPSEL_A> for u8 {
     }
 }
 #[doc = "Field `opsel` reader - Select Operation Type"]
-pub struct OPSEL_R(crate::FieldReader<u8, OPSEL_A>);
+pub struct OPSEL_R(crate::FieldReader<u8>);
 impl OPSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -146,7 +146,7 @@ impl OPSEL_R {
     }
 }
 impl core::ops::Deref for OPSEL_R {
-    type Target = crate::FieldReader<u8, OPSEL_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> OPSEL_W<'a> {
     }
 }
 #[doc = "Field `ocalc` reader - Optimized Calculation Control"]
-pub struct OCALC_R(crate::FieldReader<bool, bool>);
+pub struct OCALC_R(crate::FieldReader<bool>);
 impl OCALC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl OCALC_R {
     }
 }
 impl core::ops::Deref for OCALC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> OCALC_W<'a> {
     }
 }
 #[doc = "Field `if_done` reader - Interrupt Flag - Calculation Done"]
-pub struct IF_DONE_R(crate::FieldReader<bool, bool>);
+pub struct IF_DONE_R(crate::FieldReader<bool>);
 impl IF_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl IF_DONE_R {
     }
 }
 impl core::ops::Deref for IF_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> IF_DONE_W<'a> {
     }
 }
 #[doc = "Field `inten` reader - MAA Interrupt Enable"]
-pub struct INTEN_R(crate::FieldReader<bool, bool>);
+pub struct INTEN_R(crate::FieldReader<bool>);
 impl INTEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl INTEN_R {
     }
 }
 impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> INTEN_W<'a> {
     }
 }
 #[doc = "Field `if_error` reader - Interrupt Flag - Error"]
-pub struct IF_ERROR_R(crate::FieldReader<bool, bool>);
+pub struct IF_ERROR_R(crate::FieldReader<bool>);
 impl IF_ERROR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl IF_ERROR_R {
     }
 }
 impl core::ops::Deref for IF_ERROR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> IF_ERROR_W<'a> {
     }
 }
 #[doc = "Field `ofs_a` reader - Operand A Memory Offset Select"]
-pub struct OFS_A_R(crate::FieldReader<u8, u8>);
+pub struct OFS_A_R(crate::FieldReader<u8>);
 impl OFS_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -356,7 +356,7 @@ impl OFS_A_R {
     }
 }
 impl core::ops::Deref for OFS_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -375,7 +375,7 @@ impl<'a> OFS_A_W<'a> {
     }
 }
 #[doc = "Field `ofs_b` reader - Operand B Memory Offset Select"]
-pub struct OFS_B_R(crate::FieldReader<u8, u8>);
+pub struct OFS_B_R(crate::FieldReader<u8>);
 impl OFS_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -383,7 +383,7 @@ impl OFS_B_R {
     }
 }
 impl core::ops::Deref for OFS_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -402,7 +402,7 @@ impl<'a> OFS_B_W<'a> {
     }
 }
 #[doc = "Field `ofs_exp` reader - Exponent Memory Offset Select"]
-pub struct OFS_EXP_R(crate::FieldReader<u8, u8>);
+pub struct OFS_EXP_R(crate::FieldReader<u8>);
 impl OFS_EXP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -410,7 +410,7 @@ impl OFS_EXP_R {
     }
 }
 impl core::ops::Deref for OFS_EXP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -429,7 +429,7 @@ impl<'a> OFS_EXP_W<'a> {
     }
 }
 #[doc = "Field `ofs_mod` reader - Modulus Memory Select"]
-pub struct OFS_MOD_R(crate::FieldReader<u8, u8>);
+pub struct OFS_MOD_R(crate::FieldReader<u8>);
 impl OFS_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -437,7 +437,7 @@ impl OFS_MOD_R {
     }
 }
 impl core::ops::Deref for OFS_MOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -456,7 +456,7 @@ impl<'a> OFS_MOD_W<'a> {
     }
 }
 #[doc = "Field `seg_a` reader - Operand A Memory Segment Select"]
-pub struct SEG_A_R(crate::FieldReader<u8, u8>);
+pub struct SEG_A_R(crate::FieldReader<u8>);
 impl SEG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -464,7 +464,7 @@ impl SEG_A_R {
     }
 }
 impl core::ops::Deref for SEG_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -483,7 +483,7 @@ impl<'a> SEG_A_W<'a> {
     }
 }
 #[doc = "Field `seg_b` reader - Operand B Memory Segment Select"]
-pub struct SEG_B_R(crate::FieldReader<u8, u8>);
+pub struct SEG_B_R(crate::FieldReader<u8>);
 impl SEG_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -491,7 +491,7 @@ impl SEG_B_R {
     }
 }
 impl core::ops::Deref for SEG_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -510,7 +510,7 @@ impl<'a> SEG_B_W<'a> {
     }
 }
 #[doc = "Field `seg_res` reader - Result Memory Segment Select"]
-pub struct SEG_RES_R(crate::FieldReader<u8, u8>);
+pub struct SEG_RES_R(crate::FieldReader<u8>);
 impl SEG_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -518,7 +518,7 @@ impl SEG_RES_R {
     }
 }
 impl core::ops::Deref for SEG_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -537,7 +537,7 @@ impl<'a> SEG_RES_W<'a> {
     }
 }
 #[doc = "Field `seg_tmp` reader - Temporary Memory Segment Select"]
-pub struct SEG_TMP_R(crate::FieldReader<u8, u8>);
+pub struct SEG_TMP_R(crate::FieldReader<u8>);
 impl SEG_TMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -545,7 +545,7 @@ impl SEG_TMP_R {
     }
 }
 impl core::ops::Deref for SEG_TMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

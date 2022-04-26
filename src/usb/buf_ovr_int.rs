@@ -35,7 +35,7 @@ impl From<crate::W<BUF_OVR_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `buf_ovr0` reader - Endpoint 0 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR0_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR0_R(crate::FieldReader<bool>);
 impl BUF_OVR0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BUF_OVR0_R {
     }
 }
 impl core::ops::Deref for BUF_OVR0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BUF_OVR0_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr1` reader - Endpoint 1 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR1_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR1_R(crate::FieldReader<bool>);
 impl BUF_OVR1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl BUF_OVR1_R {
     }
 }
 impl core::ops::Deref for BUF_OVR1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> BUF_OVR1_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr2` reader - Endpoint 2 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR2_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR2_R(crate::FieldReader<bool>);
 impl BUF_OVR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BUF_OVR2_R {
     }
 }
 impl core::ops::Deref for BUF_OVR2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BUF_OVR2_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr3` reader - Endpoint 3 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR3_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR3_R(crate::FieldReader<bool>);
 impl BUF_OVR3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BUF_OVR3_R {
     }
 }
 impl core::ops::Deref for BUF_OVR3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BUF_OVR3_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr4` reader - Endpoint 4 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR4_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR4_R(crate::FieldReader<bool>);
 impl BUF_OVR4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl BUF_OVR4_R {
     }
 }
 impl core::ops::Deref for BUF_OVR4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> BUF_OVR4_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr5` reader - Endpoint 5 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR5_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR5_R(crate::FieldReader<bool>);
 impl BUF_OVR5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl BUF_OVR5_R {
     }
 }
 impl core::ops::Deref for BUF_OVR5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> BUF_OVR5_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr6` reader - Endpoint 6 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR6_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR6_R(crate::FieldReader<bool>);
 impl BUF_OVR6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BUF_OVR6_R {
     }
 }
 impl core::ops::Deref for BUF_OVR6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BUF_OVR6_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr7` reader - Endpoint 7 Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR7_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR7_R(crate::FieldReader<bool>);
 impl BUF_OVR7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BUF_OVR7_R {
     }
 }
 impl core::ops::Deref for BUF_OVR7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

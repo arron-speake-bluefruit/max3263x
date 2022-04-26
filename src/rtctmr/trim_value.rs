@@ -35,7 +35,7 @@ impl From<crate::W<TRIM_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_value` reader - Trim PPM Value"]
-pub struct TRIM_VALUE_R(crate::FieldReader<u32, u32>);
+pub struct TRIM_VALUE_R(crate::FieldReader<u32>);
 impl TRIM_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TRIM_VALUE_R {
     }
 }
 impl core::ops::Deref for TRIM_VALUE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TRIM_VALUE_W<'a> {
     }
 }
 #[doc = "Field `trim_control` reader - Trim Direction"]
-pub struct TRIM_CONTROL_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_CONTROL_R(crate::FieldReader<bool>);
 impl TRIM_CONTROL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TRIM_CONTROL_R {
     }
 }
 impl core::ops::Deref for TRIM_CONTROL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

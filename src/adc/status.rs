@@ -35,7 +35,7 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `adc_active` reader - ADC Conversion In Progress"]
-pub struct ADC_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ACTIVE_R(crate::FieldReader<bool>);
 impl ADC_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,14 +43,14 @@ impl ADC_ACTIVE_R {
     }
 }
 impl core::ops::Deref for ADC_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ro_cal_atomic_active` reader - RO Frequency Calibration Active (If Atomic)"]
-pub struct RO_CAL_ATOMIC_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_ATOMIC_ACTIVE_R(crate::FieldReader<bool>);
 impl RO_CAL_ATOMIC_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,14 +58,14 @@ impl RO_CAL_ATOMIC_ACTIVE_R {
     }
 }
 impl core::ops::Deref for RO_CAL_ATOMIC_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `afe_pwr_up_active` reader - AFE Power Up Delay Active"]
-pub struct AFE_PWR_UP_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct AFE_PWR_UP_ACTIVE_R(crate::FieldReader<bool>);
 impl AFE_PWR_UP_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,14 +73,14 @@ impl AFE_PWR_UP_ACTIVE_R {
     }
 }
 impl core::ops::Deref for AFE_PWR_UP_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `adc_overflow` reader - ADC Overflow"]
-pub struct ADC_OVERFLOW_R(crate::FieldReader<bool, bool>);
+pub struct ADC_OVERFLOW_R(crate::FieldReader<bool>);
 impl ADC_OVERFLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -88,7 +88,7 @@ impl ADC_OVERFLOW_R {
     }
 }
 impl core::ops::Deref for ADC_OVERFLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

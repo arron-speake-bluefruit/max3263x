@@ -35,7 +35,7 @@ impl From<crate::W<RO_CAL1_SPEC>> for W {
     }
 }
 #[doc = "Field `trm_init` reader - RO Trim Initial Value"]
-pub struct TRM_INIT_R(crate::FieldReader<u16, u16>);
+pub struct TRM_INIT_R(crate::FieldReader<u16>);
 impl TRM_INIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TRM_INIT_R {
     }
 }
 impl core::ops::Deref for TRM_INIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TRM_INIT_W<'a> {
     }
 }
 #[doc = "Field `trm_min` reader - RO Trim Maximum Adaptive Limit"]
-pub struct TRM_MIN_R(crate::FieldReader<u16, u16>);
+pub struct TRM_MIN_R(crate::FieldReader<u16>);
 impl TRM_MIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl TRM_MIN_R {
     }
 }
 impl core::ops::Deref for TRM_MIN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TRM_MIN_W<'a> {
     }
 }
 #[doc = "Field `trm_max` reader - RO Trim Minimum Adaptive Limit"]
-pub struct TRM_MAX_R(crate::FieldReader<u16, u16>);
+pub struct TRM_MAX_R(crate::FieldReader<u16>);
 impl TRM_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl TRM_MAX_R {
     }
 }
 impl core::ops::Deref for TRM_MAX_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

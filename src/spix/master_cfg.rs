@@ -50,7 +50,7 @@ impl From<SPI_MODE_A> for u8 {
     }
 }
 #[doc = "Field `spi_mode` reader - SPIX Mode"]
-pub struct SPI_MODE_R(crate::FieldReader<u8, SPI_MODE_A>);
+pub struct SPI_MODE_R(crate::FieldReader<u8>);
 impl SPI_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -77,7 +77,7 @@ impl SPI_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_MODE_R {
-    type Target = crate::FieldReader<u8, SPI_MODE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -125,7 +125,7 @@ impl From<SS_ACT_LO_A> for bool {
     }
 }
 #[doc = "Field `ss_act_lo` reader - SPIX Slave Select Polarity"]
-pub struct SS_ACT_LO_R(crate::FieldReader<bool, SS_ACT_LO_A>);
+pub struct SS_ACT_LO_R(crate::FieldReader<bool>);
 impl SS_ACT_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -151,7 +151,7 @@ impl SS_ACT_LO_R {
     }
 }
 impl core::ops::Deref for SS_ACT_LO_R {
-    type Target = crate::FieldReader<bool, SS_ACT_LO_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -209,7 +209,7 @@ impl From<ALT_TIMING_EN_A> for bool {
     }
 }
 #[doc = "Field `alt_timing_en` reader - Alternate Timing Mode Enable"]
-pub struct ALT_TIMING_EN_R(crate::FieldReader<bool, ALT_TIMING_EN_A>);
+pub struct ALT_TIMING_EN_R(crate::FieldReader<bool>);
 impl ALT_TIMING_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl ALT_TIMING_EN_R {
     }
 }
 impl core::ops::Deref for ALT_TIMING_EN_R {
-    type Target = crate::FieldReader<bool, ALT_TIMING_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +279,7 @@ impl<'a> ALT_TIMING_EN_W<'a> {
     }
 }
 #[doc = "Field `slave_sel` reader - SPIX Slave Select"]
-pub struct SLAVE_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_SEL_R(crate::FieldReader<u8>);
 impl SLAVE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -287,7 +287,7 @@ impl SLAVE_SEL_R {
     }
 }
 impl core::ops::Deref for SLAVE_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,7 +306,7 @@ impl<'a> SLAVE_SEL_W<'a> {
     }
 }
 #[doc = "Field `sck_hi_clk` reader - SCK High Clocks"]
-pub struct SCK_HI_CLK_R(crate::FieldReader<u8, u8>);
+pub struct SCK_HI_CLK_R(crate::FieldReader<u8>);
 impl SCK_HI_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -314,7 +314,7 @@ impl SCK_HI_CLK_R {
     }
 }
 impl core::ops::Deref for SCK_HI_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -333,7 +333,7 @@ impl<'a> SCK_HI_CLK_W<'a> {
     }
 }
 #[doc = "Field `sck_lo_clk` reader - SCK Low Clocks"]
-pub struct SCK_LO_CLK_R(crate::FieldReader<u8, u8>);
+pub struct SCK_LO_CLK_R(crate::FieldReader<u8>);
 impl SCK_LO_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -341,7 +341,7 @@ impl SCK_LO_CLK_R {
     }
 }
 impl core::ops::Deref for SCK_LO_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -379,7 +379,7 @@ impl From<ACT_DELAY_A> for u8 {
     }
 }
 #[doc = "Field `act_delay` reader - SS Active Timing"]
-pub struct ACT_DELAY_R(crate::FieldReader<u8, ACT_DELAY_A>);
+pub struct ACT_DELAY_R(crate::FieldReader<u8>);
 impl ACT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -418,7 +418,7 @@ impl ACT_DELAY_R {
     }
 }
 impl core::ops::Deref for ACT_DELAY_R {
-    type Target = crate::FieldReader<u8, ACT_DELAY_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -481,7 +481,7 @@ impl From<INACT_DELAY_A> for u8 {
     }
 }
 #[doc = "Field `inact_delay` reader - SS Inactive Timing"]
-pub struct INACT_DELAY_R(crate::FieldReader<u8, INACT_DELAY_A>);
+pub struct INACT_DELAY_R(crate::FieldReader<u8>);
 impl INACT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -520,7 +520,7 @@ impl INACT_DELAY_R {
     }
 }
 impl core::ops::Deref for INACT_DELAY_R {
-    type Target = crate::FieldReader<u8, INACT_DELAY_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -564,7 +564,7 @@ impl<'a> INACT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `alt_sck_hi_clk` reader - Alt SCK High Clocks"]
-pub struct ALT_SCK_HI_CLK_R(crate::FieldReader<u8, u8>);
+pub struct ALT_SCK_HI_CLK_R(crate::FieldReader<u8>);
 impl ALT_SCK_HI_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -572,7 +572,7 @@ impl ALT_SCK_HI_CLK_R {
     }
 }
 impl core::ops::Deref for ALT_SCK_HI_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -591,7 +591,7 @@ impl<'a> ALT_SCK_HI_CLK_W<'a> {
     }
 }
 #[doc = "Field `alt_sck_lo_clk` reader - Alt SCK Low Clocks"]
-pub struct ALT_SCK_LO_CLK_R(crate::FieldReader<u8, u8>);
+pub struct ALT_SCK_LO_CLK_R(crate::FieldReader<u8>);
 impl ALT_SCK_LO_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -599,7 +599,7 @@ impl ALT_SCK_LO_CLK_R {
     }
 }
 impl core::ops::Deref for ALT_SCK_LO_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<RO_CAL0_SPEC>> for W {
     }
 }
 #[doc = "Field `ro_cal_en` reader - RO Calibration Enable"]
-pub struct RO_CAL_EN_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_EN_R(crate::FieldReader<bool>);
 impl RO_CAL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RO_CAL_EN_R {
     }
 }
 impl core::ops::Deref for RO_CAL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RO_CAL_EN_W<'a> {
     }
 }
 #[doc = "Field `ro_cal_run` reader - RO Calibration Run"]
-pub struct RO_CAL_RUN_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_RUN_R(crate::FieldReader<bool>);
 impl RO_CAL_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RO_CAL_RUN_R {
     }
 }
 impl core::ops::Deref for RO_CAL_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RO_CAL_RUN_W<'a> {
     }
 }
 #[doc = "Field `ro_cal_load` reader - RO Calibration Load Initial Value"]
-pub struct RO_CAL_LOAD_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_LOAD_R(crate::FieldReader<bool>);
 impl RO_CAL_LOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RO_CAL_LOAD_R {
     }
 }
 impl core::ops::Deref for RO_CAL_LOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RO_CAL_LOAD_W<'a> {
     }
 }
 #[doc = "Field `ro_cal_atomic` reader - RO Calibration Run Atomic"]
-pub struct RO_CAL_ATOMIC_R(crate::FieldReader<bool, bool>);
+pub struct RO_CAL_ATOMIC_R(crate::FieldReader<bool>);
 impl RO_CAL_ATOMIC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RO_CAL_ATOMIC_R {
     }
 }
 impl core::ops::Deref for RO_CAL_ATOMIC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RO_CAL_ATOMIC_W<'a> {
     }
 }
 #[doc = "Field `dummy` reader - Dummy Write Field"]
-pub struct DUMMY_R(crate::FieldReader<u8, u8>);
+pub struct DUMMY_R(crate::FieldReader<u8>);
 impl DUMMY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl DUMMY_R {
     }
 }
 impl core::ops::Deref for DUMMY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> DUMMY_W<'a> {
     }
 }
 #[doc = "Field `trm_mu` reader - RO Trim Adaptation Gain"]
-pub struct TRM_MU_R(crate::FieldReader<u16, u16>);
+pub struct TRM_MU_R(crate::FieldReader<u16>);
 impl TRM_MU_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -218,7 +218,7 @@ impl TRM_MU_R {
     }
 }
 impl core::ops::Deref for TRM_MU_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> TRM_MU_W<'a> {
     }
 }
 #[doc = "Field `ro_trm` reader - RO Trim Calibration Result"]
-pub struct RO_TRM_R(crate::FieldReader<u16, u16>);
+pub struct RO_TRM_R(crate::FieldReader<u16>);
 impl RO_TRM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -245,7 +245,7 @@ impl RO_TRM_R {
     }
 }
 impl core::ops::Deref for RO_TRM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

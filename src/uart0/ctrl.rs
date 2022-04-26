@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `uart_en` reader - UART Enable"]
-pub struct UART_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART_EN_R(crate::FieldReader<bool>);
 impl UART_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl UART_EN_R {
     }
 }
 impl core::ops::Deref for UART_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> UART_EN_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_en` reader - RX FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
 impl RX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - TX FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
 impl TX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `data_size` reader - Data Size"]
-pub struct DATA_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct DATA_SIZE_R(crate::FieldReader<u8>);
 impl DATA_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl DATA_SIZE_R {
     }
 }
 impl core::ops::Deref for DATA_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> DATA_SIZE_W<'a> {
     }
 }
 #[doc = "Field `extra_stop` reader - Extra Stop Enable"]
-pub struct EXTRA_STOP_R(crate::FieldReader<bool, bool>);
+pub struct EXTRA_STOP_R(crate::FieldReader<bool>);
 impl EXTRA_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl EXTRA_STOP_R {
     }
 }
 impl core::ops::Deref for EXTRA_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> EXTRA_STOP_W<'a> {
     }
 }
 #[doc = "Field `parity` reader - Parity Mode"]
-pub struct PARITY_R(crate::FieldReader<u8, u8>);
+pub struct PARITY_R(crate::FieldReader<u8>);
 impl PARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl PARITY_R {
     }
 }
 impl core::ops::Deref for PARITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> PARITY_W<'a> {
     }
 }
 #[doc = "Field `cts_en` reader - CTS Enable"]
-pub struct CTS_EN_R(crate::FieldReader<bool, bool>);
+pub struct CTS_EN_R(crate::FieldReader<bool>);
 impl CTS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl CTS_EN_R {
     }
 }
 impl core::ops::Deref for CTS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> CTS_EN_W<'a> {
     }
 }
 #[doc = "Field `cts_polarity` reader - CTS Polarity"]
-pub struct CTS_POLARITY_R(crate::FieldReader<bool, bool>);
+pub struct CTS_POLARITY_R(crate::FieldReader<bool>);
 impl CTS_POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl CTS_POLARITY_R {
     }
 }
 impl core::ops::Deref for CTS_POLARITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> CTS_POLARITY_W<'a> {
     }
 }
 #[doc = "Field `rts_en` reader - RTS Enable"]
-pub struct RTS_EN_R(crate::FieldReader<bool, bool>);
+pub struct RTS_EN_R(crate::FieldReader<bool>);
 impl RTS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl RTS_EN_R {
     }
 }
 impl core::ops::Deref for RTS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> RTS_EN_W<'a> {
     }
 }
 #[doc = "Field `rts_polarity` reader - RTS Polarity"]
-pub struct RTS_POLARITY_R(crate::FieldReader<bool, bool>);
+pub struct RTS_POLARITY_R(crate::FieldReader<bool>);
 impl RTS_POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl RTS_POLARITY_R {
     }
 }
 impl core::ops::Deref for RTS_POLARITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> RTS_POLARITY_W<'a> {
     }
 }
 #[doc = "Field `rts_level` reader - RX FIFO LTE Level for RTS Assert"]
-pub struct RTS_LEVEL_R(crate::FieldReader<u8, u8>);
+pub struct RTS_LEVEL_R(crate::FieldReader<u8>);
 impl RTS_LEVEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -393,7 +393,7 @@ impl RTS_LEVEL_R {
     }
 }
 impl core::ops::Deref for RTS_LEVEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

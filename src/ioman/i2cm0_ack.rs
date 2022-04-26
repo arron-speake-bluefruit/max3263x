@@ -35,7 +35,7 @@ impl From<crate::W<I2CM0_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_ack` reader - I2C Master 0 I/O Acknowledge"]
-pub struct MAPPING_ACK_R(crate::FieldReader<bool, bool>);
+pub struct MAPPING_ACK_R(crate::FieldReader<bool>);
 impl MAPPING_ACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MAPPING_ACK_R {
     }
 }
 impl core::ops::Deref for MAPPING_ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

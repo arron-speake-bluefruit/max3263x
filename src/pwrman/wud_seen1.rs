@@ -35,7 +35,7 @@ impl From<crate::W<WUD_SEEN1_SPEC>> for W {
     }
 }
 #[doc = "Field `gpio32` reader - Wake-Up Detect Status for P4.0"]
-pub struct GPIO32_R(crate::FieldReader<bool, bool>);
+pub struct GPIO32_R(crate::FieldReader<bool>);
 impl GPIO32_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,14 +43,14 @@ impl GPIO32_R {
     }
 }
 impl core::ops::Deref for GPIO32_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio33` reader - Wake-Up Detect Status for P4.1"]
-pub struct GPIO33_R(crate::FieldReader<bool, bool>);
+pub struct GPIO33_R(crate::FieldReader<bool>);
 impl GPIO33_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,14 +58,14 @@ impl GPIO33_R {
     }
 }
 impl core::ops::Deref for GPIO33_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio34` reader - Wake-Up Detect Status for P4.2"]
-pub struct GPIO34_R(crate::FieldReader<bool, bool>);
+pub struct GPIO34_R(crate::FieldReader<bool>);
 impl GPIO34_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,14 +73,14 @@ impl GPIO34_R {
     }
 }
 impl core::ops::Deref for GPIO34_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio35` reader - Wake-Up Detect Status for P4.3"]
-pub struct GPIO35_R(crate::FieldReader<bool, bool>);
+pub struct GPIO35_R(crate::FieldReader<bool>);
 impl GPIO35_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -88,14 +88,14 @@ impl GPIO35_R {
     }
 }
 impl core::ops::Deref for GPIO35_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio36` reader - Wake-Up Detect Status for P4.4"]
-pub struct GPIO36_R(crate::FieldReader<bool, bool>);
+pub struct GPIO36_R(crate::FieldReader<bool>);
 impl GPIO36_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -103,14 +103,14 @@ impl GPIO36_R {
     }
 }
 impl core::ops::Deref for GPIO36_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio37` reader - Wake-Up Detect Status for P4.5"]
-pub struct GPIO37_R(crate::FieldReader<bool, bool>);
+pub struct GPIO37_R(crate::FieldReader<bool>);
 impl GPIO37_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -118,14 +118,14 @@ impl GPIO37_R {
     }
 }
 impl core::ops::Deref for GPIO37_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio38` reader - Wake-Up Detect Status for P4.6"]
-pub struct GPIO38_R(crate::FieldReader<bool, bool>);
+pub struct GPIO38_R(crate::FieldReader<bool>);
 impl GPIO38_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -133,14 +133,14 @@ impl GPIO38_R {
     }
 }
 impl core::ops::Deref for GPIO38_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio39` reader - Wake-Up Detect Status for P4.7"]
-pub struct GPIO39_R(crate::FieldReader<bool, bool>);
+pub struct GPIO39_R(crate::FieldReader<bool>);
 impl GPIO39_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -148,14 +148,14 @@ impl GPIO39_R {
     }
 }
 impl core::ops::Deref for GPIO39_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio40` reader - Wake-Up Detect Status for P5.0"]
-pub struct GPIO40_R(crate::FieldReader<bool, bool>);
+pub struct GPIO40_R(crate::FieldReader<bool>);
 impl GPIO40_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -163,14 +163,14 @@ impl GPIO40_R {
     }
 }
 impl core::ops::Deref for GPIO40_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio41` reader - Wake-Up Detect Status for P5.1"]
-pub struct GPIO41_R(crate::FieldReader<bool, bool>);
+pub struct GPIO41_R(crate::FieldReader<bool>);
 impl GPIO41_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -178,14 +178,14 @@ impl GPIO41_R {
     }
 }
 impl core::ops::Deref for GPIO41_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio42` reader - Wake-Up Detect Status for P5.2"]
-pub struct GPIO42_R(crate::FieldReader<bool, bool>);
+pub struct GPIO42_R(crate::FieldReader<bool>);
 impl GPIO42_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -193,14 +193,14 @@ impl GPIO42_R {
     }
 }
 impl core::ops::Deref for GPIO42_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio43` reader - Wake-Up Detect Status for P5.3"]
-pub struct GPIO43_R(crate::FieldReader<bool, bool>);
+pub struct GPIO43_R(crate::FieldReader<bool>);
 impl GPIO43_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,14 +208,14 @@ impl GPIO43_R {
     }
 }
 impl core::ops::Deref for GPIO43_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio44` reader - Wake-Up Detect Status for P5.4"]
-pub struct GPIO44_R(crate::FieldReader<bool, bool>);
+pub struct GPIO44_R(crate::FieldReader<bool>);
 impl GPIO44_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -223,14 +223,14 @@ impl GPIO44_R {
     }
 }
 impl core::ops::Deref for GPIO44_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio45` reader - Wake-Up Detect Status for P5.5"]
-pub struct GPIO45_R(crate::FieldReader<bool, bool>);
+pub struct GPIO45_R(crate::FieldReader<bool>);
 impl GPIO45_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -238,14 +238,14 @@ impl GPIO45_R {
     }
 }
 impl core::ops::Deref for GPIO45_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio46` reader - Wake-Up Detect Status for P5.6"]
-pub struct GPIO46_R(crate::FieldReader<bool, bool>);
+pub struct GPIO46_R(crate::FieldReader<bool>);
 impl GPIO46_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -253,14 +253,14 @@ impl GPIO46_R {
     }
 }
 impl core::ops::Deref for GPIO46_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio47` reader - Wake-Up Detect Status for P5.7"]
-pub struct GPIO47_R(crate::FieldReader<bool, bool>);
+pub struct GPIO47_R(crate::FieldReader<bool>);
 impl GPIO47_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -268,14 +268,14 @@ impl GPIO47_R {
     }
 }
 impl core::ops::Deref for GPIO47_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `gpio48` reader - Wake-Up Detect Status for P6.0"]
-pub struct GPIO48_R(crate::FieldReader<bool, bool>);
+pub struct GPIO48_R(crate::FieldReader<bool>);
 impl GPIO48_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -283,7 +283,7 @@ impl GPIO48_R {
     }
 }
 impl core::ops::Deref for GPIO48_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

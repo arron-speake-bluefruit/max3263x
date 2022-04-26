@@ -35,7 +35,7 @@ impl From<crate::W<CLK_GATE_CTRL0_SPEC>> for W {
     }
 }
 #[doc = "Field `cm4_clk_gater` reader - Clock Gating Control for CM4 CPU"]
-pub struct CM4_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct CM4_CLK_GATER_R(crate::FieldReader<u8>);
 impl CM4_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CM4_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for CM4_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CM4_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `ahb32_clk_gater` reader - Clock Gating Control for AHB32"]
-pub struct AHB32_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct AHB32_CLK_GATER_R(crate::FieldReader<u8>);
 impl AHB32_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl AHB32_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for AHB32_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> AHB32_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `icache_clk_gater` reader - Clock Gating Control for Instruction Cache"]
-pub struct ICACHE_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct ICACHE_CLK_GATER_R(crate::FieldReader<u8>);
 impl ICACHE_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl ICACHE_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for ICACHE_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> ICACHE_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `flash_clk_gater` reader - Clock Gating Control for Flash Memory"]
-pub struct FLASH_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_CLK_GATER_R(crate::FieldReader<u8>);
 impl FLASH_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl FLASH_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for FLASH_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> FLASH_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `sram_clk_gater` reader - Clock Gating Control for SRAM"]
-pub struct SRAM_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct SRAM_CLK_GATER_R(crate::FieldReader<u8>);
 impl SRAM_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl SRAM_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for SRAM_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> SRAM_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `apb_bridge_clk_gater` reader - Clock Gating Control for AHB-to-APB Bridge"]
-pub struct APB_BRIDGE_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct APB_BRIDGE_CLK_GATER_R(crate::FieldReader<u8>);
 impl APB_BRIDGE_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl APB_BRIDGE_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for APB_BRIDGE_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> APB_BRIDGE_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `sysman_clk_gater` reader - Clock Gating Control for CLKMAN, PWRMAN, and IOMAN"]
-pub struct SYSMAN_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct SYSMAN_CLK_GATER_R(crate::FieldReader<u8>);
 impl SYSMAN_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl SYSMAN_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for SYSMAN_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> SYSMAN_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `ptp_clk_gater` reader - Clock Gating Control for PTP Logic"]
-pub struct PTP_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct PTP_CLK_GATER_R(crate::FieldReader<u8>);
 impl PTP_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl PTP_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for PTP_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> PTP_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `ssb_mux_clk_gater` reader - Clock Gating Control for SSB Mux"]
-pub struct SSB_MUX_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct SSB_MUX_CLK_GATER_R(crate::FieldReader<u8>);
 impl SSB_MUX_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl SSB_MUX_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for SSB_MUX_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> SSB_MUX_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `pad_clk_gater` reader - Clock Gating Control for Pad Mode Filter"]
-pub struct PAD_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct PAD_CLK_GATER_R(crate::FieldReader<u8>);
 impl PAD_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl PAD_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for PAD_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> PAD_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `spix_clk_gater` reader - Clock Gating Control for SPI XIP"]
-pub struct SPIX_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct SPIX_CLK_GATER_R(crate::FieldReader<u8>);
 impl SPIX_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -313,7 +313,7 @@ impl SPIX_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for SPIX_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -332,7 +332,7 @@ impl<'a> SPIX_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `pmu_clk_gater` reader - Clock Gating Control for PMU"]
-pub struct PMU_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct PMU_CLK_GATER_R(crate::FieldReader<u8>);
 impl PMU_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -340,7 +340,7 @@ impl PMU_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for PMU_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -359,7 +359,7 @@ impl<'a> PMU_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `usb_clk_gater` reader - Clock Gating Control for USB"]
-pub struct USB_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct USB_CLK_GATER_R(crate::FieldReader<u8>);
 impl USB_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -367,7 +367,7 @@ impl USB_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for USB_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -386,7 +386,7 @@ impl<'a> USB_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `crc_clk_gater` reader - Clock Gating Control for CRC"]
-pub struct CRC_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct CRC_CLK_GATER_R(crate::FieldReader<u8>);
 impl CRC_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -394,7 +394,7 @@ impl CRC_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for CRC_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -413,7 +413,7 @@ impl<'a> CRC_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `tpu_clk_gater` reader - Clock Gating Control for TPU"]
-pub struct TPU_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct TPU_CLK_GATER_R(crate::FieldReader<u8>);
 impl TPU_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -421,7 +421,7 @@ impl TPU_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for TPU_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -440,7 +440,7 @@ impl<'a> TPU_CLK_GATER_W<'a> {
     }
 }
 #[doc = "Field `watchdog0_clk_gater` reader - Clock Gating Control for Watchdog Timer 0"]
-pub struct WATCHDOG0_CLK_GATER_R(crate::FieldReader<u8, u8>);
+pub struct WATCHDOG0_CLK_GATER_R(crate::FieldReader<u8>);
 impl WATCHDOG0_CLK_GATER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -448,7 +448,7 @@ impl WATCHDOG0_CLK_GATER_R {
     }
 }
 impl core::ops::Deref for WATCHDOG0_CLK_GATER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<SYS_CLK_CTRL_0_CM4_SPEC>> for W {
     }
 }
 #[doc = "Field `cm4_clk_scale` reader - Control Settings for CLK0 - Cortex M4 Clock"]
-pub struct CM4_CLK_SCALE_R(crate::FieldReader<u8, u8>);
+pub struct CM4_CLK_SCALE_R(crate::FieldReader<u8>);
 impl CM4_CLK_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CM4_CLK_SCALE_R {
     }
 }
 impl core::ops::Deref for CM4_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `ow_reset_done` reader - OW Reset Sequence Completed"]
-pub struct OW_RESET_DONE_R(crate::FieldReader<bool, bool>);
+pub struct OW_RESET_DONE_R(crate::FieldReader<bool>);
 impl OW_RESET_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl OW_RESET_DONE_R {
     }
 }
 impl core::ops::Deref for OW_RESET_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> OW_RESET_DONE_W<'a> {
     }
 }
 #[doc = "Field `tx_data_empty` reader - Tx Data Empty Interrupt Flag"]
-pub struct TX_DATA_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct TX_DATA_EMPTY_R(crate::FieldReader<bool>);
 impl TX_DATA_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_DATA_EMPTY_R {
     }
 }
 impl core::ops::Deref for TX_DATA_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_DATA_EMPTY_W<'a> {
     }
 }
 #[doc = "Field `rx_data_ready` reader - Rx Data Ready Interrupt Flag"]
-pub struct RX_DATA_READY_R(crate::FieldReader<bool, bool>);
+pub struct RX_DATA_READY_R(crate::FieldReader<bool>);
 impl RX_DATA_READY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RX_DATA_READY_R {
     }
 }
 impl core::ops::Deref for RX_DATA_READY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RX_DATA_READY_W<'a> {
     }
 }
 #[doc = "Field `line_short` reader - OW Line Short Detected Interrupt Flag"]
-pub struct LINE_SHORT_R(crate::FieldReader<bool, bool>);
+pub struct LINE_SHORT_R(crate::FieldReader<bool>);
 impl LINE_SHORT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl LINE_SHORT_R {
     }
 }
 impl core::ops::Deref for LINE_SHORT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> LINE_SHORT_W<'a> {
     }
 }
 #[doc = "Field `line_low` reader - OW Line Low Detected Interrupt Flag"]
-pub struct LINE_LOW_R(crate::FieldReader<bool, bool>);
+pub struct LINE_LOW_R(crate::FieldReader<bool>);
 impl LINE_LOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl LINE_LOW_R {
     }
 }
 impl core::ops::Deref for LINE_LOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

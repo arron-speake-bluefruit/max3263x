@@ -35,7 +35,7 @@ impl From<crate::W<SPCL_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ss_sample_mode` reader - SS Sample Mode"]
-pub struct SS_SAMPLE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SS_SAMPLE_MODE_R(crate::FieldReader<bool>);
 impl SS_SAMPLE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SS_SAMPLE_MODE_R {
     }
 }
 impl core::ops::Deref for SS_SAMPLE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SS_SAMPLE_MODE_W<'a> {
     }
 }
 #[doc = "Field `miso_fc_en` reader - SDIO(1) to SR(0) Mode"]
-pub struct MISO_FC_EN_R(crate::FieldReader<bool, bool>);
+pub struct MISO_FC_EN_R(crate::FieldReader<bool>);
 impl MISO_FC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MISO_FC_EN_R {
     }
 }
 impl core::ops::Deref for MISO_FC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MISO_FC_EN_W<'a> {
     }
 }
 #[doc = "Field `ss_sa_sdio_out` reader - SDIO Active Output Value"]
-pub struct SS_SA_SDIO_OUT_R(crate::FieldReader<u8, u8>);
+pub struct SS_SA_SDIO_OUT_R(crate::FieldReader<u8>);
 impl SS_SA_SDIO_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl SS_SA_SDIO_OUT_R {
     }
 }
 impl core::ops::Deref for SS_SA_SDIO_OUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> SS_SA_SDIO_OUT_W<'a> {
     }
 }
 #[doc = "Field `ss_sa_sdio_dr_en` reader - SDIO Active Drive Mode"]
-pub struct SS_SA_SDIO_DR_EN_R(crate::FieldReader<u8, u8>);
+pub struct SS_SA_SDIO_DR_EN_R(crate::FieldReader<u8>);
 impl SS_SA_SDIO_DR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl SS_SA_SDIO_DR_EN_R {
     }
 }
 impl core::ops::Deref for SS_SA_SDIO_DR_EN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

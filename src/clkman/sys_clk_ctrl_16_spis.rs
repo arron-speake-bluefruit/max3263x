@@ -35,7 +35,7 @@ impl From<crate::W<SYS_CLK_CTRL_16_SPIS_SPEC>> for W {
     }
 }
 #[doc = "Field `spis_clk_scale` reader - Control Settings for CLK16 - SPI Slave Clock"]
-pub struct SPIS_CLK_SCALE_R(crate::FieldReader<u8, u8>);
+pub struct SPIS_CLK_SCALE_R(crate::FieldReader<u8>);
 impl SPIS_CLK_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SPIS_CLK_SCALE_R {
     }
 }
 impl core::ops::Deref for SPIS_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

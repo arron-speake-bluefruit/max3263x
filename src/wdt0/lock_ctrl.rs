@@ -35,7 +35,7 @@ impl From<crate::W<LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `wdlock` reader - Lock for WDT CTRL Register"]
-pub struct WDLOCK_R(crate::FieldReader<u8, u8>);
+pub struct WDLOCK_R(crate::FieldReader<u8>);
 impl WDLOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl WDLOCK_R {
     }
 }
 impl core::ops::Deref for WDLOCK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

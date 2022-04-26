@@ -35,7 +35,7 @@ impl From<crate::W<DATA_BYTE_SPEC>> for W {
     }
 }
 #[doc = "Field `data_field` reader - Data Field"]
-pub struct DATA_FIELD_R(crate::FieldReader<u8, u8>);
+pub struct DATA_FIELD_R(crate::FieldReader<u8>);
 impl DATA_FIELD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DATA_FIELD_R {
     }
 }
 impl core::ops::Deref for DATA_FIELD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DATA_FIELD_W<'a> {
     }
 }
 #[doc = "Field `read_only_fl` reader - Read Only Flag"]
-pub struct READ_ONLY_FL_R(crate::FieldReader<bool, bool>);
+pub struct READ_ONLY_FL_R(crate::FieldReader<bool>);
 impl READ_ONLY_FL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl READ_ONLY_FL_R {
     }
 }
 impl core::ops::Deref for READ_ONLY_FL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> READ_ONLY_FL_W<'a> {
     }
 }
 #[doc = "Field `data_updated_fl` reader - Byte Updated Flag"]
-pub struct DATA_UPDATED_FL_R(crate::FieldReader<bool, bool>);
+pub struct DATA_UPDATED_FL_R(crate::FieldReader<bool>);
 impl DATA_UPDATED_FL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl DATA_UPDATED_FL_R {
     }
 }
 impl core::ops::Deref for DATA_UPDATED_FL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

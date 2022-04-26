@@ -35,7 +35,7 @@ impl From<crate::W<REG1_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_clr_io_event_latch` reader - Clear all GPIO Event Seen Latches"]
-pub struct PWR_CLR_IO_EVENT_LATCH_R(crate::FieldReader<bool, bool>);
+pub struct PWR_CLR_IO_EVENT_LATCH_R(crate::FieldReader<bool>);
 impl PWR_CLR_IO_EVENT_LATCH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PWR_CLR_IO_EVENT_LATCH_R {
     }
 }
 impl core::ops::Deref for PWR_CLR_IO_EVENT_LATCH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PWR_CLR_IO_EVENT_LATCH_W<'a> {
     }
 }
 #[doc = "Field `pwr_clr_io_cfg_latch` reader - Clear all GPIO Configuration Latches"]
-pub struct PWR_CLR_IO_CFG_LATCH_R(crate::FieldReader<bool, bool>);
+pub struct PWR_CLR_IO_CFG_LATCH_R(crate::FieldReader<bool>);
 impl PWR_CLR_IO_CFG_LATCH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PWR_CLR_IO_CFG_LATCH_R {
     }
 }
 impl core::ops::Deref for PWR_CLR_IO_CFG_LATCH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PWR_CLR_IO_CFG_LATCH_W<'a> {
     }
 }
 #[doc = "Field `pwr_mbus_gate` reader - Freeze GPIO MBus State"]
-pub struct PWR_MBUS_GATE_R(crate::FieldReader<bool, bool>);
+pub struct PWR_MBUS_GATE_R(crate::FieldReader<bool>);
 impl PWR_MBUS_GATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PWR_MBUS_GATE_R {
     }
 }
 impl core::ops::Deref for PWR_MBUS_GATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PWR_MBUS_GATE_W<'a> {
     }
 }
 #[doc = "Field `pwr_discharge_en` reader - Enable Flash Discharge During Powerfail Event"]
-pub struct PWR_DISCHARGE_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_DISCHARGE_EN_R(crate::FieldReader<bool>);
 impl PWR_DISCHARGE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PWR_DISCHARGE_EN_R {
     }
 }
 impl core::ops::Deref for PWR_DISCHARGE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PWR_DISCHARGE_EN_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_well` reader - TVDD12 Well Switch"]
-pub struct PWR_TVDD12_WELL_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TVDD12_WELL_R(crate::FieldReader<bool>);
 impl PWR_TVDD12_WELL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PWR_TVDD12_WELL_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_WELL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

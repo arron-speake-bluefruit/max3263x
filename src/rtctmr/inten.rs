@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `comp0` reader - RTC Time of Day Alarm (Compare 0) Interrupt Enable"]
-pub struct COMP0_R(crate::FieldReader<bool, bool>);
+pub struct COMP0_R(crate::FieldReader<bool>);
 impl COMP0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl COMP0_R {
     }
 }
 impl core::ops::Deref for COMP0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> COMP0_W<'a> {
     }
 }
 #[doc = "Field `comp1` reader - RTC Time of Day Alarm (Compare 1) Interrupt Enable"]
-pub struct COMP1_R(crate::FieldReader<bool, bool>);
+pub struct COMP1_R(crate::FieldReader<bool>);
 impl COMP1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl COMP1_R {
     }
 }
 impl core::ops::Deref for COMP1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> COMP1_W<'a> {
     }
 }
 #[doc = "Field `prescale_comp` reader - RTC Prescale Compare Int Enable"]
-pub struct PRESCALE_COMP_R(crate::FieldReader<bool, bool>);
+pub struct PRESCALE_COMP_R(crate::FieldReader<bool>);
 impl PRESCALE_COMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PRESCALE_COMP_R {
     }
 }
 impl core::ops::Deref for PRESCALE_COMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PRESCALE_COMP_W<'a> {
     }
 }
 #[doc = "Field `overflow` reader - RTC Overflow Interrupt Enable"]
-pub struct OVERFLOW_R(crate::FieldReader<bool, bool>);
+pub struct OVERFLOW_R(crate::FieldReader<bool>);
 impl OVERFLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl OVERFLOW_R {
     }
 }
 impl core::ops::Deref for OVERFLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> OVERFLOW_W<'a> {
     }
 }
 #[doc = "Field `trim` reader - RTC Trim Adjust Event Interrupt Enable"]
-pub struct TRIM_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_R(crate::FieldReader<bool>);
 impl TRIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TRIM_R {
     }
 }
 impl core::ops::Deref for TRIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

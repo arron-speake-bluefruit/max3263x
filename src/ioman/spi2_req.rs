@@ -35,7 +35,7 @@ impl From<crate::W<SPI2_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_req` reader - SPI Master 2 I/O Mapping Select"]
-pub struct MAPPING_REQ_R(crate::FieldReader<bool, bool>);
+pub struct MAPPING_REQ_R(crate::FieldReader<bool>);
 impl MAPPING_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MAPPING_REQ_R {
     }
 }
 impl core::ops::Deref for MAPPING_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MAPPING_REQ_W<'a> {
     }
 }
 #[doc = "Field `core_io_req` reader - SPI Master 2 Core I/O Request"]
-pub struct CORE_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct CORE_IO_REQ_R(crate::FieldReader<bool>);
 impl CORE_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CORE_IO_REQ_R {
     }
 }
 impl core::ops::Deref for CORE_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -110,7 +110,7 @@ impl<'a> CORE_IO_REQ_W<'a> {
 }
 #[doc = "Field `ss0_io_req` reader - SPI Master 2 SS\\[0\\]
 I/O Request"]
-pub struct SS0_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct SS0_IO_REQ_R(crate::FieldReader<bool>);
 impl SS0_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -118,7 +118,7 @@ impl SS0_IO_REQ_R {
     }
 }
 impl core::ops::Deref for SS0_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -149,7 +149,7 @@ impl<'a> SS0_IO_REQ_W<'a> {
 }
 #[doc = "Field `ss1_io_req` reader - SPI Master 2 SS\\[1\\]
 I/O Request"]
-pub struct SS1_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct SS1_IO_REQ_R(crate::FieldReader<bool>);
 impl SS1_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,7 +157,7 @@ impl SS1_IO_REQ_R {
     }
 }
 impl core::ops::Deref for SS1_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -188,7 +188,7 @@ impl<'a> SS1_IO_REQ_W<'a> {
 }
 #[doc = "Field `ss2_io_req` reader - SPI Master 2 SS\\[2\\]
 I/O Request"]
-pub struct SS2_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct SS2_IO_REQ_R(crate::FieldReader<bool>);
 impl SS2_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -196,7 +196,7 @@ impl SS2_IO_REQ_R {
     }
 }
 impl core::ops::Deref for SS2_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> SS2_IO_REQ_W<'a> {
 }
 #[doc = "Field `sr0_io_req` reader - SPI Master 2 SR\\[0\\]
 I/O Request"]
-pub struct SR0_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct SR0_IO_REQ_R(crate::FieldReader<bool>);
 impl SR0_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl SR0_IO_REQ_R {
     }
 }
 impl core::ops::Deref for SR0_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -266,7 +266,7 @@ impl<'a> SR0_IO_REQ_W<'a> {
 }
 #[doc = "Field `sr1_io_req` reader - SPI Master 2 SR\\[1\\]
 I/O Request"]
-pub struct SR1_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct SR1_IO_REQ_R(crate::FieldReader<bool>);
 impl SR1_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -274,7 +274,7 @@ impl SR1_IO_REQ_R {
     }
 }
 impl core::ops::Deref for SR1_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -304,7 +304,7 @@ impl<'a> SR1_IO_REQ_W<'a> {
     }
 }
 #[doc = "Field `quad_io_req` reader - SPI Master 2 Quad I/O Request"]
-pub struct QUAD_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct QUAD_IO_REQ_R(crate::FieldReader<bool>);
 impl QUAD_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -312,7 +312,7 @@ impl QUAD_IO_REQ_R {
     }
 }
 impl core::ops::Deref for QUAD_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -341,7 +341,7 @@ impl<'a> QUAD_IO_REQ_W<'a> {
     }
 }
 #[doc = "Field `fast_mode` reader - SPI Master 2 Fast Mode Request"]
-pub struct FAST_MODE_R(crate::FieldReader<bool, bool>);
+pub struct FAST_MODE_R(crate::FieldReader<bool>);
 impl FAST_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -349,7 +349,7 @@ impl FAST_MODE_R {
     }
 }
 impl core::ops::Deref for FAST_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

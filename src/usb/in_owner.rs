@@ -35,7 +35,7 @@ impl From<crate::W<IN_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `buf0_owner` reader - Owner for IN Buffer 0 for Endpoints"]
-pub struct BUF0_OWNER_R(crate::FieldReader<u8, u8>);
+pub struct BUF0_OWNER_R(crate::FieldReader<u8>);
 impl BUF0_OWNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BUF0_OWNER_R {
     }
 }
 impl core::ops::Deref for BUF0_OWNER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> BUF0_OWNER_W<'a> {
     }
 }
 #[doc = "Field `buf1_owner` reader - Owner for IN Buffer 1 for Endpoints"]
-pub struct BUF1_OWNER_R(crate::FieldReader<u8, u8>);
+pub struct BUF1_OWNER_R(crate::FieldReader<u8>);
 impl BUF1_OWNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl BUF1_OWNER_R {
     }
 }
 impl core::ops::Deref for BUF1_OWNER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

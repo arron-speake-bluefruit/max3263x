@@ -35,7 +35,7 @@ impl From<crate::W<MSK_FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_sys_reboot` reader - Mask for system reboot detect"]
-pub struct PWR_SYS_REBOOT_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SYS_REBOOT_R(crate::FieldReader<bool>);
 impl PWR_SYS_REBOOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PWR_SYS_REBOOT_R {
     }
 }
 impl core::ops::Deref for PWR_SYS_REBOOT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PWR_SYS_REBOOT_W<'a> {
     }
 }
 #[doc = "Field `pwr_power_fail` reader - Mask for previous power fail detect"]
-pub struct PWR_POWER_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct PWR_POWER_FAIL_R(crate::FieldReader<bool>);
 impl PWR_POWER_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PWR_POWER_FAIL_R {
     }
 }
 impl core::ops::Deref for PWR_POWER_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PWR_POWER_FAIL_W<'a> {
     }
 }
 #[doc = "Field `pwr_boot_fail` reader - Mask for previous boot fail detect"]
-pub struct PWR_BOOT_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct PWR_BOOT_FAIL_R(crate::FieldReader<bool>);
 impl PWR_BOOT_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PWR_BOOT_FAIL_R {
     }
 }
 impl core::ops::Deref for PWR_BOOT_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PWR_BOOT_FAIL_W<'a> {
     }
 }
 #[doc = "Field `pwr_flash_discharge` reader - Mask for flash discharge event"]
-pub struct PWR_FLASH_DISCHARGE_R(crate::FieldReader<bool, bool>);
+pub struct PWR_FLASH_DISCHARGE_R(crate::FieldReader<bool>);
 impl PWR_FLASH_DISCHARGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PWR_FLASH_DISCHARGE_R {
     }
 }
 impl core::ops::Deref for PWR_FLASH_DISCHARGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PWR_FLASH_DISCHARGE_W<'a> {
     }
 }
 #[doc = "Field `pwr_iowakeup` reader - Mask for GPIO wakeup event detect"]
-pub struct PWR_IOWAKEUP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_IOWAKEUP_R(crate::FieldReader<bool>);
 impl PWR_IOWAKEUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PWR_IOWAKEUP_R {
     }
 }
 impl core::ops::Deref for PWR_IOWAKEUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PWR_IOWAKEUP_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd12_rst_bad` reader - Mask for VDD12 rst event"]
-pub struct PWR_VDD12_RST_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD12_RST_BAD_R(crate::FieldReader<bool>);
 impl PWR_VDD12_RST_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PWR_VDD12_RST_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_VDD12_RST_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PWR_VDD12_RST_BAD_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd18_rst_bad` reader - Mask for VDD18 rst event"]
-pub struct PWR_VDD18_RST_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD18_RST_BAD_R(crate::FieldReader<bool>);
 impl PWR_VDD18_RST_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PWR_VDD18_RST_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_VDD18_RST_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PWR_VDD18_RST_BAD_W<'a> {
     }
 }
 #[doc = "Field `pwr_vrtc_rst_bad` reader - Mask for VRTC rst event"]
-pub struct PWR_VRTC_RST_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VRTC_RST_BAD_R(crate::FieldReader<bool>);
 impl PWR_VRTC_RST_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl PWR_VRTC_RST_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_VRTC_RST_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> PWR_VRTC_RST_BAD_W<'a> {
     }
 }
 #[doc = "Field `pwr_vddb_rst_bad` reader - Mask for VDDB rst event"]
-pub struct PWR_VDDB_RST_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDDB_RST_BAD_R(crate::FieldReader<bool>);
 impl PWR_VDDB_RST_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PWR_VDDB_RST_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_VDDB_RST_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PWR_VDDB_RST_BAD_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_rst_bad` reader - Mask for TVDD12 rst event"]
-pub struct PWR_TVDD12_RST_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TVDD12_RST_BAD_R(crate::FieldReader<bool>);
 impl PWR_TVDD12_RST_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl PWR_TVDD12_RST_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_RST_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> PWR_TVDD12_RST_BAD_W<'a> {
     }
 }
 #[doc = "Field `pwr_por18z_fail_latch` reader - Mask for POR18 powerfail event"]
-pub struct PWR_POR18Z_FAIL_LATCH_R(crate::FieldReader<bool, bool>);
+pub struct PWR_POR18Z_FAIL_LATCH_R(crate::FieldReader<bool>);
 impl PWR_POR18Z_FAIL_LATCH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl PWR_POR18Z_FAIL_LATCH_R {
     }
 }
 impl core::ops::Deref for PWR_POR18Z_FAIL_LATCH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> PWR_POR18Z_FAIL_LATCH_W<'a> {
     }
 }
 #[doc = "Field `rtc_cmpr0` reader - Mask for RTC compare 0 event"]
-pub struct RTC_CMPR0_R(crate::FieldReader<bool, bool>);
+pub struct RTC_CMPR0_R(crate::FieldReader<bool>);
 impl RTC_CMPR0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl RTC_CMPR0_R {
     }
 }
 impl core::ops::Deref for RTC_CMPR0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> RTC_CMPR0_W<'a> {
     }
 }
 #[doc = "Field `rtc_cmpr1` reader - Mask for RTC compare 1 event"]
-pub struct RTC_CMPR1_R(crate::FieldReader<bool, bool>);
+pub struct RTC_CMPR1_R(crate::FieldReader<bool>);
 impl RTC_CMPR1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl RTC_CMPR1_R {
     }
 }
 impl core::ops::Deref for RTC_CMPR1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> RTC_CMPR1_W<'a> {
     }
 }
 #[doc = "Field `rtc_prescale_cmp` reader - Mask for RTC prescale compare event"]
-pub struct RTC_PRESCALE_CMP_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PRESCALE_CMP_R(crate::FieldReader<bool>);
 impl RTC_PRESCALE_CMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl RTC_PRESCALE_CMP_R {
     }
 }
 impl core::ops::Deref for RTC_PRESCALE_CMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> RTC_PRESCALE_CMP_W<'a> {
     }
 }
 #[doc = "Field `rtc_rollover` reader - Mask for RTC rollover event"]
-pub struct RTC_ROLLOVER_R(crate::FieldReader<bool, bool>);
+pub struct RTC_ROLLOVER_R(crate::FieldReader<bool>);
 impl RTC_ROLLOVER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl RTC_ROLLOVER_R {
     }
 }
 impl core::ops::Deref for RTC_ROLLOVER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> RTC_ROLLOVER_W<'a> {
     }
 }
 #[doc = "Field `pwr_usb_plug_wakeup` reader - Mask for USB plug connect event"]
-pub struct PWR_USB_PLUG_WAKEUP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_USB_PLUG_WAKEUP_R(crate::FieldReader<bool>);
 impl PWR_USB_PLUG_WAKEUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl PWR_USB_PLUG_WAKEUP_R {
     }
 }
 impl core::ops::Deref for PWR_USB_PLUG_WAKEUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> PWR_USB_PLUG_WAKEUP_W<'a> {
     }
 }
 #[doc = "Field `pwr_usb_remove_wakeup` reader - Mask for USB plug disconnect event"]
-pub struct PWR_USB_REMOVE_WAKEUP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_USB_REMOVE_WAKEUP_R(crate::FieldReader<bool>);
 impl PWR_USB_REMOVE_WAKEUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl PWR_USB_REMOVE_WAKEUP_R {
     }
 }
 impl core::ops::Deref for PWR_USB_REMOVE_WAKEUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> PWR_USB_REMOVE_WAKEUP_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_bad` reader - Mask for TVDD12 power fail event"]
-pub struct PWR_TVDD12_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TVDD12_BAD_R(crate::FieldReader<bool>);
 impl PWR_TVDD12_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl PWR_TVDD12_BAD_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<DEV_INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `dpact` reader - DPLUS Activity Interrupt Flag"]
-pub struct DPACT_R(crate::FieldReader<bool, bool>);
+pub struct DPACT_R(crate::FieldReader<bool>);
 impl DPACT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DPACT_R {
     }
 }
 impl core::ops::Deref for DPACT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DPACT_W<'a> {
     }
 }
 #[doc = "Field `rwu_dn` reader - Remote Wakeup Done Interrupt Flag"]
-pub struct RWU_DN_R(crate::FieldReader<bool, bool>);
+pub struct RWU_DN_R(crate::FieldReader<bool>);
 impl RWU_DN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RWU_DN_R {
     }
 }
 impl core::ops::Deref for RWU_DN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RWU_DN_W<'a> {
     }
 }
 #[doc = "Field `bact` reader - USB Bus Activity Interrupt Flag"]
-pub struct BACT_R(crate::FieldReader<bool, bool>);
+pub struct BACT_R(crate::FieldReader<bool>);
 impl BACT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BACT_R {
     }
 }
 impl core::ops::Deref for BACT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BACT_W<'a> {
     }
 }
 #[doc = "Field `brst` reader - USB Bus Reset In Progress Interrupt Flag"]
-pub struct BRST_R(crate::FieldReader<bool, bool>);
+pub struct BRST_R(crate::FieldReader<bool>);
 impl BRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BRST_R {
     }
 }
 impl core::ops::Deref for BRST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BRST_W<'a> {
     }
 }
 #[doc = "Field `susp` reader - USB Suspend Interrupt Flag"]
-pub struct SUSP_R(crate::FieldReader<bool, bool>);
+pub struct SUSP_R(crate::FieldReader<bool>);
 impl SUSP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SUSP_R {
     }
 }
 impl core::ops::Deref for SUSP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SUSP_W<'a> {
     }
 }
 #[doc = "Field `no_vbus` reader - No VBUS Interrupt Flag"]
-pub struct NO_VBUS_R(crate::FieldReader<bool, bool>);
+pub struct NO_VBUS_R(crate::FieldReader<bool>);
 impl NO_VBUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl NO_VBUS_R {
     }
 }
 impl core::ops::Deref for NO_VBUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> NO_VBUS_W<'a> {
     }
 }
 #[doc = "Field `vbus` reader - VBUS Detect Interrupt Flag"]
-pub struct VBUS_R(crate::FieldReader<bool, bool>);
+pub struct VBUS_R(crate::FieldReader<bool>);
 impl VBUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl VBUS_R {
     }
 }
 impl core::ops::Deref for VBUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> VBUS_W<'a> {
     }
 }
 #[doc = "Field `brst_dn` reader - USB Bus Reset Completed Interrupt Flag"]
-pub struct BRST_DN_R(crate::FieldReader<bool, bool>);
+pub struct BRST_DN_R(crate::FieldReader<bool>);
 impl BRST_DN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BRST_DN_R {
     }
 }
 impl core::ops::Deref for BRST_DN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BRST_DN_W<'a> {
     }
 }
 #[doc = "Field `setup` reader - Setup Packet Interrupt Flag"]
-pub struct SETUP_R(crate::FieldReader<bool, bool>);
+pub struct SETUP_R(crate::FieldReader<bool>);
 impl SETUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl SETUP_R {
     }
 }
 impl core::ops::Deref for SETUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> SETUP_W<'a> {
     }
 }
 #[doc = "Field `ep_in` reader - Endpoint IN Interrupt Flag"]
-pub struct EP_IN_R(crate::FieldReader<bool, bool>);
+pub struct EP_IN_R(crate::FieldReader<bool>);
 impl EP_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl EP_IN_R {
     }
 }
 impl core::ops::Deref for EP_IN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> EP_IN_W<'a> {
     }
 }
 #[doc = "Field `ep_out` reader - Endpoint OUT Interrupt Flag"]
-pub struct EP_OUT_R(crate::FieldReader<bool, bool>);
+pub struct EP_OUT_R(crate::FieldReader<bool>);
 impl EP_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl EP_OUT_R {
     }
 }
 impl core::ops::Deref for EP_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> EP_OUT_W<'a> {
     }
 }
 #[doc = "Field `ep_nak` reader - Endpoint NAK Interrupt Flag"]
-pub struct EP_NAK_R(crate::FieldReader<bool, bool>);
+pub struct EP_NAK_R(crate::FieldReader<bool>);
 impl EP_NAK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl EP_NAK_R {
     }
 }
 impl core::ops::Deref for EP_NAK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> EP_NAK_W<'a> {
     }
 }
 #[doc = "Field `dma_err` reader - DMA Error Interrupt Flag"]
-pub struct DMA_ERR_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR_R(crate::FieldReader<bool>);
 impl DMA_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl DMA_ERR_R {
     }
 }
 impl core::ops::Deref for DMA_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> DMA_ERR_W<'a> {
     }
 }
 #[doc = "Field `buf_ovr` reader - Buffer Overflow Interrupt Flag"]
-pub struct BUF_OVR_R(crate::FieldReader<bool, bool>);
+pub struct BUF_OVR_R(crate::FieldReader<bool>);
 impl BUF_OVR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl BUF_OVR_R {
     }
 }
 impl core::ops::Deref for BUF_OVR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> BUF_OVR_W<'a> {
     }
 }
 #[doc = "Field `vbus_st` reader - VBUS Status"]
-pub struct VBUS_ST_R(crate::FieldReader<bool, bool>);
+pub struct VBUS_ST_R(crate::FieldReader<bool>);
 impl VBUS_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl VBUS_ST_R {
     }
 }
 impl core::ops::Deref for VBUS_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

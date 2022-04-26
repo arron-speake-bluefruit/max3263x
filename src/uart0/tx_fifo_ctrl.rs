@@ -35,7 +35,7 @@ impl From<crate::W<TX_FIFO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `fifo_entry` reader - TX FIFO Entries"]
-pub struct FIFO_ENTRY_R(crate::FieldReader<u8, u8>);
+pub struct FIFO_ENTRY_R(crate::FieldReader<u8>);
 impl FIFO_ENTRY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl FIFO_ENTRY_R {
     }
 }
 impl core::ops::Deref for FIFO_ENTRY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `fifo_ae_lvl` reader - TX FIFO AE Level"]
-pub struct FIFO_AE_LVL_R(crate::FieldReader<u8, u8>);
+pub struct FIFO_AE_LVL_R(crate::FieldReader<u8>);
 impl FIFO_AE_LVL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl FIFO_AE_LVL_R {
     }
 }
 impl core::ops::Deref for FIFO_AE_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

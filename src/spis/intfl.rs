@@ -35,7 +35,7 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_ae` reader - TX FIFO Almost Empty"]
-pub struct TX_FIFO_AE_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_AE_R(crate::FieldReader<bool>);
 impl TX_FIFO_AE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_FIFO_AE_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_AE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_FIFO_AE_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_af` reader - RX FIFO Almost Full"]
-pub struct RX_FIFO_AF_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_AF_R(crate::FieldReader<bool>);
 impl RX_FIFO_AF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RX_FIFO_AF_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_AF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RX_FIFO_AF_W<'a> {
     }
 }
 #[doc = "Field `tx_no_data` reader - TX FIFO Empty"]
-pub struct TX_NO_DATA_R(crate::FieldReader<bool, bool>);
+pub struct TX_NO_DATA_R(crate::FieldReader<bool>);
 impl TX_NO_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_NO_DATA_R {
     }
 }
 impl core::ops::Deref for TX_NO_DATA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_NO_DATA_W<'a> {
     }
 }
 #[doc = "Field `rx_lost_data` reader - RX FIFO Overflow"]
-pub struct RX_LOST_DATA_R(crate::FieldReader<bool, bool>);
+pub struct RX_LOST_DATA_R(crate::FieldReader<bool>);
 impl RX_LOST_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RX_LOST_DATA_R {
     }
 }
 impl core::ops::Deref for RX_LOST_DATA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RX_LOST_DATA_W<'a> {
     }
 }
 #[doc = "Field `ss_asserted` reader - Slave Select Asserted"]
-pub struct SS_ASSERTED_R(crate::FieldReader<bool, bool>);
+pub struct SS_ASSERTED_R(crate::FieldReader<bool>);
 impl SS_ASSERTED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SS_ASSERTED_R {
     }
 }
 impl core::ops::Deref for SS_ASSERTED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SS_ASSERTED_W<'a> {
     }
 }
 #[doc = "Field `ss_deasserted` reader - Slave Select Deasserted"]
-pub struct SS_DEASSERTED_R(crate::FieldReader<bool, bool>);
+pub struct SS_DEASSERTED_R(crate::FieldReader<bool>);
 impl SS_DEASSERTED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SS_DEASSERTED_R {
     }
 }
 impl core::ops::Deref for SS_DEASSERTED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

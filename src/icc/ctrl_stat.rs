@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `enable` reader - Cache Enable"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ENABLE_W<'a> {
     }
 }
 #[doc = "Field `ready` reader - Cache Ready Status"]
-pub struct READY_R(crate::FieldReader<bool, bool>);
+pub struct READY_R(crate::FieldReader<bool>);
 impl READY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl READY_R {
     }
 }
 impl core::ops::Deref for READY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

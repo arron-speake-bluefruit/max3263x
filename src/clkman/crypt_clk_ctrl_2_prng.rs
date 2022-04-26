@@ -35,7 +35,7 @@ impl From<crate::W<CRYPT_CLK_CTRL_2_PRNG_SPEC>> for W {
     }
 }
 #[doc = "Field `prng_clk_scale` reader - Control Settings for Crypto Clock 2 - PRNG"]
-pub struct PRNG_CLK_SCALE_R(crate::FieldReader<u8, u8>);
+pub struct PRNG_CLK_SCALE_R(crate::FieldReader<u8>);
 impl PRNG_CLK_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PRNG_CLK_SCALE_R {
     }
 }
 impl core::ops::Deref for PRNG_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

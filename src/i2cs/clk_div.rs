@@ -35,7 +35,7 @@ impl From<crate::W<CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fs_filter_clock_div` reader - FS Filter Clock Divisor"]
-pub struct FS_FILTER_CLOCK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct FS_FILTER_CLOCK_DIV_R(crate::FieldReader<u8>);
 impl FS_FILTER_CLOCK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl FS_FILTER_CLOCK_DIV_R {
     }
 }
 impl core::ops::Deref for FS_FILTER_CLOCK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

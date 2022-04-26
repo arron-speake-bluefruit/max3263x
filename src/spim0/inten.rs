@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_stalled` reader - Transaction Stalled Int Enable"]
-pub struct TX_STALLED_R(crate::FieldReader<bool, bool>);
+pub struct TX_STALLED_R(crate::FieldReader<bool>);
 impl TX_STALLED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_STALLED_R {
     }
 }
 impl core::ops::Deref for TX_STALLED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_STALLED_W<'a> {
     }
 }
 #[doc = "Field `rx_stalled` reader - Results Stalled Int Enable"]
-pub struct RX_STALLED_R(crate::FieldReader<bool, bool>);
+pub struct RX_STALLED_R(crate::FieldReader<bool>);
 impl RX_STALLED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RX_STALLED_R {
     }
 }
 impl core::ops::Deref for RX_STALLED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RX_STALLED_W<'a> {
     }
 }
 #[doc = "Field `tx_ready` reader - Transaction Ready Int Enable"]
-pub struct TX_READY_R(crate::FieldReader<bool, bool>);
+pub struct TX_READY_R(crate::FieldReader<bool>);
 impl TX_READY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_READY_R {
     }
 }
 impl core::ops::Deref for TX_READY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_READY_W<'a> {
     }
 }
 #[doc = "Field `rx_done` reader - Results Done Int Enable"]
-pub struct RX_DONE_R(crate::FieldReader<bool, bool>);
+pub struct RX_DONE_R(crate::FieldReader<bool>);
 impl RX_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RX_DONE_R {
     }
 }
 impl core::ops::Deref for RX_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RX_DONE_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_ae` reader - TXFIFO Almost Empty Int Enable"]
-pub struct TX_FIFO_AE_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_AE_R(crate::FieldReader<bool>);
 impl TX_FIFO_AE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TX_FIFO_AE_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_AE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TX_FIFO_AE_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_af` reader - RXFIFO Almost Full Int Enable"]
-pub struct RX_FIFO_AF_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_AF_R(crate::FieldReader<bool>);
 impl RX_FIFO_AF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RX_FIFO_AF_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_AF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

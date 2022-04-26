@@ -35,7 +35,7 @@ impl From<crate::W<I2CS_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `io_sel` reader - I2C Slave I/O Mapping Select"]
-pub struct IO_SEL_R(crate::FieldReader<u8, u8>);
+pub struct IO_SEL_R(crate::FieldReader<u8>);
 impl IO_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IO_SEL_R {
     }
 }
 impl core::ops::Deref for IO_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> IO_SEL_W<'a> {
     }
 }
 #[doc = "Field `mapping_req` reader - I2C Slave I/O Request"]
-pub struct MAPPING_REQ_R(crate::FieldReader<bool, bool>);
+pub struct MAPPING_REQ_R(crate::FieldReader<bool>);
 impl MAPPING_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl MAPPING_REQ_R {
     }
 }
 impl core::ops::Deref for MAPPING_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

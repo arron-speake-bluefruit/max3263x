@@ -35,7 +35,7 @@ impl From<crate::W<RATE_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `rate_control` reader - Pulse Train Enable/Rate Control"]
-pub struct RATE_CONTROL_R(crate::FieldReader<u32, u32>);
+pub struct RATE_CONTROL_R(crate::FieldReader<u32>);
 impl RATE_CONTROL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl RATE_CONTROL_R {
     }
 }
 impl core::ops::Deref for RATE_CONTROL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -137,7 +137,7 @@ impl From<MODE_A> for u8 {
     }
 }
 #[doc = "Field `mode` reader - Pulse Train Output Mode/Train Length"]
-pub struct MODE_R(crate::FieldReader<u8, MODE_A>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -344,7 +344,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, MODE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

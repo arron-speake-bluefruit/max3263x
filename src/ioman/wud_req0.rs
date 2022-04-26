@@ -35,7 +35,7 @@ impl From<crate::W<WUD_REQ0_SPEC>> for W {
     }
 }
 #[doc = "Field `wud_req_p0` reader - Wakeup Detect Request Mode: P0\\[7:0\\]"]
-pub struct WUD_REQ_P0_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P0_R(crate::FieldReader<u8>);
 impl WUD_REQ_P0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl WUD_REQ_P0_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> WUD_REQ_P0_W<'a> {
     }
 }
 #[doc = "Field `wud_req_p1` reader - Wakeup Detect Request Mode: P1\\[7:0\\]"]
-pub struct WUD_REQ_P1_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P1_R(crate::FieldReader<u8>);
 impl WUD_REQ_P1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl WUD_REQ_P1_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> WUD_REQ_P1_W<'a> {
     }
 }
 #[doc = "Field `wud_req_p2` reader - Wakeup Detect Request Mode: P2\\[7:0\\]"]
-pub struct WUD_REQ_P2_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P2_R(crate::FieldReader<u8>);
 impl WUD_REQ_P2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl WUD_REQ_P2_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> WUD_REQ_P2_W<'a> {
     }
 }
 #[doc = "Field `wud_req_p3` reader - Wakeup Detect Request Mode: P3\\[7:0\\]"]
-pub struct WUD_REQ_P3_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P3_R(crate::FieldReader<u8>);
 impl WUD_REQ_P3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl WUD_REQ_P3_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

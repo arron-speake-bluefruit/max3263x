@@ -35,7 +35,7 @@ impl From<crate::W<DEV_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `dev_addr` reader - USB Device Address"]
-pub struct DEV_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct DEV_ADDR_R(crate::FieldReader<u8>);
 impl DEV_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DEV_ADDR_R {
     }
 }
 impl core::ops::Deref for DEV_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

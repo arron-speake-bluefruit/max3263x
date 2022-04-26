@@ -35,7 +35,7 @@ impl From<crate::W<OWM_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_ack` reader - 1-Wire Line I/O Acknowledge"]
-pub struct MAPPING_ACK_R(crate::FieldReader<bool, bool>);
+pub struct MAPPING_ACK_R(crate::FieldReader<bool>);
 impl MAPPING_ACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MAPPING_ACK_R {
     }
 }
 impl core::ops::Deref for MAPPING_ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MAPPING_ACK_W<'a> {
     }
 }
 #[doc = "Field `epu_io_ack` reader - External Pullup Control Line I/O Acknowledge"]
-pub struct EPU_IO_ACK_R(crate::FieldReader<bool, bool>);
+pub struct EPU_IO_ACK_R(crate::FieldReader<bool>);
 impl EPU_IO_ACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl EPU_IO_ACK_R {
     }
 }
 impl core::ops::Deref for EPU_IO_ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

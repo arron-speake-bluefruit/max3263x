@@ -35,7 +35,7 @@ impl From<crate::W<I2C_TIMER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `i2c_1ms_timer_en` reader - I2C 1ms Timer Enable"]
-pub struct I2C_1MS_TIMER_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2C_1MS_TIMER_EN_R(crate::FieldReader<bool>);
 impl I2C_1MS_TIMER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl I2C_1MS_TIMER_EN_R {
     }
 }
 impl core::ops::Deref for I2C_1MS_TIMER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

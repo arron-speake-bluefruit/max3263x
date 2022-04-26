@@ -35,7 +35,7 @@ impl From<crate::W<OWM_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_req` reader - 1-Wire Line I/O Request"]
-pub struct MAPPING_REQ_R(crate::FieldReader<bool, bool>);
+pub struct MAPPING_REQ_R(crate::FieldReader<bool>);
 impl MAPPING_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MAPPING_REQ_R {
     }
 }
 impl core::ops::Deref for MAPPING_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MAPPING_REQ_W<'a> {
     }
 }
 #[doc = "Field `epu_io_req` reader - External Pullup Control Line I/O Request"]
-pub struct EPU_IO_REQ_R(crate::FieldReader<bool, bool>);
+pub struct EPU_IO_REQ_R(crate::FieldReader<bool>);
 impl EPU_IO_REQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl EPU_IO_REQ_R {
     }
 }
 impl core::ops::Deref for EPU_IO_REQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

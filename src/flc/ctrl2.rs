@@ -35,7 +35,7 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `flash_lve` reader - Flash LVE Enable"]
-pub struct FLASH_LVE_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_LVE_R(crate::FieldReader<u8>);
 impl FLASH_LVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl FLASH_LVE_R {
     }
 }
 impl core::ops::Deref for FLASH_LVE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FLASH_LVE_W<'a> {
     }
 }
 #[doc = "Field `bypass_ahb_fail` reader - AHB Fail Bypass"]
-pub struct BYPASS_AHB_FAIL_R(crate::FieldReader<u8, u8>);
+pub struct BYPASS_AHB_FAIL_R(crate::FieldReader<u8>);
 impl BYPASS_AHB_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl BYPASS_AHB_FAIL_R {
     }
 }
 impl core::ops::Deref for BYPASS_AHB_FAIL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

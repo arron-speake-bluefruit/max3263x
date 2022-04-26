@@ -35,7 +35,7 @@ impl From<crate::W<FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `comp0` reader - RTC Compare 0 Interrupt Status"]
-pub struct COMP0_R(crate::FieldReader<bool, bool>);
+pub struct COMP0_R(crate::FieldReader<bool>);
 impl COMP0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl COMP0_R {
     }
 }
 impl core::ops::Deref for COMP0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> COMP0_W<'a> {
     }
 }
 #[doc = "Field `comp1` reader - RTC Compare 1 Interrupt Status"]
-pub struct COMP1_R(crate::FieldReader<bool, bool>);
+pub struct COMP1_R(crate::FieldReader<bool>);
 impl COMP1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl COMP1_R {
     }
 }
 impl core::ops::Deref for COMP1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> COMP1_W<'a> {
     }
 }
 #[doc = "Field `prescale_comp` reader - RTC Prescale Compare Int Status"]
-pub struct PRESCALE_COMP_R(crate::FieldReader<bool, bool>);
+pub struct PRESCALE_COMP_R(crate::FieldReader<bool>);
 impl PRESCALE_COMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PRESCALE_COMP_R {
     }
 }
 impl core::ops::Deref for PRESCALE_COMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PRESCALE_COMP_W<'a> {
     }
 }
 #[doc = "Field `overflow` reader - RTC Overflow Interrupt Status"]
-pub struct OVERFLOW_R(crate::FieldReader<bool, bool>);
+pub struct OVERFLOW_R(crate::FieldReader<bool>);
 impl OVERFLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl OVERFLOW_R {
     }
 }
 impl core::ops::Deref for OVERFLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> OVERFLOW_W<'a> {
     }
 }
 #[doc = "Field `trim` reader - RTC Trim Interrupt Status"]
-pub struct TRIM_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_R(crate::FieldReader<bool>);
 impl TRIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TRIM_R {
     }
 }
 impl core::ops::Deref for TRIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TRIM_W<'a> {
     }
 }
 #[doc = "Field `comp0_flag_a` reader - RTC Compare 0 4kHz Flag"]
-pub struct COMP0_FLAG_A_R(crate::FieldReader<bool, bool>);
+pub struct COMP0_FLAG_A_R(crate::FieldReader<bool>);
 impl COMP0_FLAG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,14 +228,14 @@ impl COMP0_FLAG_A_R {
     }
 }
 impl core::ops::Deref for COMP0_FLAG_A_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `comp1_flag_a` reader - RTC Compare 1 4kHz Flag"]
-pub struct COMP1_FLAG_A_R(crate::FieldReader<bool, bool>);
+pub struct COMP1_FLAG_A_R(crate::FieldReader<bool>);
 impl COMP1_FLAG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,14 +243,14 @@ impl COMP1_FLAG_A_R {
     }
 }
 impl core::ops::Deref for COMP1_FLAG_A_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `prescl_flag_a` reader - RTC Prescale Compare 4kHz Flag"]
-pub struct PRESCL_FLAG_A_R(crate::FieldReader<bool, bool>);
+pub struct PRESCL_FLAG_A_R(crate::FieldReader<bool>);
 impl PRESCL_FLAG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -258,14 +258,14 @@ impl PRESCL_FLAG_A_R {
     }
 }
 impl core::ops::Deref for PRESCL_FLAG_A_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `overflow_flag_a` reader - RTC Overflow 4kHz Flag"]
-pub struct OVERFLOW_FLAG_A_R(crate::FieldReader<bool, bool>);
+pub struct OVERFLOW_FLAG_A_R(crate::FieldReader<bool>);
 impl OVERFLOW_FLAG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -273,14 +273,14 @@ impl OVERFLOW_FLAG_A_R {
     }
 }
 impl core::ops::Deref for OVERFLOW_FLAG_A_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `trim_flag_a` reader - RTC Trim Event 4kHz Flag"]
-pub struct TRIM_FLAG_A_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_FLAG_A_R(crate::FieldReader<bool>);
 impl TRIM_FLAG_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -288,7 +288,7 @@ impl TRIM_FLAG_A_R {
     }
 }
 impl core::ops::Deref for TRIM_FLAG_A_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

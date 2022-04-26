@@ -35,7 +35,7 @@ impl From<crate::W<DEV_CN_SPEC>> for W {
     }
 }
 #[doc = "Field `sigrwu` reader - USB Signal Remote Wakeup"]
-pub struct SIGRWU_R(crate::FieldReader<bool, bool>);
+pub struct SIGRWU_R(crate::FieldReader<bool>);
 impl SIGRWU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SIGRWU_R {
     }
 }
 impl core::ops::Deref for SIGRWU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SIGRWU_W<'a> {
     }
 }
 #[doc = "Field `connect` reader - Connect to USB"]
-pub struct CONNECT_R(crate::FieldReader<bool, bool>);
+pub struct CONNECT_R(crate::FieldReader<bool>);
 impl CONNECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CONNECT_R {
     }
 }
 impl core::ops::Deref for CONNECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CONNECT_W<'a> {
     }
 }
 #[doc = "Field `ulpm` reader - USB Low Power Mode"]
-pub struct ULPM_R(crate::FieldReader<bool, bool>);
+pub struct ULPM_R(crate::FieldReader<bool>);
 impl ULPM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ULPM_R {
     }
 }
 impl core::ops::Deref for ULPM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ULPM_W<'a> {
     }
 }
 #[doc = "Field `urst` reader - USB Device Controller Reset"]
-pub struct URST_R(crate::FieldReader<bool, bool>);
+pub struct URST_R(crate::FieldReader<bool>);
 impl URST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl URST_R {
     }
 }
 impl core::ops::Deref for URST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> URST_W<'a> {
     }
 }
 #[doc = "Field `vbgate` reader - VBUS Gate"]
-pub struct VBGATE_R(crate::FieldReader<bool, bool>);
+pub struct VBGATE_R(crate::FieldReader<bool>);
 impl VBGATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl VBGATE_R {
     }
 }
 impl core::ops::Deref for VBGATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> VBGATE_W<'a> {
     }
 }
 #[doc = "Field `fifo_mode` reader - FIFO Mode"]
-pub struct FIFO_MODE_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_MODE_R(crate::FieldReader<bool>);
 impl FIFO_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FIFO_MODE_R {
     }
 }
 impl core::ops::Deref for FIFO_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

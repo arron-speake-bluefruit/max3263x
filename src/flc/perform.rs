@@ -35,7 +35,7 @@ impl From<crate::W<PERFORM_SPEC>> for W {
     }
 }
 #[doc = "Field `delay_se_en` reader - Delay SE Enable (Deprecated)"]
-pub struct DELAY_SE_EN_R(crate::FieldReader<bool, bool>);
+pub struct DELAY_SE_EN_R(crate::FieldReader<bool>);
 impl DELAY_SE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DELAY_SE_EN_R {
     }
 }
 impl core::ops::Deref for DELAY_SE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DELAY_SE_EN_W<'a> {
     }
 }
 #[doc = "Field `fast_read_mode_en` reader - Fast Read Mode Enable (Deprecated)"]
-pub struct FAST_READ_MODE_EN_R(crate::FieldReader<bool, bool>);
+pub struct FAST_READ_MODE_EN_R(crate::FieldReader<bool>);
 impl FAST_READ_MODE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FAST_READ_MODE_EN_R {
     }
 }
 impl core::ops::Deref for FAST_READ_MODE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FAST_READ_MODE_EN_W<'a> {
     }
 }
 #[doc = "Field `en_prevent_fail` reader - Prevent Fail Flag Set on FLC Busy"]
-pub struct EN_PREVENT_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct EN_PREVENT_FAIL_R(crate::FieldReader<bool>);
 impl EN_PREVENT_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl EN_PREVENT_FAIL_R {
     }
 }
 impl core::ops::Deref for EN_PREVENT_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> EN_PREVENT_FAIL_W<'a> {
     }
 }
 #[doc = "Field `en_back2back_rds` reader - Enable Back To Back Reads"]
-pub struct EN_BACK2BACK_RDS_R(crate::FieldReader<bool, bool>);
+pub struct EN_BACK2BACK_RDS_R(crate::FieldReader<bool>);
 impl EN_BACK2BACK_RDS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl EN_BACK2BACK_RDS_R {
     }
 }
 impl core::ops::Deref for EN_BACK2BACK_RDS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> EN_BACK2BACK_RDS_W<'a> {
     }
 }
 #[doc = "Field `en_back2back_wrs` reader - Enable Back To Back Writes"]
-pub struct EN_BACK2BACK_WRS_R(crate::FieldReader<bool, bool>);
+pub struct EN_BACK2BACK_WRS_R(crate::FieldReader<bool>);
 impl EN_BACK2BACK_WRS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl EN_BACK2BACK_WRS_R {
     }
 }
 impl core::ops::Deref for EN_BACK2BACK_WRS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> EN_BACK2BACK_WRS_W<'a> {
     }
 }
 #[doc = "Field `en_merge_grab_gnt` reader - Enable Merge Grab GNT"]
-pub struct EN_MERGE_GRAB_GNT_R(crate::FieldReader<bool, bool>);
+pub struct EN_MERGE_GRAB_GNT_R(crate::FieldReader<bool>);
 impl EN_MERGE_GRAB_GNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl EN_MERGE_GRAB_GNT_R {
     }
 }
 impl core::ops::Deref for EN_MERGE_GRAB_GNT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> EN_MERGE_GRAB_GNT_W<'a> {
     }
 }
 #[doc = "Field `auto_tacc` reader - Auto TACC"]
-pub struct AUTO_TACC_R(crate::FieldReader<bool, bool>);
+pub struct AUTO_TACC_R(crate::FieldReader<bool>);
 impl AUTO_TACC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl AUTO_TACC_R {
     }
 }
 impl core::ops::Deref for AUTO_TACC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> AUTO_TACC_W<'a> {
     }
 }
 #[doc = "Field `auto_clkdiv` reader - Auto CLKDIV"]
-pub struct AUTO_CLKDIV_R(crate::FieldReader<bool, bool>);
+pub struct AUTO_CLKDIV_R(crate::FieldReader<bool>);
 impl AUTO_CLKDIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl AUTO_CLKDIV_R {
     }
 }
 impl core::ops::Deref for AUTO_CLKDIV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

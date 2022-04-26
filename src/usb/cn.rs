@@ -35,7 +35,7 @@ impl From<crate::W<CN_SPEC>> for W {
     }
 }
 #[doc = "Field `usb_en` reader - USB Device Interface Enable"]
-pub struct USB_EN_R(crate::FieldReader<bool, bool>);
+pub struct USB_EN_R(crate::FieldReader<bool>);
 impl USB_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl USB_EN_R {
     }
 }
 impl core::ops::Deref for USB_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

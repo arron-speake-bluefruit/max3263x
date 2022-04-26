@@ -35,7 +35,7 @@ impl From<crate::W<LOOP_SPEC>> for W {
     }
 }
 #[doc = "Field `counter_0` reader - CH1 Loop Counter 1"]
-pub struct COUNTER_0_R(crate::FieldReader<u16, u16>);
+pub struct COUNTER_0_R(crate::FieldReader<u16>);
 impl COUNTER_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl COUNTER_0_R {
     }
 }
 impl core::ops::Deref for COUNTER_0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> COUNTER_0_W<'a> {
     }
 }
 #[doc = "Field `counter_1` reader - CH1 Loop Counter 0"]
-pub struct COUNTER_1_R(crate::FieldReader<u16, u16>);
+pub struct COUNTER_1_R(crate::FieldReader<u16>);
 impl COUNTER_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl COUNTER_1_R {
     }
 }
 impl core::ops::Deref for COUNTER_1_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

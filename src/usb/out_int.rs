@@ -35,7 +35,7 @@ impl From<crate::W<OUT_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `outdav0` reader - Endpoint 0 Data Available Interrupt Flag"]
-pub struct OUTDAV0_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV0_R(crate::FieldReader<bool>);
 impl OUTDAV0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl OUTDAV0_R {
     }
 }
 impl core::ops::Deref for OUTDAV0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> OUTDAV0_W<'a> {
     }
 }
 #[doc = "Field `outdav1` reader - Endpoint 1 Data Available Interrupt Flag"]
-pub struct OUTDAV1_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV1_R(crate::FieldReader<bool>);
 impl OUTDAV1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl OUTDAV1_R {
     }
 }
 impl core::ops::Deref for OUTDAV1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> OUTDAV1_W<'a> {
     }
 }
 #[doc = "Field `outdav2` reader - Endpoint 2 Data Available Interrupt Flag"]
-pub struct OUTDAV2_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV2_R(crate::FieldReader<bool>);
 impl OUTDAV2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl OUTDAV2_R {
     }
 }
 impl core::ops::Deref for OUTDAV2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> OUTDAV2_W<'a> {
     }
 }
 #[doc = "Field `outdav3` reader - Endpoint 3 Data Available Interrupt Flag"]
-pub struct OUTDAV3_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV3_R(crate::FieldReader<bool>);
 impl OUTDAV3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl OUTDAV3_R {
     }
 }
 impl core::ops::Deref for OUTDAV3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> OUTDAV3_W<'a> {
     }
 }
 #[doc = "Field `outdav4` reader - Endpoint 4 Data Available Interrupt Flag"]
-pub struct OUTDAV4_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV4_R(crate::FieldReader<bool>);
 impl OUTDAV4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl OUTDAV4_R {
     }
 }
 impl core::ops::Deref for OUTDAV4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> OUTDAV4_W<'a> {
     }
 }
 #[doc = "Field `outdav5` reader - Endpoint 5 Data Available Interrupt Flag"]
-pub struct OUTDAV5_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV5_R(crate::FieldReader<bool>);
 impl OUTDAV5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl OUTDAV5_R {
     }
 }
 impl core::ops::Deref for OUTDAV5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> OUTDAV5_W<'a> {
     }
 }
 #[doc = "Field `outdav6` reader - Endpoint 6 Data Available Interrupt Flag"]
-pub struct OUTDAV6_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV6_R(crate::FieldReader<bool>);
 impl OUTDAV6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl OUTDAV6_R {
     }
 }
 impl core::ops::Deref for OUTDAV6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> OUTDAV6_W<'a> {
     }
 }
 #[doc = "Field `outdav7` reader - Endpoint 7 Data Available Interrupt Flag"]
-pub struct OUTDAV7_R(crate::FieldReader<bool, bool>);
+pub struct OUTDAV7_R(crate::FieldReader<bool>);
 impl OUTDAV7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl OUTDAV7_R {
     }
 }
 impl core::ops::Deref for OUTDAV7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

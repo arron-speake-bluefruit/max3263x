@@ -35,7 +35,7 @@ impl From<crate::W<MARGIN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `extra_margin` reader - Extra Margin Adjustment"]
-pub struct EXTRA_MARGIN_R(crate::FieldReader<u8, u8>);
+pub struct EXTRA_MARGIN_R(crate::FieldReader<u8>);
 impl EXTRA_MARGIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl EXTRA_MARGIN_R {
     }
 }
 impl core::ops::Deref for EXTRA_MARGIN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> EXTRA_MARGIN_W<'a> {
     }
 }
 #[doc = "Field `extra_write_margin` reader - Extra Write Margin Adjustment"]
-pub struct EXTRA_WRITE_MARGIN_R(crate::FieldReader<u8, u8>);
+pub struct EXTRA_WRITE_MARGIN_R(crate::FieldReader<u8>);
 impl EXTRA_WRITE_MARGIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl EXTRA_WRITE_MARGIN_R {
     }
 }
 impl core::ops::Deref for EXTRA_WRITE_MARGIN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> EXTRA_WRITE_MARGIN_W<'a> {
     }
 }
 #[doc = "Field `write_assist_en` reader - Write Assist Enable"]
-pub struct WRITE_ASSIST_EN_R(crate::FieldReader<bool, bool>);
+pub struct WRITE_ASSIST_EN_R(crate::FieldReader<bool>);
 impl WRITE_ASSIST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl WRITE_ASSIST_EN_R {
     }
 }
 impl core::ops::Deref for WRITE_ASSIST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> WRITE_ASSIST_EN_W<'a> {
     }
 }
 #[doc = "Field `write_assist_margin` reader - Write Assist Margin Adjustment"]
-pub struct WRITE_ASSIST_MARGIN_R(crate::FieldReader<u8, u8>);
+pub struct WRITE_ASSIST_MARGIN_R(crate::FieldReader<u8>);
 impl WRITE_ASSIST_MARGIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl WRITE_ASSIST_MARGIN_R {
     }
 }
 impl core::ops::Deref for WRITE_ASSIST_MARGIN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `start` reader - AES Start/Busy"]
-pub struct START_R(crate::FieldReader<bool, bool>);
+pub struct START_R(crate::FieldReader<bool>);
 impl START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_R {
     }
 }
 impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -86,7 +86,7 @@ impl From<CRYPT_MODE_A> for bool {
     }
 }
 #[doc = "Field `crypt_mode` reader - AES Encrypt/Decrypt Mode"]
-pub struct CRYPT_MODE_R(crate::FieldReader<bool, CRYPT_MODE_A>);
+pub struct CRYPT_MODE_R(crate::FieldReader<bool>);
 impl CRYPT_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,7 +112,7 @@ impl CRYPT_MODE_R {
     }
 }
 impl core::ops::Deref for CRYPT_MODE_R {
-    type Target = crate::FieldReader<bool, CRYPT_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl From<EXP_KEY_MODE_A> for bool {
     }
 }
 #[doc = "Field `exp_key_mode` reader - AES Expanded Key Mode"]
-pub struct EXP_KEY_MODE_R(crate::FieldReader<bool, EXP_KEY_MODE_A>);
+pub struct EXP_KEY_MODE_R(crate::FieldReader<bool>);
 impl EXP_KEY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -196,7 +196,7 @@ impl EXP_KEY_MODE_R {
     }
 }
 impl core::ops::Deref for EXP_KEY_MODE_R {
-    type Target = crate::FieldReader<bool, EXP_KEY_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl From<KEY_SIZE_A> for u8 {
     }
 }
 #[doc = "Field `key_size` reader - AES Key Size Select"]
-pub struct KEY_SIZE_R(crate::FieldReader<u8, KEY_SIZE_A>);
+pub struct KEY_SIZE_R(crate::FieldReader<u8>);
 impl KEY_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -290,7 +290,7 @@ impl KEY_SIZE_R {
     }
 }
 impl core::ops::Deref for KEY_SIZE_R {
-    type Target = crate::FieldReader<u8, KEY_SIZE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -329,7 +329,7 @@ impl<'a> KEY_SIZE_W<'a> {
     }
 }
 #[doc = "Field `inten` reader - AES Interrupt Enable"]
-pub struct INTEN_R(crate::FieldReader<bool, bool>);
+pub struct INTEN_R(crate::FieldReader<bool>);
 impl INTEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -337,7 +337,7 @@ impl INTEN_R {
     }
 }
 impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -366,7 +366,7 @@ impl<'a> INTEN_W<'a> {
     }
 }
 #[doc = "Field `intfl` reader - AES Interrupt Flag"]
-pub struct INTFL_R(crate::FieldReader<bool, bool>);
+pub struct INTFL_R(crate::FieldReader<bool>);
 impl INTFL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -374,7 +374,7 @@ impl INTFL_R {
     }
 }
 impl core::ops::Deref for INTFL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

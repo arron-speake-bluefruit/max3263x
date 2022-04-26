@@ -49,7 +49,7 @@ impl From<SPI_SLAVE_EN_A> for bool {
     }
 }
 #[doc = "Field `spi_slave_en` reader - SPI Slave Enable"]
-pub struct SPI_SLAVE_EN_R(crate::FieldReader<bool, SPI_SLAVE_EN_A>);
+pub struct SPI_SLAVE_EN_R(crate::FieldReader<bool>);
 impl SPI_SLAVE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl SPI_SLAVE_EN_R {
     }
 }
 impl core::ops::Deref for SPI_SLAVE_EN_R {
-    type Target = crate::FieldReader<bool, SPI_SLAVE_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -133,7 +133,7 @@ impl From<TX_FIFO_EN_A> for bool {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - TX FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool, TX_FIFO_EN_A>);
+pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
 impl TX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl TX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, TX_FIFO_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl From<RX_FIFO_EN_A> for bool {
     }
 }
 #[doc = "Field `rx_fifo_en` reader - SPI RX FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool, RX_FIFO_EN_A>);
+pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
 impl RX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,7 +243,7 @@ impl RX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, RX_FIFO_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,7 +306,7 @@ impl From<DATA_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `data_width` reader - Width of SPI Slave Data Transfers"]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8, DATA_WIDTH_A>);
+pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
 impl DATA_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -345,7 +345,7 @@ impl DATA_WIDTH_R {
     }
 }
 impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8, DATA_WIDTH_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -389,7 +389,7 @@ impl<'a> DATA_WIDTH_W<'a> {
     }
 }
 #[doc = "Field `spi_mode` reader - Defines Clock Polarity (bit 17) and Clock Phase (bit 16), collectively referred to as SPI Mode."]
-pub struct SPI_MODE_R(crate::FieldReader<u8, u8>);
+pub struct SPI_MODE_R(crate::FieldReader<u8>);
 impl SPI_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -397,7 +397,7 @@ impl SPI_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -430,7 +430,7 @@ impl From<TX_CLK_INVERT_A> for bool {
     }
 }
 #[doc = "Field `tx_clk_invert` reader - Invert TX Clock"]
-pub struct TX_CLK_INVERT_R(crate::FieldReader<bool, TX_CLK_INVERT_A>);
+pub struct TX_CLK_INVERT_R(crate::FieldReader<bool>);
 impl TX_CLK_INVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -456,7 +456,7 @@ impl TX_CLK_INVERT_R {
     }
 }
 impl core::ops::Deref for TX_CLK_INVERT_R {
-    type Target = crate::FieldReader<bool, TX_CLK_INVERT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -500,7 +500,7 @@ impl<'a> TX_CLK_INVERT_W<'a> {
     }
 }
 #[doc = "Field `disable_parking` reader - Disable automatic resetting of SPI Slave on exit from LP Modes"]
-pub struct DISABLE_PARKING_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_PARKING_R(crate::FieldReader<bool>);
 impl DISABLE_PARKING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -508,7 +508,7 @@ impl DISABLE_PARKING_R {
     }
 }
 impl core::ops::Deref for DISABLE_PARKING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

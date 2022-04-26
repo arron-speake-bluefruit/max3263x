@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - Master Transaction FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
 impl TX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_en` reader - Master Results FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
 impl RX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `mstr_reset_en` reader - Master Reset"]
-pub struct MSTR_RESET_EN_R(crate::FieldReader<bool, bool>);
+pub struct MSTR_RESET_EN_R(crate::FieldReader<bool>);
 impl MSTR_RESET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MSTR_RESET_EN_R {
     }
 }
 impl core::ops::Deref for MSTR_RESET_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

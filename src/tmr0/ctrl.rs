@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `mode` reader - Operating Modes for 32-bit/16-bit Timers"]
-pub struct MODE_R(crate::FieldReader<u8, u8>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `tmr2x16` reader - Dual 16-bit Timer Mode"]
-pub struct TMR2X16_R(crate::FieldReader<bool, bool>);
+pub struct TMR2X16_R(crate::FieldReader<bool>);
 impl TMR2X16_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TMR2X16_R {
     }
 }
 impl core::ops::Deref for TMR2X16_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TMR2X16_W<'a> {
     }
 }
 #[doc = "Field `prescale` reader - Timer Clock Prescale Setting"]
-pub struct PRESCALE_R(crate::FieldReader<u8, u8>);
+pub struct PRESCALE_R(crate::FieldReader<u8>);
 impl PRESCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl PRESCALE_R {
     }
 }
 impl core::ops::Deref for PRESCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> PRESCALE_W<'a> {
     }
 }
 #[doc = "Field `polarity` reader - Timer I/O Polarity"]
-pub struct POLARITY_R(crate::FieldReader<bool, bool>);
+pub struct POLARITY_R(crate::FieldReader<bool>);
 impl POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl POLARITY_R {
     }
 }
 impl core::ops::Deref for POLARITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> POLARITY_W<'a> {
     }
 }
 #[doc = "Field `enable0` reader - Enable 32-bit timer / 16-bit timer 0"]
-pub struct ENABLE0_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE0_R(crate::FieldReader<bool>);
 impl ENABLE0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl ENABLE0_R {
     }
 }
 impl core::ops::Deref for ENABLE0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> ENABLE0_W<'a> {
     }
 }
 #[doc = "Field `enable1` reader - Enable 16-bit timer 1"]
-pub struct ENABLE1_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE1_R(crate::FieldReader<bool>);
 impl ENABLE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl ENABLE1_R {
     }
 }
 impl core::ops::Deref for ENABLE1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

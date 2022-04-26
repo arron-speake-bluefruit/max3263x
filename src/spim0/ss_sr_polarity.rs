@@ -35,7 +35,7 @@ impl From<crate::W<SS_SR_POLARITY_SPEC>> for W {
     }
 }
 #[doc = "Field `ss_polarity` reader - SS Signal Polarity"]
-pub struct SS_POLARITY_R(crate::FieldReader<u8, u8>);
+pub struct SS_POLARITY_R(crate::FieldReader<u8>);
 impl SS_POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SS_POLARITY_R {
     }
 }
 impl core::ops::Deref for SS_POLARITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SS_POLARITY_W<'a> {
     }
 }
 #[doc = "Field `fc_polarity` reader - SR Signal Polarity \\[FC Polarity\\]"]
-pub struct FC_POLARITY_R(crate::FieldReader<u8, u8>);
+pub struct FC_POLARITY_R(crate::FieldReader<u8>);
 impl FC_POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl FC_POLARITY_R {
     }
 }
 impl core::ops::Deref for FC_POLARITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

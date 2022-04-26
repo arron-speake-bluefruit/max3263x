@@ -35,7 +35,7 @@ impl From<crate::W<CRYPT_CLK_CTRL_1_MAA_SPEC>> for W {
     }
 }
 #[doc = "Field `maa_clk_scale` reader - Control Settings for Crypto Clock 1 - MAA"]
-pub struct MAA_CLK_SCALE_R(crate::FieldReader<u8, u8>);
+pub struct MAA_CLK_SCALE_R(crate::FieldReader<u8>);
 impl MAA_CLK_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MAA_CLK_SCALE_R {
     }
 }
 impl core::ops::Deref for MAA_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<GEN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_mstr_en` reader - Enable/Disable SPI Master"]
-pub struct SPI_MSTR_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI_MSTR_EN_R(crate::FieldReader<bool>);
 impl SPI_MSTR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SPI_MSTR_EN_R {
     }
 }
 impl core::ops::Deref for SPI_MSTR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SPI_MSTR_EN_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - Transaction FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
 impl TX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_en` reader - Results FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
 impl RX_FIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RX_FIFO_EN_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RX_FIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `bit_bang_mode` reader - Bit Bang Mode Enable"]
-pub struct BIT_BANG_MODE_R(crate::FieldReader<bool, bool>);
+pub struct BIT_BANG_MODE_R(crate::FieldReader<bool>);
 impl BIT_BANG_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BIT_BANG_MODE_R {
     }
 }
 impl core::ops::Deref for BIT_BANG_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BIT_BANG_MODE_W<'a> {
     }
 }
 #[doc = "Field `bb_ss_in_out` reader - Bit Bang SS Input/Output"]
-pub struct BB_SS_IN_OUT_R(crate::FieldReader<bool, bool>);
+pub struct BB_SS_IN_OUT_R(crate::FieldReader<bool>);
 impl BB_SS_IN_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl BB_SS_IN_OUT_R {
     }
 }
 impl core::ops::Deref for BB_SS_IN_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> BB_SS_IN_OUT_W<'a> {
     }
 }
 #[doc = "Field `bb_sr_in` reader - Bit Bang SR Input"]
-pub struct BB_SR_IN_R(crate::FieldReader<bool, bool>);
+pub struct BB_SR_IN_R(crate::FieldReader<bool>);
 impl BB_SR_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,14 +228,14 @@ impl BB_SR_IN_R {
     }
 }
 impl core::ops::Deref for BB_SR_IN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `bb_sck_in_out` reader - Bit Bang SCK Input/Output"]
-pub struct BB_SCK_IN_OUT_R(crate::FieldReader<bool, bool>);
+pub struct BB_SCK_IN_OUT_R(crate::FieldReader<bool>);
 impl BB_SCK_IN_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,7 +243,7 @@ impl BB_SCK_IN_OUT_R {
     }
 }
 impl core::ops::Deref for BB_SCK_IN_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -272,7 +272,7 @@ impl<'a> BB_SCK_IN_OUT_W<'a> {
     }
 }
 #[doc = "Field `bb_sdio_in` reader - Bit Bang SDIO Input"]
-pub struct BB_SDIO_IN_R(crate::FieldReader<u8, u8>);
+pub struct BB_SDIO_IN_R(crate::FieldReader<u8>);
 impl BB_SDIO_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -280,14 +280,14 @@ impl BB_SDIO_IN_R {
     }
 }
 impl core::ops::Deref for BB_SDIO_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `bb_sdio_out` reader - Bit Bang SDIO Output"]
-pub struct BB_SDIO_OUT_R(crate::FieldReader<u8, u8>);
+pub struct BB_SDIO_OUT_R(crate::FieldReader<u8>);
 impl BB_SDIO_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -295,7 +295,7 @@ impl BB_SDIO_OUT_R {
     }
 }
 impl core::ops::Deref for BB_SDIO_OUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -314,7 +314,7 @@ impl<'a> BB_SDIO_OUT_W<'a> {
     }
 }
 #[doc = "Field `bb_sdio_dr_en` reader - Bit Bang SDIO Drive Enable"]
-pub struct BB_SDIO_DR_EN_R(crate::FieldReader<u8, u8>);
+pub struct BB_SDIO_DR_EN_R(crate::FieldReader<u8>);
 impl BB_SDIO_DR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -322,7 +322,7 @@ impl BB_SDIO_DR_EN_R {
     }
 }
 impl core::ops::Deref for BB_SDIO_DR_EN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -337,6 +337,43 @@ impl<'a> BB_SDIO_DR_EN_W<'a> {
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
+        self.w
+    }
+}
+#[doc = "Field `enable_sck_fb_mode` reader - Enable SCK_FB Mode"]
+pub struct ENABLE_SCK_FB_MODE_R(crate::FieldReader<bool>);
+impl ENABLE_SCK_FB_MODE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ENABLE_SCK_FB_MODE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENABLE_SCK_FB_MODE_R {
+    type Target = crate::FieldReader<bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `enable_sck_fb_mode` writer - Enable SCK_FB Mode"]
+pub struct ENABLE_SCK_FB_MODE_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> ENABLE_SCK_FB_MODE_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -391,6 +428,11 @@ impl R {
     pub fn bb_sdio_dr_en(&self) -> BB_SDIO_DR_EN_R {
         BB_SDIO_DR_EN_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
+    #[doc = "Bit 24 - Enable SCK_FB Mode"]
+    #[inline(always)]
+    pub fn enable_sck_fb_mode(&self) -> ENABLE_SCK_FB_MODE_R {
+        ENABLE_SCK_FB_MODE_R::new(((self.bits >> 24) & 1) != 0)
+    }
 }
 impl W {
     #[doc = "Bit 0 - Enable/Disable SPI Master"]
@@ -432,6 +474,11 @@ impl W {
     #[inline(always)]
     pub fn bb_sdio_dr_en(&mut self) -> BB_SDIO_DR_EN_W {
         BB_SDIO_DR_EN_W { w: self }
+    }
+    #[doc = "Bit 24 - Enable SCK_FB Mode"]
+    #[inline(always)]
+    pub fn enable_sck_fb_mode(&mut self) -> ENABLE_SCK_FB_MODE_W {
+        ENABLE_SCK_FB_MODE_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

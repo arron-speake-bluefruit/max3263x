@@ -35,7 +35,7 @@ impl From<crate::W<ALI_ACK0_SPEC>> for W {
     }
 }
 #[doc = "Field `ali_ack_p0` reader - Analog In Mode Acknowledge: P0\\[7:0\\]"]
-pub struct ALI_ACK_P0_R(crate::FieldReader<u8, u8>);
+pub struct ALI_ACK_P0_R(crate::FieldReader<u8>);
 impl ALI_ACK_P0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl ALI_ACK_P0_R {
     }
 }
 impl core::ops::Deref for ALI_ACK_P0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ali_ack_p1` reader - Analog In Mode Acknowledge: P1\\[7:0\\]"]
-pub struct ALI_ACK_P1_R(crate::FieldReader<u8, u8>);
+pub struct ALI_ACK_P1_R(crate::FieldReader<u8>);
 impl ALI_ACK_P1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,14 +58,14 @@ impl ALI_ACK_P1_R {
     }
 }
 impl core::ops::Deref for ALI_ACK_P1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ali_ack_p2` reader - Analog In Mode Acknowledge: P2\\[7:0\\]"]
-pub struct ALI_ACK_P2_R(crate::FieldReader<u8, u8>);
+pub struct ALI_ACK_P2_R(crate::FieldReader<u8>);
 impl ALI_ACK_P2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -73,14 +73,14 @@ impl ALI_ACK_P2_R {
     }
 }
 impl core::ops::Deref for ALI_ACK_P2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ali_ack_p3` reader - Analog In Mode Acknowledge: P3\\[7:0\\]"]
-pub struct ALI_ACK_P3_R(crate::FieldReader<u8, u8>);
+pub struct ALI_ACK_P3_R(crate::FieldReader<u8>);
 impl ALI_ACK_P3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -88,7 +88,7 @@ impl ALI_ACK_P3_R {
     }
 }
 impl core::ops::Deref for ALI_ACK_P3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

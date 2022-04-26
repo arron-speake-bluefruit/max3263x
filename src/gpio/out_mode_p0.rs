@@ -35,7 +35,7 @@ impl From<crate::W<OUT_MODE_P0_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P0.0 Output Drive Mode"]
-pub struct PIN0_R(crate::FieldReader<u8, u8>);
+pub struct PIN0_R(crate::FieldReader<u8>);
 impl PIN0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PIN0_R {
     }
 }
 impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PIN0_W<'a> {
     }
 }
 #[doc = "Field `pin1` reader - P0.1 Output Drive Mode"]
-pub struct PIN1_R(crate::FieldReader<u8, u8>);
+pub struct PIN1_R(crate::FieldReader<u8>);
 impl PIN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PIN1_R {
     }
 }
 impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PIN1_W<'a> {
     }
 }
 #[doc = "Field `pin2` reader - P0.2 Output Drive Mode"]
-pub struct PIN2_R(crate::FieldReader<u8, u8>);
+pub struct PIN2_R(crate::FieldReader<u8>);
 impl PIN2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PIN2_R {
     }
 }
 impl core::ops::Deref for PIN2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PIN2_W<'a> {
     }
 }
 #[doc = "Field `pin3` reader - P0.3 Output Drive Mode"]
-pub struct PIN3_R(crate::FieldReader<u8, u8>);
+pub struct PIN3_R(crate::FieldReader<u8>);
 impl PIN3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl PIN3_R {
     }
 }
 impl core::ops::Deref for PIN3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> PIN3_W<'a> {
     }
 }
 #[doc = "Field `pin4` reader - P0.4 Output Drive Mode"]
-pub struct PIN4_R(crate::FieldReader<u8, u8>);
+pub struct PIN4_R(crate::FieldReader<u8>);
 impl PIN4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl PIN4_R {
     }
 }
 impl core::ops::Deref for PIN4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> PIN4_W<'a> {
     }
 }
 #[doc = "Field `pin5` reader - P0.5 Output Drive Mode"]
-pub struct PIN5_R(crate::FieldReader<u8, u8>);
+pub struct PIN5_R(crate::FieldReader<u8>);
 impl PIN5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl PIN5_R {
     }
 }
 impl core::ops::Deref for PIN5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> PIN5_W<'a> {
     }
 }
 #[doc = "Field `pin6` reader - P0.6 Output Drive Mode"]
-pub struct PIN6_R(crate::FieldReader<u8, u8>);
+pub struct PIN6_R(crate::FieldReader<u8>);
 impl PIN6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl PIN6_R {
     }
 }
 impl core::ops::Deref for PIN6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> PIN6_W<'a> {
     }
 }
 #[doc = "Field `pin7` reader - P0.7 Output Drive Mode"]
-pub struct PIN7_R(crate::FieldReader<u8, u8>);
+pub struct PIN7_R(crate::FieldReader<u8>);
 impl PIN7_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl PIN7_R {
     }
 }
 impl core::ops::Deref for PIN7_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

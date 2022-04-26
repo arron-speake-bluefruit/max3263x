@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `enable` reader - RTC Timer Enable"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -94,7 +94,7 @@ impl<'a> CLEAR_W<'a> {
     }
 }
 #[doc = "Field `pending` reader - RTC Transaction Pending"]
-pub struct PENDING_R(crate::FieldReader<bool, bool>);
+pub struct PENDING_R(crate::FieldReader<bool>);
 impl PENDING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -102,14 +102,14 @@ impl PENDING_R {
     }
 }
 impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `use_async_flags` reader - Use Async RTC Flags"]
-pub struct USE_ASYNC_FLAGS_R(crate::FieldReader<bool, bool>);
+pub struct USE_ASYNC_FLAGS_R(crate::FieldReader<bool>);
 impl USE_ASYNC_FLAGS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl USE_ASYNC_FLAGS_R {
     }
 }
 impl core::ops::Deref for USE_ASYNC_FLAGS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> USE_ASYNC_FLAGS_W<'a> {
     }
 }
 #[doc = "Field `aggressive_rst` reader - Use Aggressive Reset Mode"]
-pub struct AGGRESSIVE_RST_R(crate::FieldReader<bool, bool>);
+pub struct AGGRESSIVE_RST_R(crate::FieldReader<bool>);
 impl AGGRESSIVE_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl AGGRESSIVE_RST_R {
     }
 }
 impl core::ops::Deref for AGGRESSIVE_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> AGGRESSIVE_RST_W<'a> {
     }
 }
 #[doc = "Field `en_active` reader - Enable RTC in Active Modes"]
-pub struct EN_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct EN_ACTIVE_R(crate::FieldReader<bool>);
 impl EN_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,14 +191,14 @@ impl EN_ACTIVE_R {
     }
 }
 impl core::ops::Deref for EN_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `osc_goto_low_active` reader - osc_goto_low_r transaction is pending"]
-pub struct OSC_GOTO_LOW_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct OSC_GOTO_LOW_ACTIVE_R(crate::FieldReader<bool>);
 impl OSC_GOTO_LOW_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -206,14 +206,14 @@ impl OSC_GOTO_LOW_ACTIVE_R {
     }
 }
 impl core::ops::Deref for OSC_GOTO_LOW_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `osc_frce_sm_en_active` reader - osc_force_mode transaction is pending"]
-pub struct OSC_FRCE_SM_EN_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct OSC_FRCE_SM_EN_ACTIVE_R(crate::FieldReader<bool>);
 impl OSC_FRCE_SM_EN_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -221,14 +221,14 @@ impl OSC_FRCE_SM_EN_ACTIVE_R {
     }
 }
 impl core::ops::Deref for OSC_FRCE_SM_EN_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `osc_frce_st_active` reader - osc_force_state transaction is pending"]
-pub struct OSC_FRCE_ST_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct OSC_FRCE_ST_ACTIVE_R(crate::FieldReader<bool>);
 impl OSC_FRCE_ST_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -236,14 +236,14 @@ impl OSC_FRCE_ST_ACTIVE_R {
     }
 }
 impl core::ops::Deref for OSC_FRCE_ST_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `set_active` reader - timer_set_active"]
-pub struct SET_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct SET_ACTIVE_R(crate::FieldReader<bool>);
 impl SET_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -251,14 +251,14 @@ impl SET_ACTIVE_R {
     }
 }
 impl core::ops::Deref for SET_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `clr_active` reader - RTC clear is pending"]
-pub struct CLR_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CLR_ACTIVE_R(crate::FieldReader<bool>);
 impl CLR_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -266,14 +266,14 @@ impl CLR_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CLR_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `rollover_clr_active` reader - rollover clr is pending"]
-pub struct ROLLOVER_CLR_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct ROLLOVER_CLR_ACTIVE_R(crate::FieldReader<bool>);
 impl ROLLOVER_CLR_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -281,14 +281,14 @@ impl ROLLOVER_CLR_ACTIVE_R {
     }
 }
 impl core::ops::Deref for ROLLOVER_CLR_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `prescale_cmpr0_active` reader - prescale cmpr0 is pending"]
-pub struct PRESCALE_CMPR0_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct PRESCALE_CMPR0_ACTIVE_R(crate::FieldReader<bool>);
 impl PRESCALE_CMPR0_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -296,14 +296,14 @@ impl PRESCALE_CMPR0_ACTIVE_R {
     }
 }
 impl core::ops::Deref for PRESCALE_CMPR0_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `prescale_update_active` reader - prescale update transaction is pending"]
-pub struct PRESCALE_UPDATE_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct PRESCALE_UPDATE_ACTIVE_R(crate::FieldReader<bool>);
 impl PRESCALE_UPDATE_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -311,14 +311,14 @@ impl PRESCALE_UPDATE_ACTIVE_R {
     }
 }
 impl core::ops::Deref for PRESCALE_UPDATE_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `cmpr1_clr_active` reader - cmpr1 clear transaction is pending"]
-pub struct CMPR1_CLR_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CMPR1_CLR_ACTIVE_R(crate::FieldReader<bool>);
 impl CMPR1_CLR_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -326,14 +326,14 @@ impl CMPR1_CLR_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CMPR1_CLR_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `cmpr0_clr_active` reader - cmpr0 clear transaction is pending"]
-pub struct CMPR0_CLR_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CMPR0_CLR_ACTIVE_R(crate::FieldReader<bool>);
 impl CMPR0_CLR_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -341,7 +341,7 @@ impl CMPR0_CLR_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CMPR0_CLR_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

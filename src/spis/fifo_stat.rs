@@ -35,7 +35,7 @@ impl From<crate::W<FIFO_STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_used` reader - Number of Bytes in Transmit FIFO"]
-pub struct TX_FIFO_USED_R(crate::FieldReader<u8, u8>);
+pub struct TX_FIFO_USED_R(crate::FieldReader<u8>);
 impl TX_FIFO_USED_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl TX_FIFO_USED_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_USED_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `rx_fifo_used` reader - Number of Bytes in Receive FIFO"]
-pub struct RX_FIFO_USED_R(crate::FieldReader<u8, u8>);
+pub struct RX_FIFO_USED_R(crate::FieldReader<u8>);
 impl RX_FIFO_USED_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl RX_FIFO_USED_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_USED_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

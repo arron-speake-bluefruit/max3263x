@@ -35,7 +35,7 @@ impl From<crate::W<MAWS_SPEC>> for W {
     }
 }
 #[doc = "Field `modlen` reader - MAA Word Size"]
-pub struct MODLEN_R(crate::FieldReader<u16, u16>);
+pub struct MODLEN_R(crate::FieldReader<u16>);
 impl MODLEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl MODLEN_R {
     }
 }
 impl core::ops::Deref for MODLEN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MODLEN_W<'a> {
     }
 }
 #[doc = "Field `byteswap` reader - Big Endian Byte Mode"]
-pub struct BYTESWAP_R(crate::FieldReader<bool, bool>);
+pub struct BYTESWAP_R(crate::FieldReader<bool>);
 impl BYTESWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl BYTESWAP_R {
     }
 }
 impl core::ops::Deref for BYTESWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

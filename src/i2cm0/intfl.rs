@@ -35,7 +35,7 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_done` reader - Transaction Done Int Status"]
-pub struct TX_DONE_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_R(crate::FieldReader<bool>);
 impl TX_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_DONE_R {
     }
 }
 impl core::ops::Deref for TX_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_DONE_W<'a> {
     }
 }
 #[doc = "Field `tx_nacked` reader - Transaction NACKed Int Status"]
-pub struct TX_NACKED_R(crate::FieldReader<bool, bool>);
+pub struct TX_NACKED_R(crate::FieldReader<bool>);
 impl TX_NACKED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_NACKED_R {
     }
 }
 impl core::ops::Deref for TX_NACKED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_NACKED_W<'a> {
     }
 }
 #[doc = "Field `tx_lost_arbitr` reader - Transaction Lost Arbitration Int Status"]
-pub struct TX_LOST_ARBITR_R(crate::FieldReader<bool, bool>);
+pub struct TX_LOST_ARBITR_R(crate::FieldReader<bool>);
 impl TX_LOST_ARBITR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_LOST_ARBITR_R {
     }
 }
 impl core::ops::Deref for TX_LOST_ARBITR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_LOST_ARBITR_W<'a> {
     }
 }
 #[doc = "Field `tx_timeout` reader - Transaction Timed Out Int Status"]
-pub struct TX_TIMEOUT_R(crate::FieldReader<bool, bool>);
+pub struct TX_TIMEOUT_R(crate::FieldReader<bool>);
 impl TX_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TX_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TX_TIMEOUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TX_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_empty` reader - Transaction FIFO Empty Int Status"]
-pub struct TX_FIFO_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_EMPTY_R(crate::FieldReader<bool>);
 impl TX_FIFO_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TX_FIFO_EMPTY_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TX_FIFO_EMPTY_W<'a> {
     }
 }
 #[doc = "Field `tx_fifo_3q_empty` reader - Transaction FIFO 3Q Empty Int Status"]
-pub struct TX_FIFO_3Q_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_3Q_EMPTY_R(crate::FieldReader<bool>);
 impl TX_FIFO_3Q_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TX_FIFO_3Q_EMPTY_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_3Q_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TX_FIFO_3Q_EMPTY_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_not_empty` reader - Results FIFO Not Empty Int Status"]
-pub struct RX_FIFO_NOT_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_NOT_EMPTY_R(crate::FieldReader<bool>);
 impl RX_FIFO_NOT_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RX_FIFO_NOT_EMPTY_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_NOT_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RX_FIFO_NOT_EMPTY_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_2q_full` reader - Results FIFO 2Q Full Int Status"]
-pub struct RX_FIFO_2Q_FULL_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_2Q_FULL_R(crate::FieldReader<bool>);
 impl RX_FIFO_2Q_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RX_FIFO_2Q_FULL_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_2Q_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> RX_FIFO_2Q_FULL_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_3q_full` reader - Results FIFO 3Q Full Int Status"]
-pub struct RX_FIFO_3Q_FULL_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_3Q_FULL_R(crate::FieldReader<bool>);
 impl RX_FIFO_3Q_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl RX_FIFO_3Q_FULL_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_3Q_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> RX_FIFO_3Q_FULL_W<'a> {
     }
 }
 #[doc = "Field `rx_fifo_full` reader - Results FIFO Full Int Status"]
-pub struct RX_FIFO_FULL_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_FULL_R(crate::FieldReader<bool>);
 impl RX_FIFO_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl RX_FIFO_FULL_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

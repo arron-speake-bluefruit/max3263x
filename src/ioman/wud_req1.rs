@@ -35,7 +35,7 @@ impl From<crate::W<WUD_REQ1_SPEC>> for W {
     }
 }
 #[doc = "Field `wud_req_p4` reader - Wakeup Detect Request Mode: P4\\[7:0\\]"]
-pub struct WUD_REQ_P4_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P4_R(crate::FieldReader<u8>);
 impl WUD_REQ_P4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl WUD_REQ_P4_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> WUD_REQ_P4_W<'a> {
     }
 }
 #[doc = "Field `wud_req_p5` reader - Wakeup Detect Request Mode: P5\\[7:0\\]"]
-pub struct WUD_REQ_P5_R(crate::FieldReader<u8, u8>);
+pub struct WUD_REQ_P5_R(crate::FieldReader<u8>);
 impl WUD_REQ_P5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl WUD_REQ_P5_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> WUD_REQ_P5_W<'a> {
     }
 }
 #[doc = "Field `wud_req_p6` reader - Wakeup Detect Request Mode: P6\\[0\\]"]
-pub struct WUD_REQ_P6_R(crate::FieldReader<bool, bool>);
+pub struct WUD_REQ_P6_R(crate::FieldReader<bool>);
 impl WUD_REQ_P6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl WUD_REQ_P6_R {
     }
 }
 impl core::ops::Deref for WUD_REQ_P6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

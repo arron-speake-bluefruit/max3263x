@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `crypto_enable` reader - Cryptographic (TPU) Relaxation Oscillator Enable"]
-pub struct CRYPTO_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_ENABLE_R(crate::FieldReader<bool>);
 impl CRYPTO_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CRYPTO_ENABLE_R {
     }
 }
 impl core::ops::Deref for CRYPTO_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CRYPTO_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `crypto_stability_count` reader - Crypto Oscillator Stability Select"]
-pub struct CRYPTO_STABILITY_COUNT_R(crate::FieldReader<u8, u8>);
+pub struct CRYPTO_STABILITY_COUNT_R(crate::FieldReader<u8>);
 impl CRYPTO_STABILITY_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CRYPTO_STABILITY_COUNT_R {
     }
 }
 impl core::ops::Deref for CRYPTO_STABILITY_COUNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

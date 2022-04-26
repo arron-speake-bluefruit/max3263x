@@ -78,7 +78,7 @@ impl From<INT_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `int_period` reader - Period from WDT Clear to Interrupt Flag Set"]
-pub struct INT_PERIOD_R(crate::FieldReader<u8, INT_PERIOD_A>);
+pub struct INT_PERIOD_R(crate::FieldReader<u8>);
 impl INT_PERIOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -189,7 +189,7 @@ impl INT_PERIOD_R {
     }
 }
 impl core::ops::Deref for INT_PERIOD_R {
-    type Target = crate::FieldReader<u8, INT_PERIOD_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -336,7 +336,7 @@ impl From<RST_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `rst_period` reader - Period from WDT Clear to Reset Flag Set"]
-pub struct RST_PERIOD_R(crate::FieldReader<u8, RST_PERIOD_A>);
+pub struct RST_PERIOD_R(crate::FieldReader<u8>);
 impl RST_PERIOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -447,7 +447,7 @@ impl RST_PERIOD_R {
     }
 }
 impl core::ops::Deref for RST_PERIOD_R {
-    type Target = crate::FieldReader<u8, RST_PERIOD_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -551,7 +551,7 @@ impl<'a> RST_PERIOD_W<'a> {
     }
 }
 #[doc = "Field `en_timer` reader - Watchdg Timer Enable"]
-pub struct EN_TIMER_R(crate::FieldReader<bool, bool>);
+pub struct EN_TIMER_R(crate::FieldReader<bool>);
 impl EN_TIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -559,7 +559,7 @@ impl EN_TIMER_R {
     }
 }
 impl core::ops::Deref for EN_TIMER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -602,7 +602,7 @@ impl From<EN_CLOCK_A> for bool {
     }
 }
 #[doc = "Field `en_clock` reader - Watchdog Clock Gate"]
-pub struct EN_CLOCK_R(crate::FieldReader<bool, EN_CLOCK_A>);
+pub struct EN_CLOCK_R(crate::FieldReader<bool>);
 impl EN_CLOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -628,7 +628,7 @@ impl EN_CLOCK_R {
     }
 }
 impl core::ops::Deref for EN_CLOCK_R {
-    type Target = crate::FieldReader<bool, EN_CLOCK_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -715,7 +715,7 @@ impl From<WAIT_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `wait_period` reader - Period from WDT Clear to Clear Window Begin"]
-pub struct WAIT_PERIOD_R(crate::FieldReader<u8, WAIT_PERIOD_A>);
+pub struct WAIT_PERIOD_R(crate::FieldReader<u8>);
 impl WAIT_PERIOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -826,7 +826,7 @@ impl WAIT_PERIOD_R {
     }
 }
 impl core::ops::Deref for WAIT_PERIOD_R {
-    type Target = crate::FieldReader<u8, WAIT_PERIOD_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

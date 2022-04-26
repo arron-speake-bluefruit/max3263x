@@ -35,7 +35,7 @@ impl From<crate::W<REG0_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_lp1` reader - Shutdown Power Mode Select"]
-pub struct PWR_LP1_R(crate::FieldReader<bool, bool>);
+pub struct PWR_LP1_R(crate::FieldReader<bool>);
 impl PWR_LP1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PWR_LP1_R {
     }
 }
 impl core::ops::Deref for PWR_LP1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PWR_LP1_W<'a> {
     }
 }
 #[doc = "Field `pwr_first_boot` reader - Wake on First Boot"]
-pub struct PWR_FIRST_BOOT_R(crate::FieldReader<bool, bool>);
+pub struct PWR_FIRST_BOOT_R(crate::FieldReader<bool>);
 impl PWR_FIRST_BOOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PWR_FIRST_BOOT_R {
     }
 }
 impl core::ops::Deref for PWR_FIRST_BOOT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -131,7 +131,7 @@ impl<'a> PWR_SYS_REBOOT_W<'a> {
     }
 }
 #[doc = "Field `pwr_flashen_run` reader - Enable Flash Operation during Run Mode"]
-pub struct PWR_FLASHEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_FLASHEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_FLASHEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -139,7 +139,7 @@ impl PWR_FLASHEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_FLASHEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -168,7 +168,7 @@ impl<'a> PWR_FLASHEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_flashen_slp` reader - Enable Flash Operation during Sleep Mode"]
-pub struct PWR_FLASHEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_FLASHEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_FLASHEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -176,7 +176,7 @@ impl PWR_FLASHEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_FLASHEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -205,7 +205,7 @@ impl<'a> PWR_FLASHEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_retregen_run` reader - Enable Retention Regulator Operation during Run Mode"]
-pub struct PWR_RETREGEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_RETREGEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_RETREGEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -213,7 +213,7 @@ impl PWR_RETREGEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_RETREGEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -242,7 +242,7 @@ impl<'a> PWR_RETREGEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_retregen_slp` reader - Enable Retention Regulator Operation during Sleep Mode"]
-pub struct PWR_RETREGEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_RETREGEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_RETREGEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -250,7 +250,7 @@ impl PWR_RETREGEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_RETREGEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +279,7 @@ impl<'a> PWR_RETREGEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_roen_run` reader - Enable 96MHz System Relaxation Oscillator in Run Mode"]
-pub struct PWR_ROEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_ROEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_ROEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -287,7 +287,7 @@ impl PWR_ROEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_ROEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,7 +316,7 @@ impl<'a> PWR_ROEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_roen_slp` reader - Enable 96MHz System Relaxation Oscillator in Sleep Mode"]
-pub struct PWR_ROEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_ROEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_ROEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -324,7 +324,7 @@ impl PWR_ROEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_ROEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,7 +353,7 @@ impl<'a> PWR_ROEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_nren_run` reader - Enable Nano Oscillator in Run Mode"]
-pub struct PWR_NREN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_NREN_RUN_R(crate::FieldReader<bool>);
 impl PWR_NREN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -361,7 +361,7 @@ impl PWR_NREN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_NREN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,7 +390,7 @@ impl<'a> PWR_NREN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_nren_slp` reader - Enable Nano Oscillator in Sleep Mode"]
-pub struct PWR_NREN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_NREN_SLP_R(crate::FieldReader<bool>);
 impl PWR_NREN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -398,7 +398,7 @@ impl PWR_NREN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_NREN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -427,7 +427,7 @@ impl<'a> PWR_NREN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_rtcen_run` reader - Enable Real Time Clock Operation during Run Mode"]
-pub struct PWR_RTCEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_RTCEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_RTCEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -435,7 +435,7 @@ impl PWR_RTCEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_RTCEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -464,7 +464,7 @@ impl<'a> PWR_RTCEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_rtcen_slp` reader - Enable Real Time Clock Operation during Sleep Mode"]
-pub struct PWR_RTCEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_RTCEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_RTCEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -472,7 +472,7 @@ impl PWR_RTCEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_RTCEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -501,7 +501,7 @@ impl<'a> PWR_RTCEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_svm12en_run` reader - Enable VDD12_SW SVM operation during Run Mode"]
-pub struct PWR_SVM12EN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SVM12EN_RUN_R(crate::FieldReader<bool>);
 impl PWR_SVM12EN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -509,7 +509,7 @@ impl PWR_SVM12EN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_SVM12EN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -538,7 +538,7 @@ impl<'a> PWR_SVM12EN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_svm18en_run` reader - Enable VDD18_SW SVM operation during Run Mode"]
-pub struct PWR_SVM18EN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SVM18EN_RUN_R(crate::FieldReader<bool>);
 impl PWR_SVM18EN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -546,7 +546,7 @@ impl PWR_SVM18EN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_SVM18EN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -575,7 +575,7 @@ impl<'a> PWR_SVM18EN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_svmrtcen_run` reader - Enable VRTC SVM operation during Run Mode"]
-pub struct PWR_SVMRTCEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SVMRTCEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_SVMRTCEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -583,7 +583,7 @@ impl PWR_SVMRTCEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_SVMRTCEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -612,7 +612,7 @@ impl<'a> PWR_SVMRTCEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_svm_vddb_run` reader - Enable VDDB SVM operation during Run Mode"]
-pub struct PWR_SVM_VDDB_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SVM_VDDB_RUN_R(crate::FieldReader<bool>);
 impl PWR_SVM_VDDB_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -620,7 +620,7 @@ impl PWR_SVM_VDDB_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_SVM_VDDB_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -649,7 +649,7 @@ impl<'a> PWR_SVM_VDDB_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_svmtvdd12en_run` reader - Enable TVDD12 SVM operation during Run Mode"]
-pub struct PWR_SVMTVDD12EN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_SVMTVDD12EN_RUN_R(crate::FieldReader<bool>);
 impl PWR_SVMTVDD12EN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -657,7 +657,7 @@ impl PWR_SVMTVDD12EN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_SVMTVDD12EN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -686,7 +686,7 @@ impl<'a> PWR_SVMTVDD12EN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd12_swen_run` reader - Enable VDD12 switching during Run Mode"]
-pub struct PWR_VDD12_SWEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD12_SWEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_VDD12_SWEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -694,7 +694,7 @@ impl PWR_VDD12_SWEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_VDD12_SWEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -723,7 +723,7 @@ impl<'a> PWR_VDD12_SWEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd12_swen_slp` reader - Enable VDD12 switching during Sleep Mode"]
-pub struct PWR_VDD12_SWEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD12_SWEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_VDD12_SWEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -731,7 +731,7 @@ impl PWR_VDD12_SWEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_VDD12_SWEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -760,7 +760,7 @@ impl<'a> PWR_VDD12_SWEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd18_swen_run` reader - Enable VDD18 switching during Run Mode"]
-pub struct PWR_VDD18_SWEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD18_SWEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_VDD18_SWEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -768,7 +768,7 @@ impl PWR_VDD18_SWEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_VDD18_SWEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -797,7 +797,7 @@ impl<'a> PWR_VDD18_SWEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_vdd18_swen_slp` reader - Enable VDD18 switching during Sleep Mode"]
-pub struct PWR_VDD18_SWEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_VDD18_SWEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_VDD18_SWEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -805,7 +805,7 @@ impl PWR_VDD18_SWEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_VDD18_SWEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -834,7 +834,7 @@ impl<'a> PWR_VDD18_SWEN_SLP_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_swen_run` reader - Enable TVDD12 switching during Run Mode"]
-pub struct PWR_TVDD12_SWEN_RUN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TVDD12_SWEN_RUN_R(crate::FieldReader<bool>);
 impl PWR_TVDD12_SWEN_RUN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -842,7 +842,7 @@ impl PWR_TVDD12_SWEN_RUN_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_SWEN_RUN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -871,7 +871,7 @@ impl<'a> PWR_TVDD12_SWEN_RUN_W<'a> {
     }
 }
 #[doc = "Field `pwr_tvdd12_swen_slp` reader - Enable TVDD12 switching during Sleep Mode"]
-pub struct PWR_TVDD12_SWEN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TVDD12_SWEN_SLP_R(crate::FieldReader<bool>);
 impl PWR_TVDD12_SWEN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -879,7 +879,7 @@ impl PWR_TVDD12_SWEN_SLP_R {
     }
 }
 impl core::ops::Deref for PWR_TVDD12_SWEN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<PERIPHERAL_RESET_SPEC>> for W {
     }
 }
 #[doc = "Field `ssb` reader - Reset SSB"]
-pub struct SSB_R(crate::FieldReader<bool, bool>);
+pub struct SSB_R(crate::FieldReader<bool>);
 impl SSB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SSB_R {
     }
 }
 impl core::ops::Deref for SSB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SSB_W<'a> {
     }
 }
 #[doc = "Field `spix` reader - Reset SPI XIP"]
-pub struct SPIX_R(crate::FieldReader<bool, bool>);
+pub struct SPIX_R(crate::FieldReader<bool>);
 impl SPIX_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SPIX_R {
     }
 }
 impl core::ops::Deref for SPIX_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SPIX_W<'a> {
     }
 }
 #[doc = "Field `pmu` reader - Reset PMU"]
-pub struct PMU_R(crate::FieldReader<bool, bool>);
+pub struct PMU_R(crate::FieldReader<bool>);
 impl PMU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PMU_R {
     }
 }
 impl core::ops::Deref for PMU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PMU_W<'a> {
     }
 }
 #[doc = "Field `usb` reader - Reset USB"]
-pub struct USB_R(crate::FieldReader<bool, bool>);
+pub struct USB_R(crate::FieldReader<bool>);
 impl USB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl USB_R {
     }
 }
 impl core::ops::Deref for USB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> USB_W<'a> {
     }
 }
 #[doc = "Field `crc` reader - Reset CRC"]
-pub struct CRC_R(crate::FieldReader<bool, bool>);
+pub struct CRC_R(crate::FieldReader<bool>);
 impl CRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CRC_R {
     }
 }
 impl core::ops::Deref for CRC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CRC_W<'a> {
     }
 }
 #[doc = "Field `tpu` reader - Reset TPU"]
-pub struct TPU_R(crate::FieldReader<bool, bool>);
+pub struct TPU_R(crate::FieldReader<bool>);
 impl TPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TPU_R {
     }
 }
 impl core::ops::Deref for TPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TPU_W<'a> {
     }
 }
 #[doc = "Field `watchdog0` reader - Reset Watchdog Timer 0"]
-pub struct WATCHDOG0_R(crate::FieldReader<bool, bool>);
+pub struct WATCHDOG0_R(crate::FieldReader<bool>);
 impl WATCHDOG0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl WATCHDOG0_R {
     }
 }
 impl core::ops::Deref for WATCHDOG0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> WATCHDOG0_W<'a> {
     }
 }
 #[doc = "Field `gpio` reader - Reset GPIO"]
-pub struct GPIO_R(crate::FieldReader<bool, bool>);
+pub struct GPIO_R(crate::FieldReader<bool>);
 impl GPIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl GPIO_R {
     }
 }
 impl core::ops::Deref for GPIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> GPIO_W<'a> {
     }
 }
 #[doc = "Field `timer0` reader - Reset Timer/Counter Module 0"]
-pub struct TIMER0_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_R(crate::FieldReader<bool>);
 impl TIMER0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl TIMER0_R {
     }
 }
 impl core::ops::Deref for TIMER0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> TIMER0_W<'a> {
     }
 }
 #[doc = "Field `timer1` reader - Reset Timer/Counter Module 1"]
-pub struct TIMER1_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_R(crate::FieldReader<bool>);
 impl TIMER1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl TIMER1_R {
     }
 }
 impl core::ops::Deref for TIMER1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> TIMER1_W<'a> {
     }
 }
 #[doc = "Field `timer2` reader - Reset Timer/Counter Module 2"]
-pub struct TIMER2_R(crate::FieldReader<bool, bool>);
+pub struct TIMER2_R(crate::FieldReader<bool>);
 impl TIMER2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl TIMER2_R {
     }
 }
 impl core::ops::Deref for TIMER2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> TIMER2_W<'a> {
     }
 }
 #[doc = "Field `timer3` reader - Reset Timer/Counter Module 3"]
-pub struct TIMER3_R(crate::FieldReader<bool, bool>);
+pub struct TIMER3_R(crate::FieldReader<bool>);
 impl TIMER3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TIMER3_R {
     }
 }
 impl core::ops::Deref for TIMER3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TIMER3_W<'a> {
     }
 }
 #[doc = "Field `timer4` reader - Reset Timer/Counter Module 4"]
-pub struct TIMER4_R(crate::FieldReader<bool, bool>);
+pub struct TIMER4_R(crate::FieldReader<bool>);
 impl TIMER4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TIMER4_R {
     }
 }
 impl core::ops::Deref for TIMER4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TIMER4_W<'a> {
     }
 }
 #[doc = "Field `timer5` reader - Reset Timer/Counter Module 5"]
-pub struct TIMER5_R(crate::FieldReader<bool, bool>);
+pub struct TIMER5_R(crate::FieldReader<bool>);
 impl TIMER5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TIMER5_R {
     }
 }
 impl core::ops::Deref for TIMER5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TIMER5_W<'a> {
     }
 }
 #[doc = "Field `pulse_train` reader - Reset All Pulse Trains"]
-pub struct PULSE_TRAIN_R(crate::FieldReader<bool, bool>);
+pub struct PULSE_TRAIN_R(crate::FieldReader<bool>);
 impl PULSE_TRAIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl PULSE_TRAIN_R {
     }
 }
 impl core::ops::Deref for PULSE_TRAIN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> PULSE_TRAIN_W<'a> {
     }
 }
 #[doc = "Field `uart0` reader - Reset UART 0"]
-pub struct UART0_R(crate::FieldReader<bool, bool>);
+pub struct UART0_R(crate::FieldReader<bool>);
 impl UART0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl UART0_R {
     }
 }
 impl core::ops::Deref for UART0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> UART0_W<'a> {
     }
 }
 #[doc = "Field `uart1` reader - Reset UART 1"]
-pub struct UART1_R(crate::FieldReader<bool, bool>);
+pub struct UART1_R(crate::FieldReader<bool>);
 impl UART1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl UART1_R {
     }
 }
 impl core::ops::Deref for UART1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> UART1_W<'a> {
     }
 }
 #[doc = "Field `uart2` reader - Reset UART 2"]
-pub struct UART2_R(crate::FieldReader<bool, bool>);
+pub struct UART2_R(crate::FieldReader<bool>);
 impl UART2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl UART2_R {
     }
 }
 impl core::ops::Deref for UART2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> UART2_W<'a> {
     }
 }
 #[doc = "Field `uart3` reader - Reset UART 3"]
-pub struct UART3_R(crate::FieldReader<bool, bool>);
+pub struct UART3_R(crate::FieldReader<bool>);
 impl UART3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl UART3_R {
     }
 }
 impl core::ops::Deref for UART3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> UART3_W<'a> {
     }
 }
 #[doc = "Field `i2cm0` reader - Reset I2C Master 0"]
-pub struct I2CM0_R(crate::FieldReader<bool, bool>);
+pub struct I2CM0_R(crate::FieldReader<bool>);
 impl I2CM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl I2CM0_R {
     }
 }
 impl core::ops::Deref for I2CM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> I2CM0_W<'a> {
     }
 }
 #[doc = "Field `i2cm1` reader - Reset I2C Master 1"]
-pub struct I2CM1_R(crate::FieldReader<bool, bool>);
+pub struct I2CM1_R(crate::FieldReader<bool>);
 impl I2CM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl I2CM1_R {
     }
 }
 impl core::ops::Deref for I2CM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> I2CM1_W<'a> {
     }
 }
 #[doc = "Field `i2cm2` reader - Reset I2C Master 2"]
-pub struct I2CM2_R(crate::FieldReader<bool, bool>);
+pub struct I2CM2_R(crate::FieldReader<bool>);
 impl I2CM2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl I2CM2_R {
     }
 }
 impl core::ops::Deref for I2CM2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> I2CM2_W<'a> {
     }
 }
 #[doc = "Field `i2cs` reader - Reset I2C Slave"]
-pub struct I2CS_R(crate::FieldReader<bool, bool>);
+pub struct I2CS_R(crate::FieldReader<bool>);
 impl I2CS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl I2CS_R {
     }
 }
 impl core::ops::Deref for I2CS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> I2CS_W<'a> {
     }
 }
 #[doc = "Field `spim0` reader - Reset SPI Master 0"]
-pub struct SPIM0_R(crate::FieldReader<bool, bool>);
+pub struct SPIM0_R(crate::FieldReader<bool>);
 impl SPIM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl SPIM0_R {
     }
 }
 impl core::ops::Deref for SPIM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -923,7 +923,7 @@ impl<'a> SPIM0_W<'a> {
     }
 }
 #[doc = "Field `spim1` reader - Reset SPI Master 1"]
-pub struct SPIM1_R(crate::FieldReader<bool, bool>);
+pub struct SPIM1_R(crate::FieldReader<bool>);
 impl SPIM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -931,7 +931,7 @@ impl SPIM1_R {
     }
 }
 impl core::ops::Deref for SPIM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -960,7 +960,7 @@ impl<'a> SPIM1_W<'a> {
     }
 }
 #[doc = "Field `spim2` reader - Reset SPI Master 2"]
-pub struct SPIM2_R(crate::FieldReader<bool, bool>);
+pub struct SPIM2_R(crate::FieldReader<bool>);
 impl SPIM2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -968,7 +968,7 @@ impl SPIM2_R {
     }
 }
 impl core::ops::Deref for SPIM2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -997,7 +997,7 @@ impl<'a> SPIM2_W<'a> {
     }
 }
 #[doc = "Field `spib` reader - Reset SPI Bridge"]
-pub struct SPIB_R(crate::FieldReader<bool, bool>);
+pub struct SPIB_R(crate::FieldReader<bool>);
 impl SPIB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1005,7 +1005,7 @@ impl SPIB_R {
     }
 }
 impl core::ops::Deref for SPIB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1034,7 +1034,7 @@ impl<'a> SPIB_W<'a> {
     }
 }
 #[doc = "Field `owm` reader - Reset 1-Wire Master"]
-pub struct OWM_R(crate::FieldReader<bool, bool>);
+pub struct OWM_R(crate::FieldReader<bool>);
 impl OWM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1042,7 +1042,7 @@ impl OWM_R {
     }
 }
 impl core::ops::Deref for OWM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1071,7 +1071,7 @@ impl<'a> OWM_W<'a> {
     }
 }
 #[doc = "Field `adc` reader - Reset ADC"]
-pub struct ADC_R(crate::FieldReader<bool, bool>);
+pub struct ADC_R(crate::FieldReader<bool>);
 impl ADC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1079,7 +1079,7 @@ impl ADC_R {
     }
 }
 impl core::ops::Deref for ADC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

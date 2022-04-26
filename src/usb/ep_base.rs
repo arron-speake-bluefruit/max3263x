@@ -35,7 +35,7 @@ impl From<crate::W<EP_BASE_SPEC>> for W {
     }
 }
 #[doc = "Field `ep_base` reader - USB Endpoint Descriptor Table Base Address"]
-pub struct EP_BASE_R(crate::FieldReader<u32, u32>);
+pub struct EP_BASE_R(crate::FieldReader<u32>);
 impl EP_BASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl EP_BASE_R {
     }
 }
 impl core::ops::Deref for EP_BASE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_P5_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P5.0 External Interrupt Enable"]
-pub struct PIN0_R(crate::FieldReader<bool, bool>);
+pub struct PIN0_R(crate::FieldReader<bool>);
 impl PIN0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PIN0_R {
     }
 }
 impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PIN0_W<'a> {
     }
 }
 #[doc = "Field `pin1` reader - P5.1 External Interrupt Enable"]
-pub struct PIN1_R(crate::FieldReader<bool, bool>);
+pub struct PIN1_R(crate::FieldReader<bool>);
 impl PIN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PIN1_R {
     }
 }
 impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PIN1_W<'a> {
     }
 }
 #[doc = "Field `pin2` reader - P5.2 External Interrupt Enable"]
-pub struct PIN2_R(crate::FieldReader<bool, bool>);
+pub struct PIN2_R(crate::FieldReader<bool>);
 impl PIN2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PIN2_R {
     }
 }
 impl core::ops::Deref for PIN2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PIN2_W<'a> {
     }
 }
 #[doc = "Field `pin3` reader - P5.3 External Interrupt Enable"]
-pub struct PIN3_R(crate::FieldReader<bool, bool>);
+pub struct PIN3_R(crate::FieldReader<bool>);
 impl PIN3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PIN3_R {
     }
 }
 impl core::ops::Deref for PIN3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PIN3_W<'a> {
     }
 }
 #[doc = "Field `pin4` reader - P5.4 External Interrupt Enable"]
-pub struct PIN4_R(crate::FieldReader<bool, bool>);
+pub struct PIN4_R(crate::FieldReader<bool>);
 impl PIN4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PIN4_R {
     }
 }
 impl core::ops::Deref for PIN4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PIN4_W<'a> {
     }
 }
 #[doc = "Field `pin5` reader - P5.5 External Interrupt Enable"]
-pub struct PIN5_R(crate::FieldReader<bool, bool>);
+pub struct PIN5_R(crate::FieldReader<bool>);
 impl PIN5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PIN5_R {
     }
 }
 impl core::ops::Deref for PIN5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PIN5_W<'a> {
     }
 }
 #[doc = "Field `pin6` reader - P5.6 External Interrupt Enable"]
-pub struct PIN6_R(crate::FieldReader<bool, bool>);
+pub struct PIN6_R(crate::FieldReader<bool>);
 impl PIN6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PIN6_R {
     }
 }
 impl core::ops::Deref for PIN6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PIN6_W<'a> {
     }
 }
 #[doc = "Field `pin7` reader - P5.7 External Interrupt Enable"]
-pub struct PIN7_R(crate::FieldReader<bool, bool>);
+pub struct PIN7_R(crate::FieldReader<bool>);
 impl PIN7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl PIN7_R {
     }
 }
 impl core::ops::Deref for PIN7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

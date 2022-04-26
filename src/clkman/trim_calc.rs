@@ -35,7 +35,7 @@ impl From<crate::W<TRIM_CALC_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_clk_sel` reader - Trim Clock Select"]
-pub struct TRIM_CLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_CLK_SEL_R(crate::FieldReader<bool>);
 impl TRIM_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TRIM_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for TRIM_CLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TRIM_CLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `trim_calc_start` reader - Start Trim Calculation"]
-pub struct TRIM_CALC_START_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_CALC_START_R(crate::FieldReader<bool>);
 impl TRIM_CALC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TRIM_CALC_START_R {
     }
 }
 impl core::ops::Deref for TRIM_CALC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TRIM_CALC_START_W<'a> {
     }
 }
 #[doc = "Field `trim_calc_completed` reader - Trim Calculation Completed"]
-pub struct TRIM_CALC_COMPLETED_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_CALC_COMPLETED_R(crate::FieldReader<bool>);
 impl TRIM_CALC_COMPLETED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,14 +117,14 @@ impl TRIM_CALC_COMPLETED_R {
     }
 }
 impl core::ops::Deref for TRIM_CALC_COMPLETED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `trim_enable` reader - Trim Logic Enable"]
-pub struct TRIM_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct TRIM_ENABLE_R(crate::FieldReader<bool>);
 impl TRIM_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,7 +132,7 @@ impl TRIM_ENABLE_R {
     }
 }
 impl core::ops::Deref for TRIM_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -161,7 +161,7 @@ impl<'a> TRIM_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `trim_calc_results` reader - Trim Calculation Results"]
-pub struct TRIM_CALC_RESULTS_R(crate::FieldReader<u16, u16>);
+pub struct TRIM_CALC_RESULTS_R(crate::FieldReader<u16>);
 impl TRIM_CALC_RESULTS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -169,7 +169,7 @@ impl TRIM_CALC_RESULTS_R {
     }
 }
 impl core::ops::Deref for TRIM_CALC_RESULTS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

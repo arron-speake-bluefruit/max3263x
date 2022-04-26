@@ -35,7 +35,7 @@ impl From<crate::W<INTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `byte0` reader - Updated Byte 0"]
-pub struct BYTE0_R(crate::FieldReader<bool, bool>);
+pub struct BYTE0_R(crate::FieldReader<bool>);
 impl BYTE0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BYTE0_R {
     }
 }
 impl core::ops::Deref for BYTE0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BYTE0_W<'a> {
     }
 }
 #[doc = "Field `byte1` reader - Updated Byte 1"]
-pub struct BYTE1_R(crate::FieldReader<bool, bool>);
+pub struct BYTE1_R(crate::FieldReader<bool>);
 impl BYTE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl BYTE1_R {
     }
 }
 impl core::ops::Deref for BYTE1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> BYTE1_W<'a> {
     }
 }
 #[doc = "Field `byte2` reader - Updated Byte 2"]
-pub struct BYTE2_R(crate::FieldReader<bool, bool>);
+pub struct BYTE2_R(crate::FieldReader<bool>);
 impl BYTE2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BYTE2_R {
     }
 }
 impl core::ops::Deref for BYTE2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BYTE2_W<'a> {
     }
 }
 #[doc = "Field `byte3` reader - Updated Byte 3"]
-pub struct BYTE3_R(crate::FieldReader<bool, bool>);
+pub struct BYTE3_R(crate::FieldReader<bool>);
 impl BYTE3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BYTE3_R {
     }
 }
 impl core::ops::Deref for BYTE3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BYTE3_W<'a> {
     }
 }
 #[doc = "Field `byte4` reader - Updated Byte 4"]
-pub struct BYTE4_R(crate::FieldReader<bool, bool>);
+pub struct BYTE4_R(crate::FieldReader<bool>);
 impl BYTE4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl BYTE4_R {
     }
 }
 impl core::ops::Deref for BYTE4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> BYTE4_W<'a> {
     }
 }
 #[doc = "Field `byte5` reader - Updated Byte 5"]
-pub struct BYTE5_R(crate::FieldReader<bool, bool>);
+pub struct BYTE5_R(crate::FieldReader<bool>);
 impl BYTE5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl BYTE5_R {
     }
 }
 impl core::ops::Deref for BYTE5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> BYTE5_W<'a> {
     }
 }
 #[doc = "Field `byte6` reader - Updated Byte 6"]
-pub struct BYTE6_R(crate::FieldReader<bool, bool>);
+pub struct BYTE6_R(crate::FieldReader<bool>);
 impl BYTE6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BYTE6_R {
     }
 }
 impl core::ops::Deref for BYTE6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BYTE6_W<'a> {
     }
 }
 #[doc = "Field `byte7` reader - Updated Byte 7"]
-pub struct BYTE7_R(crate::FieldReader<bool, bool>);
+pub struct BYTE7_R(crate::FieldReader<bool>);
 impl BYTE7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BYTE7_R {
     }
 }
 impl core::ops::Deref for BYTE7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BYTE7_W<'a> {
     }
 }
 #[doc = "Field `byte8` reader - Updated Byte 8"]
-pub struct BYTE8_R(crate::FieldReader<bool, bool>);
+pub struct BYTE8_R(crate::FieldReader<bool>);
 impl BYTE8_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl BYTE8_R {
     }
 }
 impl core::ops::Deref for BYTE8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> BYTE8_W<'a> {
     }
 }
 #[doc = "Field `byte9` reader - Updated Byte 9"]
-pub struct BYTE9_R(crate::FieldReader<bool, bool>);
+pub struct BYTE9_R(crate::FieldReader<bool>);
 impl BYTE9_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl BYTE9_R {
     }
 }
 impl core::ops::Deref for BYTE9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> BYTE9_W<'a> {
     }
 }
 #[doc = "Field `byte10` reader - Updated Byte 10"]
-pub struct BYTE10_R(crate::FieldReader<bool, bool>);
+pub struct BYTE10_R(crate::FieldReader<bool>);
 impl BYTE10_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl BYTE10_R {
     }
 }
 impl core::ops::Deref for BYTE10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> BYTE10_W<'a> {
     }
 }
 #[doc = "Field `byte11` reader - Updated Byte 11"]
-pub struct BYTE11_R(crate::FieldReader<bool, bool>);
+pub struct BYTE11_R(crate::FieldReader<bool>);
 impl BYTE11_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl BYTE11_R {
     }
 }
 impl core::ops::Deref for BYTE11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> BYTE11_W<'a> {
     }
 }
 #[doc = "Field `byte12` reader - Updated Byte 12"]
-pub struct BYTE12_R(crate::FieldReader<bool, bool>);
+pub struct BYTE12_R(crate::FieldReader<bool>);
 impl BYTE12_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl BYTE12_R {
     }
 }
 impl core::ops::Deref for BYTE12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> BYTE12_W<'a> {
     }
 }
 #[doc = "Field `byte13` reader - Updated Byte 13"]
-pub struct BYTE13_R(crate::FieldReader<bool, bool>);
+pub struct BYTE13_R(crate::FieldReader<bool>);
 impl BYTE13_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl BYTE13_R {
     }
 }
 impl core::ops::Deref for BYTE13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> BYTE13_W<'a> {
     }
 }
 #[doc = "Field `byte14` reader - Updated Byte 14"]
-pub struct BYTE14_R(crate::FieldReader<bool, bool>);
+pub struct BYTE14_R(crate::FieldReader<bool>);
 impl BYTE14_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl BYTE14_R {
     }
 }
 impl core::ops::Deref for BYTE14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> BYTE14_W<'a> {
     }
 }
 #[doc = "Field `byte15` reader - Updated Byte 15"]
-pub struct BYTE15_R(crate::FieldReader<bool, bool>);
+pub struct BYTE15_R(crate::FieldReader<bool>);
 impl BYTE15_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl BYTE15_R {
     }
 }
 impl core::ops::Deref for BYTE15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> BYTE15_W<'a> {
     }
 }
 #[doc = "Field `byte16` reader - Updated Byte 16"]
-pub struct BYTE16_R(crate::FieldReader<bool, bool>);
+pub struct BYTE16_R(crate::FieldReader<bool>);
 impl BYTE16_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl BYTE16_R {
     }
 }
 impl core::ops::Deref for BYTE16_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> BYTE16_W<'a> {
     }
 }
 #[doc = "Field `byte17` reader - Updated Byte 17"]
-pub struct BYTE17_R(crate::FieldReader<bool, bool>);
+pub struct BYTE17_R(crate::FieldReader<bool>);
 impl BYTE17_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl BYTE17_R {
     }
 }
 impl core::ops::Deref for BYTE17_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> BYTE17_W<'a> {
     }
 }
 #[doc = "Field `byte18` reader - Updated Byte 18"]
-pub struct BYTE18_R(crate::FieldReader<bool, bool>);
+pub struct BYTE18_R(crate::FieldReader<bool>);
 impl BYTE18_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl BYTE18_R {
     }
 }
 impl core::ops::Deref for BYTE18_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> BYTE18_W<'a> {
     }
 }
 #[doc = "Field `byte19` reader - Updated Byte 19"]
-pub struct BYTE19_R(crate::FieldReader<bool, bool>);
+pub struct BYTE19_R(crate::FieldReader<bool>);
 impl BYTE19_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl BYTE19_R {
     }
 }
 impl core::ops::Deref for BYTE19_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> BYTE19_W<'a> {
     }
 }
 #[doc = "Field `byte20` reader - Updated Byte 20"]
-pub struct BYTE20_R(crate::FieldReader<bool, bool>);
+pub struct BYTE20_R(crate::FieldReader<bool>);
 impl BYTE20_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl BYTE20_R {
     }
 }
 impl core::ops::Deref for BYTE20_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> BYTE20_W<'a> {
     }
 }
 #[doc = "Field `byte21` reader - Updated Byte 21"]
-pub struct BYTE21_R(crate::FieldReader<bool, bool>);
+pub struct BYTE21_R(crate::FieldReader<bool>);
 impl BYTE21_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl BYTE21_R {
     }
 }
 impl core::ops::Deref for BYTE21_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> BYTE21_W<'a> {
     }
 }
 #[doc = "Field `byte22` reader - Updated Byte 22"]
-pub struct BYTE22_R(crate::FieldReader<bool, bool>);
+pub struct BYTE22_R(crate::FieldReader<bool>);
 impl BYTE22_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl BYTE22_R {
     }
 }
 impl core::ops::Deref for BYTE22_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> BYTE22_W<'a> {
     }
 }
 #[doc = "Field `byte23` reader - Updated Byte 23"]
-pub struct BYTE23_R(crate::FieldReader<bool, bool>);
+pub struct BYTE23_R(crate::FieldReader<bool>);
 impl BYTE23_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl BYTE23_R {
     }
 }
 impl core::ops::Deref for BYTE23_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -923,7 +923,7 @@ impl<'a> BYTE23_W<'a> {
     }
 }
 #[doc = "Field `byte24` reader - Updated Byte 24"]
-pub struct BYTE24_R(crate::FieldReader<bool, bool>);
+pub struct BYTE24_R(crate::FieldReader<bool>);
 impl BYTE24_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -931,7 +931,7 @@ impl BYTE24_R {
     }
 }
 impl core::ops::Deref for BYTE24_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -960,7 +960,7 @@ impl<'a> BYTE24_W<'a> {
     }
 }
 #[doc = "Field `byte25` reader - Updated Byte 25"]
-pub struct BYTE25_R(crate::FieldReader<bool, bool>);
+pub struct BYTE25_R(crate::FieldReader<bool>);
 impl BYTE25_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -968,7 +968,7 @@ impl BYTE25_R {
     }
 }
 impl core::ops::Deref for BYTE25_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -997,7 +997,7 @@ impl<'a> BYTE25_W<'a> {
     }
 }
 #[doc = "Field `byte26` reader - Updated Byte 26"]
-pub struct BYTE26_R(crate::FieldReader<bool, bool>);
+pub struct BYTE26_R(crate::FieldReader<bool>);
 impl BYTE26_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1005,7 +1005,7 @@ impl BYTE26_R {
     }
 }
 impl core::ops::Deref for BYTE26_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1034,7 +1034,7 @@ impl<'a> BYTE26_W<'a> {
     }
 }
 #[doc = "Field `byte27` reader - Updated Byte 27"]
-pub struct BYTE27_R(crate::FieldReader<bool, bool>);
+pub struct BYTE27_R(crate::FieldReader<bool>);
 impl BYTE27_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1042,7 +1042,7 @@ impl BYTE27_R {
     }
 }
 impl core::ops::Deref for BYTE27_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1071,7 +1071,7 @@ impl<'a> BYTE27_W<'a> {
     }
 }
 #[doc = "Field `byte28` reader - Updated Byte 28"]
-pub struct BYTE28_R(crate::FieldReader<bool, bool>);
+pub struct BYTE28_R(crate::FieldReader<bool>);
 impl BYTE28_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1079,7 +1079,7 @@ impl BYTE28_R {
     }
 }
 impl core::ops::Deref for BYTE28_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1108,7 +1108,7 @@ impl<'a> BYTE28_W<'a> {
     }
 }
 #[doc = "Field `byte29` reader - Updated Byte 29"]
-pub struct BYTE29_R(crate::FieldReader<bool, bool>);
+pub struct BYTE29_R(crate::FieldReader<bool>);
 impl BYTE29_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1116,7 +1116,7 @@ impl BYTE29_R {
     }
 }
 impl core::ops::Deref for BYTE29_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1145,7 +1145,7 @@ impl<'a> BYTE29_W<'a> {
     }
 }
 #[doc = "Field `byte30` reader - Updated Byte 30"]
-pub struct BYTE30_R(crate::FieldReader<bool, bool>);
+pub struct BYTE30_R(crate::FieldReader<bool>);
 impl BYTE30_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1153,7 +1153,7 @@ impl BYTE30_R {
     }
 }
 impl core::ops::Deref for BYTE30_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1182,7 +1182,7 @@ impl<'a> BYTE30_W<'a> {
     }
 }
 #[doc = "Field `byte31` reader - Updated Byte 31"]
-pub struct BYTE31_R(crate::FieldReader<bool, bool>);
+pub struct BYTE31_R(crate::FieldReader<bool>);
 impl BYTE31_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1190,7 +1190,7 @@ impl BYTE31_R {
     }
 }
 impl core::ops::Deref for BYTE31_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

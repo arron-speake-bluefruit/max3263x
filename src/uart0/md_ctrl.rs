@@ -35,7 +35,7 @@ impl From<crate::W<MD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `slave_addr` reader - Slave Address"]
-pub struct SLAVE_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_ADDR_R(crate::FieldReader<u8>);
 impl SLAVE_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_ADDR_R {
     }
 }
 impl core::ops::Deref for SLAVE_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SLAVE_ADDR_W<'a> {
     }
 }
 #[doc = "Field `slave_addr_msk` reader - Slave Address Mask"]
-pub struct SLAVE_ADDR_MSK_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_ADDR_MSK_R(crate::FieldReader<u8>);
 impl SLAVE_ADDR_MSK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SLAVE_ADDR_MSK_R {
     }
 }
 impl core::ops::Deref for SLAVE_ADDR_MSK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SLAVE_ADDR_MSK_W<'a> {
     }
 }
 #[doc = "Field `md_mstr` reader - Multidrop Master"]
-pub struct MD_MSTR_R(crate::FieldReader<bool, bool>);
+pub struct MD_MSTR_R(crate::FieldReader<bool>);
 impl MD_MSTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl MD_MSTR_R {
     }
 }
 impl core::ops::Deref for MD_MSTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> MD_MSTR_W<'a> {
     }
 }
 #[doc = "Field `tx_addr_mark` reader - RX Address Mark"]
-pub struct TX_ADDR_MARK_R(crate::FieldReader<bool, bool>);
+pub struct TX_ADDR_MARK_R(crate::FieldReader<bool>);
 impl TX_ADDR_MARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl TX_ADDR_MARK_R {
     }
 }
 impl core::ops::Deref for TX_ADDR_MARK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<FS_CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fs_filter_clk_div` reader - Full Speed Filter Clock Divisor"]
-pub struct FS_FILTER_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct FS_FILTER_CLK_DIV_R(crate::FieldReader<u8>);
 impl FS_FILTER_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl FS_FILTER_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for FS_FILTER_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FS_FILTER_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `fs_scl_lo_cnt` reader - Full Speed SCL Low Count"]
-pub struct FS_SCL_LO_CNT_R(crate::FieldReader<u16, u16>);
+pub struct FS_SCL_LO_CNT_R(crate::FieldReader<u16>);
 impl FS_SCL_LO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl FS_SCL_LO_CNT_R {
     }
 }
 impl core::ops::Deref for FS_SCL_LO_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> FS_SCL_LO_CNT_W<'a> {
     }
 }
 #[doc = "Field `fs_scl_hi_cnt` reader - Full Speed SCL High Count"]
-pub struct FS_SCL_HI_CNT_R(crate::FieldReader<u16, u16>);
+pub struct FS_SCL_HI_CNT_R(crate::FieldReader<u16>);
 impl FS_SCL_HI_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl FS_SCL_HI_CNT_R {
     }
 }
 impl core::ops::Deref for FS_SCL_HI_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

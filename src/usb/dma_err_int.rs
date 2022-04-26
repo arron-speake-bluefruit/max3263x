@@ -35,7 +35,7 @@ impl From<crate::W<DMA_ERR_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `dma_err0` reader - Endpoint 0 DMA Error Interrupt Flag"]
-pub struct DMA_ERR0_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR0_R(crate::FieldReader<bool>);
 impl DMA_ERR0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_ERR0_R {
     }
 }
 impl core::ops::Deref for DMA_ERR0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DMA_ERR0_W<'a> {
     }
 }
 #[doc = "Field `dma_err1` reader - Endpoint 1 DMA Error Interrupt Flag"]
-pub struct DMA_ERR1_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR1_R(crate::FieldReader<bool>);
 impl DMA_ERR1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DMA_ERR1_R {
     }
 }
 impl core::ops::Deref for DMA_ERR1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DMA_ERR1_W<'a> {
     }
 }
 #[doc = "Field `dma_err2` reader - Endpoint 2 DMA Error Interrupt Flag"]
-pub struct DMA_ERR2_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR2_R(crate::FieldReader<bool>);
 impl DMA_ERR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DMA_ERR2_R {
     }
 }
 impl core::ops::Deref for DMA_ERR2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DMA_ERR2_W<'a> {
     }
 }
 #[doc = "Field `dma_err3` reader - Endpoint 3 DMA Error Interrupt Flag"]
-pub struct DMA_ERR3_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR3_R(crate::FieldReader<bool>);
 impl DMA_ERR3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DMA_ERR3_R {
     }
 }
 impl core::ops::Deref for DMA_ERR3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DMA_ERR3_W<'a> {
     }
 }
 #[doc = "Field `dma_err4` reader - Endpoint 4 DMA Error Interrupt Flag"]
-pub struct DMA_ERR4_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR4_R(crate::FieldReader<bool>);
 impl DMA_ERR4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DMA_ERR4_R {
     }
 }
 impl core::ops::Deref for DMA_ERR4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DMA_ERR4_W<'a> {
     }
 }
 #[doc = "Field `dma_err5` reader - Endpoint 5 DMA Error Interrupt Flag"]
-pub struct DMA_ERR5_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR5_R(crate::FieldReader<bool>);
 impl DMA_ERR5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DMA_ERR5_R {
     }
 }
 impl core::ops::Deref for DMA_ERR5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DMA_ERR5_W<'a> {
     }
 }
 #[doc = "Field `dma_err6` reader - Endpoint 6 DMA Error Interrupt Flag"]
-pub struct DMA_ERR6_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR6_R(crate::FieldReader<bool>);
 impl DMA_ERR6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DMA_ERR6_R {
     }
 }
 impl core::ops::Deref for DMA_ERR6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> DMA_ERR6_W<'a> {
     }
 }
 #[doc = "Field `dma_err7` reader - Endpoint 7 DMA Error Interrupt Flag"]
-pub struct DMA_ERR7_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ERR7_R(crate::FieldReader<bool>);
 impl DMA_ERR7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl DMA_ERR7_R {
     }
 }
 impl core::ops::Deref for DMA_ERR7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

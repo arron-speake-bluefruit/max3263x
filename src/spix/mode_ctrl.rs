@@ -35,7 +35,7 @@ impl From<crate::W<MODE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `mode_clocks` reader - Mode Clocks"]
-pub struct MODE_CLOCKS_R(crate::FieldReader<u8, u8>);
+pub struct MODE_CLOCKS_R(crate::FieldReader<u8>);
 impl MODE_CLOCKS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MODE_CLOCKS_R {
     }
 }
 impl core::ops::Deref for MODE_CLOCKS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MODE_CLOCKS_W<'a> {
     }
 }
 #[doc = "Field `no_cmd_mode` reader - No Command Mode"]
-pub struct NO_CMD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct NO_CMD_MODE_R(crate::FieldReader<bool>);
 impl NO_CMD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl NO_CMD_MODE_R {
     }
 }
 impl core::ops::Deref for NO_CMD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

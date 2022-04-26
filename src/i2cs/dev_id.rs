@@ -35,7 +35,7 @@ impl From<crate::W<DEV_ID_SPEC>> for W {
     }
 }
 #[doc = "Field `slave_dev_id` reader - Slave Device ID"]
-pub struct SLAVE_DEV_ID_R(crate::FieldReader<u16, u16>);
+pub struct SLAVE_DEV_ID_R(crate::FieldReader<u16>);
 impl SLAVE_DEV_ID_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_DEV_ID_R {
     }
 }
 impl core::ops::Deref for SLAVE_DEV_ID_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SLAVE_DEV_ID_W<'a> {
     }
 }
 #[doc = "Field `ten_bit_id_mode` reader - 10-bit ID Mode"]
-pub struct TEN_BIT_ID_MODE_R(crate::FieldReader<bool, bool>);
+pub struct TEN_BIT_ID_MODE_R(crate::FieldReader<bool>);
 impl TEN_BIT_ID_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TEN_BIT_ID_MODE_R {
     }
 }
 impl core::ops::Deref for TEN_BIT_ID_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TEN_BIT_ID_MODE_W<'a> {
     }
 }
 #[doc = "Field `slave_reset` reader - Slave Reset"]
-pub struct SLAVE_RESET_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_RESET_R(crate::FieldReader<bool>);
 impl SLAVE_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl SLAVE_RESET_R {
     }
 }
 impl core::ops::Deref for SLAVE_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<OSC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `osc_bypass` reader - Bypass RTC oscillator"]
-pub struct OSC_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct OSC_BYPASS_R(crate::FieldReader<bool>);
 impl OSC_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl OSC_BYPASS_R {
     }
 }
 impl core::ops::Deref for OSC_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> OSC_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `osc_disable_r` reader - if osc_disable_sel = 1, this will hold the RTC in reset."]
-pub struct OSC_DISABLE_R_R(crate::FieldReader<bool, bool>);
+pub struct OSC_DISABLE_R_R(crate::FieldReader<bool>);
 impl OSC_DISABLE_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl OSC_DISABLE_R_R {
     }
 }
 impl core::ops::Deref for OSC_DISABLE_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -123,7 +123,7 @@ impl From<OSC_DISABLE_SEL_A> for bool {
     }
 }
 #[doc = "Field `osc_disable_sel` reader - Select RTC Oscillator Disable Control Source"]
-pub struct OSC_DISABLE_SEL_R(crate::FieldReader<bool, OSC_DISABLE_SEL_A>);
+pub struct OSC_DISABLE_SEL_R(crate::FieldReader<bool>);
 impl OSC_DISABLE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -149,7 +149,7 @@ impl OSC_DISABLE_SEL_R {
     }
 }
 impl core::ops::Deref for OSC_DISABLE_SEL_R {
-    type Target = crate::FieldReader<bool, OSC_DISABLE_SEL_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -193,7 +193,7 @@ impl<'a> OSC_DISABLE_SEL_W<'a> {
     }
 }
 #[doc = "Field `osc_disable_o` reader - Reset RTC Oscillator"]
-pub struct OSC_DISABLE_O_R(crate::FieldReader<bool, bool>);
+pub struct OSC_DISABLE_O_R(crate::FieldReader<bool>);
 impl OSC_DISABLE_O_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -201,7 +201,7 @@ impl OSC_DISABLE_O_R {
     }
 }
 impl core::ops::Deref for OSC_DISABLE_O_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

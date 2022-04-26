@@ -35,7 +35,7 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_timeout` reader - Transaction Timeout Limit"]
-pub struct TX_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct TX_TIMEOUT_R(crate::FieldReader<u8>);
 impl TX_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TX_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `auto_stop_en` reader - Auto-Stop Enable"]
-pub struct AUTO_STOP_EN_R(crate::FieldReader<bool, bool>);
+pub struct AUTO_STOP_EN_R(crate::FieldReader<bool>);
 impl AUTO_STOP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl AUTO_STOP_EN_R {
     }
 }
 impl core::ops::Deref for AUTO_STOP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

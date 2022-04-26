@@ -35,7 +35,7 @@ impl From<crate::W<REG3_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_rosel` reader - Relaxation Oscillator Stable Timeout"]
-pub struct PWR_ROSEL_R(crate::FieldReader<u8, u8>);
+pub struct PWR_ROSEL_R(crate::FieldReader<u8>);
 impl PWR_ROSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PWR_ROSEL_R {
     }
 }
 impl core::ops::Deref for PWR_ROSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PWR_ROSEL_W<'a> {
     }
 }
 #[doc = "Field `pwr_fltrrosel` reader - Window of time power must be valid before entering Run mode."]
-pub struct PWR_FLTRROSEL_R(crate::FieldReader<u8, u8>);
+pub struct PWR_FLTRROSEL_R(crate::FieldReader<u8>);
 impl PWR_FLTRROSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PWR_FLTRROSEL_R {
     }
 }
 impl core::ops::Deref for PWR_FLTRROSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PWR_FLTRROSEL_W<'a> {
     }
 }
 #[doc = "Field `pwr_svm_clk_mux` reader - SVM Clock Mux"]
-pub struct PWR_SVM_CLK_MUX_R(crate::FieldReader<u8, u8>);
+pub struct PWR_SVM_CLK_MUX_R(crate::FieldReader<u8>);
 impl PWR_SVM_CLK_MUX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PWR_SVM_CLK_MUX_R {
     }
 }
 impl core::ops::Deref for PWR_SVM_CLK_MUX_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PWR_SVM_CLK_MUX_W<'a> {
     }
 }
 #[doc = "Field `pwr_ro_clk_mux` reader - Relaxation Clock Mux"]
-pub struct PWR_RO_CLK_MUX_R(crate::FieldReader<u8, u8>);
+pub struct PWR_RO_CLK_MUX_R(crate::FieldReader<u8>);
 impl PWR_RO_CLK_MUX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl PWR_RO_CLK_MUX_R {
     }
 }
 impl core::ops::Deref for PWR_RO_CLK_MUX_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> PWR_RO_CLK_MUX_W<'a> {
     }
 }
 #[doc = "Field `pwr_failsel` reader - Timeout before rebooting during PowerFail/BootFail events."]
-pub struct PWR_FAILSEL_R(crate::FieldReader<u8, u8>);
+pub struct PWR_FAILSEL_R(crate::FieldReader<u8>);
 impl PWR_FAILSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl PWR_FAILSEL_R {
     }
 }
 impl core::ops::Deref for PWR_FAILSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

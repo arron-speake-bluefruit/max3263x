@@ -35,7 +35,7 @@ impl From<crate::W<PRESCALE_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `comp_mask` reader - RTC Timer Prescale Compare Mask"]
-pub struct COMP_MASK_R(crate::FieldReader<u8, u8>);
+pub struct COMP_MASK_R(crate::FieldReader<u8>);
 impl COMP_MASK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl COMP_MASK_R {
     }
 }
 impl core::ops::Deref for COMP_MASK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

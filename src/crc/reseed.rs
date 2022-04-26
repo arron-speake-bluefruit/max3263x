@@ -35,7 +35,7 @@ impl From<crate::W<RESEED_SPEC>> for W {
     }
 }
 #[doc = "Field `crc16` reader - Reseed CRC16 Generator"]
-pub struct CRC16_R(crate::FieldReader<bool, bool>);
+pub struct CRC16_R(crate::FieldReader<bool>);
 impl CRC16_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CRC16_R {
     }
 }
 impl core::ops::Deref for CRC16_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CRC16_W<'a> {
     }
 }
 #[doc = "Field `crc32` reader - Reseed CRC32 Generator"]
-pub struct CRC32_R(crate::FieldReader<bool, bool>);
+pub struct CRC32_R(crate::FieldReader<bool>);
 impl CRC32_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CRC32_R {
     }
 }
 impl core::ops::Deref for CRC32_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CRC32_W<'a> {
     }
 }
 #[doc = "Field `rev_endian16` reader - Reverse Endianness for CRC16"]
-pub struct REV_ENDIAN16_R(crate::FieldReader<bool, bool>);
+pub struct REV_ENDIAN16_R(crate::FieldReader<bool>);
 impl REV_ENDIAN16_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl REV_ENDIAN16_R {
     }
 }
 impl core::ops::Deref for REV_ENDIAN16_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> REV_ENDIAN16_W<'a> {
     }
 }
 #[doc = "Field `rev_endian32` reader - Reverse Endianness for CRC32"]
-pub struct REV_ENDIAN32_R(crate::FieldReader<bool, bool>);
+pub struct REV_ENDIAN32_R(crate::FieldReader<bool>);
 impl REV_ENDIAN32_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl REV_ENDIAN32_R {
     }
 }
 impl core::ops::Deref for REV_ENDIAN32_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> REV_ENDIAN32_W<'a> {
     }
 }
 #[doc = "Field `ccitt_mode` reader - CRC16-CCITT Mode"]
-pub struct CCITT_MODE_R(crate::FieldReader<bool, bool>);
+pub struct CCITT_MODE_R(crate::FieldReader<bool>);
 impl CCITT_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CCITT_MODE_R {
     }
 }
 impl core::ops::Deref for CCITT_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `finished_if` reader - Flash Write/Erase Operation Finished"]
-pub struct FINISHED_IF_R(crate::FieldReader<bool, bool>);
+pub struct FINISHED_IF_R(crate::FieldReader<bool>);
 impl FINISHED_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FINISHED_IF_R {
     }
 }
 impl core::ops::Deref for FINISHED_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FINISHED_IF_W<'a> {
     }
 }
 #[doc = "Field `failed_if` reader - Flash Operation Failed"]
-pub struct FAILED_IF_R(crate::FieldReader<bool, bool>);
+pub struct FAILED_IF_R(crate::FieldReader<bool>);
 impl FAILED_IF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FAILED_IF_R {
     }
 }
 impl core::ops::Deref for FAILED_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FAILED_IF_W<'a> {
     }
 }
 #[doc = "Field `finished_ie` reader - Flash Write/Erase Operation Finished Interrupt Enable"]
-pub struct FINISHED_IE_R(crate::FieldReader<bool, bool>);
+pub struct FINISHED_IE_R(crate::FieldReader<bool>);
 impl FINISHED_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FINISHED_IE_R {
     }
 }
 impl core::ops::Deref for FINISHED_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FINISHED_IE_W<'a> {
     }
 }
 #[doc = "Field `failed_ie` reader - Flash Operation Failed Interrupt Enable"]
-pub struct FAILED_IE_R(crate::FieldReader<bool, bool>);
+pub struct FAILED_IE_R(crate::FieldReader<bool>);
 impl FAILED_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FAILED_IE_R {
     }
 }
 impl core::ops::Deref for FAILED_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FAILED_IE_W<'a> {
     }
 }
 #[doc = "Field `fail_flags` reader - Flash Operation Failure Details"]
-pub struct FAIL_FLAGS_R(crate::FieldReader<u16, u16>);
+pub struct FAIL_FLAGS_R(crate::FieldReader<u16>);
 impl FAIL_FLAGS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -191,7 +191,7 @@ impl FAIL_FLAGS_R {
     }
 }
 impl core::ops::Deref for FAIL_FLAGS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

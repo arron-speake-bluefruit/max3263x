@@ -35,7 +35,7 @@ impl From<crate::W<REG4_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_tm_ps_2_gpio` reader - Internal Use Only"]
-pub struct PWR_TM_PS_2_GPIO_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TM_PS_2_GPIO_R(crate::FieldReader<bool>);
 impl PWR_TM_PS_2_GPIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PWR_TM_PS_2_GPIO_R {
     }
 }
 impl core::ops::Deref for PWR_TM_PS_2_GPIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PWR_TM_PS_2_GPIO_W<'a> {
     }
 }
 #[doc = "Field `pwr_tm_fast_timers` reader - Internal Use Only"]
-pub struct PWR_TM_FAST_TIMERS_R(crate::FieldReader<bool, bool>);
+pub struct PWR_TM_FAST_TIMERS_R(crate::FieldReader<bool>);
 impl PWR_TM_FAST_TIMERS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PWR_TM_FAST_TIMERS_R {
     }
 }
 impl core::ops::Deref for PWR_TM_FAST_TIMERS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PWR_TM_FAST_TIMERS_W<'a> {
     }
 }
 #[doc = "Field `pwr_usb_dis_comp` reader - Internal Use Only"]
-pub struct PWR_USB_DIS_COMP_R(crate::FieldReader<bool, bool>);
+pub struct PWR_USB_DIS_COMP_R(crate::FieldReader<bool>);
 impl PWR_USB_DIS_COMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PWR_USB_DIS_COMP_R {
     }
 }
 impl core::ops::Deref for PWR_USB_DIS_COMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PWR_USB_DIS_COMP_W<'a> {
     }
 }
 #[doc = "Field `pwr_ro_tstclk_en` reader - Internal Use Only"]
-pub struct PWR_RO_TSTCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_RO_TSTCLK_EN_R(crate::FieldReader<bool>);
 impl PWR_RO_TSTCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PWR_RO_TSTCLK_EN_R {
     }
 }
 impl core::ops::Deref for PWR_RO_TSTCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PWR_RO_TSTCLK_EN_W<'a> {
     }
 }
 #[doc = "Field `pwr_nr_clk_gate_en` reader - Internal Use Only"]
-pub struct PWR_NR_CLK_GATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_NR_CLK_GATE_EN_R(crate::FieldReader<bool>);
 impl PWR_NR_CLK_GATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PWR_NR_CLK_GATE_EN_R {
     }
 }
 impl core::ops::Deref for PWR_NR_CLK_GATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PWR_NR_CLK_GATE_EN_W<'a> {
     }
 }
 #[doc = "Field `pwr_ext_clk_in_en` reader - Internal Use Only"]
-pub struct PWR_EXT_CLK_IN_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_EXT_CLK_IN_EN_R(crate::FieldReader<bool>);
 impl PWR_EXT_CLK_IN_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PWR_EXT_CLK_IN_EN_R {
     }
 }
 impl core::ops::Deref for PWR_EXT_CLK_IN_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PWR_EXT_CLK_IN_EN_W<'a> {
     }
 }
 #[doc = "Field `pwr_pseq_32k_en` reader - Internal Use Only"]
-pub struct PWR_PSEQ_32K_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWR_PSEQ_32K_EN_R(crate::FieldReader<bool>);
 impl PWR_PSEQ_32K_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PWR_PSEQ_32K_EN_R {
     }
 }
 impl core::ops::Deref for PWR_PSEQ_32K_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

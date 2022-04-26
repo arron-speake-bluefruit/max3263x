@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `start_ow_reset` reader - Start OW Reset"]
-pub struct START_OW_RESET_R(crate::FieldReader<bool, bool>);
+pub struct START_OW_RESET_R(crate::FieldReader<bool>);
 impl START_OW_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_OW_RESET_R {
     }
 }
 impl core::ops::Deref for START_OW_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> START_OW_RESET_W<'a> {
     }
 }
 #[doc = "Field `sra_mode` reader - SRA Mode"]
-pub struct SRA_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SRA_MODE_R(crate::FieldReader<bool>);
 impl SRA_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SRA_MODE_R {
     }
 }
 impl core::ops::Deref for SRA_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SRA_MODE_W<'a> {
     }
 }
 #[doc = "Field `bit_bang_oe` reader - Bit Bang Output Enable"]
-pub struct BIT_BANG_OE_R(crate::FieldReader<bool, bool>);
+pub struct BIT_BANG_OE_R(crate::FieldReader<bool>);
 impl BIT_BANG_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BIT_BANG_OE_R {
     }
 }
 impl core::ops::Deref for BIT_BANG_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BIT_BANG_OE_W<'a> {
     }
 }
 #[doc = "Field `ow_input` reader - OW Input State"]
-pub struct OW_INPUT_R(crate::FieldReader<bool, bool>);
+pub struct OW_INPUT_R(crate::FieldReader<bool>);
 impl OW_INPUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,14 +154,14 @@ impl OW_INPUT_R {
     }
 }
 impl core::ops::Deref for OW_INPUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `presence_detect` reader - Presence Pulse Detected"]
-pub struct PRESENCE_DETECT_R(crate::FieldReader<bool, bool>);
+pub struct PRESENCE_DETECT_R(crate::FieldReader<bool>);
 impl PRESENCE_DETECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -169,7 +169,7 @@ impl PRESENCE_DETECT_R {
     }
 }
 impl core::ops::Deref for PRESENCE_DETECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
