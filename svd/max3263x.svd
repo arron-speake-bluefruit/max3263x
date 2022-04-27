@@ -15538,15 +15538,9 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>alt_sck_hi_clk</name>
-              <description>Alt SCK High Clocks</description>
+              <name>sdio_sample_point</name>
+              <description>SDIO Sample Point</description>
               <bitRange>[23:20]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>alt_sck_lo_clk</name>
-              <description>Alt SCK Low Clocks</description>
-              <bitRange>[27:24]</bitRange>
               <access>read-write</access>
             </field>
           </fields>
