@@ -260,57 +260,30 @@ impl<'a> INACT_DELAY_W<'a> {
         self.w
     }
 }
-#[doc = "Field `alt_sck_hi_clk` reader - Alt SCK High Clocks"]
-pub struct ALT_SCK_HI_CLK_R(crate::FieldReader<u8>);
-impl ALT_SCK_HI_CLK_R {
+#[doc = "Field `sdio_sample_point` reader - SDIO Sample Point"]
+pub struct SDIO_SAMPLE_POINT_R(crate::FieldReader<u8>);
+impl SDIO_SAMPLE_POINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
-        ALT_SCK_HI_CLK_R(crate::FieldReader::new(bits))
+        SDIO_SAMPLE_POINT_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for ALT_SCK_HI_CLK_R {
+impl core::ops::Deref for SDIO_SAMPLE_POINT_R {
     type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `alt_sck_hi_clk` writer - Alt SCK High Clocks"]
-pub struct ALT_SCK_HI_CLK_W<'a> {
+#[doc = "Field `sdio_sample_point` writer - SDIO Sample Point"]
+pub struct SDIO_SAMPLE_POINT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> ALT_SCK_HI_CLK_W<'a> {
+impl<'a> SDIO_SAMPLE_POINT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
-#[doc = "Field `alt_sck_lo_clk` reader - Alt SCK Low Clocks"]
-pub struct ALT_SCK_LO_CLK_R(crate::FieldReader<u8>);
-impl ALT_SCK_LO_CLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALT_SCK_LO_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALT_SCK_LO_CLK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `alt_sck_lo_clk` writer - Alt SCK Low Clocks"]
-pub struct ALT_SCK_LO_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALT_SCK_LO_CLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
         self.w
     }
 }
@@ -355,15 +328,10 @@ impl R {
     pub fn inact_delay(&self) -> INACT_DELAY_R {
         INACT_DELAY_R::new(((self.bits >> 18) & 3) as u8)
     }
-    #[doc = "Bits 20:23 - Alt SCK High Clocks"]
+    #[doc = "Bits 20:23 - SDIO Sample Point"]
     #[inline(always)]
-    pub fn alt_sck_hi_clk(&self) -> ALT_SCK_HI_CLK_R {
-        ALT_SCK_HI_CLK_R::new(((self.bits >> 20) & 0x0f) as u8)
-    }
-    #[doc = "Bits 24:27 - Alt SCK Low Clocks"]
-    #[inline(always)]
-    pub fn alt_sck_lo_clk(&self) -> ALT_SCK_LO_CLK_R {
-        ALT_SCK_LO_CLK_R::new(((self.bits >> 24) & 0x0f) as u8)
+    pub fn sdio_sample_point(&self) -> SDIO_SAMPLE_POINT_R {
+        SDIO_SAMPLE_POINT_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
 }
 impl W {
@@ -407,15 +375,10 @@ impl W {
     pub fn inact_delay(&mut self) -> INACT_DELAY_W {
         INACT_DELAY_W { w: self }
     }
-    #[doc = "Bits 20:23 - Alt SCK High Clocks"]
+    #[doc = "Bits 20:23 - SDIO Sample Point"]
     #[inline(always)]
-    pub fn alt_sck_hi_clk(&mut self) -> ALT_SCK_HI_CLK_W {
-        ALT_SCK_HI_CLK_W { w: self }
-    }
-    #[doc = "Bits 24:27 - Alt SCK Low Clocks"]
-    #[inline(always)]
-    pub fn alt_sck_lo_clk(&mut self) -> ALT_SCK_LO_CLK_W {
-        ALT_SCK_LO_CLK_W { w: self }
+    pub fn sdio_sample_point(&mut self) -> SDIO_SAMPLE_POINT_W {
+        SDIO_SAMPLE_POINT_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
