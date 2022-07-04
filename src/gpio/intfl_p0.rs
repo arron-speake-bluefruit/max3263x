@@ -35,301 +35,37 @@ impl From<crate::W<INTFL_P0_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P0.0 External Interrupt Flags"]
-pub struct PIN0_R(crate::FieldReader<bool>);
-impl PIN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN0_R = crate::BitReader<bool>;
 #[doc = "Field `pin0` writer - P0.0 External Interrupt Flags"]
-pub struct PIN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PIN0_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 0>;
 #[doc = "Field `pin1` reader - P0.1 External Interrupt Flags"]
-pub struct PIN1_R(crate::FieldReader<bool>);
-impl PIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN1_R = crate::BitReader<bool>;
 #[doc = "Field `pin1` writer - P0.1 External Interrupt Flags"]
-pub struct PIN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PIN1_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 1>;
 #[doc = "Field `pin2` reader - P0.2 External Interrupt Flags"]
-pub struct PIN2_R(crate::FieldReader<bool>);
-impl PIN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN2_R = crate::BitReader<bool>;
 #[doc = "Field `pin2` writer - P0.2 External Interrupt Flags"]
-pub struct PIN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PIN2_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 2>;
 #[doc = "Field `pin3` reader - P0.3 External Interrupt Flags"]
-pub struct PIN3_R(crate::FieldReader<bool>);
-impl PIN3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN3_R = crate::BitReader<bool>;
 #[doc = "Field `pin3` writer - P0.3 External Interrupt Flags"]
-pub struct PIN3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PIN3_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 3>;
 #[doc = "Field `pin4` reader - P0.4 External Interrupt Flags"]
-pub struct PIN4_R(crate::FieldReader<bool>);
-impl PIN4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN4_R = crate::BitReader<bool>;
 #[doc = "Field `pin4` writer - P0.4 External Interrupt Flags"]
-pub struct PIN4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PIN4_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 4>;
 #[doc = "Field `pin5` reader - P0.5 External Interrupt Flags"]
-pub struct PIN5_R(crate::FieldReader<bool>);
-impl PIN5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN5_R = crate::BitReader<bool>;
 #[doc = "Field `pin5` writer - P0.5 External Interrupt Flags"]
-pub struct PIN5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PIN5_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 5>;
 #[doc = "Field `pin6` reader - P0.6 External Interrupt Flags"]
-pub struct PIN6_R(crate::FieldReader<bool>);
-impl PIN6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN6_R = crate::BitReader<bool>;
 #[doc = "Field `pin6` writer - P0.6 External Interrupt Flags"]
-pub struct PIN6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PIN6_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 6>;
 #[doc = "Field `pin7` reader - P0.7 External Interrupt Flags"]
-pub struct PIN7_R(crate::FieldReader<bool>);
-impl PIN7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN7_R = crate::BitReader<bool>;
 #[doc = "Field `pin7` writer - P0.7 External Interrupt Flags"]
-pub struct PIN7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PIN7_W<'a> = crate::BitWriter1C<'a, u32, INTFL_P0_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - P0.0 External Interrupt Flags"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - P0.0 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin0(&mut self) -> PIN0_W {
-        PIN0_W { w: self }
+        PIN0_W::new(self)
     }
     #[doc = "Bit 1 - P0.1 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin1(&mut self) -> PIN1_W {
-        PIN1_W { w: self }
+        PIN1_W::new(self)
     }
     #[doc = "Bit 2 - P0.2 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin2(&mut self) -> PIN2_W {
-        PIN2_W { w: self }
+        PIN2_W::new(self)
     }
     #[doc = "Bit 3 - P0.3 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin3(&mut self) -> PIN3_W {
-        PIN3_W { w: self }
+        PIN3_W::new(self)
     }
     #[doc = "Bit 4 - P0.4 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin4(&mut self) -> PIN4_W {
-        PIN4_W { w: self }
+        PIN4_W::new(self)
     }
     #[doc = "Bit 5 - P0.5 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin5(&mut self) -> PIN5_W {
-        PIN5_W { w: self }
+        PIN5_W::new(self)
     }
     #[doc = "Bit 6 - P0.6 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin6(&mut self) -> PIN6_W {
-        PIN6_W { w: self }
+        PIN6_W::new(self)
     }
     #[doc = "Bit 7 - P0.7 External Interrupt Flags"]
     #[inline(always)]
     pub fn pin7(&mut self) -> PIN7_W {
-        PIN7_W { w: self }
+        PIN7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

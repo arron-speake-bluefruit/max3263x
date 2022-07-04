@@ -35,227 +35,29 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_stalled` reader - Transaction Stalled Int Status"]
-pub struct TX_STALLED_R(crate::FieldReader<bool>);
-impl TX_STALLED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_STALLED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_STALLED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_STALLED_R = crate::BitReader<bool>;
 #[doc = "Field `tx_stalled` writer - Transaction Stalled Int Status"]
-pub struct TX_STALLED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_STALLED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_STALLED_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 0>;
 #[doc = "Field `rx_stalled` reader - Results Stalled Int Status"]
-pub struct RX_STALLED_R(crate::FieldReader<bool>);
-impl RX_STALLED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_STALLED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_STALLED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_STALLED_R = crate::BitReader<bool>;
 #[doc = "Field `rx_stalled` writer - Results Stalled Int Status"]
-pub struct RX_STALLED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_STALLED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RX_STALLED_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 1>;
 #[doc = "Field `tx_ready` reader - Transaction Ready Int Status"]
-pub struct TX_READY_R(crate::FieldReader<bool>);
-impl TX_READY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_READY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_READY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_READY_R = crate::BitReader<bool>;
 #[doc = "Field `tx_ready` writer - Transaction Ready Int Status"]
-pub struct TX_READY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_READY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TX_READY_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 2>;
 #[doc = "Field `rx_done` reader - Results Done Int Status"]
-pub struct RX_DONE_R(crate::FieldReader<bool>);
-impl RX_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `rx_done` writer - Results Done Int Status"]
-pub struct RX_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RX_DONE_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 3>;
 #[doc = "Field `tx_fifo_ae` reader - TXFIFO Almost Empty Int Status"]
-pub struct TX_FIFO_AE_R(crate::FieldReader<bool>);
-impl TX_FIFO_AE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_AE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_FIFO_AE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_FIFO_AE_R = crate::BitReader<bool>;
 #[doc = "Field `tx_fifo_ae` writer - TXFIFO Almost Empty Int Status"]
-pub struct TX_FIFO_AE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_AE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TX_FIFO_AE_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 4>;
 #[doc = "Field `rx_fifo_af` reader - RXFIFO Almost Full Int Status"]
-pub struct RX_FIFO_AF_R(crate::FieldReader<bool>);
-impl RX_FIFO_AF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_AF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_AF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_AF_R = crate::BitReader<bool>;
 #[doc = "Field `rx_fifo_af` writer - RXFIFO Almost Full Int Status"]
-pub struct RX_FIFO_AF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_AF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RX_FIFO_AF_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - Transaction Stalled Int Status"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - Transaction Stalled Int Status"]
     #[inline(always)]
     pub fn tx_stalled(&mut self) -> TX_STALLED_W {
-        TX_STALLED_W { w: self }
+        TX_STALLED_W::new(self)
     }
     #[doc = "Bit 1 - Results Stalled Int Status"]
     #[inline(always)]
     pub fn rx_stalled(&mut self) -> RX_STALLED_W {
-        RX_STALLED_W { w: self }
+        RX_STALLED_W::new(self)
     }
     #[doc = "Bit 2 - Transaction Ready Int Status"]
     #[inline(always)]
     pub fn tx_ready(&mut self) -> TX_READY_W {
-        TX_READY_W { w: self }
+        TX_READY_W::new(self)
     }
     #[doc = "Bit 3 - Results Done Int Status"]
     #[inline(always)]
     pub fn rx_done(&mut self) -> RX_DONE_W {
-        RX_DONE_W { w: self }
+        RX_DONE_W::new(self)
     }
     #[doc = "Bit 4 - TXFIFO Almost Empty Int Status"]
     #[inline(always)]
     pub fn tx_fifo_ae(&mut self) -> TX_FIFO_AE_W {
-        TX_FIFO_AE_W { w: self }
+        TX_FIFO_AE_W::new(self)
     }
     #[doc = "Bit 5 - RXFIFO Almost Full Int Status"]
     #[inline(always)]
     pub fn rx_fifo_af(&mut self) -> RX_FIFO_AF_W {
-        RX_FIFO_AF_W { w: self }
+        RX_FIFO_AF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

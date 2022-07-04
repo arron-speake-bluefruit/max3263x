@@ -35,65 +35,13 @@ impl From<crate::W<SETUP0_SPEC>> for W {
     }
 }
 #[doc = "Field `byte0` reader - SETUP Packet Byte 0"]
-pub struct BYTE0_R(crate::FieldReader<u8>);
-impl BYTE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BYTE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTE0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTE0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `byte1` reader - SETUP Packet Byte 1"]
-pub struct BYTE1_R(crate::FieldReader<u8>);
-impl BYTE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BYTE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTE1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTE1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `byte2` reader - SETUP Packet Byte 2"]
-pub struct BYTE2_R(crate::FieldReader<u8>);
-impl BYTE2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BYTE2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTE2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTE2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `byte3` reader - SETUP Packet Byte 3"]
-pub struct BYTE3_R(crate::FieldReader<u8>);
-impl BYTE3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BYTE3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTE3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTE3_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - SETUP Packet Byte 0"]
     #[inline(always)]

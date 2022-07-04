@@ -35,116 +35,17 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - Master Transaction FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
-impl TX_FIFO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_FIFO_EN_R = crate::BitReader<bool>;
 #[doc = "Field `tx_fifo_en` writer - Master Transaction FIFO Enable"]
-pub struct TX_FIFO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TX_FIFO_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 2>;
 #[doc = "Field `rx_fifo_en` reader - Master Results FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
-impl RX_FIFO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_EN_R = crate::BitReader<bool>;
 #[doc = "Field `rx_fifo_en` writer - Master Results FIFO Enable"]
-pub struct RX_FIFO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RX_FIFO_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
 #[doc = "Field `mstr_reset_en` reader - Master Reset"]
-pub struct MSTR_RESET_EN_R(crate::FieldReader<bool>);
-impl MSTR_RESET_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MSTR_RESET_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSTR_RESET_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MSTR_RESET_EN_R = crate::BitReader<bool>;
 #[doc = "Field `mstr_reset_en` writer - Master Reset"]
-pub struct MSTR_RESET_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MSTR_RESET_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type MSTR_RESET_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 2 - Master Transaction FIFO Enable"]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 2 - Master Transaction FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&mut self) -> TX_FIFO_EN_W {
-        TX_FIFO_EN_W { w: self }
+        TX_FIFO_EN_W::new(self)
     }
     #[doc = "Bit 3 - Master Results FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&mut self) -> RX_FIFO_EN_W {
-        RX_FIFO_EN_W { w: self }
+        RX_FIFO_EN_W::new(self)
     }
     #[doc = "Bit 7 - Master Reset"]
     #[inline(always)]
     pub fn mstr_reset_en(&mut self) -> MSTR_RESET_EN_W {
-        MSTR_RESET_EN_W { w: self }
+        MSTR_RESET_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

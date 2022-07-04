@@ -35,146 +35,21 @@ impl From<crate::W<TRIM_CALC_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_clk_sel` reader - Trim Clock Select"]
-pub struct TRIM_CLK_SEL_R(crate::FieldReader<bool>);
-impl TRIM_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_CLK_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_CLK_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `trim_clk_sel` writer - Trim Clock Select"]
-pub struct TRIM_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_CLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TRIM_CLK_SEL_W<'a> = crate::BitWriter<'a, u32, TRIM_CALC_SPEC, bool, 0>;
 #[doc = "Field `trim_calc_start` reader - Start Trim Calculation"]
-pub struct TRIM_CALC_START_R(crate::FieldReader<bool>);
-impl TRIM_CALC_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_CALC_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_CALC_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_CALC_START_R = crate::BitReader<bool>;
 #[doc = "Field `trim_calc_start` writer - Start Trim Calculation"]
-pub struct TRIM_CALC_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_CALC_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TRIM_CALC_START_W<'a> = crate::BitWriter<'a, u32, TRIM_CALC_SPEC, bool, 1>;
 #[doc = "Field `trim_calc_completed` reader - Trim Calculation Completed"]
-pub struct TRIM_CALC_COMPLETED_R(crate::FieldReader<bool>);
-impl TRIM_CALC_COMPLETED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_CALC_COMPLETED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_CALC_COMPLETED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_CALC_COMPLETED_R = crate::BitReader<bool>;
 #[doc = "Field `trim_enable` reader - Trim Logic Enable"]
-pub struct TRIM_ENABLE_R(crate::FieldReader<bool>);
-impl TRIM_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `trim_enable` writer - Trim Logic Enable"]
-pub struct TRIM_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TRIM_ENABLE_W<'a> = crate::BitWriter<'a, u32, TRIM_CALC_SPEC, bool, 3>;
 #[doc = "Field `trim_calc_results` reader - Trim Calculation Results"]
-pub struct TRIM_CALC_RESULTS_R(crate::FieldReader<u16>);
-impl TRIM_CALC_RESULTS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TRIM_CALC_RESULTS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_CALC_RESULTS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_CALC_RESULTS_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0 - Trim Clock Select"]
     #[inline(always)]
@@ -206,17 +81,17 @@ impl W {
     #[doc = "Bit 0 - Trim Clock Select"]
     #[inline(always)]
     pub fn trim_clk_sel(&mut self) -> TRIM_CLK_SEL_W {
-        TRIM_CLK_SEL_W { w: self }
+        TRIM_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 1 - Start Trim Calculation"]
     #[inline(always)]
     pub fn trim_calc_start(&mut self) -> TRIM_CALC_START_W {
-        TRIM_CALC_START_W { w: self }
+        TRIM_CALC_START_W::new(self)
     }
     #[doc = "Bit 3 - Trim Logic Enable"]
     #[inline(always)]
     pub fn trim_enable(&mut self) -> TRIM_ENABLE_W {
-        TRIM_ENABLE_W { w: self }
+        TRIM_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

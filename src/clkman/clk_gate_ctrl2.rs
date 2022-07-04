@@ -35,221 +35,38 @@ impl From<crate::W<CLK_GATE_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `i2cs_clk_gater` reader - Clock Gating Control for I2C Slave"]
-pub struct I2CS_CLK_GATER_R(crate::FieldReader<u8>);
-impl I2CS_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2CS_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2CS_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2CS_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `i2cs_clk_gater` writer - Clock Gating Control for I2C Slave"]
-pub struct I2CS_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2CS_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type I2CS_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `spi0_clk_gater` reader - Clock Gating Control for SPI Master 0"]
-pub struct SPI0_CLK_GATER_R(crate::FieldReader<u8>);
-impl SPI0_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI0_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI0_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI0_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spi0_clk_gater` writer - Clock Gating Control for SPI Master 0"]
-pub struct SPI0_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI0_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type SPI0_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `spi1_clk_gater` reader - Clock Gating Control for SPI Master 1"]
-pub struct SPI1_CLK_GATER_R(crate::FieldReader<u8>);
-impl SPI1_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI1_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI1_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI1_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spi1_clk_gater` writer - Clock Gating Control for SPI Master 1"]
-pub struct SPI1_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI1_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type SPI1_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `spi2_clk_gater` reader - Clock Gating Control for SPI Master 2"]
-pub struct SPI2_CLK_GATER_R(crate::FieldReader<u8>);
-impl SPI2_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI2_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI2_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI2_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spi2_clk_gater` writer - Clock Gating Control for SPI Master 2"]
-pub struct SPI2_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI2_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type SPI2_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `spi_bridge_clk_gater` reader - Clock Gating Control for SPI Bridge"]
-pub struct SPI_BRIDGE_CLK_GATER_R(crate::FieldReader<u8>);
-impl SPI_BRIDGE_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_BRIDGE_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_BRIDGE_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_BRIDGE_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spi_bridge_clk_gater` writer - Clock Gating Control for SPI Bridge"]
-pub struct SPI_BRIDGE_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_BRIDGE_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type SPI_BRIDGE_CLK_GATER_W<'a> =
+    crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `owm_clk_gater` reader - Clock Gating Control for 1-Wire Master (OWM)"]
-pub struct OWM_CLK_GATER_R(crate::FieldReader<u8>);
-impl OWM_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OWM_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OWM_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OWM_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `owm_clk_gater` writer - Clock Gating Control for 1-Wire Master (OWM)"]
-pub struct OWM_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OWM_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type OWM_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `adc_clk_gater` reader - Clock Gating Control for ADC"]
-pub struct ADC_CLK_GATER_R(crate::FieldReader<u8>);
-impl ADC_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `adc_clk_gater` writer - Clock Gating Control for ADC"]
-pub struct ADC_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type ADC_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `spis_clk_gater` reader - Clock Gating Control for SPI Slave"]
-pub struct SPIS_CLK_GATER_R(crate::FieldReader<u8>);
-impl SPIS_CLK_GATER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPIS_CLK_GATER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPIS_CLK_GATER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPIS_CLK_GATER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spis_clk_gater` writer - Clock Gating Control for SPI Slave"]
-pub struct SPIS_CLK_GATER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPIS_CLK_GATER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type SPIS_CLK_GATER_W<'a> = crate::FieldWriter<'a, u32, CLK_GATE_CTRL2_SPEC, u8, u8, 2, 14>;
 impl R {
     #[doc = "Bits 0:1 - Clock Gating Control for I2C Slave"]
     #[inline(always)]
@@ -296,42 +113,42 @@ impl W {
     #[doc = "Bits 0:1 - Clock Gating Control for I2C Slave"]
     #[inline(always)]
     pub fn i2cs_clk_gater(&mut self) -> I2CS_CLK_GATER_W {
-        I2CS_CLK_GATER_W { w: self }
+        I2CS_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 2:3 - Clock Gating Control for SPI Master 0"]
     #[inline(always)]
     pub fn spi0_clk_gater(&mut self) -> SPI0_CLK_GATER_W {
-        SPI0_CLK_GATER_W { w: self }
+        SPI0_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 4:5 - Clock Gating Control for SPI Master 1"]
     #[inline(always)]
     pub fn spi1_clk_gater(&mut self) -> SPI1_CLK_GATER_W {
-        SPI1_CLK_GATER_W { w: self }
+        SPI1_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 6:7 - Clock Gating Control for SPI Master 2"]
     #[inline(always)]
     pub fn spi2_clk_gater(&mut self) -> SPI2_CLK_GATER_W {
-        SPI2_CLK_GATER_W { w: self }
+        SPI2_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 8:9 - Clock Gating Control for SPI Bridge"]
     #[inline(always)]
     pub fn spi_bridge_clk_gater(&mut self) -> SPI_BRIDGE_CLK_GATER_W {
-        SPI_BRIDGE_CLK_GATER_W { w: self }
+        SPI_BRIDGE_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 10:11 - Clock Gating Control for 1-Wire Master (OWM)"]
     #[inline(always)]
     pub fn owm_clk_gater(&mut self) -> OWM_CLK_GATER_W {
-        OWM_CLK_GATER_W { w: self }
+        OWM_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 12:13 - Clock Gating Control for ADC"]
     #[inline(always)]
     pub fn adc_clk_gater(&mut self) -> ADC_CLK_GATER_W {
-        ADC_CLK_GATER_W { w: self }
+        ADC_CLK_GATER_W::new(self)
     }
     #[doc = "Bits 14:15 - Clock Gating Control for SPI Slave"]
     #[inline(always)]
     pub fn spis_clk_gater(&mut self) -> SPIS_CLK_GATER_W {
-        SPIS_CLK_GATER_W { w: self }
+        SPIS_CLK_GATER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

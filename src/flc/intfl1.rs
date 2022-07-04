@@ -35,227 +35,29 @@ impl From<crate::W<INTFL1_SPEC>> for W {
     }
 }
 #[doc = "Field `sram_addr_wrapped` reader - SRAM Address Wrapped Interrupt Flag"]
-pub struct SRAM_ADDR_WRAPPED_R(crate::FieldReader<bool>);
-impl SRAM_ADDR_WRAPPED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRAM_ADDR_WRAPPED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_ADDR_WRAPPED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_ADDR_WRAPPED_R = crate::BitReader<bool>;
 #[doc = "Field `sram_addr_wrapped` writer - SRAM Address Wrapped Interrupt Flag"]
-pub struct SRAM_ADDR_WRAPPED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_ADDR_WRAPPED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SRAM_ADDR_WRAPPED_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 0>;
 #[doc = "Field `invalid_flash_addr` reader - Invalid Flash Address Interrupt Flag"]
-pub struct INVALID_FLASH_ADDR_R(crate::FieldReader<bool>);
-impl INVALID_FLASH_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INVALID_FLASH_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INVALID_FLASH_ADDR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INVALID_FLASH_ADDR_R = crate::BitReader<bool>;
 #[doc = "Field `invalid_flash_addr` writer - Invalid Flash Address Interrupt Flag"]
-pub struct INVALID_FLASH_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INVALID_FLASH_ADDR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type INVALID_FLASH_ADDR_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 1>;
 #[doc = "Field `flash_read_locked` reader - Flash Read from Locked Area Interrupt Flag"]
-pub struct FLASH_READ_LOCKED_R(crate::FieldReader<bool>);
-impl FLASH_READ_LOCKED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_READ_LOCKED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_READ_LOCKED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_READ_LOCKED_R = crate::BitReader<bool>;
 #[doc = "Field `flash_read_locked` writer - Flash Read from Locked Area Interrupt Flag"]
-pub struct FLASH_READ_LOCKED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_READ_LOCKED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FLASH_READ_LOCKED_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 2>;
 #[doc = "Field `trim_update_done` reader - Trim Update Complete Interrupt Flag"]
-pub struct TRIM_UPDATE_DONE_R(crate::FieldReader<bool>);
-impl TRIM_UPDATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_UPDATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_UPDATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_UPDATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `trim_update_done` writer - Trim Update Complete Interrupt Flag"]
-pub struct TRIM_UPDATE_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_UPDATE_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TRIM_UPDATE_DONE_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 3>;
 #[doc = "Field `flc_state_done` reader - FLC State Machine Reached DONE Interrupt Flag"]
-pub struct FLC_STATE_DONE_R(crate::FieldReader<bool>);
-impl FLC_STATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLC_STATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLC_STATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLC_STATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `flc_state_done` writer - FLC State Machine Reached DONE Interrupt Flag"]
-pub struct FLC_STATE_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLC_STATE_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type FLC_STATE_DONE_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 4>;
 #[doc = "Field `flc_prog_complete` reader - Program (Write or Erase) Operation Completed Interrupt Flag"]
-pub struct FLC_PROG_COMPLETE_R(crate::FieldReader<bool>);
-impl FLC_PROG_COMPLETE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLC_PROG_COMPLETE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLC_PROG_COMPLETE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLC_PROG_COMPLETE_R = crate::BitReader<bool>;
 #[doc = "Field `flc_prog_complete` writer - Program (Write or Erase) Operation Completed Interrupt Flag"]
-pub struct FLC_PROG_COMPLETE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLC_PROG_COMPLETE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type FLC_PROG_COMPLETE_W<'a> = crate::BitWriter1C<'a, u32, INTFL1_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - SRAM Address Wrapped Interrupt Flag"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - SRAM Address Wrapped Interrupt Flag"]
     #[inline(always)]
     pub fn sram_addr_wrapped(&mut self) -> SRAM_ADDR_WRAPPED_W {
-        SRAM_ADDR_WRAPPED_W { w: self }
+        SRAM_ADDR_WRAPPED_W::new(self)
     }
     #[doc = "Bit 1 - Invalid Flash Address Interrupt Flag"]
     #[inline(always)]
     pub fn invalid_flash_addr(&mut self) -> INVALID_FLASH_ADDR_W {
-        INVALID_FLASH_ADDR_W { w: self }
+        INVALID_FLASH_ADDR_W::new(self)
     }
     #[doc = "Bit 2 - Flash Read from Locked Area Interrupt Flag"]
     #[inline(always)]
     pub fn flash_read_locked(&mut self) -> FLASH_READ_LOCKED_W {
-        FLASH_READ_LOCKED_W { w: self }
+        FLASH_READ_LOCKED_W::new(self)
     }
     #[doc = "Bit 3 - Trim Update Complete Interrupt Flag"]
     #[inline(always)]
     pub fn trim_update_done(&mut self) -> TRIM_UPDATE_DONE_W {
-        TRIM_UPDATE_DONE_W { w: self }
+        TRIM_UPDATE_DONE_W::new(self)
     }
     #[doc = "Bit 4 - FLC State Machine Reached DONE Interrupt Flag"]
     #[inline(always)]
     pub fn flc_state_done(&mut self) -> FLC_STATE_DONE_W {
-        FLC_STATE_DONE_W { w: self }
+        FLC_STATE_DONE_W::new(self)
     }
     #[doc = "Bit 5 - Program (Write or Erase) Operation Completed Interrupt Flag"]
     #[inline(always)]
     pub fn flc_prog_complete(&mut self) -> FLC_PROG_COMPLETE_W {
-        FLC_PROG_COMPLETE_W { w: self }
+        FLC_PROG_COMPLETE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

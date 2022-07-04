@@ -35,32 +35,9 @@ impl From<crate::W<FADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `faddr` reader - Flash Operation Address"]
-pub struct FADDR_R(crate::FieldReader<u32>);
-impl FADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        FADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `faddr` writer - Flash Operation Address"]
-pub struct FADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type FADDR_W<'a> = crate::FieldWriter<'a, u32, FADDR_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21 - Flash Operation Address"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:21 - Flash Operation Address"]
     #[inline(always)]
     pub fn faddr(&mut self) -> FADDR_W {
-        FADDR_W { w: self }
+        FADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

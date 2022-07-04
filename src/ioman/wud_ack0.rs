@@ -35,65 +35,13 @@ impl From<crate::W<WUD_ACK0_SPEC>> for W {
     }
 }
 #[doc = "Field `wud_ack_p0` reader - WUD Mode Acknowledge: P0\\[7:0\\]"]
-pub struct WUD_ACK_P0_R(crate::FieldReader<u8>);
-impl WUD_ACK_P0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WUD_ACK_P0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WUD_ACK_P0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WUD_ACK_P0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wud_ack_p1` reader - WUD Mode Acknowledge: P1\\[7:0\\]"]
-pub struct WUD_ACK_P1_R(crate::FieldReader<u8>);
-impl WUD_ACK_P1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WUD_ACK_P1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WUD_ACK_P1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WUD_ACK_P1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wud_ack_p2` reader - WUD Mode Acknowledge: P2\\[7:0\\]"]
-pub struct WUD_ACK_P2_R(crate::FieldReader<u8>);
-impl WUD_ACK_P2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WUD_ACK_P2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WUD_ACK_P2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WUD_ACK_P2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wud_ack_p3` reader - WUD Mode Acknowledge: P3\\[7:0\\]"]
-pub struct WUD_ACK_P3_R(crate::FieldReader<u8>);
-impl WUD_ACK_P3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WUD_ACK_P3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WUD_ACK_P3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WUD_ACK_P3_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - WUD Mode Acknowledge: P0\\[7:0\\]"]
     #[inline(always)]

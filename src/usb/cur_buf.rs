@@ -35,35 +35,9 @@ impl From<crate::W<CUR_BUF_SPEC>> for W {
     }
 }
 #[doc = "Field `out_buf` reader - OUT Transfer Current Buffers"]
-pub struct OUT_BUF_R(crate::FieldReader<u8>);
-impl OUT_BUF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_BUF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_BUF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_BUF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `in_buf` reader - IN Transfer Current Buffers"]
-pub struct IN_BUF_R(crate::FieldReader<u8>);
-impl IN_BUF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_BUF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_BUF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_BUF_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - OUT Transfer Current Buffers"]
     #[inline(always)]

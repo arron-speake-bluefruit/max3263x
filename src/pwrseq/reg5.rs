@@ -35,113 +35,21 @@ impl From<crate::W<REG5_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_trim_svm_bg` reader - Power Manager Bandgap trim setting"]
-pub struct PWR_TRIM_SVM_BG_R(crate::FieldReader<u16>);
-impl PWR_TRIM_SVM_BG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PWR_TRIM_SVM_BG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_SVM_BG_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_SVM_BG_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pwr_trim_svm_bg` writer - Power Manager Bandgap trim setting"]
-pub struct PWR_TRIM_SVM_BG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_SVM_BG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type PWR_TRIM_SVM_BG_W<'a> = crate::FieldWriter<'a, u32, REG5_SPEC, u16, u16, 9, 0>;
 #[doc = "Field `pwr_trim_bias` reader - Power Manager Bias Current trim setting"]
-pub struct PWR_TRIM_BIAS_R(crate::FieldReader<u8>);
-impl PWR_TRIM_BIAS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TRIM_BIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_BIAS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_BIAS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_trim_bias` writer - Power Manager Bias Current trim setting"]
-pub struct PWR_TRIM_BIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_BIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 9)) | ((value as u32 & 0x3f) << 9);
-        self.w
-    }
-}
+pub type PWR_TRIM_BIAS_W<'a> = crate::FieldWriter<'a, u32, REG5_SPEC, u8, u8, 6, 9>;
 #[doc = "Field `pwr_trim_retreg` reader - Retention Regulator trim setting"]
-pub struct PWR_TRIM_RETREG_R(crate::FieldReader<u8>);
-impl PWR_TRIM_RETREG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TRIM_RETREG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_RETREG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_RETREG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_trim_retreg` writer - Retention Regulator trim setting"]
-pub struct PWR_TRIM_RETREG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_RETREG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 15)) | ((value as u32 & 0x3f) << 15);
-        self.w
-    }
-}
+pub type PWR_TRIM_RETREG_W<'a> = crate::FieldWriter<'a, u32, REG5_SPEC, u8, u8, 6, 15>;
 #[doc = "Field `pwr_rtc_trim` reader - Real Time Clock trim setting"]
-pub struct PWR_RTC_TRIM_R(crate::FieldReader<u8>);
-impl PWR_RTC_TRIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_RTC_TRIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_RTC_TRIM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_RTC_TRIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_rtc_trim` writer - Real Time Clock trim setting"]
-pub struct PWR_RTC_TRIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_RTC_TRIM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 21)) | ((value as u32 & 0x0f) << 21);
-        self.w
-    }
-}
+pub type PWR_RTC_TRIM_W<'a> = crate::FieldWriter<'a, u32, REG5_SPEC, u8, u8, 4, 21>;
 impl R {
     #[doc = "Bits 0:8 - Power Manager Bandgap trim setting"]
     #[inline(always)]
@@ -168,22 +76,22 @@ impl W {
     #[doc = "Bits 0:8 - Power Manager Bandgap trim setting"]
     #[inline(always)]
     pub fn pwr_trim_svm_bg(&mut self) -> PWR_TRIM_SVM_BG_W {
-        PWR_TRIM_SVM_BG_W { w: self }
+        PWR_TRIM_SVM_BG_W::new(self)
     }
     #[doc = "Bits 9:14 - Power Manager Bias Current trim setting"]
     #[inline(always)]
     pub fn pwr_trim_bias(&mut self) -> PWR_TRIM_BIAS_W {
-        PWR_TRIM_BIAS_W { w: self }
+        PWR_TRIM_BIAS_W::new(self)
     }
     #[doc = "Bits 15:20 - Retention Regulator trim setting"]
     #[inline(always)]
     pub fn pwr_trim_retreg(&mut self) -> PWR_TRIM_RETREG_W {
-        PWR_TRIM_RETREG_W { w: self }
+        PWR_TRIM_RETREG_W::new(self)
     }
     #[doc = "Bits 21:24 - Real Time Clock trim setting"]
     #[inline(always)]
     pub fn pwr_rtc_trim(&mut self) -> PWR_RTC_TRIM_W {
-        PWR_RTC_TRIM_W { w: self }
+        PWR_RTC_TRIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

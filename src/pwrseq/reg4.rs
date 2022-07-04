@@ -35,264 +35,33 @@ impl From<crate::W<REG4_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_tm_ps_2_gpio` reader - Internal Use Only"]
-pub struct PWR_TM_PS_2_GPIO_R(crate::FieldReader<bool>);
-impl PWR_TM_PS_2_GPIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_TM_PS_2_GPIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TM_PS_2_GPIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TM_PS_2_GPIO_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_tm_ps_2_gpio` writer - Internal Use Only"]
-pub struct PWR_TM_PS_2_GPIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TM_PS_2_GPIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PWR_TM_PS_2_GPIO_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 0>;
 #[doc = "Field `pwr_tm_fast_timers` reader - Internal Use Only"]
-pub struct PWR_TM_FAST_TIMERS_R(crate::FieldReader<bool>);
-impl PWR_TM_FAST_TIMERS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_TM_FAST_TIMERS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TM_FAST_TIMERS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TM_FAST_TIMERS_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_tm_fast_timers` writer - Internal Use Only"]
-pub struct PWR_TM_FAST_TIMERS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TM_FAST_TIMERS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PWR_TM_FAST_TIMERS_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 1>;
 #[doc = "Field `pwr_usb_dis_comp` reader - Internal Use Only"]
-pub struct PWR_USB_DIS_COMP_R(crate::FieldReader<bool>);
-impl PWR_USB_DIS_COMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_USB_DIS_COMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_USB_DIS_COMP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_USB_DIS_COMP_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_usb_dis_comp` writer - Internal Use Only"]
-pub struct PWR_USB_DIS_COMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_USB_DIS_COMP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PWR_USB_DIS_COMP_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 3>;
 #[doc = "Field `pwr_ro_tstclk_en` reader - Internal Use Only"]
-pub struct PWR_RO_TSTCLK_EN_R(crate::FieldReader<bool>);
-impl PWR_RO_TSTCLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_RO_TSTCLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_RO_TSTCLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_RO_TSTCLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_ro_tstclk_en` writer - Internal Use Only"]
-pub struct PWR_RO_TSTCLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_RO_TSTCLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PWR_RO_TSTCLK_EN_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 4>;
 #[doc = "Field `pwr_nr_clk_gate_en` reader - Internal Use Only"]
-pub struct PWR_NR_CLK_GATE_EN_R(crate::FieldReader<bool>);
-impl PWR_NR_CLK_GATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_NR_CLK_GATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_NR_CLK_GATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_NR_CLK_GATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_nr_clk_gate_en` writer - Internal Use Only"]
-pub struct PWR_NR_CLK_GATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_NR_CLK_GATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PWR_NR_CLK_GATE_EN_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 5>;
 #[doc = "Field `pwr_ext_clk_in_en` reader - Internal Use Only"]
-pub struct PWR_EXT_CLK_IN_EN_R(crate::FieldReader<bool>);
-impl PWR_EXT_CLK_IN_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_EXT_CLK_IN_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_EXT_CLK_IN_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_EXT_CLK_IN_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_ext_clk_in_en` writer - Internal Use Only"]
-pub struct PWR_EXT_CLK_IN_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_EXT_CLK_IN_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PWR_EXT_CLK_IN_EN_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 6>;
 #[doc = "Field `pwr_pseq_32k_en` reader - Internal Use Only"]
-pub struct PWR_PSEQ_32K_EN_R(crate::FieldReader<bool>);
-impl PWR_PSEQ_32K_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_PSEQ_32K_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_PSEQ_32K_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_PSEQ_32K_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_pseq_32k_en` writer - Internal Use Only"]
-pub struct PWR_PSEQ_32K_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_PSEQ_32K_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PWR_PSEQ_32K_EN_W<'a> = crate::BitWriter<'a, u32, REG4_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - Internal Use Only"]
     #[inline(always)]
@@ -334,37 +103,37 @@ impl W {
     #[doc = "Bit 0 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_tm_ps_2_gpio(&mut self) -> PWR_TM_PS_2_GPIO_W {
-        PWR_TM_PS_2_GPIO_W { w: self }
+        PWR_TM_PS_2_GPIO_W::new(self)
     }
     #[doc = "Bit 1 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_tm_fast_timers(&mut self) -> PWR_TM_FAST_TIMERS_W {
-        PWR_TM_FAST_TIMERS_W { w: self }
+        PWR_TM_FAST_TIMERS_W::new(self)
     }
     #[doc = "Bit 3 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_usb_dis_comp(&mut self) -> PWR_USB_DIS_COMP_W {
-        PWR_USB_DIS_COMP_W { w: self }
+        PWR_USB_DIS_COMP_W::new(self)
     }
     #[doc = "Bit 4 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_ro_tstclk_en(&mut self) -> PWR_RO_TSTCLK_EN_W {
-        PWR_RO_TSTCLK_EN_W { w: self }
+        PWR_RO_TSTCLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_nr_clk_gate_en(&mut self) -> PWR_NR_CLK_GATE_EN_W {
-        PWR_NR_CLK_GATE_EN_W { w: self }
+        PWR_NR_CLK_GATE_EN_W::new(self)
     }
     #[doc = "Bit 6 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_ext_clk_in_en(&mut self) -> PWR_EXT_CLK_IN_EN_W {
-        PWR_EXT_CLK_IN_EN_W { w: self }
+        PWR_EXT_CLK_IN_EN_W::new(self)
     }
     #[doc = "Bit 7 - Internal Use Only"]
     #[inline(always)]
     pub fn pwr_pseq_32k_en(&mut self) -> PWR_PSEQ_32K_EN_W {
-        PWR_PSEQ_32K_EN_W { w: self }
+        PWR_PSEQ_32K_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,35 +35,9 @@ impl From<crate::W<MEM_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `cache_size` reader - Instruction Cache Size"]
-pub struct CACHE_SIZE_R(crate::FieldReader<u16>);
-impl CACHE_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CACHE_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `main_memory_size` reader - Internal Flash Memory Size"]
-pub struct MAIN_MEMORY_SIZE_R(crate::FieldReader<u16>);
-impl MAIN_MEMORY_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MAIN_MEMORY_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_MEMORY_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_MEMORY_SIZE_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Instruction Cache Size"]
     #[inline(always)]

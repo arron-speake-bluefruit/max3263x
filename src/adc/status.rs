@@ -35,65 +35,13 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `adc_active` reader - ADC Conversion In Progress"]
-pub struct ADC_ACTIVE_R(crate::FieldReader<bool>);
-impl ADC_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_atomic_active` reader - RO Frequency Calibration Active (If Atomic)"]
-pub struct RO_CAL_ATOMIC_ACTIVE_R(crate::FieldReader<bool>);
-impl RO_CAL_ATOMIC_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_ATOMIC_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_ATOMIC_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_ATOMIC_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `afe_pwr_up_active` reader - AFE Power Up Delay Active"]
-pub struct AFE_PWR_UP_ACTIVE_R(crate::FieldReader<bool>);
-impl AFE_PWR_UP_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AFE_PWR_UP_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AFE_PWR_UP_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AFE_PWR_UP_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_overflow` reader - ADC Overflow"]
-pub struct ADC_OVERFLOW_R(crate::FieldReader<bool>);
-impl ADC_OVERFLOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_OVERFLOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_OVERFLOW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_OVERFLOW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - ADC Conversion In Progress"]
     #[inline(always)]

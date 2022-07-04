@@ -35,32 +35,9 @@ impl From<crate::W<CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fs_filter_clock_div` reader - FS Filter Clock Divisor"]
-pub struct FS_FILTER_CLOCK_DIV_R(crate::FieldReader<u8>);
-impl FS_FILTER_CLOCK_DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FS_FILTER_CLOCK_DIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FS_FILTER_CLOCK_DIV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FS_FILTER_CLOCK_DIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fs_filter_clock_div` writer - FS Filter Clock Divisor"]
-pub struct FS_FILTER_CLOCK_DIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FS_FILTER_CLOCK_DIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type FS_FILTER_CLOCK_DIV_W<'a> = crate::FieldWriter<'a, u32, CLK_DIV_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - FS Filter Clock Divisor"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - FS Filter Clock Divisor"]
     #[inline(always)]
     pub fn fs_filter_clock_div(&mut self) -> FS_FILTER_CLOCK_DIV_W {
-        FS_FILTER_CLOCK_DIV_W { w: self }
+        FS_FILTER_CLOCK_DIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

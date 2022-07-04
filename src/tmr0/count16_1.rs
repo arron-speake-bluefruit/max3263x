@@ -35,32 +35,9 @@ impl From<crate::W<COUNT16_1_SPEC>> for W {
     }
 }
 #[doc = "Field `value` reader - Count Value"]
-pub struct VALUE_R(crate::FieldReader<u16>);
-impl VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VALUE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `value` writer - Count Value"]
-pub struct VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type VALUE_W<'a> = crate::FieldWriter<'a, u32, COUNT16_1_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - Count Value"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - Count Value"]
     #[inline(always)]
     pub fn value(&mut self) -> VALUE_W {
-        VALUE_W { w: self }
+        VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

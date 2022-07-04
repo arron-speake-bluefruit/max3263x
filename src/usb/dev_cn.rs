@@ -35,227 +35,29 @@ impl From<crate::W<DEV_CN_SPEC>> for W {
     }
 }
 #[doc = "Field `sigrwu` reader - USB Signal Remote Wakeup"]
-pub struct SIGRWU_R(crate::FieldReader<bool>);
-impl SIGRWU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SIGRWU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SIGRWU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SIGRWU_R = crate::BitReader<bool>;
 #[doc = "Field `sigrwu` writer - USB Signal Remote Wakeup"]
-pub struct SIGRWU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SIGRWU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SIGRWU_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 2>;
 #[doc = "Field `connect` reader - Connect to USB"]
-pub struct CONNECT_R(crate::FieldReader<bool>);
-impl CONNECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CONNECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONNECT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONNECT_R = crate::BitReader<bool>;
 #[doc = "Field `connect` writer - Connect to USB"]
-pub struct CONNECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONNECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CONNECT_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 3>;
 #[doc = "Field `ulpm` reader - USB Low Power Mode"]
-pub struct ULPM_R(crate::FieldReader<bool>);
-impl ULPM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ULPM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULPM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULPM_R = crate::BitReader<bool>;
 #[doc = "Field `ulpm` writer - USB Low Power Mode"]
-pub struct ULPM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULPM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type ULPM_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 4>;
 #[doc = "Field `urst` reader - USB Device Controller Reset"]
-pub struct URST_R(crate::FieldReader<bool>);
-impl URST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        URST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for URST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type URST_R = crate::BitReader<bool>;
 #[doc = "Field `urst` writer - USB Device Controller Reset"]
-pub struct URST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> URST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type URST_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 5>;
 #[doc = "Field `vbgate` reader - VBUS Gate"]
-pub struct VBGATE_R(crate::FieldReader<bool>);
-impl VBGATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VBGATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VBGATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VBGATE_R = crate::BitReader<bool>;
 #[doc = "Field `vbgate` writer - VBUS Gate"]
-pub struct VBGATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VBGATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type VBGATE_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 6>;
 #[doc = "Field `fifo_mode` reader - FIFO Mode"]
-pub struct FIFO_MODE_R(crate::FieldReader<bool>);
-impl FIFO_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FIFO_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `fifo_mode` writer - FIFO Mode"]
-pub struct FIFO_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIFO_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type FIFO_MODE_W<'a> = crate::BitWriter<'a, u32, DEV_CN_SPEC, bool, 9>;
 impl R {
     #[doc = "Bit 2 - USB Signal Remote Wakeup"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 2 - USB Signal Remote Wakeup"]
     #[inline(always)]
     pub fn sigrwu(&mut self) -> SIGRWU_W {
-        SIGRWU_W { w: self }
+        SIGRWU_W::new(self)
     }
     #[doc = "Bit 3 - Connect to USB"]
     #[inline(always)]
     pub fn connect(&mut self) -> CONNECT_W {
-        CONNECT_W { w: self }
+        CONNECT_W::new(self)
     }
     #[doc = "Bit 4 - USB Low Power Mode"]
     #[inline(always)]
     pub fn ulpm(&mut self) -> ULPM_W {
-        ULPM_W { w: self }
+        ULPM_W::new(self)
     }
     #[doc = "Bit 5 - USB Device Controller Reset"]
     #[inline(always)]
     pub fn urst(&mut self) -> URST_W {
-        URST_W { w: self }
+        URST_W::new(self)
     }
     #[doc = "Bit 6 - VBUS Gate"]
     #[inline(always)]
     pub fn vbgate(&mut self) -> VBGATE_W {
-        VBGATE_W { w: self }
+        VBGATE_W::new(self)
     }
     #[doc = "Bit 9 - FIFO Mode"]
     #[inline(always)]
     pub fn fifo_mode(&mut self) -> FIFO_MODE_W {
-        FIFO_MODE_W { w: self }
+        FIFO_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

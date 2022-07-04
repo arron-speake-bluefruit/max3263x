@@ -35,69 +35,13 @@ impl From<crate::W<CLK_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `crypto_enable` reader - Cryptographic (TPU) Relaxation Oscillator Enable"]
-pub struct CRYPTO_ENABLE_R(crate::FieldReader<bool>);
-impl CRYPTO_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `crypto_enable` writer - Cryptographic (TPU) Relaxation Oscillator Enable"]
-pub struct CRYPTO_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CRYPTO_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CONFIG_SPEC, bool, 0>;
 #[doc = "Field `crypto_stability_count` reader - Crypto Oscillator Stability Select"]
-pub struct CRYPTO_STABILITY_COUNT_R(crate::FieldReader<u8>);
-impl CRYPTO_STABILITY_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CRYPTO_STABILITY_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_STABILITY_COUNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_STABILITY_COUNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `crypto_stability_count` writer - Crypto Oscillator Stability Select"]
-pub struct CRYPTO_STABILITY_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_STABILITY_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type CRYPTO_STABILITY_COUNT_W<'a> = crate::FieldWriter<'a, u32, CLK_CONFIG_SPEC, u8, u8, 4, 4>;
 impl R {
     #[doc = "Bit 0 - Cryptographic (TPU) Relaxation Oscillator Enable"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - Cryptographic (TPU) Relaxation Oscillator Enable"]
     #[inline(always)]
     pub fn crypto_enable(&mut self) -> CRYPTO_ENABLE_W {
-        CRYPTO_ENABLE_W { w: self }
+        CRYPTO_ENABLE_W::new(self)
     }
     #[doc = "Bits 4:7 - Crypto Oscillator Stability Select"]
     #[inline(always)]
     pub fn crypto_stability_count(&mut self) -> CRYPTO_STABILITY_COUNT_W {
-        CRYPTO_STABILITY_COUNT_W { w: self }
+        CRYPTO_STABILITY_COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

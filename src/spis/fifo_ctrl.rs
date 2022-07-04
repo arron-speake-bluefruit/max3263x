@@ -35,47 +35,11 @@ impl From<crate::W<FIFO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_fifo_ae_lvl` reader - Transaction FIFO Almost Empty Flag Level"]
-pub struct TX_FIFO_AE_LVL_R(crate::FieldReader<u8>);
-impl TX_FIFO_AE_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_FIFO_AE_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_FIFO_AE_LVL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_FIFO_AE_LVL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `tx_fifo_ae_lvl` writer - Transaction FIFO Almost Empty Flag Level"]
-pub struct TX_FIFO_AE_LVL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_AE_LVL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type TX_FIFO_AE_LVL_W<'a> = crate::FieldWriter<'a, u32, FIFO_CTRL_SPEC, u8, u8, 5, 0>;
 #[doc = "Field `rx_fifo_af_lvl` reader - Receive FIFO Almost Full Flag Level"]
-pub struct RX_FIFO_AF_LVL_R(crate::FieldReader<u8>);
-impl RX_FIFO_AF_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_FIFO_AF_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_AF_LVL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_AF_LVL_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4 - Transaction FIFO Almost Empty Flag Level"]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 0:4 - Transaction FIFO Almost Empty Flag Level"]
     #[inline(always)]
     pub fn tx_fifo_ae_lvl(&mut self) -> TX_FIFO_AE_LVL_W {
-        TX_FIFO_AE_LVL_W { w: self }
+        TX_FIFO_AE_LVL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

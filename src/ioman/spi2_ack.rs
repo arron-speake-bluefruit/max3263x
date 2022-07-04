@@ -35,145 +35,28 @@ impl From<crate::W<SPI2_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_ack` reader - SPI Master 2 I/O Mapping Acknowledge"]
-pub struct MAPPING_ACK_R(crate::FieldReader<bool>);
-impl MAPPING_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAPPING_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAPPING_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAPPING_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `core_io_ack` reader - SPI Master 2 Core I/O Acknowledge"]
-pub struct CORE_IO_ACK_R(crate::FieldReader<bool>);
-impl CORE_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss0_io_ack` reader - SPI Master 2 SS\\[0\\]
 I/O Acknowledge"]
-pub struct SS0_IO_ACK_R(crate::FieldReader<bool>);
-impl SS0_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS0_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS0_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS0_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss1_io_ack` reader - SPI Master 2 SS\\[1\\]
 I/O Acknowledge"]
-pub struct SS1_IO_ACK_R(crate::FieldReader<bool>);
-impl SS1_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS1_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS1_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS1_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss2_io_ack` reader - SPI Master 2 SS\\[2\\]
 I/O Acknowledge"]
-pub struct SS2_IO_ACK_R(crate::FieldReader<bool>);
-impl SS2_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS2_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS2_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS2_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `sr0_io_req` reader - SPI Master 2 SR\\[0\\]
 I/O Acknowledge"]
-pub struct SR0_IO_REQ_R(crate::FieldReader<bool>);
-impl SR0_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SR0_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SR0_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SR0_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `sr1_io_req` reader - SPI Master 2 SR\\[1\\]
 I/O Acknowledge"]
-pub struct SR1_IO_REQ_R(crate::FieldReader<bool>);
-impl SR1_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SR1_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SR1_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SR1_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `quad_io_ack` reader - SPI Master 2 Quad I/O Acknowledge"]
-pub struct QUAD_IO_ACK_R(crate::FieldReader<bool>);
-impl QUAD_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUAD_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUAD_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUAD_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `fast_mode` reader - SPI Master 2 Fast Mode Acknowledge"]
-pub struct FAST_MODE_R(crate::FieldReader<bool>);
-impl FAST_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAST_MODE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - SPI Master 2 I/O Mapping Acknowledge"]
     #[inline(always)]

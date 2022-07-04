@@ -35,301 +35,37 @@ impl From<crate::W<IN_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `inbav0` reader - Endpoint 0 Buffer Available Interrupt Flag"]
-pub struct INBAV0_R(crate::FieldReader<bool>);
-impl INBAV0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV0_R = crate::BitReader<bool>;
 #[doc = "Field `inbav0` writer - Endpoint 0 Buffer Available Interrupt Flag"]
-pub struct INBAV0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type INBAV0_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 0>;
 #[doc = "Field `inbav1` reader - Endpoint 1 Buffer Available Interrupt Flag"]
-pub struct INBAV1_R(crate::FieldReader<bool>);
-impl INBAV1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV1_R = crate::BitReader<bool>;
 #[doc = "Field `inbav1` writer - Endpoint 1 Buffer Available Interrupt Flag"]
-pub struct INBAV1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type INBAV1_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 1>;
 #[doc = "Field `inbav2` reader - Endpoint 2 Buffer Available Interrupt Flag"]
-pub struct INBAV2_R(crate::FieldReader<bool>);
-impl INBAV2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV2_R = crate::BitReader<bool>;
 #[doc = "Field `inbav2` writer - Endpoint 2 Buffer Available Interrupt Flag"]
-pub struct INBAV2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type INBAV2_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 2>;
 #[doc = "Field `inbav3` reader - Endpoint 3 Buffer Available Interrupt Flag"]
-pub struct INBAV3_R(crate::FieldReader<bool>);
-impl INBAV3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV3_R = crate::BitReader<bool>;
 #[doc = "Field `inbav3` writer - Endpoint 3 Buffer Available Interrupt Flag"]
-pub struct INBAV3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type INBAV3_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 3>;
 #[doc = "Field `inbav4` reader - Endpoint 4 Buffer Available Interrupt Flag"]
-pub struct INBAV4_R(crate::FieldReader<bool>);
-impl INBAV4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV4_R = crate::BitReader<bool>;
 #[doc = "Field `inbav4` writer - Endpoint 4 Buffer Available Interrupt Flag"]
-pub struct INBAV4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type INBAV4_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 4>;
 #[doc = "Field `inbav5` reader - Endpoint 5 Buffer Available Interrupt Flag"]
-pub struct INBAV5_R(crate::FieldReader<bool>);
-impl INBAV5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV5_R = crate::BitReader<bool>;
 #[doc = "Field `inbav5` writer - Endpoint 5 Buffer Available Interrupt Flag"]
-pub struct INBAV5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type INBAV5_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 5>;
 #[doc = "Field `inbav6` reader - Endpoint 6 Buffer Available Interrupt Flag"]
-pub struct INBAV6_R(crate::FieldReader<bool>);
-impl INBAV6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV6_R = crate::BitReader<bool>;
 #[doc = "Field `inbav6` writer - Endpoint 6 Buffer Available Interrupt Flag"]
-pub struct INBAV6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type INBAV6_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 6>;
 #[doc = "Field `inbav7` reader - Endpoint 7 Buffer Available Interrupt Flag"]
-pub struct INBAV7_R(crate::FieldReader<bool>);
-impl INBAV7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INBAV7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INBAV7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INBAV7_R = crate::BitReader<bool>;
 #[doc = "Field `inbav7` writer - Endpoint 7 Buffer Available Interrupt Flag"]
-pub struct INBAV7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INBAV7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type INBAV7_W<'a> = crate::BitWriter1C<'a, u32, IN_INT_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - Endpoint 0 Buffer Available Interrupt Flag"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - Endpoint 0 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav0(&mut self) -> INBAV0_W {
-        INBAV0_W { w: self }
+        INBAV0_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint 1 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav1(&mut self) -> INBAV1_W {
-        INBAV1_W { w: self }
+        INBAV1_W::new(self)
     }
     #[doc = "Bit 2 - Endpoint 2 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav2(&mut self) -> INBAV2_W {
-        INBAV2_W { w: self }
+        INBAV2_W::new(self)
     }
     #[doc = "Bit 3 - Endpoint 3 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav3(&mut self) -> INBAV3_W {
-        INBAV3_W { w: self }
+        INBAV3_W::new(self)
     }
     #[doc = "Bit 4 - Endpoint 4 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav4(&mut self) -> INBAV4_W {
-        INBAV4_W { w: self }
+        INBAV4_W::new(self)
     }
     #[doc = "Bit 5 - Endpoint 5 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav5(&mut self) -> INBAV5_W {
-        INBAV5_W { w: self }
+        INBAV5_W::new(self)
     }
     #[doc = "Bit 6 - Endpoint 6 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav6(&mut self) -> INBAV6_W {
-        INBAV6_W { w: self }
+        INBAV6_W::new(self)
     }
     #[doc = "Bit 7 - Endpoint 7 Buffer Available Interrupt Flag"]
     #[inline(always)]
     pub fn inbav7(&mut self) -> INBAV7_W {
-        INBAV7_W { w: self }
+        INBAV7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

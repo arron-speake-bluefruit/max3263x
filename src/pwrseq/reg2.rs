@@ -35,140 +35,25 @@ impl From<crate::W<REG2_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_vdd12_hyst` reader - VDD12_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD12_HYST_R(crate::FieldReader<u8>);
-impl PWR_VDD12_HYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_VDD12_HYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDD12_HYST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDD12_HYST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_vdd12_hyst` writer - VDD12_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD12_HYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDD12_HYST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type PWR_VDD12_HYST_W<'a> = crate::FieldWriter<'a, u32, REG2_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `pwr_vdd18_hyst` reader - VDD18_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD18_HYST_R(crate::FieldReader<u8>);
-impl PWR_VDD18_HYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_VDD18_HYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDD18_HYST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDD18_HYST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_vdd18_hyst` writer - VDD18_SW Comparator Hysteresis Setting"]
-pub struct PWR_VDD18_HYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDD18_HYST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type PWR_VDD18_HYST_W<'a> = crate::FieldWriter<'a, u32, REG2_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `pwr_vrtc_hyst` reader - VRTC Comparator Hysteresis Setting"]
-pub struct PWR_VRTC_HYST_R(crate::FieldReader<u8>);
-impl PWR_VRTC_HYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_VRTC_HYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VRTC_HYST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VRTC_HYST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_vrtc_hyst` writer - VRTC Comparator Hysteresis Setting"]
-pub struct PWR_VRTC_HYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VRTC_HYST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type PWR_VRTC_HYST_W<'a> = crate::FieldWriter<'a, u32, REG2_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `pwr_vddb_hyst` reader - VDDB Comparator Hysteresis Setting"]
-pub struct PWR_VDDB_HYST_R(crate::FieldReader<u8>);
-impl PWR_VDDB_HYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_VDDB_HYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDDB_HYST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDDB_HYST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_vddb_hyst` writer - VDDB Comparator Hysteresis Setting"]
-pub struct PWR_VDDB_HYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDDB_HYST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type PWR_VDDB_HYST_W<'a> = crate::FieldWriter<'a, u32, REG2_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `pwr_tvdd12_hyst` reader - TVDD12 Comparator Hysteresis Setting"]
-pub struct PWR_TVDD12_HYST_R(crate::FieldReader<u8>);
-impl PWR_TVDD12_HYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TVDD12_HYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TVDD12_HYST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TVDD12_HYST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_tvdd12_hyst` writer - TVDD12 Comparator Hysteresis Setting"]
-pub struct PWR_TVDD12_HYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TVDD12_HYST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type PWR_TVDD12_HYST_W<'a> = crate::FieldWriter<'a, u32, REG2_SPEC, u8, u8, 2, 8>;
 impl R {
     #[doc = "Bits 0:1 - VDD12_SW Comparator Hysteresis Setting"]
     #[inline(always)]
@@ -200,27 +85,27 @@ impl W {
     #[doc = "Bits 0:1 - VDD12_SW Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vdd12_hyst(&mut self) -> PWR_VDD12_HYST_W {
-        PWR_VDD12_HYST_W { w: self }
+        PWR_VDD12_HYST_W::new(self)
     }
     #[doc = "Bits 2:3 - VDD18_SW Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vdd18_hyst(&mut self) -> PWR_VDD18_HYST_W {
-        PWR_VDD18_HYST_W { w: self }
+        PWR_VDD18_HYST_W::new(self)
     }
     #[doc = "Bits 4:5 - VRTC Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vrtc_hyst(&mut self) -> PWR_VRTC_HYST_W {
-        PWR_VRTC_HYST_W { w: self }
+        PWR_VRTC_HYST_W::new(self)
     }
     #[doc = "Bits 6:7 - VDDB Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_vddb_hyst(&mut self) -> PWR_VDDB_HYST_W {
-        PWR_VDDB_HYST_W { w: self }
+        PWR_VDDB_HYST_W::new(self)
     }
     #[doc = "Bits 8:9 - TVDD12 Comparator Hysteresis Setting"]
     #[inline(always)]
     pub fn pwr_tvdd12_hyst(&mut self) -> PWR_TVDD12_HYST_W {
-        PWR_TVDD12_HYST_W { w: self }
+        PWR_TVDD12_HYST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

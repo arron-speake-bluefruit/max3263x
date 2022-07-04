@@ -35,50 +35,11 @@ impl From<crate::W<SPIB_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `core_io_req` reader - SPI Bridge Core I/O Request"]
-pub struct CORE_IO_REQ_R(crate::FieldReader<bool>);
-impl CORE_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `quad_io_req` reader - SPI Bridge Quad I/O Request"]
-pub struct QUAD_IO_REQ_R(crate::FieldReader<bool>);
-impl QUAD_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUAD_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUAD_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUAD_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `fast_mode` reader - SPI Bridge Fast Mode Request"]
-pub struct FAST_MODE_R(crate::FieldReader<bool>);
-impl FAST_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAST_MODE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 4 - SPI Bridge Core I/O Request"]
     #[inline(always)]

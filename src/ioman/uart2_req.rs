@@ -35,227 +35,29 @@ impl From<crate::W<UART2_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `io_map` reader - UART2 TX/RX I/O Mapping Select"]
-pub struct IO_MAP_R(crate::FieldReader<bool>);
-impl IO_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IO_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IO_MAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IO_MAP_R = crate::BitReader<bool>;
 #[doc = "Field `io_map` writer - UART2 TX/RX I/O Mapping Select"]
-pub struct IO_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IO_MAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type IO_MAP_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 0>;
 #[doc = "Field `cts_map` reader - UART2 CTS I/O Mapping Select"]
-pub struct CTS_MAP_R(crate::FieldReader<bool>);
-impl CTS_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CTS_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CTS_MAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CTS_MAP_R = crate::BitReader<bool>;
 #[doc = "Field `cts_map` writer - UART2 CTS I/O Mapping Select"]
-pub struct CTS_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTS_MAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CTS_MAP_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 1>;
 #[doc = "Field `rts_map` reader - UART2 RTS I/O Mapping Select"]
-pub struct RTS_MAP_R(crate::FieldReader<bool>);
-impl RTS_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTS_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTS_MAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTS_MAP_R = crate::BitReader<bool>;
 #[doc = "Field `rts_map` writer - UART2 RTS I/O Mapping Select"]
-pub struct RTS_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTS_MAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RTS_MAP_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 2>;
 #[doc = "Field `io_req` reader - UART2 TX/RX I/O Request"]
-pub struct IO_REQ_R(crate::FieldReader<bool>);
-impl IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `io_req` writer - UART2 TX/RX I/O Request"]
-pub struct IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type IO_REQ_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 4>;
 #[doc = "Field `cts_io_req` reader - UART2 CTS I/O Request"]
-pub struct CTS_IO_REQ_R(crate::FieldReader<bool>);
-impl CTS_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CTS_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CTS_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CTS_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `cts_io_req` writer - UART2 CTS I/O Request"]
-pub struct CTS_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTS_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CTS_IO_REQ_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 5>;
 #[doc = "Field `rts_io_req` reader - UART2 RTS I/O Request"]
-pub struct RTS_IO_REQ_R(crate::FieldReader<bool>);
-impl RTS_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTS_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTS_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTS_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `rts_io_req` writer - UART2 RTS I/O Request"]
-pub struct RTS_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTS_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type RTS_IO_REQ_W<'a> = crate::BitWriter<'a, u32, UART2_REQ_SPEC, bool, 6>;
 impl R {
     #[doc = "Bit 0 - UART2 TX/RX I/O Mapping Select"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - UART2 TX/RX I/O Mapping Select"]
     #[inline(always)]
     pub fn io_map(&mut self) -> IO_MAP_W {
-        IO_MAP_W { w: self }
+        IO_MAP_W::new(self)
     }
     #[doc = "Bit 1 - UART2 CTS I/O Mapping Select"]
     #[inline(always)]
     pub fn cts_map(&mut self) -> CTS_MAP_W {
-        CTS_MAP_W { w: self }
+        CTS_MAP_W::new(self)
     }
     #[doc = "Bit 2 - UART2 RTS I/O Mapping Select"]
     #[inline(always)]
     pub fn rts_map(&mut self) -> RTS_MAP_W {
-        RTS_MAP_W { w: self }
+        RTS_MAP_W::new(self)
     }
     #[doc = "Bit 4 - UART2 TX/RX I/O Request"]
     #[inline(always)]
     pub fn io_req(&mut self) -> IO_REQ_W {
-        IO_REQ_W { w: self }
+        IO_REQ_W::new(self)
     }
     #[doc = "Bit 5 - UART2 CTS I/O Request"]
     #[inline(always)]
     pub fn cts_io_req(&mut self) -> CTS_IO_REQ_W {
-        CTS_IO_REQ_W { w: self }
+        CTS_IO_REQ_W::new(self)
     }
     #[doc = "Bit 6 - UART2 RTS I/O Request"]
     #[inline(always)]
     pub fn rts_io_req(&mut self) -> RTS_IO_REQ_W {
-        RTS_IO_REQ_W { w: self }
+        RTS_IO_REQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

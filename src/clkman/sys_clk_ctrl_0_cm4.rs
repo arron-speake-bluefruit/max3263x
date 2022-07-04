@@ -35,32 +35,9 @@ impl From<crate::W<SYS_CLK_CTRL_0_CM4_SPEC>> for W {
     }
 }
 #[doc = "Field `cm4_clk_scale` reader - Control Settings for CLK0 - Cortex M4 Clock"]
-pub struct CM4_CLK_SCALE_R(crate::FieldReader<u8>);
-impl CM4_CLK_SCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CM4_CLK_SCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CM4_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CM4_CLK_SCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `cm4_clk_scale` writer - Control Settings for CLK0 - Cortex M4 Clock"]
-pub struct CM4_CLK_SCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CM4_CLK_SCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CM4_CLK_SCALE_W<'a> = crate::FieldWriter<'a, u32, SYS_CLK_CTRL_0_CM4_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - Control Settings for CLK0 - Cortex M4 Clock"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - Control Settings for CLK0 - Cortex M4 Clock"]
     #[inline(always)]
     pub fn cm4_clk_scale(&mut self) -> CM4_CLK_SCALE_W {
-        CM4_CLK_SCALE_W { w: self }
+        CM4_CLK_SCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

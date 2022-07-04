@@ -35,20 +35,7 @@ impl From<crate::W<NANO_CNTR_SPEC>> for W {
     }
 }
 #[doc = "Field `nanoring_counter` reader - Nano Oscillator Counter"]
-pub struct NANORING_COUNTER_R(crate::FieldReader<u16>);
-impl NANORING_COUNTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        NANORING_COUNTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NANORING_COUNTER_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NANORING_COUNTER_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Nano Oscillator Counter"]
     #[inline(always)]

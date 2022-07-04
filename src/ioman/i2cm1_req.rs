@@ -35,42 +35,9 @@ impl From<crate::W<I2CM1_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_req` reader - I2C Master 1 I/O Request"]
-pub struct MAPPING_REQ_R(crate::FieldReader<bool>);
-impl MAPPING_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAPPING_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAPPING_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAPPING_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `mapping_req` writer - I2C Master 1 I/O Request"]
-pub struct MAPPING_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAPPING_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MAPPING_REQ_W<'a> = crate::BitWriter<'a, u32, I2CM1_REQ_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 4 - I2C Master 1 I/O Request"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 4 - I2C Master 1 I/O Request"]
     #[inline(always)]
     pub fn mapping_req(&mut self) -> MAPPING_REQ_W {
-        MAPPING_REQ_W { w: self }
+        MAPPING_REQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

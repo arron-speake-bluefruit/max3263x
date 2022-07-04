@@ -35,94 +35,15 @@ impl From<crate::W<TRIM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_enable_r` reader - Enable RTL Trim of RTC Timer"]
-pub struct TRIM_ENABLE_R_R(crate::FieldReader<bool>);
-impl TRIM_ENABLE_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_ENABLE_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_ENABLE_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_ENABLE_R_R = crate::BitReader<bool>;
 #[doc = "Field `trim_enable_r` writer - Enable RTL Trim of RTC Timer"]
-pub struct TRIM_ENABLE_R_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_ENABLE_R_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TRIM_ENABLE_R_W<'a> = crate::BitWriter<'a, u32, TRIM_CTRL_SPEC, bool, 0>;
 #[doc = "Field `trim_faster_ovr_r` reader - Force RTC Trim to Faster"]
-pub struct TRIM_FASTER_OVR_R_R(crate::FieldReader<bool>);
-impl TRIM_FASTER_OVR_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_FASTER_OVR_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_FASTER_OVR_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_FASTER_OVR_R_R = crate::BitReader<bool>;
 #[doc = "Field `trim_faster_ovr_r` writer - Force RTC Trim to Faster"]
-pub struct TRIM_FASTER_OVR_R_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_FASTER_OVR_R_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TRIM_FASTER_OVR_R_W<'a> = crate::BitWriter<'a, u32, TRIM_CTRL_SPEC, bool, 1>;
 #[doc = "Field `trim_slower_r` reader - RTC Trim Direction Status"]
-pub struct TRIM_SLOWER_R_R(crate::FieldReader<bool>);
-impl TRIM_SLOWER_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_SLOWER_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_SLOWER_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_SLOWER_R_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Enable RTL Trim of RTC Timer"]
     #[inline(always)]
@@ -144,12 +65,12 @@ impl W {
     #[doc = "Bit 0 - Enable RTL Trim of RTC Timer"]
     #[inline(always)]
     pub fn trim_enable_r(&mut self) -> TRIM_ENABLE_R_W {
-        TRIM_ENABLE_R_W { w: self }
+        TRIM_ENABLE_R_W::new(self)
     }
     #[doc = "Bit 1 - Force RTC Trim to Faster"]
     #[inline(always)]
     pub fn trim_faster_ovr_r(&mut self) -> TRIM_FASTER_OVR_R_W {
-        TRIM_FASTER_OVR_R_W { w: self }
+        TRIM_FASTER_OVR_R_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

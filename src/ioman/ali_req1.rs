@@ -35,96 +35,17 @@ impl From<crate::W<ALI_REQ1_SPEC>> for W {
     }
 }
 #[doc = "Field `ali_req_p4` reader - Analog Input Mode Request: P4\\[7:0\\]"]
-pub struct ALI_REQ_P4_R(crate::FieldReader<u8>);
-impl ALI_REQ_P4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P4_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P4_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p4` writer - Analog Input Mode Request: P4\\[7:0\\]"]
-pub struct ALI_REQ_P4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type ALI_REQ_P4_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ1_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `ali_req_p5` reader - Analog Input Mode Request: P5\\[7:0\\]"]
-pub struct ALI_REQ_P5_R(crate::FieldReader<u8>);
-impl ALI_REQ_P5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P5_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P5_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p5` writer - Analog Input Mode Request: P5\\[7:0\\]"]
-pub struct ALI_REQ_P5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type ALI_REQ_P5_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ1_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `ali_req_p6` reader - Analog Input Mode Request: P6\\[0\\]"]
-pub struct ALI_REQ_P6_R(crate::FieldReader<bool>);
-impl ALI_REQ_P6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALI_REQ_P6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P6_R = crate::BitReader<bool>;
 #[doc = "Field `ali_req_p6` writer - Analog Input Mode Request: P6\\[0\\]"]
-pub struct ALI_REQ_P6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type ALI_REQ_P6_W<'a> = crate::BitWriter<'a, u32, ALI_REQ1_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:7 - Analog Input Mode Request: P4\\[7:0\\]"]
     #[inline(always)]
@@ -146,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - Analog Input Mode Request: P4\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p4(&mut self) -> ALI_REQ_P4_W {
-        ALI_REQ_P4_W { w: self }
+        ALI_REQ_P4_W::new(self)
     }
     #[doc = "Bits 8:15 - Analog Input Mode Request: P5\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p5(&mut self) -> ALI_REQ_P5_W {
-        ALI_REQ_P5_W { w: self }
+        ALI_REQ_P5_W::new(self)
     }
     #[doc = "Bit 16 - Analog Input Mode Request: P6\\[0\\]"]
     #[inline(always)]
     pub fn ali_req_p6(&mut self) -> ALI_REQ_P6_W {
-        ALI_REQ_P6_W { w: self }
+        ALI_REQ_P6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

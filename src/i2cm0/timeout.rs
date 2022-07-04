@@ -35,69 +35,13 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_timeout` reader - Transaction Timeout Limit"]
-pub struct TX_TIMEOUT_R(crate::FieldReader<u8>);
-impl TX_TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_TIMEOUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_TIMEOUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `tx_timeout` writer - Transaction Timeout Limit"]
-pub struct TX_TIMEOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_TIMEOUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type TX_TIMEOUT_W<'a> = crate::FieldWriter<'a, u32, TIMEOUT_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `auto_stop_en` reader - Auto-Stop Enable"]
-pub struct AUTO_STOP_EN_R(crate::FieldReader<bool>);
-impl AUTO_STOP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_STOP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_STOP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_STOP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `auto_stop_en` writer - Auto-Stop Enable"]
-pub struct AUTO_STOP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_STOP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type AUTO_STOP_EN_W<'a> = crate::BitWriter<'a, u32, TIMEOUT_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 16:23 - Transaction Timeout Limit"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 16:23 - Transaction Timeout Limit"]
     #[inline(always)]
     pub fn tx_timeout(&mut self) -> TX_TIMEOUT_W {
-        TX_TIMEOUT_W { w: self }
+        TX_TIMEOUT_W::new(self)
     }
     #[doc = "Bit 24 - Auto-Stop Enable"]
     #[inline(always)]
     pub fn auto_stop_en(&mut self) -> AUTO_STOP_EN_W {
-        AUTO_STOP_EN_W { w: self }
+        AUTO_STOP_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,35 +35,9 @@ impl From<crate::W<I2CS_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `io_sel` reader - I2C Slave I/O Mapping Acknowledge"]
-pub struct IO_SEL_R(crate::FieldReader<u8>);
-impl IO_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IO_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IO_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IO_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `mapping_ack` reader - I2C Slave I/O Acknowledge"]
-pub struct MAPPING_ACK_R(crate::FieldReader<bool>);
-impl MAPPING_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAPPING_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAPPING_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAPPING_ACK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:1 - I2C Slave I/O Mapping Acknowledge"]
     #[inline(always)]

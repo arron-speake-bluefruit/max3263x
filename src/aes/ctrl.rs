@@ -35,42 +35,9 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `start` reader - AES Start/Busy"]
-pub struct START_R(crate::FieldReader<bool>);
-impl START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_R = crate::BitReader<bool>;
 #[doc = "Field `start` writer - AES Start/Busy"]
-pub struct START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type START_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
 #[doc = "AES Encrypt/Decrypt Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CRYPT_MODE_A {
@@ -86,13 +53,9 @@ impl From<CRYPT_MODE_A> for bool {
     }
 }
 #[doc = "Field `crypt_mode` reader - AES Encrypt/Decrypt Mode"]
-pub struct CRYPT_MODE_R(crate::FieldReader<bool>);
+pub type CRYPT_MODE_R = crate::BitReader<CRYPT_MODE_A>;
 impl CRYPT_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPT_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CRYPT_MODE_A {
         match self.bits {
@@ -103,31 +66,17 @@ impl CRYPT_MODE_R {
     #[doc = "Checks if the value of the field is `ENCRYPT_MODE`"]
     #[inline(always)]
     pub fn is_encrypt_mode(&self) -> bool {
-        **self == CRYPT_MODE_A::ENCRYPT_MODE
+        *self == CRYPT_MODE_A::ENCRYPT_MODE
     }
     #[doc = "Checks if the value of the field is `DECRYPT_MODE`"]
     #[inline(always)]
     pub fn is_decrypt_mode(&self) -> bool {
-        **self == CRYPT_MODE_A::DECRYPT_MODE
-    }
-}
-impl core::ops::Deref for CRYPT_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CRYPT_MODE_A::DECRYPT_MODE
     }
 }
 #[doc = "Field `crypt_mode` writer - AES Encrypt/Decrypt Mode"]
-pub struct CRYPT_MODE_W<'a> {
-    w: &'a mut W,
-}
+pub type CRYPT_MODE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, CRYPT_MODE_A, 1>;
 impl<'a> CRYPT_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CRYPT_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Perform AES encryption operation."]
     #[inline(always)]
     pub fn encrypt_mode(self) -> &'a mut W {
@@ -137,22 +86,6 @@ impl<'a> CRYPT_MODE_W<'a> {
     #[inline(always)]
     pub fn decrypt_mode(self) -> &'a mut W {
         self.variant(CRYPT_MODE_A::DECRYPT_MODE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
     }
 }
 #[doc = "AES Expanded Key Mode\n\nValue on reset: 0"]
@@ -170,13 +103,9 @@ impl From<EXP_KEY_MODE_A> for bool {
     }
 }
 #[doc = "Field `exp_key_mode` reader - AES Expanded Key Mode"]
-pub struct EXP_KEY_MODE_R(crate::FieldReader<bool>);
+pub type EXP_KEY_MODE_R = crate::BitReader<EXP_KEY_MODE_A>;
 impl EXP_KEY_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXP_KEY_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EXP_KEY_MODE_A {
         match self.bits {
@@ -187,31 +116,17 @@ impl EXP_KEY_MODE_R {
     #[doc = "Checks if the value of the field is `CALC_NEW_EXP_KEY`"]
     #[inline(always)]
     pub fn is_calc_new_exp_key(&self) -> bool {
-        **self == EXP_KEY_MODE_A::CALC_NEW_EXP_KEY
+        *self == EXP_KEY_MODE_A::CALC_NEW_EXP_KEY
     }
     #[doc = "Checks if the value of the field is `USE_LAST_EXP_KEY`"]
     #[inline(always)]
     pub fn is_use_last_exp_key(&self) -> bool {
-        **self == EXP_KEY_MODE_A::USE_LAST_EXP_KEY
-    }
-}
-impl core::ops::Deref for EXP_KEY_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EXP_KEY_MODE_A::USE_LAST_EXP_KEY
     }
 }
 #[doc = "Field `exp_key_mode` writer - AES Expanded Key Mode"]
-pub struct EXP_KEY_MODE_W<'a> {
-    w: &'a mut W,
-}
+pub type EXP_KEY_MODE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, EXP_KEY_MODE_A, 2>;
 impl<'a> EXP_KEY_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EXP_KEY_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Calculate new expanded key for this operation."]
     #[inline(always)]
     pub fn calc_new_exp_key(self) -> &'a mut W {
@@ -221,22 +136,6 @@ impl<'a> EXP_KEY_MODE_W<'a> {
     #[inline(always)]
     pub fn use_last_exp_key(self) -> &'a mut W {
         self.variant(EXP_KEY_MODE_A::USE_LAST_EXP_KEY)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
     }
 }
 #[doc = "AES Key Size Select\n\nValue on reset: 0"]
@@ -257,13 +156,9 @@ impl From<KEY_SIZE_A> for u8 {
     }
 }
 #[doc = "Field `key_size` reader - AES Key Size Select"]
-pub struct KEY_SIZE_R(crate::FieldReader<u8>);
+pub type KEY_SIZE_R = crate::FieldReader<u8, KEY_SIZE_A>;
 impl KEY_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_SIZE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<KEY_SIZE_A> {
         match self.bits {
@@ -276,36 +171,22 @@ impl KEY_SIZE_R {
     #[doc = "Checks if the value of the field is `KEY_SIZE_128`"]
     #[inline(always)]
     pub fn is_key_size_128(&self) -> bool {
-        **self == KEY_SIZE_A::KEY_SIZE_128
+        *self == KEY_SIZE_A::KEY_SIZE_128
     }
     #[doc = "Checks if the value of the field is `KEY_SIZE_192`"]
     #[inline(always)]
     pub fn is_key_size_192(&self) -> bool {
-        **self == KEY_SIZE_A::KEY_SIZE_192
+        *self == KEY_SIZE_A::KEY_SIZE_192
     }
     #[doc = "Checks if the value of the field is `KEY_SIZE_256`"]
     #[inline(always)]
     pub fn is_key_size_256(&self) -> bool {
-        **self == KEY_SIZE_A::KEY_SIZE_256
-    }
-}
-impl core::ops::Deref for KEY_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == KEY_SIZE_A::KEY_SIZE_256
     }
 }
 #[doc = "Field `key_size` writer - AES Key Size Select"]
-pub struct KEY_SIZE_W<'a> {
-    w: &'a mut W,
-}
+pub type KEY_SIZE_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, KEY_SIZE_A, 2, 3>;
 impl<'a> KEY_SIZE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: KEY_SIZE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "Use 128-bit AES key size."]
     #[inline(always)]
     pub fn key_size_128(self) -> &'a mut W {
@@ -321,87 +202,15 @@ impl<'a> KEY_SIZE_W<'a> {
     pub fn key_size_256(self) -> &'a mut W {
         self.variant(KEY_SIZE_A::KEY_SIZE_256)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
 }
 #[doc = "Field `inten` reader - AES Interrupt Enable"]
-pub struct INTEN_R(crate::FieldReader<bool>);
-impl INTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTEN_R = crate::BitReader<bool>;
 #[doc = "Field `inten` writer - AES Interrupt Enable"]
-pub struct INTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type INTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 5>;
 #[doc = "Field `intfl` reader - AES Interrupt Flag"]
-pub struct INTFL_R(crate::FieldReader<bool>);
-impl INTFL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTFL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTFL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTFL_R = crate::BitReader<bool>;
 #[doc = "Field `intfl` writer - AES Interrupt Flag"]
-pub struct INTFL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTFL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type INTFL_W<'a> = crate::BitWriter1C<'a, u32, CTRL_SPEC, bool, 6>;
 impl R {
     #[doc = "Bit 0 - AES Start/Busy"]
     #[inline(always)]
@@ -438,32 +247,32 @@ impl W {
     #[doc = "Bit 0 - AES Start/Busy"]
     #[inline(always)]
     pub fn start(&mut self) -> START_W {
-        START_W { w: self }
+        START_W::new(self)
     }
     #[doc = "Bit 1 - AES Encrypt/Decrypt Mode"]
     #[inline(always)]
     pub fn crypt_mode(&mut self) -> CRYPT_MODE_W {
-        CRYPT_MODE_W { w: self }
+        CRYPT_MODE_W::new(self)
     }
     #[doc = "Bit 2 - AES Expanded Key Mode"]
     #[inline(always)]
     pub fn exp_key_mode(&mut self) -> EXP_KEY_MODE_W {
-        EXP_KEY_MODE_W { w: self }
+        EXP_KEY_MODE_W::new(self)
     }
     #[doc = "Bits 3:4 - AES Key Size Select"]
     #[inline(always)]
     pub fn key_size(&mut self) -> KEY_SIZE_W {
-        KEY_SIZE_W { w: self }
+        KEY_SIZE_W::new(self)
     }
     #[doc = "Bit 5 - AES Interrupt Enable"]
     #[inline(always)]
     pub fn inten(&mut self) -> INTEN_W {
-        INTEN_W { w: self }
+        INTEN_W::new(self)
     }
     #[doc = "Bit 6 - AES Interrupt Flag"]
     #[inline(always)]
     pub fn intfl(&mut self) -> INTFL_W {
-        INTFL_W { w: self }
+        INTFL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

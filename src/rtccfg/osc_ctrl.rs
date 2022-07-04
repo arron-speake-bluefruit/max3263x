@@ -35,79 +35,13 @@ impl From<crate::W<OSC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `osc_bypass` reader - Bypass RTC oscillator"]
-pub struct OSC_BYPASS_R(crate::FieldReader<bool>);
-impl OSC_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OSC_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OSC_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OSC_BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `osc_bypass` writer - Bypass RTC oscillator"]
-pub struct OSC_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OSC_BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type OSC_BYPASS_W<'a> = crate::BitWriter<'a, u32, OSC_CTRL_SPEC, bool, 0>;
 #[doc = "Field `osc_disable_r` reader - if osc_disable_sel = 1, this will hold the RTC in reset."]
-pub struct OSC_DISABLE_R_R(crate::FieldReader<bool>);
-impl OSC_DISABLE_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OSC_DISABLE_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OSC_DISABLE_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OSC_DISABLE_R_R = crate::BitReader<bool>;
 #[doc = "Field `osc_disable_r` writer - if osc_disable_sel = 1, this will hold the RTC in reset."]
-pub struct OSC_DISABLE_R_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OSC_DISABLE_R_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type OSC_DISABLE_R_W<'a> = crate::BitWriter<'a, u32, OSC_CTRL_SPEC, bool, 1>;
 #[doc = "Select RTC Oscillator Disable Control Source\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OSC_DISABLE_SEL_A {
@@ -123,13 +57,9 @@ impl From<OSC_DISABLE_SEL_A> for bool {
     }
 }
 #[doc = "Field `osc_disable_sel` reader - Select RTC Oscillator Disable Control Source"]
-pub struct OSC_DISABLE_SEL_R(crate::FieldReader<bool>);
+pub type OSC_DISABLE_SEL_R = crate::BitReader<OSC_DISABLE_SEL_A>;
 impl OSC_DISABLE_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OSC_DISABLE_SEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> OSC_DISABLE_SEL_A {
         match self.bits {
@@ -140,31 +70,17 @@ impl OSC_DISABLE_SEL_R {
     #[doc = "Checks if the value of the field is `PWRSEQ_CONTROL`"]
     #[inline(always)]
     pub fn is_pwr_seq_control(&self) -> bool {
-        **self == OSC_DISABLE_SEL_A::PWRSEQ_CONTROL
+        *self == OSC_DISABLE_SEL_A::PWRSEQ_CONTROL
     }
     #[doc = "Checks if the value of the field is `RTC_DOMAIN_CONTROL`"]
     #[inline(always)]
     pub fn is_rtc_domain_control(&self) -> bool {
-        **self == OSC_DISABLE_SEL_A::RTC_DOMAIN_CONTROL
-    }
-}
-impl core::ops::Deref for OSC_DISABLE_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == OSC_DISABLE_SEL_A::RTC_DOMAIN_CONTROL
     }
 }
 #[doc = "Field `osc_disable_sel` writer - Select RTC Oscillator Disable Control Source"]
-pub struct OSC_DISABLE_SEL_W<'a> {
-    w: &'a mut W,
-}
+pub type OSC_DISABLE_SEL_W<'a> = crate::BitWriter<'a, u32, OSC_CTRL_SPEC, OSC_DISABLE_SEL_A, 2>;
 impl<'a> OSC_DISABLE_SEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: OSC_DISABLE_SEL_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "PowerSequencer controls the reset state of the RTC"]
     #[inline(always)]
     pub fn pwr_seq_control(self) -> &'a mut W {
@@ -175,38 +91,9 @@ impl<'a> OSC_DISABLE_SEL_W<'a> {
     pub fn rtc_domain_control(self) -> &'a mut W {
         self.variant(OSC_DISABLE_SEL_A::RTC_DOMAIN_CONTROL)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
 }
 #[doc = "Field `osc_disable_o` reader - Reset RTC Oscillator"]
-pub struct OSC_DISABLE_O_R(crate::FieldReader<bool>);
-impl OSC_DISABLE_O_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OSC_DISABLE_O_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OSC_DISABLE_O_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OSC_DISABLE_O_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Bypass RTC oscillator"]
     #[inline(always)]
@@ -233,17 +120,17 @@ impl W {
     #[doc = "Bit 0 - Bypass RTC oscillator"]
     #[inline(always)]
     pub fn osc_bypass(&mut self) -> OSC_BYPASS_W {
-        OSC_BYPASS_W { w: self }
+        OSC_BYPASS_W::new(self)
     }
     #[doc = "Bit 1 - if osc_disable_sel = 1, this will hold the RTC in reset."]
     #[inline(always)]
     pub fn osc_disable_r(&mut self) -> OSC_DISABLE_R_W {
-        OSC_DISABLE_R_W { w: self }
+        OSC_DISABLE_R_W::new(self)
     }
     #[doc = "Bit 2 - Select RTC Oscillator Disable Control Source"]
     #[inline(always)]
     pub fn osc_disable_sel(&mut self) -> OSC_DISABLE_SEL_W {
-        OSC_DISABLE_SEL_W { w: self }
+        OSC_DISABLE_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -78,13 +78,9 @@ impl From<INT_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `int_period` reader - Period from WDT Clear to Interrupt Flag Set"]
-pub struct INT_PERIOD_R(crate::FieldReader<u8>);
+pub type INT_PERIOD_R = crate::FieldReader<u8, INT_PERIOD_A>;
 impl INT_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INT_PERIOD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> INT_PERIOD_A {
         match self.bits {
@@ -110,101 +106,87 @@ impl INT_PERIOD_R {
     #[doc = "Checks if the value of the field is `_2_31_CLKS`"]
     #[inline(always)]
     pub fn is_2_31_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_31_CLKS
+        *self == INT_PERIOD_A::_2_31_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_30_CLKS`"]
     #[inline(always)]
     pub fn is_2_30_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_30_CLKS
+        *self == INT_PERIOD_A::_2_30_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_29_CLKS`"]
     #[inline(always)]
     pub fn is_2_29_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_29_CLKS
+        *self == INT_PERIOD_A::_2_29_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_28_CLKS`"]
     #[inline(always)]
     pub fn is_2_28_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_28_CLKS
+        *self == INT_PERIOD_A::_2_28_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_27_CLKS`"]
     #[inline(always)]
     pub fn is_2_27_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_27_CLKS
+        *self == INT_PERIOD_A::_2_27_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_26_CLKS`"]
     #[inline(always)]
     pub fn is_2_26_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_26_CLKS
+        *self == INT_PERIOD_A::_2_26_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_25_CLKS`"]
     #[inline(always)]
     pub fn is_2_25_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_25_CLKS
+        *self == INT_PERIOD_A::_2_25_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_24_CLKS`"]
     #[inline(always)]
     pub fn is_2_24_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_24_CLKS
+        *self == INT_PERIOD_A::_2_24_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_23_CLKS`"]
     #[inline(always)]
     pub fn is_2_23_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_23_CLKS
+        *self == INT_PERIOD_A::_2_23_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_22_CLKS`"]
     #[inline(always)]
     pub fn is_2_22_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_22_CLKS
+        *self == INT_PERIOD_A::_2_22_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_21_CLKS`"]
     #[inline(always)]
     pub fn is_2_21_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_21_CLKS
+        *self == INT_PERIOD_A::_2_21_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_20_CLKS`"]
     #[inline(always)]
     pub fn is_2_20_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_20_CLKS
+        *self == INT_PERIOD_A::_2_20_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_19_CLKS`"]
     #[inline(always)]
     pub fn is_2_19_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_19_CLKS
+        *self == INT_PERIOD_A::_2_19_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_18_CLKS`"]
     #[inline(always)]
     pub fn is_2_18_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_18_CLKS
+        *self == INT_PERIOD_A::_2_18_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_17_CLKS`"]
     #[inline(always)]
     pub fn is_2_17_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_17_CLKS
+        *self == INT_PERIOD_A::_2_17_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_16_CLKS`"]
     #[inline(always)]
     pub fn is_2_16_clks(&self) -> bool {
-        **self == INT_PERIOD_A::_2_16_CLKS
-    }
-}
-impl core::ops::Deref for INT_PERIOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == INT_PERIOD_A::_2_16_CLKS
     }
 }
 #[doc = "Field `int_period` writer - Period from WDT Clear to Interrupt Flag Set"]
-pub struct INT_PERIOD_W<'a> {
-    w: &'a mut W,
-}
+pub type INT_PERIOD_W<'a> = crate::FieldWriterSafe<'a, u32, CTRL_SPEC, u8, INT_PERIOD_A, 4, 0>;
 impl<'a> INT_PERIOD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: INT_PERIOD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "2^31 WDT clocks"]
     #[inline(always)]
     pub fn _2_31_clks(self) -> &'a mut W {
@@ -285,12 +267,6 @@ impl<'a> INT_PERIOD_W<'a> {
     pub fn _2_16_clks(self) -> &'a mut W {
         self.variant(INT_PERIOD_A::_2_16_CLKS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
 }
 #[doc = "Period from WDT Clear to Reset Flag Set\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -336,13 +312,9 @@ impl From<RST_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `rst_period` reader - Period from WDT Clear to Reset Flag Set"]
-pub struct RST_PERIOD_R(crate::FieldReader<u8>);
+pub type RST_PERIOD_R = crate::FieldReader<u8, RST_PERIOD_A>;
 impl RST_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RST_PERIOD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RST_PERIOD_A {
         match self.bits {
@@ -368,101 +340,87 @@ impl RST_PERIOD_R {
     #[doc = "Checks if the value of the field is `_2_31_CLKS`"]
     #[inline(always)]
     pub fn is_2_31_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_31_CLKS
+        *self == RST_PERIOD_A::_2_31_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_30_CLKS`"]
     #[inline(always)]
     pub fn is_2_30_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_30_CLKS
+        *self == RST_PERIOD_A::_2_30_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_29_CLKS`"]
     #[inline(always)]
     pub fn is_2_29_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_29_CLKS
+        *self == RST_PERIOD_A::_2_29_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_28_CLKS`"]
     #[inline(always)]
     pub fn is_2_28_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_28_CLKS
+        *self == RST_PERIOD_A::_2_28_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_27_CLKS`"]
     #[inline(always)]
     pub fn is_2_27_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_27_CLKS
+        *self == RST_PERIOD_A::_2_27_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_26_CLKS`"]
     #[inline(always)]
     pub fn is_2_26_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_26_CLKS
+        *self == RST_PERIOD_A::_2_26_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_25_CLKS`"]
     #[inline(always)]
     pub fn is_2_25_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_25_CLKS
+        *self == RST_PERIOD_A::_2_25_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_24_CLKS`"]
     #[inline(always)]
     pub fn is_2_24_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_24_CLKS
+        *self == RST_PERIOD_A::_2_24_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_23_CLKS`"]
     #[inline(always)]
     pub fn is_2_23_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_23_CLKS
+        *self == RST_PERIOD_A::_2_23_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_22_CLKS`"]
     #[inline(always)]
     pub fn is_2_22_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_22_CLKS
+        *self == RST_PERIOD_A::_2_22_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_21_CLKS`"]
     #[inline(always)]
     pub fn is_2_21_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_21_CLKS
+        *self == RST_PERIOD_A::_2_21_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_20_CLKS`"]
     #[inline(always)]
     pub fn is_2_20_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_20_CLKS
+        *self == RST_PERIOD_A::_2_20_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_19_CLKS`"]
     #[inline(always)]
     pub fn is_2_19_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_19_CLKS
+        *self == RST_PERIOD_A::_2_19_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_18_CLKS`"]
     #[inline(always)]
     pub fn is_2_18_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_18_CLKS
+        *self == RST_PERIOD_A::_2_18_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_17_CLKS`"]
     #[inline(always)]
     pub fn is_2_17_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_17_CLKS
+        *self == RST_PERIOD_A::_2_17_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_16_CLKS`"]
     #[inline(always)]
     pub fn is_2_16_clks(&self) -> bool {
-        **self == RST_PERIOD_A::_2_16_CLKS
-    }
-}
-impl core::ops::Deref for RST_PERIOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == RST_PERIOD_A::_2_16_CLKS
     }
 }
 #[doc = "Field `rst_period` writer - Period from WDT Clear to Reset Flag Set"]
-pub struct RST_PERIOD_W<'a> {
-    w: &'a mut W,
-}
+pub type RST_PERIOD_W<'a> = crate::FieldWriterSafe<'a, u32, CTRL_SPEC, u8, RST_PERIOD_A, 4, 4>;
 impl<'a> RST_PERIOD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RST_PERIOD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "2^31 WDT clocks."]
     #[inline(always)]
     pub fn _2_31_clks(self) -> &'a mut W {
@@ -543,50 +501,11 @@ impl<'a> RST_PERIOD_W<'a> {
     pub fn _2_16_clks(self) -> &'a mut W {
         self.variant(RST_PERIOD_A::_2_16_CLKS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
 }
 #[doc = "Field `en_timer` reader - Watchdg Timer Enable"]
-pub struct EN_TIMER_R(crate::FieldReader<bool>);
-impl EN_TIMER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_TIMER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_TIMER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_TIMER_R = crate::BitReader<bool>;
 #[doc = "Field `en_timer` writer - Watchdg Timer Enable"]
-pub struct EN_TIMER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_TIMER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type EN_TIMER_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 8>;
 #[doc = "Watchdog Clock Gate\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EN_CLOCK_A {
@@ -602,13 +521,9 @@ impl From<EN_CLOCK_A> for bool {
     }
 }
 #[doc = "Field `en_clock` reader - Watchdog Clock Gate"]
-pub struct EN_CLOCK_R(crate::FieldReader<bool>);
+pub type EN_CLOCK_R = crate::BitReader<EN_CLOCK_A>;
 impl EN_CLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_CLOCK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EN_CLOCK_A {
         match self.bits {
@@ -619,31 +534,17 @@ impl EN_CLOCK_R {
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == EN_CLOCK_A::DISABLE
+        *self == EN_CLOCK_A::DISABLE
     }
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == EN_CLOCK_A::ENABLE
-    }
-}
-impl core::ops::Deref for EN_CLOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EN_CLOCK_A::ENABLE
     }
 }
 #[doc = "Field `en_clock` writer - Watchdog Clock Gate"]
-pub struct EN_CLOCK_W<'a> {
-    w: &'a mut W,
-}
+pub type EN_CLOCK_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, EN_CLOCK_A, 9>;
 impl<'a> EN_CLOCK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EN_CLOCK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "WDT Clock Gate Control Disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
@@ -653,22 +554,6 @@ impl<'a> EN_CLOCK_W<'a> {
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
         self.variant(EN_CLOCK_A::ENABLE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
     }
 }
 #[doc = "Period from WDT Clear to Clear Window Begin\n\nValue on reset: 0"]
@@ -715,13 +600,9 @@ impl From<WAIT_PERIOD_A> for u8 {
     }
 }
 #[doc = "Field `wait_period` reader - Period from WDT Clear to Clear Window Begin"]
-pub struct WAIT_PERIOD_R(crate::FieldReader<u8>);
+pub type WAIT_PERIOD_R = crate::FieldReader<u8, WAIT_PERIOD_A>;
 impl WAIT_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WAIT_PERIOD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> WAIT_PERIOD_A {
         match self.bits {
@@ -747,101 +628,87 @@ impl WAIT_PERIOD_R {
     #[doc = "Checks if the value of the field is `_2_31_CLKS`"]
     #[inline(always)]
     pub fn is_2_31_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_31_CLKS
+        *self == WAIT_PERIOD_A::_2_31_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_30_CLKS`"]
     #[inline(always)]
     pub fn is_2_30_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_30_CLKS
+        *self == WAIT_PERIOD_A::_2_30_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_29_CLKS`"]
     #[inline(always)]
     pub fn is_2_29_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_29_CLKS
+        *self == WAIT_PERIOD_A::_2_29_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_28_CLKS`"]
     #[inline(always)]
     pub fn is_2_28_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_28_CLKS
+        *self == WAIT_PERIOD_A::_2_28_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_27_CLKS`"]
     #[inline(always)]
     pub fn is_2_27_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_27_CLKS
+        *self == WAIT_PERIOD_A::_2_27_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_26_CLKS`"]
     #[inline(always)]
     pub fn is_2_26_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_26_CLKS
+        *self == WAIT_PERIOD_A::_2_26_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_25_CLKS`"]
     #[inline(always)]
     pub fn is_2_25_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_25_CLKS
+        *self == WAIT_PERIOD_A::_2_25_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_24_CLKS`"]
     #[inline(always)]
     pub fn is_2_24_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_24_CLKS
+        *self == WAIT_PERIOD_A::_2_24_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_23_CLKS`"]
     #[inline(always)]
     pub fn is_2_23_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_23_CLKS
+        *self == WAIT_PERIOD_A::_2_23_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_22_CLKS`"]
     #[inline(always)]
     pub fn is_2_22_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_22_CLKS
+        *self == WAIT_PERIOD_A::_2_22_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_21_CLKS`"]
     #[inline(always)]
     pub fn is_2_21_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_21_CLKS
+        *self == WAIT_PERIOD_A::_2_21_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_20_CLKS`"]
     #[inline(always)]
     pub fn is_2_20_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_20_CLKS
+        *self == WAIT_PERIOD_A::_2_20_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_19_CLKS`"]
     #[inline(always)]
     pub fn is_2_19_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_19_CLKS
+        *self == WAIT_PERIOD_A::_2_19_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_18_CLKS`"]
     #[inline(always)]
     pub fn is_2_18_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_18_CLKS
+        *self == WAIT_PERIOD_A::_2_18_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_17_CLKS`"]
     #[inline(always)]
     pub fn is_2_17_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_17_CLKS
+        *self == WAIT_PERIOD_A::_2_17_CLKS
     }
     #[doc = "Checks if the value of the field is `_2_16_CLKS`"]
     #[inline(always)]
     pub fn is_2_16_clks(&self) -> bool {
-        **self == WAIT_PERIOD_A::_2_16_CLKS
-    }
-}
-impl core::ops::Deref for WAIT_PERIOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == WAIT_PERIOD_A::_2_16_CLKS
     }
 }
 #[doc = "Field `wait_period` writer - Period from WDT Clear to Clear Window Begin"]
-pub struct WAIT_PERIOD_W<'a> {
-    w: &'a mut W,
-}
+pub type WAIT_PERIOD_W<'a> = crate::FieldWriterSafe<'a, u32, CTRL_SPEC, u8, WAIT_PERIOD_A, 4, 12>;
 impl<'a> WAIT_PERIOD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: WAIT_PERIOD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "2^31 WDT clocks."]
     #[inline(always)]
     pub fn _2_31_clks(self) -> &'a mut W {
@@ -922,12 +789,6 @@ impl<'a> WAIT_PERIOD_W<'a> {
     pub fn _2_16_clks(self) -> &'a mut W {
         self.variant(WAIT_PERIOD_A::_2_16_CLKS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:3 - Period from WDT Clear to Interrupt Flag Set"]
@@ -960,27 +821,27 @@ impl W {
     #[doc = "Bits 0:3 - Period from WDT Clear to Interrupt Flag Set"]
     #[inline(always)]
     pub fn int_period(&mut self) -> INT_PERIOD_W {
-        INT_PERIOD_W { w: self }
+        INT_PERIOD_W::new(self)
     }
     #[doc = "Bits 4:7 - Period from WDT Clear to Reset Flag Set"]
     #[inline(always)]
     pub fn rst_period(&mut self) -> RST_PERIOD_W {
-        RST_PERIOD_W { w: self }
+        RST_PERIOD_W::new(self)
     }
     #[doc = "Bit 8 - Watchdg Timer Enable"]
     #[inline(always)]
     pub fn en_timer(&mut self) -> EN_TIMER_W {
-        EN_TIMER_W { w: self }
+        EN_TIMER_W::new(self)
     }
     #[doc = "Bit 9 - Watchdog Clock Gate"]
     #[inline(always)]
     pub fn en_clock(&mut self) -> EN_CLOCK_W {
-        EN_CLOCK_W { w: self }
+        EN_CLOCK_W::new(self)
     }
     #[doc = "Bits 12:15 - Period from WDT Clear to Clear Window Begin"]
     #[inline(always)]
     pub fn wait_period(&mut self) -> WAIT_PERIOD_W {
-        WAIT_PERIOD_W { w: self }
+        WAIT_PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

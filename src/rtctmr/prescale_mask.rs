@@ -35,32 +35,9 @@ impl From<crate::W<PRESCALE_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `comp_mask` reader - RTC Timer Prescale Compare Mask"]
-pub struct COMP_MASK_R(crate::FieldReader<u8>);
-impl COMP_MASK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        COMP_MASK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMP_MASK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMP_MASK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `comp_mask` writer - RTC Timer Prescale Compare Mask"]
-pub struct COMP_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COMP_MASK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type COMP_MASK_W<'a> = crate::FieldWriter<'a, u32, PRESCALE_MASK_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - RTC Timer Prescale Compare Mask"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - RTC Timer Prescale Compare Mask"]
     #[inline(always)]
     pub fn comp_mask(&mut self) -> COMP_MASK_W {
-        COMP_MASK_W { w: self }
+        COMP_MASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

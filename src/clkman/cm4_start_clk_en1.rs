@@ -35,32 +35,9 @@ impl From<crate::W<CM4_START_CLK_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `ints` reader - Interrupt Sources 32-63"]
-pub struct INTS_R(crate::FieldReader<u32>);
-impl INTS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ints` writer - Interrupt Sources 32-63"]
-pub struct INTS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type INTS_W<'a> = crate::FieldWriter<'a, u32, CM4_START_CLK_EN1_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt Sources 32-63"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Interrupt Sources 32-63"]
     #[inline(always)]
     pub fn ints(&mut self) -> INTS_W {
-        INTS_W { w: self }
+        INTS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

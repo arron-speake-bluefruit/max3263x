@@ -35,32 +35,9 @@ impl From<crate::W<LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `wdlock` reader - Lock for WDT CTRL Register"]
-pub struct WDLOCK_R(crate::FieldReader<u8>);
-impl WDLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WDLOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDLOCK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDLOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wdlock` writer - Lock for WDT CTRL Register"]
-pub struct WDLOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDLOCK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type WDLOCK_W<'a> = crate::FieldWriter<'a, u32, LOCK_CTRL_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - Lock for WDT CTRL Register"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - Lock for WDT CTRL Register"]
     #[inline(always)]
     pub fn wdlock(&mut self) -> WDLOCK_W {
-        WDLOCK_W { w: self }
+        WDLOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

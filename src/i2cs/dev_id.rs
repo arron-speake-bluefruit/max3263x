@@ -35,106 +35,17 @@ impl From<crate::W<DEV_ID_SPEC>> for W {
     }
 }
 #[doc = "Field `slave_dev_id` reader - Slave Device ID"]
-pub struct SLAVE_DEV_ID_R(crate::FieldReader<u16>);
-impl SLAVE_DEV_ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLAVE_DEV_ID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_DEV_ID_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_DEV_ID_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `slave_dev_id` writer - Slave Device ID"]
-pub struct SLAVE_DEV_ID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_DEV_ID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type SLAVE_DEV_ID_W<'a> = crate::FieldWriter<'a, u32, DEV_ID_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `ten_bit_id_mode` reader - 10-bit ID Mode"]
-pub struct TEN_BIT_ID_MODE_R(crate::FieldReader<bool>);
-impl TEN_BIT_ID_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TEN_BIT_ID_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TEN_BIT_ID_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TEN_BIT_ID_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ten_bit_id_mode` writer - 10-bit ID Mode"]
-pub struct TEN_BIT_ID_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEN_BIT_ID_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type TEN_BIT_ID_MODE_W<'a> = crate::BitWriter<'a, u32, DEV_ID_SPEC, bool, 12>;
 #[doc = "Field `slave_reset` reader - Slave Reset"]
-pub struct SLAVE_RESET_R(crate::FieldReader<bool>);
-impl SLAVE_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `slave_reset` writer - Slave Reset"]
-pub struct SLAVE_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type SLAVE_RESET_W<'a> = crate::BitWriter<'a, u32, DEV_ID_SPEC, bool, 14>;
 impl R {
     #[doc = "Bits 0:9 - Slave Device ID"]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:9 - Slave Device ID"]
     #[inline(always)]
     pub fn slave_dev_id(&mut self) -> SLAVE_DEV_ID_W {
-        SLAVE_DEV_ID_W { w: self }
+        SLAVE_DEV_ID_W::new(self)
     }
     #[doc = "Bit 12 - 10-bit ID Mode"]
     #[inline(always)]
     pub fn ten_bit_id_mode(&mut self) -> TEN_BIT_ID_MODE_W {
-        TEN_BIT_ID_MODE_W { w: self }
+        TEN_BIT_ID_MODE_W::new(self)
     }
     #[doc = "Bit 14 - Slave Reset"]
     #[inline(always)]
     pub fn slave_reset(&mut self) -> SLAVE_RESET_W {
-        SLAVE_RESET_W { w: self }
+        SLAVE_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

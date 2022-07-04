@@ -35,32 +35,9 @@ impl From<crate::W<BAUD_SPEC>> for W {
     }
 }
 #[doc = "Field `baud_divisor` reader - Baud Divisor"]
-pub struct BAUD_DIVISOR_R(crate::FieldReader<u8>);
-impl BAUD_DIVISOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BAUD_DIVISOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BAUD_DIVISOR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BAUD_DIVISOR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `baud_divisor` writer - Baud Divisor"]
-pub struct BAUD_DIVISOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BAUD_DIVISOR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type BAUD_DIVISOR_W<'a> = crate::FieldWriter<'a, u32, BAUD_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - Baud Divisor"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - Baud Divisor"]
     #[inline(always)]
     pub fn baud_divisor(&mut self) -> BAUD_DIVISOR_W {
-        BAUD_DIVISOR_W { w: self }
+        BAUD_DIVISOR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

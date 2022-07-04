@@ -35,35 +35,9 @@ impl From<crate::W<MASK_ID0_SPEC>> for W {
     }
 }
 #[doc = "Field `revision_id` reader - Revision ID"]
-pub struct REVISION_ID_R(crate::FieldReader<u8>);
-impl REVISION_ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REVISION_ID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REVISION_ID_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REVISION_ID_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `mask_id` reader - Mask ID\\[27:0\\]"]
-pub struct MASK_ID_R(crate::FieldReader<u32>);
-impl MASK_ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MASK_ID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_ID_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_ID_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:3 - Revision ID"]
     #[inline(always)]

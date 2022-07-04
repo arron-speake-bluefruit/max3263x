@@ -35,59 +35,13 @@ impl From<crate::W<LOOP_SPEC>> for W {
     }
 }
 #[doc = "Field `counter_0` reader - CH1 Loop Counter 1"]
-pub struct COUNTER_0_R(crate::FieldReader<u16>);
-impl COUNTER_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COUNTER_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COUNTER_0_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COUNTER_0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `counter_0` writer - CH1 Loop Counter 1"]
-pub struct COUNTER_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COUNTER_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type COUNTER_0_W<'a> = crate::FieldWriter<'a, u32, LOOP_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `counter_1` reader - CH1 Loop Counter 0"]
-pub struct COUNTER_1_R(crate::FieldReader<u16>);
-impl COUNTER_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COUNTER_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COUNTER_1_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COUNTER_1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `counter_1` writer - CH1 Loop Counter 0"]
-pub struct COUNTER_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COUNTER_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type COUNTER_1_W<'a> = crate::FieldWriter<'a, u32, LOOP_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bits 0:15 - CH1 Loop Counter 1"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:15 - CH1 Loop Counter 1"]
     #[inline(always)]
     pub fn counter_0(&mut self) -> COUNTER_0_W {
-        COUNTER_0_W { w: self }
+        COUNTER_0_W::new(self)
     }
     #[doc = "Bits 16:31 - CH1 Loop Counter 0"]
     #[inline(always)]
     pub fn counter_1(&mut self) -> COUNTER_1_W {
-        COUNTER_1_W { w: self }
+        COUNTER_1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

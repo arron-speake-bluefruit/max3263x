@@ -35,80 +35,15 @@ impl From<crate::W<SVM_EVENTS_SPEC>> for W {
     }
 }
 #[doc = "Field `v1_2_warning` reader - 1.2V Warning Monitor Event Input"]
-pub struct V1_2_WARNING_R(crate::FieldReader<bool>);
-impl V1_2_WARNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        V1_2_WARNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for V1_2_WARNING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type V1_2_WARNING_R = crate::BitReader<bool>;
 #[doc = "Field `v1_8_warning` reader - 1.8V Warning Monitor Event Input"]
-pub struct V1_8_WARNING_R(crate::FieldReader<bool>);
-impl V1_8_WARNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        V1_8_WARNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for V1_8_WARNING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type V1_8_WARNING_R = crate::BitReader<bool>;
 #[doc = "Field `rtc_warning` reader - RTC Warning Monitor Event Input"]
-pub struct RTC_WARNING_R(crate::FieldReader<bool>);
-impl RTC_WARNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_WARNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_WARNING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_WARNING_R = crate::BitReader<bool>;
 #[doc = "Field `vdda_warning` reader - VDDA Warning Monitor Event Input"]
-pub struct VDDA_WARNING_R(crate::FieldReader<bool>);
-impl VDDA_WARNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDDA_WARNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDDA_WARNING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDDA_WARNING_R = crate::BitReader<bool>;
 #[doc = "Field `vddb_warning` reader - VDDB Warning Monitor Event Input"]
-pub struct VDDB_WARNING_R(crate::FieldReader<bool>);
-impl VDDB_WARNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDDB_WARNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDDB_WARNING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDDB_WARNING_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1.2V Warning Monitor Event Input"]
     #[inline(always)]

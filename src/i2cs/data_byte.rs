@@ -35,84 +35,15 @@ impl From<crate::W<DATA_BYTE_SPEC>> for W {
     }
 }
 #[doc = "Field `data_field` reader - Data Field"]
-pub struct DATA_FIELD_R(crate::FieldReader<u8>);
-impl DATA_FIELD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_FIELD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_FIELD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_FIELD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `data_field` writer - Data Field"]
-pub struct DATA_FIELD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_FIELD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DATA_FIELD_W<'a> = crate::FieldWriter<'a, u32, DATA_BYTE_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `read_only_fl` reader - Read Only Flag"]
-pub struct READ_ONLY_FL_R(crate::FieldReader<bool>);
-impl READ_ONLY_FL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        READ_ONLY_FL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for READ_ONLY_FL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type READ_ONLY_FL_R = crate::BitReader<bool>;
 #[doc = "Field `read_only_fl` writer - Read Only Flag"]
-pub struct READ_ONLY_FL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> READ_ONLY_FL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type READ_ONLY_FL_W<'a> = crate::BitWriter<'a, u32, DATA_BYTE_SPEC, bool, 8>;
 #[doc = "Field `data_updated_fl` reader - Byte Updated Flag"]
-pub struct DATA_UPDATED_FL_R(crate::FieldReader<bool>);
-impl DATA_UPDATED_FL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DATA_UPDATED_FL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_UPDATED_FL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_UPDATED_FL_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:7 - Data Field"]
     #[inline(always)]
@@ -134,12 +65,12 @@ impl W {
     #[doc = "Bits 0:7 - Data Field"]
     #[inline(always)]
     pub fn data_field(&mut self) -> DATA_FIELD_W {
-        DATA_FIELD_W { w: self }
+        DATA_FIELD_W::new(self)
     }
     #[doc = "Bit 8 - Read Only Flag"]
     #[inline(always)]
     pub fn read_only_fl(&mut self) -> READ_ONLY_FL_W {
-        READ_ONLY_FL_W { w: self }
+        READ_ONLY_FL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

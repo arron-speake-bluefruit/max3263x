@@ -35,345 +35,45 @@ impl From<crate::W<CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `enable` reader - PMU Channel Enable"]
-pub struct ENABLE_R(crate::FieldReader<bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `enable` writer - PMU Channel Enable"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 0>;
 #[doc = "Field `ll_stopped` reader - Linked List Engine Status"]
-pub struct LL_STOPPED_R(crate::FieldReader<bool>);
-impl LL_STOPPED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LL_STOPPED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LL_STOPPED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LL_STOPPED_R = crate::BitReader<bool>;
 #[doc = "Field `ll_stopped` writer - Linked List Engine Status"]
-pub struct LL_STOPPED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LL_STOPPED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type LL_STOPPED_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 2>;
 #[doc = "Field `manual` reader - Manual Mode Enable"]
-pub struct MANUAL_R(crate::FieldReader<bool>);
-impl MANUAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MANUAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MANUAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MANUAL_R = crate::BitReader<bool>;
 #[doc = "Field `manual` writer - Manual Mode Enable"]
-pub struct MANUAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MANUAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MANUAL_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 3>;
 #[doc = "Field `bus_error` reader - AHB Bus Error Interrupt Flag"]
-pub struct BUS_ERROR_R(crate::FieldReader<bool>);
-impl BUS_ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUS_ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_ERROR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `bus_error` writer - AHB Bus Error Interrupt Flag"]
-pub struct BUS_ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUS_ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type BUS_ERROR_W<'a> = crate::BitWriter1C<'a, u32, CFG_SPEC, bool, 4>;
 #[doc = "Field `to_stat` reader - AHB Bus Timeout Interrupt Flag"]
-pub struct TO_STAT_R(crate::FieldReader<bool>);
-impl TO_STAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TO_STAT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TO_STAT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TO_STAT_R = crate::BitReader<bool>;
 #[doc = "Field `to_stat` writer - AHB Bus Timeout Interrupt Flag"]
-pub struct TO_STAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TO_STAT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type TO_STAT_W<'a> = crate::BitWriter1C<'a, u32, CFG_SPEC, bool, 6>;
 #[doc = "Field `to_sel` reader - Time Out Interval Select"]
-pub struct TO_SEL_R(crate::FieldReader<u8>);
-impl TO_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TO_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TO_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TO_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `to_sel` writer - Time Out Interval Select"]
-pub struct TO_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TO_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type TO_SEL_W<'a> = crate::FieldWriter<'a, u32, CFG_SPEC, u8, u8, 3, 11>;
 #[doc = "Field `ps_sel` reader - Time Out Interval Prescale Select"]
-pub struct PS_SEL_R(crate::FieldReader<u8>);
-impl PS_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PS_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PS_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PS_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ps_sel` writer - Time Out Interval Prescale Select"]
-pub struct PS_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PS_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type PS_SEL_W<'a> = crate::FieldWriter<'a, u32, CFG_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `interrupt` reader - Descriptor Interrupt Flag"]
-pub struct INTERRUPT_R(crate::FieldReader<bool>);
-impl INTERRUPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERRUPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERRUPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERRUPT_R = crate::BitReader<bool>;
 #[doc = "Field `interrupt` writer - Descriptor Interrupt Flag"]
-pub struct INTERRUPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERRUPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type INTERRUPT_W<'a> = crate::BitWriter1C<'a, u32, CFG_SPEC, bool, 16>;
 #[doc = "Field `int_en` reader - PMU Channel Interrupt Enable"]
-pub struct INT_EN_R(crate::FieldReader<bool>);
-impl INT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `int_en` writer - PMU Channel Interrupt Enable"]
-pub struct INT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type INT_EN_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 17>;
 #[doc = "Field `burst_size` reader - DMA Maximum Burst Size"]
-pub struct BURST_SIZE_R(crate::FieldReader<u8>);
-impl BURST_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BURST_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BURST_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BURST_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `burst_size` writer - DMA Maximum Burst Size"]
-pub struct BURST_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BURST_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 24)) | ((value as u32 & 0x1f) << 24);
-        self.w
-    }
-}
+pub type BURST_SIZE_W<'a> = crate::FieldWriter<'a, u32, CFG_SPEC, u8, u8, 5, 24>;
 impl R {
     #[doc = "Bit 0 - PMU Channel Enable"]
     #[inline(always)]
@@ -430,52 +130,52 @@ impl W {
     #[doc = "Bit 0 - PMU Channel Enable"]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+        ENABLE_W::new(self)
     }
     #[doc = "Bit 2 - Linked List Engine Status"]
     #[inline(always)]
     pub fn ll_stopped(&mut self) -> LL_STOPPED_W {
-        LL_STOPPED_W { w: self }
+        LL_STOPPED_W::new(self)
     }
     #[doc = "Bit 3 - Manual Mode Enable"]
     #[inline(always)]
     pub fn manual(&mut self) -> MANUAL_W {
-        MANUAL_W { w: self }
+        MANUAL_W::new(self)
     }
     #[doc = "Bit 4 - AHB Bus Error Interrupt Flag"]
     #[inline(always)]
     pub fn bus_error(&mut self) -> BUS_ERROR_W {
-        BUS_ERROR_W { w: self }
+        BUS_ERROR_W::new(self)
     }
     #[doc = "Bit 6 - AHB Bus Timeout Interrupt Flag"]
     #[inline(always)]
     pub fn to_stat(&mut self) -> TO_STAT_W {
-        TO_STAT_W { w: self }
+        TO_STAT_W::new(self)
     }
     #[doc = "Bits 11:13 - Time Out Interval Select"]
     #[inline(always)]
     pub fn to_sel(&mut self) -> TO_SEL_W {
-        TO_SEL_W { w: self }
+        TO_SEL_W::new(self)
     }
     #[doc = "Bits 14:15 - Time Out Interval Prescale Select"]
     #[inline(always)]
     pub fn ps_sel(&mut self) -> PS_SEL_W {
-        PS_SEL_W { w: self }
+        PS_SEL_W::new(self)
     }
     #[doc = "Bit 16 - Descriptor Interrupt Flag"]
     #[inline(always)]
     pub fn interrupt(&mut self) -> INTERRUPT_W {
-        INTERRUPT_W { w: self }
+        INTERRUPT_W::new(self)
     }
     #[doc = "Bit 17 - PMU Channel Interrupt Enable"]
     #[inline(always)]
     pub fn int_en(&mut self) -> INT_EN_W {
-        INT_EN_W { w: self }
+        INT_EN_W::new(self)
     }
     #[doc = "Bits 24:28 - DMA Maximum Burst Size"]
     #[inline(always)]
     pub fn burst_size(&mut self) -> BURST_SIZE_W {
-        BURST_SIZE_W { w: self }
+        BURST_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

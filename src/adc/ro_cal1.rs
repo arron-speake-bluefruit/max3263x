@@ -35,86 +35,17 @@ impl From<crate::W<RO_CAL1_SPEC>> for W {
     }
 }
 #[doc = "Field `trm_init` reader - RO Trim Initial Value"]
-pub struct TRM_INIT_R(crate::FieldReader<u16>);
-impl TRM_INIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TRM_INIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRM_INIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRM_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `trm_init` writer - RO Trim Initial Value"]
-pub struct TRM_INIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRM_INIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type TRM_INIT_W<'a> = crate::FieldWriter<'a, u32, RO_CAL1_SPEC, u16, u16, 9, 0>;
 #[doc = "Field `trm_min` reader - RO Trim Maximum Adaptive Limit"]
-pub struct TRM_MIN_R(crate::FieldReader<u16>);
-impl TRM_MIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TRM_MIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRM_MIN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRM_MIN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `trm_min` writer - RO Trim Maximum Adaptive Limit"]
-pub struct TRM_MIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRM_MIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 10)) | ((value as u32 & 0x01ff) << 10);
-        self.w
-    }
-}
+pub type TRM_MIN_W<'a> = crate::FieldWriter<'a, u32, RO_CAL1_SPEC, u16, u16, 9, 10>;
 #[doc = "Field `trm_max` reader - RO Trim Minimum Adaptive Limit"]
-pub struct TRM_MAX_R(crate::FieldReader<u16>);
-impl TRM_MAX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TRM_MAX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRM_MAX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRM_MAX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `trm_max` writer - RO Trim Minimum Adaptive Limit"]
-pub struct TRM_MAX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRM_MAX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 20)) | ((value as u32 & 0x01ff) << 20);
-        self.w
-    }
-}
+pub type TRM_MAX_W<'a> = crate::FieldWriter<'a, u32, RO_CAL1_SPEC, u16, u16, 9, 20>;
 impl R {
     #[doc = "Bits 0:8 - RO Trim Initial Value"]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:8 - RO Trim Initial Value"]
     #[inline(always)]
     pub fn trm_init(&mut self) -> TRM_INIT_W {
-        TRM_INIT_W { w: self }
+        TRM_INIT_W::new(self)
     }
     #[doc = "Bits 10:18 - RO Trim Maximum Adaptive Limit"]
     #[inline(always)]
     pub fn trm_min(&mut self) -> TRM_MIN_W {
-        TRM_MIN_W { w: self }
+        TRM_MIN_W::new(self)
     }
     #[doc = "Bits 20:28 - RO Trim Minimum Adaptive Limit"]
     #[inline(always)]
     pub fn trm_max(&mut self) -> TRM_MAX_W {
-        TRM_MAX_W { w: self }
+        TRM_MAX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,59 +35,13 @@ impl From<crate::W<IN_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `buf0_owner` reader - Owner for IN Buffer 0 for Endpoints"]
-pub struct BUF0_OWNER_R(crate::FieldReader<u8>);
-impl BUF0_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BUF0_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUF0_OWNER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUF0_OWNER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `buf0_owner` writer - Owner for IN Buffer 0 for Endpoints"]
-pub struct BUF0_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUF0_OWNER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type BUF0_OWNER_W<'a> = crate::FieldWriter<'a, u32, IN_OWNER_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `buf1_owner` reader - Owner for IN Buffer 1 for Endpoints"]
-pub struct BUF1_OWNER_R(crate::FieldReader<u8>);
-impl BUF1_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BUF1_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUF1_OWNER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUF1_OWNER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `buf1_owner` writer - Owner for IN Buffer 1 for Endpoints"]
-pub struct BUF1_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUF1_OWNER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type BUF1_OWNER_W<'a> = crate::FieldWriter<'a, u32, IN_OWNER_SPEC, u8, u8, 8, 16>;
 impl R {
     #[doc = "Bits 0:7 - Owner for IN Buffer 0 for Endpoints"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:7 - Owner for IN Buffer 0 for Endpoints"]
     #[inline(always)]
     pub fn buf0_owner(&mut self) -> BUF0_OWNER_W {
-        BUF0_OWNER_W { w: self }
+        BUF0_OWNER_W::new(self)
     }
     #[doc = "Bits 16:23 - Owner for IN Buffer 1 for Endpoints"]
     #[inline(always)]
     pub fn buf1_owner(&mut self) -> BUF1_OWNER_W {
-        BUF1_OWNER_W { w: self }
+        BUF1_OWNER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

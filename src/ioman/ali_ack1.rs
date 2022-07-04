@@ -35,50 +35,11 @@ impl From<crate::W<ALI_ACK1_SPEC>> for W {
     }
 }
 #[doc = "Field `ali_ack_p4` reader - Analog In Mode Acknowledge: P4\\[7:0\\]"]
-pub struct ALI_ACK_P4_R(crate::FieldReader<u8>);
-impl ALI_ACK_P4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_ACK_P4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_ACK_P4_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_ACK_P4_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_ack_p5` reader - Analog In Mode Acknowledge: P5\\[7:0\\]"]
-pub struct ALI_ACK_P5_R(crate::FieldReader<u8>);
-impl ALI_ACK_P5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_ACK_P5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_ACK_P5_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_ACK_P5_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_ack_p6` reader - Analog In Mode Acknowledge: P6\\[0\\]"]
-pub struct ALI_ACK_P6_R(crate::FieldReader<bool>);
-impl ALI_ACK_P6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALI_ACK_P6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_ACK_P6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_ACK_P6_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:7 - Analog In Mode Acknowledge: P4\\[7:0\\]"]
     #[inline(always)]

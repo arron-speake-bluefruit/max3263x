@@ -35,348 +35,51 @@ impl From<crate::W<SPI2_REQ_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_req` reader - SPI Master 2 I/O Mapping Select"]
-pub struct MAPPING_REQ_R(crate::FieldReader<bool>);
-impl MAPPING_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAPPING_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAPPING_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAPPING_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `mapping_req` writer - SPI Master 2 I/O Mapping Select"]
-pub struct MAPPING_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAPPING_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MAPPING_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 0>;
 #[doc = "Field `core_io_req` reader - SPI Master 2 Core I/O Request"]
-pub struct CORE_IO_REQ_R(crate::FieldReader<bool>);
-impl CORE_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `core_io_req` writer - SPI Master 2 Core I/O Request"]
-pub struct CORE_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CORE_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 4>;
 #[doc = "Field `ss0_io_req` reader - SPI Master 2 SS\\[0\\]
 I/O Request"]
-pub struct SS0_IO_REQ_R(crate::FieldReader<bool>);
-impl SS0_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS0_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS0_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS0_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `ss0_io_req` writer - SPI Master 2 SS\\[0\\]
 I/O Request"]
-pub struct SS0_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS0_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SS0_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 8>;
 #[doc = "Field `ss1_io_req` reader - SPI Master 2 SS\\[1\\]
 I/O Request"]
-pub struct SS1_IO_REQ_R(crate::FieldReader<bool>);
-impl SS1_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS1_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS1_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS1_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `ss1_io_req` writer - SPI Master 2 SS\\[1\\]
 I/O Request"]
-pub struct SS1_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS1_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type SS1_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 9>;
 #[doc = "Field `ss2_io_req` reader - SPI Master 2 SS\\[2\\]
 I/O Request"]
-pub struct SS2_IO_REQ_R(crate::FieldReader<bool>);
-impl SS2_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS2_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS2_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS2_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `ss2_io_req` writer - SPI Master 2 SS\\[2\\]
 I/O Request"]
-pub struct SS2_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS2_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type SS2_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 10>;
 #[doc = "Field `sr0_io_req` reader - SPI Master 2 SR\\[0\\]
 I/O Request"]
-pub struct SR0_IO_REQ_R(crate::FieldReader<bool>);
-impl SR0_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SR0_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SR0_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SR0_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `sr0_io_req` writer - SPI Master 2 SR\\[0\\]
 I/O Request"]
-pub struct SR0_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SR0_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SR0_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 16>;
 #[doc = "Field `sr1_io_req` reader - SPI Master 2 SR\\[1\\]
 I/O Request"]
-pub struct SR1_IO_REQ_R(crate::FieldReader<bool>);
-impl SR1_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SR1_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SR1_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SR1_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `sr1_io_req` writer - SPI Master 2 SR\\[1\\]
 I/O Request"]
-pub struct SR1_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SR1_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type SR1_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 17>;
 #[doc = "Field `quad_io_req` reader - SPI Master 2 Quad I/O Request"]
-pub struct QUAD_IO_REQ_R(crate::FieldReader<bool>);
-impl QUAD_IO_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUAD_IO_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUAD_IO_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUAD_IO_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `quad_io_req` writer - SPI Master 2 Quad I/O Request"]
-pub struct QUAD_IO_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> QUAD_IO_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type QUAD_IO_REQ_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 20>;
 #[doc = "Field `fast_mode` reader - SPI Master 2 Fast Mode Request"]
-pub struct FAST_MODE_R(crate::FieldReader<bool>);
-impl FAST_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAST_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `fast_mode` writer - SPI Master 2 Fast Mode Request"]
-pub struct FAST_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FAST_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type FAST_MODE_W<'a> = crate::BitWriter<'a, u32, SPI2_REQ_SPEC, bool, 24>;
 impl R {
     #[doc = "Bit 0 - SPI Master 2 I/O Mapping Select"]
     #[inline(always)]
@@ -433,52 +136,52 @@ impl W {
     #[doc = "Bit 0 - SPI Master 2 I/O Mapping Select"]
     #[inline(always)]
     pub fn mapping_req(&mut self) -> MAPPING_REQ_W {
-        MAPPING_REQ_W { w: self }
+        MAPPING_REQ_W::new(self)
     }
     #[doc = "Bit 4 - SPI Master 2 Core I/O Request"]
     #[inline(always)]
     pub fn core_io_req(&mut self) -> CORE_IO_REQ_W {
-        CORE_IO_REQ_W { w: self }
+        CORE_IO_REQ_W::new(self)
     }
     #[doc = "Bit 8 - SPI Master 2 SS\\[0\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss0_io_req(&mut self) -> SS0_IO_REQ_W {
-        SS0_IO_REQ_W { w: self }
+        SS0_IO_REQ_W::new(self)
     }
     #[doc = "Bit 9 - SPI Master 2 SS\\[1\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss1_io_req(&mut self) -> SS1_IO_REQ_W {
-        SS1_IO_REQ_W { w: self }
+        SS1_IO_REQ_W::new(self)
     }
     #[doc = "Bit 10 - SPI Master 2 SS\\[2\\]
 I/O Request"]
     #[inline(always)]
     pub fn ss2_io_req(&mut self) -> SS2_IO_REQ_W {
-        SS2_IO_REQ_W { w: self }
+        SS2_IO_REQ_W::new(self)
     }
     #[doc = "Bit 16 - SPI Master 2 SR\\[0\\]
 I/O Request"]
     #[inline(always)]
     pub fn sr0_io_req(&mut self) -> SR0_IO_REQ_W {
-        SR0_IO_REQ_W { w: self }
+        SR0_IO_REQ_W::new(self)
     }
     #[doc = "Bit 17 - SPI Master 2 SR\\[1\\]
 I/O Request"]
     #[inline(always)]
     pub fn sr1_io_req(&mut self) -> SR1_IO_REQ_W {
-        SR1_IO_REQ_W { w: self }
+        SR1_IO_REQ_W::new(self)
     }
     #[doc = "Bit 20 - SPI Master 2 Quad I/O Request"]
     #[inline(always)]
     pub fn quad_io_req(&mut self) -> QUAD_IO_REQ_W {
-        QUAD_IO_REQ_W { w: self }
+        QUAD_IO_REQ_W::new(self)
     }
     #[doc = "Bit 24 - SPI Master 2 Fast Mode Request"]
     #[inline(always)]
     pub fn fast_mode(&mut self) -> FAST_MODE_W {
-        FAST_MODE_W { w: self }
+        FAST_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

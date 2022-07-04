@@ -35,125 +35,21 @@ impl From<crate::W<FREE_P1_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P1.0 GPIO Mode Acknowledge"]
-pub struct PIN0_R(crate::FieldReader<bool>);
-impl PIN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN0_R = crate::BitReader<bool>;
 #[doc = "Field `pin1` reader - P1.1 GPIO Mode Acknowledge"]
-pub struct PIN1_R(crate::FieldReader<bool>);
-impl PIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN1_R = crate::BitReader<bool>;
 #[doc = "Field `pin2` reader - P1.2 GPIO Mode Acknowledge"]
-pub struct PIN2_R(crate::FieldReader<bool>);
-impl PIN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN2_R = crate::BitReader<bool>;
 #[doc = "Field `pin3` reader - P1.3 GPIO Mode Acknowledge"]
-pub struct PIN3_R(crate::FieldReader<bool>);
-impl PIN3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN3_R = crate::BitReader<bool>;
 #[doc = "Field `pin4` reader - P1.4 GPIO Mode Acknowledge"]
-pub struct PIN4_R(crate::FieldReader<bool>);
-impl PIN4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN4_R = crate::BitReader<bool>;
 #[doc = "Field `pin5` reader - P1.5 GPIO Mode Acknowledge"]
-pub struct PIN5_R(crate::FieldReader<bool>);
-impl PIN5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN5_R = crate::BitReader<bool>;
 #[doc = "Field `pin6` reader - P1.6 GPIO Mode Acknowledge"]
-pub struct PIN6_R(crate::FieldReader<bool>);
-impl PIN6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN6_R = crate::BitReader<bool>;
 #[doc = "Field `pin7` reader - P1.7 GPIO Mode Acknowledge"]
-pub struct PIN7_R(crate::FieldReader<bool>);
-impl PIN7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN7_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - P1.0 GPIO Mode Acknowledge"]
     #[inline(always)]

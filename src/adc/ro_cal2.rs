@@ -35,32 +35,9 @@ impl From<crate::W<RO_CAL2_SPEC>> for W {
     }
 }
 #[doc = "Field `auto_cal_done_cnt` reader - Auto Cal Time Delay for Atomic Calibration (in milliseconds)"]
-pub struct AUTO_CAL_DONE_CNT_R(crate::FieldReader<u8>);
-impl AUTO_CAL_DONE_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AUTO_CAL_DONE_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_CAL_DONE_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_CAL_DONE_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `auto_cal_done_cnt` writer - Auto Cal Time Delay for Atomic Calibration (in milliseconds)"]
-pub struct AUTO_CAL_DONE_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_CAL_DONE_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type AUTO_CAL_DONE_CNT_W<'a> = crate::FieldWriter<'a, u32, RO_CAL2_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - Auto Cal Time Delay for Atomic Calibration (in milliseconds)"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - Auto Cal Time Delay for Atomic Calibration (in milliseconds)"]
     #[inline(always)]
     pub fn auto_cal_done_cnt(&mut self) -> AUTO_CAL_DONE_CNT_W {
-        AUTO_CAL_DONE_CNT_W { w: self }
+        AUTO_CAL_DONE_CNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

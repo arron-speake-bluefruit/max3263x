@@ -35,160 +35,25 @@ impl From<crate::W<LIMIT0_SPEC>> for W {
     }
 }
 #[doc = "Field `ch_lo_limit` reader - Low Limit Threshold"]
-pub struct CH_LO_LIMIT_R(crate::FieldReader<u16>);
-impl CH_LO_LIMIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CH_LO_LIMIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_LO_LIMIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_LO_LIMIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ch_lo_limit` writer - Low Limit Threshold"]
-pub struct CH_LO_LIMIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH_LO_LIMIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type CH_LO_LIMIT_W<'a> = crate::FieldWriter<'a, u32, LIMIT0_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `ch_hi_limit` reader - High Limit Threshold"]
-pub struct CH_HI_LIMIT_R(crate::FieldReader<u16>);
-impl CH_HI_LIMIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CH_HI_LIMIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_HI_LIMIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_HI_LIMIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ch_hi_limit` writer - High Limit Threshold"]
-pub struct CH_HI_LIMIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH_HI_LIMIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 12)) | ((value as u32 & 0x03ff) << 12);
-        self.w
-    }
-}
+pub type CH_HI_LIMIT_W<'a> = crate::FieldWriter<'a, u32, LIMIT0_SPEC, u16, u16, 10, 12>;
 #[doc = "Field `ch_sel` reader - ADC Channel Select"]
-pub struct CH_SEL_R(crate::FieldReader<u8>);
-impl CH_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ch_sel` writer - ADC Channel Select"]
-pub struct CH_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type CH_SEL_W<'a> = crate::FieldWriter<'a, u32, LIMIT0_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `ch_lo_limit_en` reader - Low Limit Monitoring Enable"]
-pub struct CH_LO_LIMIT_EN_R(crate::FieldReader<bool>);
-impl CH_LO_LIMIT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_LO_LIMIT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_LO_LIMIT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_LO_LIMIT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ch_lo_limit_en` writer - Low Limit Monitoring Enable"]
-pub struct CH_LO_LIMIT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH_LO_LIMIT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type CH_LO_LIMIT_EN_W<'a> = crate::BitWriter<'a, u32, LIMIT0_SPEC, bool, 28>;
 #[doc = "Field `ch_hi_limit_en` reader - High Limit Monitoring Enable"]
-pub struct CH_HI_LIMIT_EN_R(crate::FieldReader<bool>);
-impl CH_HI_LIMIT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_HI_LIMIT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_HI_LIMIT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_HI_LIMIT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ch_hi_limit_en` writer - High Limit Monitoring Enable"]
-pub struct CH_HI_LIMIT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH_HI_LIMIT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type CH_HI_LIMIT_EN_W<'a> = crate::BitWriter<'a, u32, LIMIT0_SPEC, bool, 29>;
 impl R {
     #[doc = "Bits 0:9 - Low Limit Threshold"]
     #[inline(always)]
@@ -220,27 +85,27 @@ impl W {
     #[doc = "Bits 0:9 - Low Limit Threshold"]
     #[inline(always)]
     pub fn ch_lo_limit(&mut self) -> CH_LO_LIMIT_W {
-        CH_LO_LIMIT_W { w: self }
+        CH_LO_LIMIT_W::new(self)
     }
     #[doc = "Bits 12:21 - High Limit Threshold"]
     #[inline(always)]
     pub fn ch_hi_limit(&mut self) -> CH_HI_LIMIT_W {
-        CH_HI_LIMIT_W { w: self }
+        CH_HI_LIMIT_W::new(self)
     }
     #[doc = "Bits 24:27 - ADC Channel Select"]
     #[inline(always)]
     pub fn ch_sel(&mut self) -> CH_SEL_W {
-        CH_SEL_W { w: self }
+        CH_SEL_W::new(self)
     }
     #[doc = "Bit 28 - Low Limit Monitoring Enable"]
     #[inline(always)]
     pub fn ch_lo_limit_en(&mut self) -> CH_LO_LIMIT_EN_W {
-        CH_LO_LIMIT_EN_W { w: self }
+        CH_LO_LIMIT_EN_W::new(self)
     }
     #[doc = "Bit 29 - High Limit Monitoring Enable"]
     #[inline(always)]
     pub fn ch_hi_limit_en(&mut self) -> CH_HI_LIMIT_EN_W {
-        CH_HI_LIMIT_EN_W { w: self }
+        CH_HI_LIMIT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

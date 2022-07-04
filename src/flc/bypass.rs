@@ -35,65 +35,13 @@ impl From<crate::W<BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `destruct_bypass_erase` reader - Destructive Security Bypass In Progress"]
-pub struct DESTRUCT_BYPASS_ERASE_R(crate::FieldReader<bool>);
-impl DESTRUCT_BYPASS_ERASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DESTRUCT_BYPASS_ERASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DESTRUCT_BYPASS_ERASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DESTRUCT_BYPASS_ERASE_R = crate::BitReader<bool>;
 #[doc = "Field `superwipe_erase` reader - Superwipe Erase In Progress"]
-pub struct SUPERWIPE_ERASE_R(crate::FieldReader<bool>);
-impl SUPERWIPE_ERASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUPERWIPE_ERASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUPERWIPE_ERASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUPERWIPE_ERASE_R = crate::BitReader<bool>;
 #[doc = "Field `destruct_bypass_complete` reader - Destructive Security Bypass Erase Complete"]
-pub struct DESTRUCT_BYPASS_COMPLETE_R(crate::FieldReader<bool>);
-impl DESTRUCT_BYPASS_COMPLETE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DESTRUCT_BYPASS_COMPLETE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DESTRUCT_BYPASS_COMPLETE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DESTRUCT_BYPASS_COMPLETE_R = crate::BitReader<bool>;
 #[doc = "Field `superwipe_complete` reader - Superwipe Erase Complete"]
-pub struct SUPERWIPE_COMPLETE_R(crate::FieldReader<bool>);
-impl SUPERWIPE_COMPLETE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUPERWIPE_COMPLETE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUPERWIPE_COMPLETE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUPERWIPE_COMPLETE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Destructive Security Bypass In Progress"]
     #[inline(always)]

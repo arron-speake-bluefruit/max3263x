@@ -35,140 +35,25 @@ impl From<crate::W<SECURITY_SPEC>> for W {
     }
 }
 #[doc = "Field `debug_disable` reader - Debug Lockout"]
-pub struct DEBUG_DISABLE_R(crate::FieldReader<u8>);
-impl DEBUG_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DEBUG_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEBUG_DISABLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEBUG_DISABLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `debug_disable` writer - Debug Lockout"]
-pub struct DEBUG_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DEBUG_DISABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DEBUG_DISABLE_W<'a> = crate::FieldWriter<'a, u32, SECURITY_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `mass_erase_lock` reader - Mass Erase Lockout"]
-pub struct MASS_ERASE_LOCK_R(crate::FieldReader<u8>);
-impl MASS_ERASE_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MASS_ERASE_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASS_ERASE_LOCK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASS_ERASE_LOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `mass_erase_lock` writer - Mass Erase Lockout"]
-pub struct MASS_ERASE_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASS_ERASE_LOCK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type MASS_ERASE_LOCK_W<'a> = crate::FieldWriter<'a, u32, SECURITY_SPEC, u8, u8, 4, 8>;
 #[doc = "Field `disable_ahb_wr` reader - Disable AHB Flash Write Operations"]
-pub struct DISABLE_AHB_WR_R(crate::FieldReader<u8>);
-impl DISABLE_AHB_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DISABLE_AHB_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DISABLE_AHB_WR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DISABLE_AHB_WR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `disable_ahb_wr` writer - Disable AHB Flash Write Operations"]
-pub struct DISABLE_AHB_WR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DISABLE_AHB_WR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type DISABLE_AHB_WR_W<'a> = crate::FieldWriter<'a, u32, SECURITY_SPEC, u8, u8, 4, 16>;
 #[doc = "Field `flc_settings_lock` reader - FLC Settings Lock"]
-pub struct FLC_SETTINGS_LOCK_R(crate::FieldReader<u8>);
-impl FLC_SETTINGS_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLC_SETTINGS_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLC_SETTINGS_LOCK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLC_SETTINGS_LOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `flc_settings_lock` writer - FLC Settings Lock"]
-pub struct FLC_SETTINGS_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLC_SETTINGS_LOCK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type FLC_SETTINGS_LOCK_W<'a> = crate::FieldWriter<'a, u32, SECURITY_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `security_lock` reader - Security Lock"]
-pub struct SECURITY_LOCK_R(crate::FieldReader<u8>);
-impl SECURITY_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SECURITY_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURITY_LOCK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURITY_LOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `security_lock` writer - Security Lock"]
-pub struct SECURITY_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECURITY_LOCK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type SECURITY_LOCK_W<'a> = crate::FieldWriter<'a, u32, SECURITY_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bits 0:7 - Debug Lockout"]
     #[inline(always)]
@@ -200,27 +85,27 @@ impl W {
     #[doc = "Bits 0:7 - Debug Lockout"]
     #[inline(always)]
     pub fn debug_disable(&mut self) -> DEBUG_DISABLE_W {
-        DEBUG_DISABLE_W { w: self }
+        DEBUG_DISABLE_W::new(self)
     }
     #[doc = "Bits 8:11 - Mass Erase Lockout"]
     #[inline(always)]
     pub fn mass_erase_lock(&mut self) -> MASS_ERASE_LOCK_W {
-        MASS_ERASE_LOCK_W { w: self }
+        MASS_ERASE_LOCK_W::new(self)
     }
     #[doc = "Bits 16:19 - Disable AHB Flash Write Operations"]
     #[inline(always)]
     pub fn disable_ahb_wr(&mut self) -> DISABLE_AHB_WR_W {
-        DISABLE_AHB_WR_W { w: self }
+        DISABLE_AHB_WR_W::new(self)
     }
     #[doc = "Bits 24:27 - FLC Settings Lock"]
     #[inline(always)]
     pub fn flc_settings_lock(&mut self) -> FLC_SETTINGS_LOCK_W {
-        FLC_SETTINGS_LOCK_W { w: self }
+        FLC_SETTINGS_LOCK_W::new(self)
     }
     #[doc = "Bits 28:31 - Security Lock"]
     #[inline(always)]
     pub fn security_lock(&mut self) -> SECURITY_LOCK_W {
-        SECURITY_LOCK_W { w: self }
+        SECURITY_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

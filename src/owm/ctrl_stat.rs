@@ -35,168 +35,23 @@ impl From<crate::W<CTRL_STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `start_ow_reset` reader - Start OW Reset"]
-pub struct START_OW_RESET_R(crate::FieldReader<bool>);
-impl START_OW_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_OW_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_OW_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_OW_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `start_ow_reset` writer - Start OW Reset"]
-pub struct START_OW_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_OW_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type START_OW_RESET_W<'a> = crate::BitWriter<'a, u32, CTRL_STAT_SPEC, bool, 0>;
 #[doc = "Field `sra_mode` reader - SRA Mode"]
-pub struct SRA_MODE_R(crate::FieldReader<bool>);
-impl SRA_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRA_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRA_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRA_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `sra_mode` writer - SRA Mode"]
-pub struct SRA_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRA_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SRA_MODE_W<'a> = crate::BitWriter<'a, u32, CTRL_STAT_SPEC, bool, 1>;
 #[doc = "Field `bit_bang_oe` reader - Bit Bang Output Enable"]
-pub struct BIT_BANG_OE_R(crate::FieldReader<bool>);
-impl BIT_BANG_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BIT_BANG_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BIT_BANG_OE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BIT_BANG_OE_R = crate::BitReader<bool>;
 #[doc = "Field `bit_bang_oe` writer - Bit Bang Output Enable"]
-pub struct BIT_BANG_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BIT_BANG_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type BIT_BANG_OE_W<'a> = crate::BitWriter<'a, u32, CTRL_STAT_SPEC, bool, 2>;
 #[doc = "Field `ow_input` reader - OW Input State"]
-pub struct OW_INPUT_R(crate::FieldReader<bool>);
-impl OW_INPUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OW_INPUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OW_INPUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OW_INPUT_R = crate::BitReader<bool>;
 #[doc = "Field `presence_detect` reader - Presence Pulse Detected"]
-pub struct PRESENCE_DETECT_R(crate::FieldReader<bool>);
-impl PRESENCE_DETECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRESENCE_DETECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRESENCE_DETECT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRESENCE_DETECT_R = crate::BitReader<bool>;
 #[doc = "Field `presence_detect` writer - Presence Pulse Detected"]
-pub struct PRESENCE_DETECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRESENCE_DETECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PRESENCE_DETECT_W<'a> = crate::BitWriter<'a, u32, CTRL_STAT_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - Start OW Reset"]
     #[inline(always)]
@@ -228,22 +83,22 @@ impl W {
     #[doc = "Bit 0 - Start OW Reset"]
     #[inline(always)]
     pub fn start_ow_reset(&mut self) -> START_OW_RESET_W {
-        START_OW_RESET_W { w: self }
+        START_OW_RESET_W::new(self)
     }
     #[doc = "Bit 1 - SRA Mode"]
     #[inline(always)]
     pub fn sra_mode(&mut self) -> SRA_MODE_W {
-        SRA_MODE_W { w: self }
+        SRA_MODE_W::new(self)
     }
     #[doc = "Bit 2 - Bit Bang Output Enable"]
     #[inline(always)]
     pub fn bit_bang_oe(&mut self) -> BIT_BANG_OE_W {
-        BIT_BANG_OE_W { w: self }
+        BIT_BANG_OE_W::new(self)
     }
     #[doc = "Bit 7 - Presence Pulse Detected"]
     #[inline(always)]
     pub fn presence_detect(&mut self) -> PRESENCE_DETECT_W {
-        PRESENCE_DETECT_W { w: self }
+        PRESENCE_DETECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

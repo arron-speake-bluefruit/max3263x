@@ -35,42 +35,9 @@ impl From<crate::W<CLK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `nano_en` reader - Enable nanoring oscillator output"]
-pub struct NANO_EN_R(crate::FieldReader<bool>);
-impl NANO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NANO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NANO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NANO_EN_R = crate::BitReader<bool>;
 #[doc = "Field `nano_en` writer - Enable nanoring oscillator output"]
-pub struct NANO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NANO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type NANO_EN_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 2 - Enable nanoring oscillator output"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 2 - Enable nanoring oscillator output"]
     #[inline(always)]
     pub fn nano_en(&mut self) -> NANO_EN_W {
-        NANO_EN_W { w: self }
+        NANO_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

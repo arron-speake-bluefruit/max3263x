@@ -35,113 +35,21 @@ impl From<crate::W<ALI_REQ0_SPEC>> for W {
     }
 }
 #[doc = "Field `ali_req_p0` reader - Analog Input Mode Request: P0\\[7:0\\]"]
-pub struct ALI_REQ_P0_R(crate::FieldReader<u8>);
-impl ALI_REQ_P0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p0` writer - Analog Input Mode Request: P0\\[7:0\\]"]
-pub struct ALI_REQ_P0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type ALI_REQ_P0_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ0_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `ali_req_p1` reader - Analog Input Mode Request: P1\\[7:0\\]"]
-pub struct ALI_REQ_P1_R(crate::FieldReader<u8>);
-impl ALI_REQ_P1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p1` writer - Analog Input Mode Request: P1\\[7:0\\]"]
-pub struct ALI_REQ_P1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type ALI_REQ_P1_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ0_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `ali_req_p2` reader - Analog Input Mode Request: P2\\[7:0\\]"]
-pub struct ALI_REQ_P2_R(crate::FieldReader<u8>);
-impl ALI_REQ_P2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p2` writer - Analog Input Mode Request: P2\\[7:0\\]"]
-pub struct ALI_REQ_P2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type ALI_REQ_P2_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ0_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `ali_req_p3` reader - Analog Input Mode Request: P3\\[7:0\\]"]
-pub struct ALI_REQ_P3_R(crate::FieldReader<u8>);
-impl ALI_REQ_P3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALI_REQ_P3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALI_REQ_P3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALI_REQ_P3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ali_req_p3` writer - Analog Input Mode Request: P3\\[7:0\\]"]
-pub struct ALI_REQ_P3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALI_REQ_P3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type ALI_REQ_P3_W<'a> = crate::FieldWriter<'a, u32, ALI_REQ0_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 0:7 - Analog Input Mode Request: P0\\[7:0\\]"]
     #[inline(always)]
@@ -168,22 +76,22 @@ impl W {
     #[doc = "Bits 0:7 - Analog Input Mode Request: P0\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p0(&mut self) -> ALI_REQ_P0_W {
-        ALI_REQ_P0_W { w: self }
+        ALI_REQ_P0_W::new(self)
     }
     #[doc = "Bits 8:15 - Analog Input Mode Request: P1\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p1(&mut self) -> ALI_REQ_P1_W {
-        ALI_REQ_P1_W { w: self }
+        ALI_REQ_P1_W::new(self)
     }
     #[doc = "Bits 16:23 - Analog Input Mode Request: P2\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p2(&mut self) -> ALI_REQ_P2_W {
-        ALI_REQ_P2_W { w: self }
+        ALI_REQ_P2_W::new(self)
     }
     #[doc = "Bits 24:31 - Analog Input Mode Request: P3\\[7:0\\]"]
     #[inline(always)]
     pub fn ali_req_p3(&mut self) -> ALI_REQ_P3_W {
-        ALI_REQ_P3_W { w: self }
+        ALI_REQ_P3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

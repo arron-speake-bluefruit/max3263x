@@ -35,576 +35,69 @@ impl From<crate::W<FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_first_boot` reader - Initial Boot event detected flag"]
-pub struct PWR_FIRST_BOOT_R(crate::FieldReader<bool>);
-impl PWR_FIRST_BOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_FIRST_BOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_FIRST_BOOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_FIRST_BOOT_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_sys_reboot` reader - Firmware Reset event detected flag"]
-pub struct PWR_SYS_REBOOT_R(crate::FieldReader<bool>);
-impl PWR_SYS_REBOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_SYS_REBOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_SYS_REBOOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_SYS_REBOOT_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_power_fail` reader - Power Fail event detected flag"]
-pub struct PWR_POWER_FAIL_R(crate::FieldReader<bool>);
-impl PWR_POWER_FAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_POWER_FAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_POWER_FAIL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_POWER_FAIL_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_power_fail` writer - Power Fail event detected flag"]
-pub struct PWR_POWER_FAIL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_POWER_FAIL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PWR_POWER_FAIL_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 2>;
 #[doc = "Field `pwr_boot_fail` reader - Boot Fail event detected flag"]
-pub struct PWR_BOOT_FAIL_R(crate::FieldReader<bool>);
-impl PWR_BOOT_FAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_BOOT_FAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_BOOT_FAIL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_BOOT_FAIL_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_boot_fail` writer - Boot Fail event detected flag"]
-pub struct PWR_BOOT_FAIL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_BOOT_FAIL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PWR_BOOT_FAIL_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 3>;
 #[doc = "Field `pwr_flash_discharge` reader - Flash Discharged During Powerfail event detected flag"]
-pub struct PWR_FLASH_DISCHARGE_R(crate::FieldReader<bool>);
-impl PWR_FLASH_DISCHARGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_FLASH_DISCHARGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_FLASH_DISCHARGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_FLASH_DISCHARGE_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_flash_discharge` writer - Flash Discharged During Powerfail event detected flag"]
-pub struct PWR_FLASH_DISCHARGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_FLASH_DISCHARGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PWR_FLASH_DISCHARGE_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 4>;
 #[doc = "Field `pwr_iowakeup` reader - GPIO Wakeup event detected flag"]
-pub struct PWR_IOWAKEUP_R(crate::FieldReader<bool>);
-impl PWR_IOWAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_IOWAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_IOWAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_IOWAKEUP_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_iowakeup` writer - GPIO Wakeup event detected flag"]
-pub struct PWR_IOWAKEUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_IOWAKEUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PWR_IOWAKEUP_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 5>;
 #[doc = "Field `pwr_vdd12_rst_bad` reader - VDD12_SW Comparator Tripped event detected flag"]
-pub struct PWR_VDD12_RST_BAD_R(crate::FieldReader<bool>);
-impl PWR_VDD12_RST_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_VDD12_RST_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDD12_RST_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDD12_RST_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_vdd12_rst_bad` writer - VDD12_SW Comparator Tripped event detected flag"]
-pub struct PWR_VDD12_RST_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDD12_RST_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PWR_VDD12_RST_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 6>;
 #[doc = "Field `pwr_vdd18_rst_bad` reader - VDD18_SW Comparator Tripped event detected flag"]
-pub struct PWR_VDD18_RST_BAD_R(crate::FieldReader<bool>);
-impl PWR_VDD18_RST_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_VDD18_RST_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDD18_RST_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDD18_RST_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_vdd18_rst_bad` writer - VDD18_SW Comparator Tripped event detected flag"]
-pub struct PWR_VDD18_RST_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDD18_RST_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PWR_VDD18_RST_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 7>;
 #[doc = "Field `pwr_vrtc_rst_bad` reader - VRTC Comparator Tripped event detected flag"]
-pub struct PWR_VRTC_RST_BAD_R(crate::FieldReader<bool>);
-impl PWR_VRTC_RST_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_VRTC_RST_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VRTC_RST_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VRTC_RST_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_vrtc_rst_bad` writer - VRTC Comparator Tripped event detected flag"]
-pub struct PWR_VRTC_RST_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VRTC_RST_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PWR_VRTC_RST_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 8>;
 #[doc = "Field `pwr_vddb_rst_bad` reader - VDDB Comparator Tripped event detected flag"]
-pub struct PWR_VDDB_RST_BAD_R(crate::FieldReader<bool>);
-impl PWR_VDDB_RST_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_VDDB_RST_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_VDDB_RST_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_VDDB_RST_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_vddb_rst_bad` writer - VDDB Comparator Tripped event detected flag"]
-pub struct PWR_VDDB_RST_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_VDDB_RST_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PWR_VDDB_RST_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 9>;
 #[doc = "Field `pwr_tvdd12_rst_bad` reader - TVDD12 Comparator Tripped event detected flag"]
-pub struct PWR_TVDD12_RST_BAD_R(crate::FieldReader<bool>);
-impl PWR_TVDD12_RST_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_TVDD12_RST_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TVDD12_RST_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TVDD12_RST_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_tvdd12_rst_bad` writer - TVDD12 Comparator Tripped event detected flag"]
-pub struct PWR_TVDD12_RST_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TVDD12_RST_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PWR_TVDD12_RST_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 10>;
 #[doc = "Field `pwr_por18z_fail_latch` reader - POR18 and POR18_bg have been tripped"]
-pub struct PWR_POR18Z_FAIL_LATCH_R(crate::FieldReader<bool>);
-impl PWR_POR18Z_FAIL_LATCH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_POR18Z_FAIL_LATCH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_POR18Z_FAIL_LATCH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_POR18Z_FAIL_LATCH_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_por18z_fail_latch` writer - POR18 and POR18_bg have been tripped"]
-pub struct PWR_POR18Z_FAIL_LATCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_POR18Z_FAIL_LATCH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PWR_POR18Z_FAIL_LATCH_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 11>;
 #[doc = "Field `rtc_cmpr0` reader - RTC Comparator 0 Match event detected flag"]
-pub struct RTC_CMPR0_R(crate::FieldReader<bool>);
-impl RTC_CMPR0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_CMPR0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CMPR0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CMPR0_R = crate::BitReader<bool>;
 #[doc = "Field `rtc_cmpr1` reader - RTC Comparator 1 Match event detected flag"]
-pub struct RTC_CMPR1_R(crate::FieldReader<bool>);
-impl RTC_CMPR1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_CMPR1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CMPR1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CMPR1_R = crate::BitReader<bool>;
 #[doc = "Field `rtc_prescale_cmp` reader - RTC Prescale Comparator Match event detected flag"]
-pub struct RTC_PRESCALE_CMP_R(crate::FieldReader<bool>);
-impl RTC_PRESCALE_CMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_PRESCALE_CMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_PRESCALE_CMP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_PRESCALE_CMP_R = crate::BitReader<bool>;
 #[doc = "Field `rtc_rollover` reader - RTC Rollover event detected flag"]
-pub struct RTC_ROLLOVER_R(crate::FieldReader<bool>);
-impl RTC_ROLLOVER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_ROLLOVER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_ROLLOVER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_ROLLOVER_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_usb_plug_wakeup` reader - USB Power Connect Wakeup event detected flag"]
-pub struct PWR_USB_PLUG_WAKEUP_R(crate::FieldReader<bool>);
-impl PWR_USB_PLUG_WAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_USB_PLUG_WAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_USB_PLUG_WAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_USB_PLUG_WAKEUP_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_usb_plug_wakeup` writer - USB Power Connect Wakeup event detected flag"]
-pub struct PWR_USB_PLUG_WAKEUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_USB_PLUG_WAKEUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type PWR_USB_PLUG_WAKEUP_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 16>;
 #[doc = "Field `pwr_usb_remove_wakeup` reader - USB Power Remove Wakeup event detected flag"]
-pub struct PWR_USB_REMOVE_WAKEUP_R(crate::FieldReader<bool>);
-impl PWR_USB_REMOVE_WAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_USB_REMOVE_WAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_USB_REMOVE_WAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_USB_REMOVE_WAKEUP_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_usb_remove_wakeup` writer - USB Power Remove Wakeup event detected flag"]
-pub struct PWR_USB_REMOVE_WAKEUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_USB_REMOVE_WAKEUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type PWR_USB_REMOVE_WAKEUP_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 17>;
 #[doc = "Field `pwr_tvdd12_bad` reader - Retention Regulator POR Tripped event detected flag"]
-pub struct PWR_TVDD12_BAD_R(crate::FieldReader<bool>);
-impl PWR_TVDD12_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_TVDD12_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TVDD12_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TVDD12_BAD_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_tvdd12_bad` writer - Retention Regulator POR Tripped event detected flag"]
-pub struct PWR_TVDD12_BAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TVDD12_BAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type PWR_TVDD12_BAD_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 18>;
 impl R {
     #[doc = "Bit 0 - Initial Boot event detected flag"]
     #[inline(always)]
@@ -706,67 +199,67 @@ impl W {
     #[doc = "Bit 2 - Power Fail event detected flag"]
     #[inline(always)]
     pub fn pwr_power_fail(&mut self) -> PWR_POWER_FAIL_W {
-        PWR_POWER_FAIL_W { w: self }
+        PWR_POWER_FAIL_W::new(self)
     }
     #[doc = "Bit 3 - Boot Fail event detected flag"]
     #[inline(always)]
     pub fn pwr_boot_fail(&mut self) -> PWR_BOOT_FAIL_W {
-        PWR_BOOT_FAIL_W { w: self }
+        PWR_BOOT_FAIL_W::new(self)
     }
     #[doc = "Bit 4 - Flash Discharged During Powerfail event detected flag"]
     #[inline(always)]
     pub fn pwr_flash_discharge(&mut self) -> PWR_FLASH_DISCHARGE_W {
-        PWR_FLASH_DISCHARGE_W { w: self }
+        PWR_FLASH_DISCHARGE_W::new(self)
     }
     #[doc = "Bit 5 - GPIO Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_iowakeup(&mut self) -> PWR_IOWAKEUP_W {
-        PWR_IOWAKEUP_W { w: self }
+        PWR_IOWAKEUP_W::new(self)
     }
     #[doc = "Bit 6 - VDD12_SW Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vdd12_rst_bad(&mut self) -> PWR_VDD12_RST_BAD_W {
-        PWR_VDD12_RST_BAD_W { w: self }
+        PWR_VDD12_RST_BAD_W::new(self)
     }
     #[doc = "Bit 7 - VDD18_SW Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vdd18_rst_bad(&mut self) -> PWR_VDD18_RST_BAD_W {
-        PWR_VDD18_RST_BAD_W { w: self }
+        PWR_VDD18_RST_BAD_W::new(self)
     }
     #[doc = "Bit 8 - VRTC Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vrtc_rst_bad(&mut self) -> PWR_VRTC_RST_BAD_W {
-        PWR_VRTC_RST_BAD_W { w: self }
+        PWR_VRTC_RST_BAD_W::new(self)
     }
     #[doc = "Bit 9 - VDDB Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_vddb_rst_bad(&mut self) -> PWR_VDDB_RST_BAD_W {
-        PWR_VDDB_RST_BAD_W { w: self }
+        PWR_VDDB_RST_BAD_W::new(self)
     }
     #[doc = "Bit 10 - TVDD12 Comparator Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_tvdd12_rst_bad(&mut self) -> PWR_TVDD12_RST_BAD_W {
-        PWR_TVDD12_RST_BAD_W { w: self }
+        PWR_TVDD12_RST_BAD_W::new(self)
     }
     #[doc = "Bit 11 - POR18 and POR18_bg have been tripped"]
     #[inline(always)]
     pub fn pwr_por18z_fail_latch(&mut self) -> PWR_POR18Z_FAIL_LATCH_W {
-        PWR_POR18Z_FAIL_LATCH_W { w: self }
+        PWR_POR18Z_FAIL_LATCH_W::new(self)
     }
     #[doc = "Bit 16 - USB Power Connect Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_usb_plug_wakeup(&mut self) -> PWR_USB_PLUG_WAKEUP_W {
-        PWR_USB_PLUG_WAKEUP_W { w: self }
+        PWR_USB_PLUG_WAKEUP_W::new(self)
     }
     #[doc = "Bit 17 - USB Power Remove Wakeup event detected flag"]
     #[inline(always)]
     pub fn pwr_usb_remove_wakeup(&mut self) -> PWR_USB_REMOVE_WAKEUP_W {
-        PWR_USB_REMOVE_WAKEUP_W { w: self }
+        PWR_USB_REMOVE_WAKEUP_W::new(self)
     }
     #[doc = "Bit 18 - Retention Regulator POR Tripped event detected flag"]
     #[inline(always)]
     pub fn pwr_tvdd12_bad(&mut self) -> PWR_TVDD12_BAD_W {
-        PWR_TVDD12_BAD_W { w: self }
+        PWR_TVDD12_BAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

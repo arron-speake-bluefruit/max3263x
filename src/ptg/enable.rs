@@ -35,597 +35,69 @@ impl From<crate::W<ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `pt0` reader - Enable/Disable control for PT0"]
-pub struct PT0_R(crate::FieldReader<bool>);
-impl PT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT0_R = crate::BitReader<bool>;
 #[doc = "Field `pt0` writer - Enable/Disable control for PT0"]
-pub struct PT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PT0_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 0>;
 #[doc = "Field `pt1` reader - Enable/Disable control for PT1"]
-pub struct PT1_R(crate::FieldReader<bool>);
-impl PT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT1_R = crate::BitReader<bool>;
 #[doc = "Field `pt1` writer - Enable/Disable control for PT1"]
-pub struct PT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PT1_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 1>;
 #[doc = "Field `pt2` reader - Enable/Disable control for PT2"]
-pub struct PT2_R(crate::FieldReader<bool>);
-impl PT2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT2_R = crate::BitReader<bool>;
 #[doc = "Field `pt2` writer - Enable/Disable control for PT2"]
-pub struct PT2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PT2_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 2>;
 #[doc = "Field `pt3` reader - Enable/Disable control for PT3"]
-pub struct PT3_R(crate::FieldReader<bool>);
-impl PT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT3_R = crate::BitReader<bool>;
 #[doc = "Field `pt3` writer - Enable/Disable control for PT3"]
-pub struct PT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PT3_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 3>;
 #[doc = "Field `pt4` reader - Enable/Disable control for PT4"]
-pub struct PT4_R(crate::FieldReader<bool>);
-impl PT4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT4_R = crate::BitReader<bool>;
 #[doc = "Field `pt4` writer - Enable/Disable control for PT4"]
-pub struct PT4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PT4_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 4>;
 #[doc = "Field `pt5` reader - Enable/Disable control for PT5"]
-pub struct PT5_R(crate::FieldReader<bool>);
-impl PT5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT5_R = crate::BitReader<bool>;
 #[doc = "Field `pt5` writer - Enable/Disable control for PT5"]
-pub struct PT5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PT5_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 5>;
 #[doc = "Field `pt6` reader - Enable/Disable control for PT6"]
-pub struct PT6_R(crate::FieldReader<bool>);
-impl PT6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT6_R = crate::BitReader<bool>;
 #[doc = "Field `pt6` writer - Enable/Disable control for PT6"]
-pub struct PT6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PT6_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 6>;
 #[doc = "Field `pt7` reader - Enable/Disable control for PT7"]
-pub struct PT7_R(crate::FieldReader<bool>);
-impl PT7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT7_R = crate::BitReader<bool>;
 #[doc = "Field `pt7` writer - Enable/Disable control for PT7"]
-pub struct PT7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PT7_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 7>;
 #[doc = "Field `pt8` reader - Enable/Disable control for PT8"]
-pub struct PT8_R(crate::FieldReader<bool>);
-impl PT8_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT8_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT8_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT8_R = crate::BitReader<bool>;
 #[doc = "Field `pt8` writer - Enable/Disable control for PT8"]
-pub struct PT8_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT8_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PT8_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 8>;
 #[doc = "Field `pt9` reader - Enable/Disable control for PT9"]
-pub struct PT9_R(crate::FieldReader<bool>);
-impl PT9_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT9_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT9_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT9_R = crate::BitReader<bool>;
 #[doc = "Field `pt9` writer - Enable/Disable control for PT9"]
-pub struct PT9_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT9_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PT9_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 9>;
 #[doc = "Field `pt10` reader - Enable/Disable control for PT10"]
-pub struct PT10_R(crate::FieldReader<bool>);
-impl PT10_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT10_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT10_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT10_R = crate::BitReader<bool>;
 #[doc = "Field `pt10` writer - Enable/Disable control for PT10"]
-pub struct PT10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT10_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PT10_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 10>;
 #[doc = "Field `pt11` reader - Enable/Disable control for PT11"]
-pub struct PT11_R(crate::FieldReader<bool>);
-impl PT11_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT11_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT11_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT11_R = crate::BitReader<bool>;
 #[doc = "Field `pt11` writer - Enable/Disable control for PT11"]
-pub struct PT11_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT11_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PT11_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 11>;
 #[doc = "Field `pt12` reader - Enable/Disable control for PT12"]
-pub struct PT12_R(crate::FieldReader<bool>);
-impl PT12_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT12_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT12_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT12_R = crate::BitReader<bool>;
 #[doc = "Field `pt12` writer - Enable/Disable control for PT12"]
-pub struct PT12_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT12_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PT12_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 12>;
 #[doc = "Field `pt13` reader - Enable/Disable control for PT13"]
-pub struct PT13_R(crate::FieldReader<bool>);
-impl PT13_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT13_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT13_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT13_R = crate::BitReader<bool>;
 #[doc = "Field `pt13` writer - Enable/Disable control for PT13"]
-pub struct PT13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT13_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type PT13_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 13>;
 #[doc = "Field `pt14` reader - Enable/Disable control for PT14"]
-pub struct PT14_R(crate::FieldReader<bool>);
-impl PT14_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT14_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT14_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT14_R = crate::BitReader<bool>;
 #[doc = "Field `pt14` writer - Enable/Disable control for PT14"]
-pub struct PT14_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT14_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PT14_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 14>;
 #[doc = "Field `pt15` reader - Enable/Disable control for PT15"]
-pub struct PT15_R(crate::FieldReader<bool>);
-impl PT15_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PT15_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PT15_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PT15_R = crate::BitReader<bool>;
 #[doc = "Field `pt15` writer - Enable/Disable control for PT15"]
-pub struct PT15_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PT15_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type PT15_W<'a> = crate::BitWriter<'a, u32, ENABLE_SPEC, bool, 15>;
 impl R {
     #[doc = "Bit 0 - Enable/Disable control for PT0"]
     #[inline(always)]
@@ -712,82 +184,82 @@ impl W {
     #[doc = "Bit 0 - Enable/Disable control for PT0"]
     #[inline(always)]
     pub fn pt0(&mut self) -> PT0_W {
-        PT0_W { w: self }
+        PT0_W::new(self)
     }
     #[doc = "Bit 1 - Enable/Disable control for PT1"]
     #[inline(always)]
     pub fn pt1(&mut self) -> PT1_W {
-        PT1_W { w: self }
+        PT1_W::new(self)
     }
     #[doc = "Bit 2 - Enable/Disable control for PT2"]
     #[inline(always)]
     pub fn pt2(&mut self) -> PT2_W {
-        PT2_W { w: self }
+        PT2_W::new(self)
     }
     #[doc = "Bit 3 - Enable/Disable control for PT3"]
     #[inline(always)]
     pub fn pt3(&mut self) -> PT3_W {
-        PT3_W { w: self }
+        PT3_W::new(self)
     }
     #[doc = "Bit 4 - Enable/Disable control for PT4"]
     #[inline(always)]
     pub fn pt4(&mut self) -> PT4_W {
-        PT4_W { w: self }
+        PT4_W::new(self)
     }
     #[doc = "Bit 5 - Enable/Disable control for PT5"]
     #[inline(always)]
     pub fn pt5(&mut self) -> PT5_W {
-        PT5_W { w: self }
+        PT5_W::new(self)
     }
     #[doc = "Bit 6 - Enable/Disable control for PT6"]
     #[inline(always)]
     pub fn pt6(&mut self) -> PT6_W {
-        PT6_W { w: self }
+        PT6_W::new(self)
     }
     #[doc = "Bit 7 - Enable/Disable control for PT7"]
     #[inline(always)]
     pub fn pt7(&mut self) -> PT7_W {
-        PT7_W { w: self }
+        PT7_W::new(self)
     }
     #[doc = "Bit 8 - Enable/Disable control for PT8"]
     #[inline(always)]
     pub fn pt8(&mut self) -> PT8_W {
-        PT8_W { w: self }
+        PT8_W::new(self)
     }
     #[doc = "Bit 9 - Enable/Disable control for PT9"]
     #[inline(always)]
     pub fn pt9(&mut self) -> PT9_W {
-        PT9_W { w: self }
+        PT9_W::new(self)
     }
     #[doc = "Bit 10 - Enable/Disable control for PT10"]
     #[inline(always)]
     pub fn pt10(&mut self) -> PT10_W {
-        PT10_W { w: self }
+        PT10_W::new(self)
     }
     #[doc = "Bit 11 - Enable/Disable control for PT11"]
     #[inline(always)]
     pub fn pt11(&mut self) -> PT11_W {
-        PT11_W { w: self }
+        PT11_W::new(self)
     }
     #[doc = "Bit 12 - Enable/Disable control for PT12"]
     #[inline(always)]
     pub fn pt12(&mut self) -> PT12_W {
-        PT12_W { w: self }
+        PT12_W::new(self)
     }
     #[doc = "Bit 13 - Enable/Disable control for PT13"]
     #[inline(always)]
     pub fn pt13(&mut self) -> PT13_W {
-        PT13_W { w: self }
+        PT13_W::new(self)
     }
     #[doc = "Bit 14 - Enable/Disable control for PT14"]
     #[inline(always)]
     pub fn pt14(&mut self) -> PT14_W {
-        PT14_W { w: self }
+        PT14_W::new(self)
     }
     #[doc = "Bit 15 - Enable/Disable control for PT15"]
     #[inline(always)]
     pub fn pt15(&mut self) -> PT15_W {
-        PT15_W { w: self }
+        PT15_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

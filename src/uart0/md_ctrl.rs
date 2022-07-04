@@ -35,133 +35,21 @@ impl From<crate::W<MD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `slave_addr` reader - Slave Address"]
-pub struct SLAVE_ADDR_R(crate::FieldReader<u8>);
-impl SLAVE_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLAVE_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `slave_addr` writer - Slave Address"]
-pub struct SLAVE_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SLAVE_ADDR_W<'a> = crate::FieldWriter<'a, u32, MD_CTRL_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `slave_addr_msk` reader - Slave Address Mask"]
-pub struct SLAVE_ADDR_MSK_R(crate::FieldReader<u8>);
-impl SLAVE_ADDR_MSK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLAVE_ADDR_MSK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_ADDR_MSK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_ADDR_MSK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `slave_addr_msk` writer - Slave Address Mask"]
-pub struct SLAVE_ADDR_MSK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_ADDR_MSK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type SLAVE_ADDR_MSK_W<'a> = crate::FieldWriter<'a, u32, MD_CTRL_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `md_mstr` reader - Multidrop Master"]
-pub struct MD_MSTR_R(crate::FieldReader<bool>);
-impl MD_MSTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MD_MSTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MD_MSTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MD_MSTR_R = crate::BitReader<bool>;
 #[doc = "Field `md_mstr` writer - Multidrop Master"]
-pub struct MD_MSTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MD_MSTR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type MD_MSTR_W<'a> = crate::BitWriter<'a, u32, MD_CTRL_SPEC, bool, 16>;
 #[doc = "Field `tx_addr_mark` reader - RX Address Mark"]
-pub struct TX_ADDR_MARK_R(crate::FieldReader<bool>);
-impl TX_ADDR_MARK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_ADDR_MARK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_ADDR_MARK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_ADDR_MARK_R = crate::BitReader<bool>;
 #[doc = "Field `tx_addr_mark` writer - RX Address Mark"]
-pub struct TX_ADDR_MARK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_ADDR_MARK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type TX_ADDR_MARK_W<'a> = crate::BitWriter<'a, u32, MD_CTRL_SPEC, bool, 17>;
 impl R {
     #[doc = "Bits 0:7 - Slave Address"]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bits 0:7 - Slave Address"]
     #[inline(always)]
     pub fn slave_addr(&mut self) -> SLAVE_ADDR_W {
-        SLAVE_ADDR_W { w: self }
+        SLAVE_ADDR_W::new(self)
     }
     #[doc = "Bits 8:15 - Slave Address Mask"]
     #[inline(always)]
     pub fn slave_addr_msk(&mut self) -> SLAVE_ADDR_MSK_W {
-        SLAVE_ADDR_MSK_W { w: self }
+        SLAVE_ADDR_MSK_W::new(self)
     }
     #[doc = "Bit 16 - Multidrop Master"]
     #[inline(always)]
     pub fn md_mstr(&mut self) -> MD_MSTR_W {
-        MD_MSTR_W { w: self }
+        MD_MSTR_W::new(self)
     }
     #[doc = "Bit 17 - RX Address Mark"]
     #[inline(always)]
     pub fn tx_addr_mark(&mut self) -> TX_ADDR_MARK_W {
-        TX_ADDR_MARK_W { w: self }
+        TX_ADDR_MARK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

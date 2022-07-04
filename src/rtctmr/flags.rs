@@ -35,287 +35,37 @@ impl From<crate::W<FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `comp0` reader - RTC Compare 0 Interrupt Status"]
-pub struct COMP0_R(crate::FieldReader<bool>);
-impl COMP0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMP0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMP0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMP0_R = crate::BitReader<bool>;
 #[doc = "Field `comp0` writer - RTC Compare 0 Interrupt Status"]
-pub struct COMP0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COMP0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type COMP0_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 0>;
 #[doc = "Field `comp1` reader - RTC Compare 1 Interrupt Status"]
-pub struct COMP1_R(crate::FieldReader<bool>);
-impl COMP1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMP1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMP1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMP1_R = crate::BitReader<bool>;
 #[doc = "Field `comp1` writer - RTC Compare 1 Interrupt Status"]
-pub struct COMP1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COMP1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type COMP1_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 1>;
 #[doc = "Field `prescale_comp` reader - RTC Prescale Compare Int Status"]
-pub struct PRESCALE_COMP_R(crate::FieldReader<bool>);
-impl PRESCALE_COMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRESCALE_COMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRESCALE_COMP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRESCALE_COMP_R = crate::BitReader<bool>;
 #[doc = "Field `prescale_comp` writer - RTC Prescale Compare Int Status"]
-pub struct PRESCALE_COMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRESCALE_COMP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRESCALE_COMP_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 2>;
 #[doc = "Field `overflow` reader - RTC Overflow Interrupt Status"]
-pub struct OVERFLOW_R(crate::FieldReader<bool>);
-impl OVERFLOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERFLOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERFLOW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVERFLOW_R = crate::BitReader<bool>;
 #[doc = "Field `overflow` writer - RTC Overflow Interrupt Status"]
-pub struct OVERFLOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OVERFLOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type OVERFLOW_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 3>;
 #[doc = "Field `trim` reader - RTC Trim Interrupt Status"]
-pub struct TRIM_R(crate::FieldReader<bool>);
-impl TRIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_R = crate::BitReader<bool>;
 #[doc = "Field `trim` writer - RTC Trim Interrupt Status"]
-pub struct TRIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TRIM_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 4>;
 #[doc = "Field `comp0_flag_a` reader - RTC Compare 0 4kHz Flag"]
-pub struct COMP0_FLAG_A_R(crate::FieldReader<bool>);
-impl COMP0_FLAG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMP0_FLAG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMP0_FLAG_A_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMP0_FLAG_A_R = crate::BitReader<bool>;
 #[doc = "Field `comp1_flag_a` reader - RTC Compare 1 4kHz Flag"]
-pub struct COMP1_FLAG_A_R(crate::FieldReader<bool>);
-impl COMP1_FLAG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMP1_FLAG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMP1_FLAG_A_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMP1_FLAG_A_R = crate::BitReader<bool>;
 #[doc = "Field `prescl_flag_a` reader - RTC Prescale Compare 4kHz Flag"]
-pub struct PRESCL_FLAG_A_R(crate::FieldReader<bool>);
-impl PRESCL_FLAG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRESCL_FLAG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRESCL_FLAG_A_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRESCL_FLAG_A_R = crate::BitReader<bool>;
 #[doc = "Field `overflow_flag_a` reader - RTC Overflow 4kHz Flag"]
-pub struct OVERFLOW_FLAG_A_R(crate::FieldReader<bool>);
-impl OVERFLOW_FLAG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERFLOW_FLAG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERFLOW_FLAG_A_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVERFLOW_FLAG_A_R = crate::BitReader<bool>;
 #[doc = "Field `trim_flag_a` reader - RTC Trim Event 4kHz Flag"]
-pub struct TRIM_FLAG_A_R(crate::FieldReader<bool>);
-impl TRIM_FLAG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_FLAG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_FLAG_A_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_FLAG_A_R = crate::BitReader<bool>;
 #[doc = "Field `async_clr_flags` writer - Asynchronous RTC Flag Clear"]
-pub struct ASYNC_CLR_FLAGS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ASYNC_CLR_FLAGS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ASYNC_CLR_FLAGS_W<'a> = crate::BitWriter<'a, u32, FLAGS_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - RTC Compare 0 Interrupt Status"]
     #[inline(always)]
@@ -372,32 +122,32 @@ impl W {
     #[doc = "Bit 0 - RTC Compare 0 Interrupt Status"]
     #[inline(always)]
     pub fn comp0(&mut self) -> COMP0_W {
-        COMP0_W { w: self }
+        COMP0_W::new(self)
     }
     #[doc = "Bit 1 - RTC Compare 1 Interrupt Status"]
     #[inline(always)]
     pub fn comp1(&mut self) -> COMP1_W {
-        COMP1_W { w: self }
+        COMP1_W::new(self)
     }
     #[doc = "Bit 2 - RTC Prescale Compare Int Status"]
     #[inline(always)]
     pub fn prescale_comp(&mut self) -> PRESCALE_COMP_W {
-        PRESCALE_COMP_W { w: self }
+        PRESCALE_COMP_W::new(self)
     }
     #[doc = "Bit 3 - RTC Overflow Interrupt Status"]
     #[inline(always)]
     pub fn overflow(&mut self) -> OVERFLOW_W {
-        OVERFLOW_W { w: self }
+        OVERFLOW_W::new(self)
     }
     #[doc = "Bit 4 - RTC Trim Interrupt Status"]
     #[inline(always)]
     pub fn trim(&mut self) -> TRIM_W {
-        TRIM_W { w: self }
+        TRIM_W::new(self)
     }
     #[doc = "Bit 31 - Asynchronous RTC Flag Clear"]
     #[inline(always)]
     pub fn async_clr_flags(&mut self) -> ASYNC_CLR_FLAGS_W {
-        ASYNC_CLR_FLAGS_W { w: self }
+        ASYNC_CLR_FLAGS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

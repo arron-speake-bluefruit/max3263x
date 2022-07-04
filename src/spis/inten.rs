@@ -49,13 +49,9 @@ impl From<TX_FIFO_AE_A> for bool {
     }
 }
 #[doc = "Field `tx_fifo_ae` reader - TX FIFO Almost Empty Int Enable"]
-pub struct TX_FIFO_AE_R(crate::FieldReader<bool>);
+pub type TX_FIFO_AE_R = crate::BitReader<TX_FIFO_AE_A>;
 impl TX_FIFO_AE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_AE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TX_FIFO_AE_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl TX_FIFO_AE_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == TX_FIFO_AE_A::DISABLED
+        *self == TX_FIFO_AE_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == TX_FIFO_AE_A::ENABLED
-    }
-}
-impl core::ops::Deref for TX_FIFO_AE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TX_FIFO_AE_A::ENABLED
     }
 }
 #[doc = "Field `tx_fifo_ae` writer - TX FIFO Almost Empty Int Enable"]
-pub struct TX_FIFO_AE_W<'a> {
-    w: &'a mut W,
-}
+pub type TX_FIFO_AE_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, TX_FIFO_AE_A, 0>;
 impl<'a> TX_FIFO_AE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TX_FIFO_AE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -100,22 +82,6 @@ impl<'a> TX_FIFO_AE_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(TX_FIFO_AE_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 #[doc = "RX FIFO Almost Full Int Enable\n\nValue on reset: 0"]
@@ -133,13 +99,9 @@ impl From<RX_FIFO_AF_A> for bool {
     }
 }
 #[doc = "Field `rx_fifo_af` reader - RX FIFO Almost Full Int Enable"]
-pub struct RX_FIFO_AF_R(crate::FieldReader<bool>);
+pub type RX_FIFO_AF_R = crate::BitReader<RX_FIFO_AF_A>;
 impl RX_FIFO_AF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_AF_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RX_FIFO_AF_A {
         match self.bits {
@@ -150,31 +112,17 @@ impl RX_FIFO_AF_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == RX_FIFO_AF_A::DISABLED
+        *self == RX_FIFO_AF_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == RX_FIFO_AF_A::ENABLED
-    }
-}
-impl core::ops::Deref for RX_FIFO_AF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == RX_FIFO_AF_A::ENABLED
     }
 }
 #[doc = "Field `rx_fifo_af` writer - RX FIFO Almost Full Int Enable"]
-pub struct RX_FIFO_AF_W<'a> {
-    w: &'a mut W,
-}
+pub type RX_FIFO_AF_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, RX_FIFO_AF_A, 1>;
 impl<'a> RX_FIFO_AF_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RX_FIFO_AF_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -184,22 +132,6 @@ impl<'a> RX_FIFO_AF_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(RX_FIFO_AF_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
     }
 }
 #[doc = "No Data in TX FIFO Int Enable\n\nValue on reset: 0"]
@@ -217,13 +149,9 @@ impl From<TX_NO_DATA_A> for bool {
     }
 }
 #[doc = "Field `tx_no_data` reader - No Data in TX FIFO Int Enable"]
-pub struct TX_NO_DATA_R(crate::FieldReader<bool>);
+pub type TX_NO_DATA_R = crate::BitReader<TX_NO_DATA_A>;
 impl TX_NO_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_NO_DATA_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TX_NO_DATA_A {
         match self.bits {
@@ -234,31 +162,17 @@ impl TX_NO_DATA_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == TX_NO_DATA_A::DISABLED
+        *self == TX_NO_DATA_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == TX_NO_DATA_A::ENABLED
-    }
-}
-impl core::ops::Deref for TX_NO_DATA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TX_NO_DATA_A::ENABLED
     }
 }
 #[doc = "Field `tx_no_data` writer - No Data in TX FIFO Int Enable"]
-pub struct TX_NO_DATA_W<'a> {
-    w: &'a mut W,
-}
+pub type TX_NO_DATA_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, TX_NO_DATA_A, 2>;
 impl<'a> TX_NO_DATA_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TX_NO_DATA_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -268,22 +182,6 @@ impl<'a> TX_NO_DATA_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(TX_NO_DATA_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
     }
 }
 #[doc = "RX FIFO Overflow Int Enable\n\nValue on reset: 0"]
@@ -301,13 +199,9 @@ impl From<RX_LOST_DATA_A> for bool {
     }
 }
 #[doc = "Field `rx_lost_data` reader - RX FIFO Overflow Int Enable"]
-pub struct RX_LOST_DATA_R(crate::FieldReader<bool>);
+pub type RX_LOST_DATA_R = crate::BitReader<RX_LOST_DATA_A>;
 impl RX_LOST_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_LOST_DATA_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RX_LOST_DATA_A {
         match self.bits {
@@ -318,31 +212,17 @@ impl RX_LOST_DATA_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == RX_LOST_DATA_A::DISABLED
+        *self == RX_LOST_DATA_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == RX_LOST_DATA_A::ENABLED
-    }
-}
-impl core::ops::Deref for RX_LOST_DATA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == RX_LOST_DATA_A::ENABLED
     }
 }
 #[doc = "Field `rx_lost_data` writer - RX FIFO Overflow Int Enable"]
-pub struct RX_LOST_DATA_W<'a> {
-    w: &'a mut W,
-}
+pub type RX_LOST_DATA_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, RX_LOST_DATA_A, 3>;
 impl<'a> RX_LOST_DATA_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RX_LOST_DATA_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -352,22 +232,6 @@ impl<'a> RX_LOST_DATA_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(RX_LOST_DATA_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
     }
 }
 #[doc = "TX Underflow Int Enable\n\nValue on reset: 0"]
@@ -385,13 +249,9 @@ impl From<TX_UNDERFLOW_A> for bool {
     }
 }
 #[doc = "Field `tx_underflow` reader - TX Underflow Int Enable"]
-pub struct TX_UNDERFLOW_R(crate::FieldReader<bool>);
+pub type TX_UNDERFLOW_R = crate::BitReader<TX_UNDERFLOW_A>;
 impl TX_UNDERFLOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_UNDERFLOW_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TX_UNDERFLOW_A {
         match self.bits {
@@ -402,31 +262,17 @@ impl TX_UNDERFLOW_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == TX_UNDERFLOW_A::DISABLED
+        *self == TX_UNDERFLOW_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == TX_UNDERFLOW_A::ENABLED
-    }
-}
-impl core::ops::Deref for TX_UNDERFLOW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TX_UNDERFLOW_A::ENABLED
     }
 }
 #[doc = "Field `tx_underflow` writer - TX Underflow Int Enable"]
-pub struct TX_UNDERFLOW_W<'a> {
-    w: &'a mut W,
-}
+pub type TX_UNDERFLOW_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, TX_UNDERFLOW_A, 4>;
 impl<'a> TX_UNDERFLOW_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TX_UNDERFLOW_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -436,22 +282,6 @@ impl<'a> TX_UNDERFLOW_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(TX_UNDERFLOW_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
     }
 }
 #[doc = "Slave Select Asserted Int Enable\n\nValue on reset: 0"]
@@ -469,13 +299,9 @@ impl From<SS_ASSERTED_A> for bool {
     }
 }
 #[doc = "Field `ss_asserted` reader - Slave Select Asserted Int Enable"]
-pub struct SS_ASSERTED_R(crate::FieldReader<bool>);
+pub type SS_ASSERTED_R = crate::BitReader<SS_ASSERTED_A>;
 impl SS_ASSERTED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS_ASSERTED_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SS_ASSERTED_A {
         match self.bits {
@@ -486,31 +312,17 @@ impl SS_ASSERTED_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == SS_ASSERTED_A::DISABLED
+        *self == SS_ASSERTED_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == SS_ASSERTED_A::ENABLED
-    }
-}
-impl core::ops::Deref for SS_ASSERTED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SS_ASSERTED_A::ENABLED
     }
 }
 #[doc = "Field `ss_asserted` writer - Slave Select Asserted Int Enable"]
-pub struct SS_ASSERTED_W<'a> {
-    w: &'a mut W,
-}
+pub type SS_ASSERTED_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, SS_ASSERTED_A, 5>;
 impl<'a> SS_ASSERTED_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SS_ASSERTED_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -520,22 +332,6 @@ impl<'a> SS_ASSERTED_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(SS_ASSERTED_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
     }
 }
 #[doc = "Slave Select Deasserted Int Enable\n\nValue on reset: 0"]
@@ -553,13 +349,9 @@ impl From<SS_DEASSERTED_A> for bool {
     }
 }
 #[doc = "Field `ss_deasserted` reader - Slave Select Deasserted Int Enable"]
-pub struct SS_DEASSERTED_R(crate::FieldReader<bool>);
+pub type SS_DEASSERTED_R = crate::BitReader<SS_DEASSERTED_A>;
 impl SS_DEASSERTED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS_DEASSERTED_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SS_DEASSERTED_A {
         match self.bits {
@@ -570,31 +362,17 @@ impl SS_DEASSERTED_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == SS_DEASSERTED_A::DISABLED
+        *self == SS_DEASSERTED_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == SS_DEASSERTED_A::ENABLED
-    }
-}
-impl core::ops::Deref for SS_DEASSERTED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SS_DEASSERTED_A::ENABLED
     }
 }
 #[doc = "Field `ss_deasserted` writer - Slave Select Deasserted Int Enable"]
-pub struct SS_DEASSERTED_W<'a> {
-    w: &'a mut W,
-}
+pub type SS_DEASSERTED_W<'a> = crate::BitWriter<'a, u32, INTEN_SPEC, SS_DEASSERTED_A, 6>;
 impl<'a> SS_DEASSERTED_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SS_DEASSERTED_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable Interrupt"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -604,22 +382,6 @@ impl<'a> SS_DEASSERTED_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(SS_DEASSERTED_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
     }
 }
 impl R {
@@ -663,37 +425,37 @@ impl W {
     #[doc = "Bit 0 - TX FIFO Almost Empty Int Enable"]
     #[inline(always)]
     pub fn tx_fifo_ae(&mut self) -> TX_FIFO_AE_W {
-        TX_FIFO_AE_W { w: self }
+        TX_FIFO_AE_W::new(self)
     }
     #[doc = "Bit 1 - RX FIFO Almost Full Int Enable"]
     #[inline(always)]
     pub fn rx_fifo_af(&mut self) -> RX_FIFO_AF_W {
-        RX_FIFO_AF_W { w: self }
+        RX_FIFO_AF_W::new(self)
     }
     #[doc = "Bit 2 - No Data in TX FIFO Int Enable"]
     #[inline(always)]
     pub fn tx_no_data(&mut self) -> TX_NO_DATA_W {
-        TX_NO_DATA_W { w: self }
+        TX_NO_DATA_W::new(self)
     }
     #[doc = "Bit 3 - RX FIFO Overflow Int Enable"]
     #[inline(always)]
     pub fn rx_lost_data(&mut self) -> RX_LOST_DATA_W {
-        RX_LOST_DATA_W { w: self }
+        RX_LOST_DATA_W::new(self)
     }
     #[doc = "Bit 4 - TX Underflow Int Enable"]
     #[inline(always)]
     pub fn tx_underflow(&mut self) -> TX_UNDERFLOW_W {
-        TX_UNDERFLOW_W { w: self }
+        TX_UNDERFLOW_W::new(self)
     }
     #[doc = "Bit 5 - Slave Select Asserted Int Enable"]
     #[inline(always)]
     pub fn ss_asserted(&mut self) -> SS_ASSERTED_W {
-        SS_ASSERTED_W { w: self }
+        SS_ASSERTED_W::new(self)
     }
     #[doc = "Bit 6 - Slave Select Deasserted Int Enable"]
     #[inline(always)]
     pub fn ss_deasserted(&mut self) -> SS_DEASSERTED_W {
-        SS_DEASSERTED_W { w: self }
+        SS_DEASSERTED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

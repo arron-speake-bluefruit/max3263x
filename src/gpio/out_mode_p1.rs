@@ -35,221 +35,37 @@ impl From<crate::W<OUT_MODE_P1_SPEC>> for W {
     }
 }
 #[doc = "Field `pin0` reader - P1.0 Output Drive Mode"]
-pub struct PIN0_R(crate::FieldReader<u8>);
-impl PIN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin0` writer - P1.0 Output Drive Mode"]
-pub struct PIN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type PIN0_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `pin1` reader - P1.1 Output Drive Mode"]
-pub struct PIN1_R(crate::FieldReader<u8>);
-impl PIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin1` writer - P1.1 Output Drive Mode"]
-pub struct PIN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type PIN1_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `pin2` reader - P1.2 Output Drive Mode"]
-pub struct PIN2_R(crate::FieldReader<u8>);
-impl PIN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin2` writer - P1.2 Output Drive Mode"]
-pub struct PIN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type PIN2_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 8>;
 #[doc = "Field `pin3` reader - P1.3 Output Drive Mode"]
-pub struct PIN3_R(crate::FieldReader<u8>);
-impl PIN3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin3` writer - P1.3 Output Drive Mode"]
-pub struct PIN3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type PIN3_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 12>;
 #[doc = "Field `pin4` reader - P1.4 Output Drive Mode"]
-pub struct PIN4_R(crate::FieldReader<u8>);
-impl PIN4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN4_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN4_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin4` writer - P1.4 Output Drive Mode"]
-pub struct PIN4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type PIN4_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 16>;
 #[doc = "Field `pin5` reader - P1.5 Output Drive Mode"]
-pub struct PIN5_R(crate::FieldReader<u8>);
-impl PIN5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN5_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN5_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin5` writer - P1.5 Output Drive Mode"]
-pub struct PIN5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type PIN5_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 20>;
 #[doc = "Field `pin6` reader - P1.6 Output Drive Mode"]
-pub struct PIN6_R(crate::FieldReader<u8>);
-impl PIN6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN6_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN6_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin6` writer - P1.6 Output Drive Mode"]
-pub struct PIN6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type PIN6_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `pin7` reader - P1.7 Output Drive Mode"]
-pub struct PIN7_R(crate::FieldReader<u8>);
-impl PIN7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN7_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN7_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pin7` writer - P1.7 Output Drive Mode"]
-pub struct PIN7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN7_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type PIN7_W<'a> = crate::FieldWriter<'a, u32, OUT_MODE_P1_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bits 0:3 - P1.0 Output Drive Mode"]
     #[inline(always)]
@@ -296,42 +112,42 @@ impl W {
     #[doc = "Bits 0:3 - P1.0 Output Drive Mode"]
     #[inline(always)]
     pub fn pin0(&mut self) -> PIN0_W {
-        PIN0_W { w: self }
+        PIN0_W::new(self)
     }
     #[doc = "Bits 4:7 - P1.1 Output Drive Mode"]
     #[inline(always)]
     pub fn pin1(&mut self) -> PIN1_W {
-        PIN1_W { w: self }
+        PIN1_W::new(self)
     }
     #[doc = "Bits 8:11 - P1.2 Output Drive Mode"]
     #[inline(always)]
     pub fn pin2(&mut self) -> PIN2_W {
-        PIN2_W { w: self }
+        PIN2_W::new(self)
     }
     #[doc = "Bits 12:15 - P1.3 Output Drive Mode"]
     #[inline(always)]
     pub fn pin3(&mut self) -> PIN3_W {
-        PIN3_W { w: self }
+        PIN3_W::new(self)
     }
     #[doc = "Bits 16:19 - P1.4 Output Drive Mode"]
     #[inline(always)]
     pub fn pin4(&mut self) -> PIN4_W {
-        PIN4_W { w: self }
+        PIN4_W::new(self)
     }
     #[doc = "Bits 20:23 - P1.5 Output Drive Mode"]
     #[inline(always)]
     pub fn pin5(&mut self) -> PIN5_W {
-        PIN5_W { w: self }
+        PIN5_W::new(self)
     }
     #[doc = "Bits 24:27 - P1.6 Output Drive Mode"]
     #[inline(always)]
     pub fn pin6(&mut self) -> PIN6_W {
-        PIN6_W { w: self }
+        PIN6_W::new(self)
     }
     #[doc = "Bits 28:31 - P1.7 Output Drive Mode"]
     #[inline(always)]
     pub fn pin7(&mut self) -> PIN7_W {
-        PIN7_W { w: self }
+        PIN7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,130 +35,26 @@ impl From<crate::W<SPI0_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `core_io_ack` reader - SPI Master 0 Core I/O Acknowledge"]
-pub struct CORE_IO_ACK_R(crate::FieldReader<bool>);
-impl CORE_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss0_io_ack` reader - SPI Master 0 SS\\[0\\]
 I/O Acknowledge"]
-pub struct SS0_IO_ACK_R(crate::FieldReader<bool>);
-impl SS0_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS0_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS0_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS0_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss1_io_ack` reader - SPI Master 0 SS\\[1\\]
 I/O Acknowledge"]
-pub struct SS1_IO_ACK_R(crate::FieldReader<bool>);
-impl SS1_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS1_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS1_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS1_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss2_io_ack` reader - SPI Master 0 SS\\[2\\]
 I/O Acknowledge"]
-pub struct SS2_IO_ACK_R(crate::FieldReader<bool>);
-impl SS2_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS2_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS2_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS2_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss3_io_ack` reader - SPI Master 0 SS\\[3\\]
 I/O Acknowledge"]
-pub struct SS3_IO_ACK_R(crate::FieldReader<bool>);
-impl SS3_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS3_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS3_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS3_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `ss4_io_ack` reader - SPI Master 0 SS\\[4\\]
 I/O Acknowledge"]
-pub struct SS4_IO_ACK_R(crate::FieldReader<bool>);
-impl SS4_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS4_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS4_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS4_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `quad_io_ack` reader - SPI Master 0 Quad I/O Acknowledge"]
-pub struct QUAD_IO_ACK_R(crate::FieldReader<bool>);
-impl QUAD_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUAD_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUAD_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUAD_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `fast_mode` reader - SPI Master 0 Fast Mode Acknowledge"]
-pub struct FAST_MODE_R(crate::FieldReader<bool>);
-impl FAST_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAST_MODE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 4 - SPI Master 0 Core I/O Acknowledge"]
     #[inline(always)]

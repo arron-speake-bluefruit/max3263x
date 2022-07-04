@@ -35,140 +35,25 @@ impl From<crate::W<REG6_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_trim_usb_bias` reader - USB Bias Current trim setting"]
-pub struct PWR_TRIM_USB_BIAS_R(crate::FieldReader<u8>);
-impl PWR_TRIM_USB_BIAS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TRIM_USB_BIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_USB_BIAS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_USB_BIAS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_trim_usb_bias` writer - USB Bias Current trim setting"]
-pub struct PWR_TRIM_USB_BIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_USB_BIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type PWR_TRIM_USB_BIAS_W<'a> = crate::FieldWriter<'a, u32, REG6_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `pwr_trim_usb_pm_res` reader - USB Data Plus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_PM_RES_R(crate::FieldReader<u8>);
-impl PWR_TRIM_USB_PM_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TRIM_USB_PM_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_USB_PM_RES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_USB_PM_RES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_trim_usb_pm_res` writer - USB Data Plus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_PM_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_USB_PM_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 3)) | ((value as u32 & 0x0f) << 3);
-        self.w
-    }
-}
+pub type PWR_TRIM_USB_PM_RES_W<'a> = crate::FieldWriter<'a, u32, REG6_SPEC, u8, u8, 4, 3>;
 #[doc = "Field `pwr_trim_usb_dm_res` reader - USB Data Minus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_DM_RES_R(crate::FieldReader<u8>);
-impl PWR_TRIM_USB_DM_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PWR_TRIM_USB_DM_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_USB_DM_RES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_USB_DM_RES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pwr_trim_usb_dm_res` writer - USB Data Minus Slew Rate trim setting"]
-pub struct PWR_TRIM_USB_DM_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_USB_DM_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 7)) | ((value as u32 & 0x0f) << 7);
-        self.w
-    }
-}
+pub type PWR_TRIM_USB_DM_RES_W<'a> = crate::FieldWriter<'a, u32, REG6_SPEC, u8, u8, 4, 7>;
 #[doc = "Field `pwr_trim_osc_vref` reader - Relaxation Oscillator trim setting"]
-pub struct PWR_TRIM_OSC_VREF_R(crate::FieldReader<u16>);
-impl PWR_TRIM_OSC_VREF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PWR_TRIM_OSC_VREF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_OSC_VREF_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_OSC_VREF_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pwr_trim_osc_vref` writer - Relaxation Oscillator trim setting"]
-pub struct PWR_TRIM_OSC_VREF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_OSC_VREF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 11)) | ((value as u32 & 0x01ff) << 11);
-        self.w
-    }
-}
+pub type PWR_TRIM_OSC_VREF_W<'a> = crate::FieldWriter<'a, u32, REG6_SPEC, u16, u16, 9, 11>;
 #[doc = "Field `pwr_trim_crypto_osc` reader - Crypto Oscillator trim setting"]
-pub struct PWR_TRIM_CRYPTO_OSC_R(crate::FieldReader<u16>);
-impl PWR_TRIM_CRYPTO_OSC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PWR_TRIM_CRYPTO_OSC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TRIM_CRYPTO_OSC_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TRIM_CRYPTO_OSC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pwr_trim_crypto_osc` writer - Crypto Oscillator trim setting"]
-pub struct PWR_TRIM_CRYPTO_OSC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TRIM_CRYPTO_OSC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 20)) | ((value as u32 & 0x01ff) << 20);
-        self.w
-    }
-}
+pub type PWR_TRIM_CRYPTO_OSC_W<'a> = crate::FieldWriter<'a, u32, REG6_SPEC, u16, u16, 9, 20>;
 impl R {
     #[doc = "Bits 0:2 - USB Bias Current trim setting"]
     #[inline(always)]
@@ -200,27 +85,27 @@ impl W {
     #[doc = "Bits 0:2 - USB Bias Current trim setting"]
     #[inline(always)]
     pub fn pwr_trim_usb_bias(&mut self) -> PWR_TRIM_USB_BIAS_W {
-        PWR_TRIM_USB_BIAS_W { w: self }
+        PWR_TRIM_USB_BIAS_W::new(self)
     }
     #[doc = "Bits 3:6 - USB Data Plus Slew Rate trim setting"]
     #[inline(always)]
     pub fn pwr_trim_usb_pm_res(&mut self) -> PWR_TRIM_USB_PM_RES_W {
-        PWR_TRIM_USB_PM_RES_W { w: self }
+        PWR_TRIM_USB_PM_RES_W::new(self)
     }
     #[doc = "Bits 7:10 - USB Data Minus Slew Rate trim setting"]
     #[inline(always)]
     pub fn pwr_trim_usb_dm_res(&mut self) -> PWR_TRIM_USB_DM_RES_W {
-        PWR_TRIM_USB_DM_RES_W { w: self }
+        PWR_TRIM_USB_DM_RES_W::new(self)
     }
     #[doc = "Bits 11:19 - Relaxation Oscillator trim setting"]
     #[inline(always)]
     pub fn pwr_trim_osc_vref(&mut self) -> PWR_TRIM_OSC_VREF_W {
-        PWR_TRIM_OSC_VREF_W { w: self }
+        PWR_TRIM_OSC_VREF_W::new(self)
     }
     #[doc = "Bits 20:28 - Crypto Oscillator trim setting"]
     #[inline(always)]
     pub fn pwr_trim_crypto_osc(&mut self) -> PWR_TRIM_CRYPTO_OSC_W {
-        PWR_TRIM_CRYPTO_OSC_W { w: self }
+        PWR_TRIM_CRYPTO_OSC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

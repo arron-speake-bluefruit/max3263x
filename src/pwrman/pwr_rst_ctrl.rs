@@ -35,369 +35,47 @@ impl From<crate::W<PWR_RST_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `afe_powered` reader - AFE Powered"]
-pub struct AFE_POWERED_R(crate::FieldReader<bool>);
-impl AFE_POWERED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AFE_POWERED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AFE_POWERED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AFE_POWERED_R = crate::BitReader<bool>;
 #[doc = "Field `afe_powered` writer - AFE Powered"]
-pub struct AFE_POWERED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AFE_POWERED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type AFE_POWERED_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 2>;
 #[doc = "Field `io_active` reader - I/O Active"]
-pub struct IO_ACTIVE_R(crate::FieldReader<bool>);
-impl IO_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IO_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IO_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IO_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `io_active` writer - I/O Active"]
-pub struct IO_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IO_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type IO_ACTIVE_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 3>;
 #[doc = "Field `usb_powered` reader - USB Powered"]
-pub struct USB_POWERED_R(crate::FieldReader<bool>);
-impl USB_POWERED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_POWERED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_POWERED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_POWERED_R = crate::BitReader<bool>;
 #[doc = "Field `usb_powered` writer - USB Powered"]
-pub struct USB_POWERED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_POWERED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type USB_POWERED_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 4>;
 #[doc = "Field `pullups_enabled` reader - Static Pullups Enabled"]
-pub struct PULLUPS_ENABLED_R(crate::FieldReader<bool>);
-impl PULLUPS_ENABLED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PULLUPS_ENABLED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PULLUPS_ENABLED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PULLUPS_ENABLED_R = crate::BitReader<bool>;
 #[doc = "Field `pullups_enabled` writer - Static Pullups Enabled"]
-pub struct PULLUPS_ENABLED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PULLUPS_ENABLED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PULLUPS_ENABLED_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 5>;
 #[doc = "Field `firmware_reset` reader - Firmware Initiated Reset"]
-pub struct FIRMWARE_RESET_R(crate::FieldReader<bool>);
-impl FIRMWARE_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FIRMWARE_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIRMWARE_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIRMWARE_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `firmware_reset` writer - Firmware Initiated Reset"]
-pub struct FIRMWARE_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIRMWARE_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type FIRMWARE_RESET_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 8>;
 #[doc = "Field `arm_lockup_reset` reader - ARM Lockup Reset"]
-pub struct ARM_LOCKUP_RESET_R(crate::FieldReader<bool>);
-impl ARM_LOCKUP_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARM_LOCKUP_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARM_LOCKUP_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARM_LOCKUP_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `arm_lockup_reset` writer - ARM Lockup Reset"]
-pub struct ARM_LOCKUP_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARM_LOCKUP_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type ARM_LOCKUP_RESET_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 9>;
 #[doc = "Field `tamper_detect` reader - Reset Caused By - Tamper Detect"]
-pub struct TAMPER_DETECT_R(crate::FieldReader<bool>);
-impl TAMPER_DETECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAMPER_DETECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAMPER_DETECT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAMPER_DETECT_R = crate::BitReader<bool>;
 #[doc = "Field `fw_command_sysman` reader - Reset Caused By - Firmware Commanded Reset (SysMan)"]
-pub struct FW_COMMAND_SYSMAN_R(crate::FieldReader<bool>);
-impl FW_COMMAND_SYSMAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FW_COMMAND_SYSMAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FW_COMMAND_SYSMAN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FW_COMMAND_SYSMAN_R = crate::BitReader<bool>;
 #[doc = "Field `watchdog_timeout` reader - Reset Caused By - Watchdog Timeout"]
-pub struct WATCHDOG_TIMEOUT_R(crate::FieldReader<bool>);
-impl WATCHDOG_TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WATCHDOG_TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WATCHDOG_TIMEOUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WATCHDOG_TIMEOUT_R = crate::BitReader<bool>;
 #[doc = "Field `fw_command_arm` reader - Reset Caused By - Firmware Commanded Reset (ARM Core)"]
-pub struct FW_COMMAND_ARM_R(crate::FieldReader<bool>);
-impl FW_COMMAND_ARM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FW_COMMAND_ARM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FW_COMMAND_ARM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FW_COMMAND_ARM_R = crate::BitReader<bool>;
 #[doc = "Field `arm_lockup` reader - Reset Caused By - ARM Lockup"]
-pub struct ARM_LOCKUP_R(crate::FieldReader<bool>);
-impl ARM_LOCKUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARM_LOCKUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARM_LOCKUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARM_LOCKUP_R = crate::BitReader<bool>;
 #[doc = "Field `srstn_assertion` reader - Reset Caused By - External System Reset"]
-pub struct SRSTN_ASSERTION_R(crate::FieldReader<bool>);
-impl SRSTN_ASSERTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRSTN_ASSERTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRSTN_ASSERTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRSTN_ASSERTION_R = crate::BitReader<bool>;
 #[doc = "Field `por` reader - Reset Caused By - Power On Reset (POR)"]
-pub struct POR_R(crate::FieldReader<bool>);
-impl POR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POR_R = crate::BitReader<bool>;
 #[doc = "Field `low_power_mode` reader - Power Manager Dynamic Clock Gating Enable"]
-pub struct LOW_POWER_MODE_R(crate::FieldReader<bool>);
-impl LOW_POWER_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOW_POWER_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOW_POWER_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOW_POWER_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `low_power_mode` writer - Power Manager Dynamic Clock Gating Enable"]
-pub struct LOW_POWER_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOW_POWER_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type LOW_POWER_MODE_W<'a> = crate::BitWriter<'a, u32, PWR_RST_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 2 - AFE Powered"]
     #[inline(always)]
@@ -474,37 +152,37 @@ impl W {
     #[doc = "Bit 2 - AFE Powered"]
     #[inline(always)]
     pub fn afe_powered(&mut self) -> AFE_POWERED_W {
-        AFE_POWERED_W { w: self }
+        AFE_POWERED_W::new(self)
     }
     #[doc = "Bit 3 - I/O Active"]
     #[inline(always)]
     pub fn io_active(&mut self) -> IO_ACTIVE_W {
-        IO_ACTIVE_W { w: self }
+        IO_ACTIVE_W::new(self)
     }
     #[doc = "Bit 4 - USB Powered"]
     #[inline(always)]
     pub fn usb_powered(&mut self) -> USB_POWERED_W {
-        USB_POWERED_W { w: self }
+        USB_POWERED_W::new(self)
     }
     #[doc = "Bit 5 - Static Pullups Enabled"]
     #[inline(always)]
     pub fn pullups_enabled(&mut self) -> PULLUPS_ENABLED_W {
-        PULLUPS_ENABLED_W { w: self }
+        PULLUPS_ENABLED_W::new(self)
     }
     #[doc = "Bit 8 - Firmware Initiated Reset"]
     #[inline(always)]
     pub fn firmware_reset(&mut self) -> FIRMWARE_RESET_W {
-        FIRMWARE_RESET_W { w: self }
+        FIRMWARE_RESET_W::new(self)
     }
     #[doc = "Bit 9 - ARM Lockup Reset"]
     #[inline(always)]
     pub fn arm_lockup_reset(&mut self) -> ARM_LOCKUP_RESET_W {
-        ARM_LOCKUP_RESET_W { w: self }
+        ARM_LOCKUP_RESET_W::new(self)
     }
     #[doc = "Bit 31 - Power Manager Dynamic Clock Gating Enable"]
     #[inline(always)]
     pub fn low_power_mode(&mut self) -> LOW_POWER_MODE_W {
-        LOW_POWER_MODE_W { w: self }
+        LOW_POWER_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,20 +35,7 @@ impl From<crate::W<REG7_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_flash_pd_lookahead` reader - Flash Powerdown Lookahead Flag"]
-pub struct PWR_FLASH_PD_LOOKAHEAD_R(crate::FieldReader<bool>);
-impl PWR_FLASH_PD_LOOKAHEAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_FLASH_PD_LOOKAHEAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_FLASH_PD_LOOKAHEAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_FLASH_PD_LOOKAHEAD_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Flash Powerdown Lookahead Flag"]
     #[inline(always)]

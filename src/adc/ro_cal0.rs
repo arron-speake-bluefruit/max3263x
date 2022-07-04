@@ -35,234 +35,33 @@ impl From<crate::W<RO_CAL0_SPEC>> for W {
     }
 }
 #[doc = "Field `ro_cal_en` reader - RO Calibration Enable"]
-pub struct RO_CAL_EN_R(crate::FieldReader<bool>);
-impl RO_CAL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_en` writer - RO Calibration Enable"]
-pub struct RO_CAL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RO_CAL_EN_W<'a> = crate::BitWriter<'a, u32, RO_CAL0_SPEC, bool, 0>;
 #[doc = "Field `ro_cal_run` reader - RO Calibration Run"]
-pub struct RO_CAL_RUN_R(crate::FieldReader<bool>);
-impl RO_CAL_RUN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_RUN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_RUN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_RUN_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_run` writer - RO Calibration Run"]
-pub struct RO_CAL_RUN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_RUN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RO_CAL_RUN_W<'a> = crate::BitWriter<'a, u32, RO_CAL0_SPEC, bool, 1>;
 #[doc = "Field `ro_cal_load` reader - RO Calibration Load Initial Value"]
-pub struct RO_CAL_LOAD_R(crate::FieldReader<bool>);
-impl RO_CAL_LOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_LOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_LOAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_LOAD_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_load` writer - RO Calibration Load Initial Value"]
-pub struct RO_CAL_LOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_LOAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RO_CAL_LOAD_W<'a> = crate::BitWriter<'a, u32, RO_CAL0_SPEC, bool, 2>;
 #[doc = "Field `ro_cal_atomic` reader - RO Calibration Run Atomic"]
-pub struct RO_CAL_ATOMIC_R(crate::FieldReader<bool>);
-impl RO_CAL_ATOMIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_ATOMIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_ATOMIC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_ATOMIC_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_atomic` writer - RO Calibration Run Atomic"]
-pub struct RO_CAL_ATOMIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_ATOMIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RO_CAL_ATOMIC_W<'a> = crate::BitWriter<'a, u32, RO_CAL0_SPEC, bool, 4>;
 #[doc = "Field `dummy` reader - Dummy Write Field"]
-pub struct DUMMY_R(crate::FieldReader<u8>);
-impl DUMMY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DUMMY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUMMY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUMMY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `dummy` writer - Dummy Write Field"]
-pub struct DUMMY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUMMY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
-        self.w
-    }
-}
+pub type DUMMY_W<'a> = crate::FieldWriter<'a, u32, RO_CAL0_SPEC, u8, u8, 3, 5>;
 #[doc = "Field `trm_mu` reader - RO Trim Adaptation Gain"]
-pub struct TRM_MU_R(crate::FieldReader<u16>);
-impl TRM_MU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TRM_MU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRM_MU_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRM_MU_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `trm_mu` writer - RO Trim Adaptation Gain"]
-pub struct TRM_MU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRM_MU_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 8)) | ((value as u32 & 0x0fff) << 8);
-        self.w
-    }
-}
+pub type TRM_MU_W<'a> = crate::FieldWriter<'a, u32, RO_CAL0_SPEC, u16, u16, 12, 8>;
 #[doc = "Field `ro_trm` reader - RO Trim Calibration Result"]
-pub struct RO_TRM_R(crate::FieldReader<u16>);
-impl RO_TRM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RO_TRM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_TRM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_TRM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ro_trm` writer - RO Trim Calibration Result"]
-pub struct RO_TRM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_TRM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 23)) | ((value as u32 & 0x01ff) << 23);
-        self.w
-    }
-}
+pub type RO_TRM_W<'a> = crate::FieldWriter<'a, u32, RO_CAL0_SPEC, u16, u16, 9, 23>;
 impl R {
     #[doc = "Bit 0 - RO Calibration Enable"]
     #[inline(always)]
@@ -304,37 +103,37 @@ impl W {
     #[doc = "Bit 0 - RO Calibration Enable"]
     #[inline(always)]
     pub fn ro_cal_en(&mut self) -> RO_CAL_EN_W {
-        RO_CAL_EN_W { w: self }
+        RO_CAL_EN_W::new(self)
     }
     #[doc = "Bit 1 - RO Calibration Run"]
     #[inline(always)]
     pub fn ro_cal_run(&mut self) -> RO_CAL_RUN_W {
-        RO_CAL_RUN_W { w: self }
+        RO_CAL_RUN_W::new(self)
     }
     #[doc = "Bit 2 - RO Calibration Load Initial Value"]
     #[inline(always)]
     pub fn ro_cal_load(&mut self) -> RO_CAL_LOAD_W {
-        RO_CAL_LOAD_W { w: self }
+        RO_CAL_LOAD_W::new(self)
     }
     #[doc = "Bit 4 - RO Calibration Run Atomic"]
     #[inline(always)]
     pub fn ro_cal_atomic(&mut self) -> RO_CAL_ATOMIC_W {
-        RO_CAL_ATOMIC_W { w: self }
+        RO_CAL_ATOMIC_W::new(self)
     }
     #[doc = "Bits 5:7 - Dummy Write Field"]
     #[inline(always)]
     pub fn dummy(&mut self) -> DUMMY_W {
-        DUMMY_W { w: self }
+        DUMMY_W::new(self)
     }
     #[doc = "Bits 8:19 - RO Trim Adaptation Gain"]
     #[inline(always)]
     pub fn trm_mu(&mut self) -> TRM_MU_W {
-        TRM_MU_W { w: self }
+        TRM_MU_W::new(self)
     }
     #[doc = "Bits 23:31 - RO Trim Calibration Result"]
     #[inline(always)]
     pub fn ro_trm(&mut self) -> RO_TRM_W {
-        RO_TRM_W { w: self }
+        RO_TRM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,207 +35,29 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `mode` reader - Operating Modes for 32-bit/16-bit Timers"]
-pub struct MODE_R(crate::FieldReader<u8>);
-impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `mode` writer - Operating Modes for 32-bit/16-bit Timers"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type MODE_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `tmr2x16` reader - Dual 16-bit Timer Mode"]
-pub struct TMR2X16_R(crate::FieldReader<bool>);
-impl TMR2X16_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TMR2X16_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TMR2X16_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TMR2X16_R = crate::BitReader<bool>;
 #[doc = "Field `tmr2x16` writer - Dual 16-bit Timer Mode"]
-pub struct TMR2X16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TMR2X16_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TMR2X16_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
 #[doc = "Field `prescale` reader - Timer Clock Prescale Setting"]
-pub struct PRESCALE_R(crate::FieldReader<u8>);
-impl PRESCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRESCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRESCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRESCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `prescale` writer - Timer Clock Prescale Setting"]
-pub struct PRESCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRESCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type PRESCALE_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `polarity` reader - Timer I/O Polarity"]
-pub struct POLARITY_R(crate::FieldReader<bool>);
-impl POLARITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POLARITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POLARITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POLARITY_R = crate::BitReader<bool>;
 #[doc = "Field `polarity` writer - Timer I/O Polarity"]
-pub struct POLARITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POLARITY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type POLARITY_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 8>;
 #[doc = "Field `enable0` reader - Enable 32-bit timer / 16-bit timer 0"]
-pub struct ENABLE0_R(crate::FieldReader<bool>);
-impl ENABLE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE0_R = crate::BitReader<bool>;
 #[doc = "Field `enable0` writer - Enable 32-bit timer / 16-bit timer 0"]
-pub struct ENABLE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type ENABLE0_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 12>;
 #[doc = "Field `enable1` reader - Enable 16-bit timer 1"]
-pub struct ENABLE1_R(crate::FieldReader<bool>);
-impl ENABLE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE1_R = crate::BitReader<bool>;
 #[doc = "Field `enable1` writer - Enable 16-bit timer 1"]
-pub struct ENABLE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type ENABLE1_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 13>;
 impl R {
     #[doc = "Bits 0:2 - Operating Modes for 32-bit/16-bit Timers"]
     #[inline(always)]
@@ -272,32 +94,32 @@ impl W {
     #[doc = "Bits 0:2 - Operating Modes for 32-bit/16-bit Timers"]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+        MODE_W::new(self)
     }
     #[doc = "Bit 3 - Dual 16-bit Timer Mode"]
     #[inline(always)]
     pub fn tmr2x16(&mut self) -> TMR2X16_W {
-        TMR2X16_W { w: self }
+        TMR2X16_W::new(self)
     }
     #[doc = "Bits 4:7 - Timer Clock Prescale Setting"]
     #[inline(always)]
     pub fn prescale(&mut self) -> PRESCALE_W {
-        PRESCALE_W { w: self }
+        PRESCALE_W::new(self)
     }
     #[doc = "Bit 8 - Timer I/O Polarity"]
     #[inline(always)]
     pub fn polarity(&mut self) -> POLARITY_W {
-        POLARITY_W { w: self }
+        POLARITY_W::new(self)
     }
     #[doc = "Bit 12 - Enable 32-bit timer / 16-bit timer 0"]
     #[inline(always)]
     pub fn enable0(&mut self) -> ENABLE0_W {
-        ENABLE0_W { w: self }
+        ENABLE0_W::new(self)
     }
     #[doc = "Bit 13 - Enable 16-bit timer 1"]
     #[inline(always)]
     pub fn enable1(&mut self) -> ENABLE1_W {
-        ENABLE1_W { w: self }
+        ENABLE1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

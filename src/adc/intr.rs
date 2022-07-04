@@ -35,464 +35,55 @@ impl From<crate::W<INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `adc_done_ie` reader - ADC Done Interrupt Enable"]
-pub struct ADC_DONE_IE_R(crate::FieldReader<bool>);
-impl ADC_DONE_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_DONE_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_DONE_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_DONE_IE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_done_ie` writer - ADC Done Interrupt Enable"]
-pub struct ADC_DONE_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_DONE_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ADC_DONE_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 0>;
 #[doc = "Field `adc_ref_ready_ie` reader - ADC Reference Ready Interrupt Enable"]
-pub struct ADC_REF_READY_IE_R(crate::FieldReader<bool>);
-impl ADC_REF_READY_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_REF_READY_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_REF_READY_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_REF_READY_IE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_ref_ready_ie` writer - ADC Reference Ready Interrupt Enable"]
-pub struct ADC_REF_READY_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_REF_READY_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ADC_REF_READY_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 1>;
 #[doc = "Field `adc_hi_limit_ie` reader - ADC Hi Limit Monitor Interrupt Enable"]
-pub struct ADC_HI_LIMIT_IE_R(crate::FieldReader<bool>);
-impl ADC_HI_LIMIT_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_HI_LIMIT_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_HI_LIMIT_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_HI_LIMIT_IE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_hi_limit_ie` writer - ADC Hi Limit Monitor Interrupt Enable"]
-pub struct ADC_HI_LIMIT_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_HI_LIMIT_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ADC_HI_LIMIT_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 2>;
 #[doc = "Field `adc_lo_limit_ie` reader - ADC Lo Limit Monitor Interrupt Enable"]
-pub struct ADC_LO_LIMIT_IE_R(crate::FieldReader<bool>);
-impl ADC_LO_LIMIT_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_LO_LIMIT_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_LO_LIMIT_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_LO_LIMIT_IE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_lo_limit_ie` writer - ADC Lo Limit Monitor Interrupt Enable"]
-pub struct ADC_LO_LIMIT_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_LO_LIMIT_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type ADC_LO_LIMIT_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 3>;
 #[doc = "Field `adc_overflow_ie` reader - ADC Overflow Interrupt Enable"]
-pub struct ADC_OVERFLOW_IE_R(crate::FieldReader<bool>);
-impl ADC_OVERFLOW_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_OVERFLOW_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_OVERFLOW_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_OVERFLOW_IE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_overflow_ie` writer - ADC Overflow Interrupt Enable"]
-pub struct ADC_OVERFLOW_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_OVERFLOW_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type ADC_OVERFLOW_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 4>;
 #[doc = "Field `ro_cal_done_ie` reader - RO Cal Done Interrupt Enable"]
-pub struct RO_CAL_DONE_IE_R(crate::FieldReader<bool>);
-impl RO_CAL_DONE_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_DONE_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_DONE_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_DONE_IE_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_done_ie` writer - RO Cal Done Interrupt Enable"]
-pub struct RO_CAL_DONE_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_DONE_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RO_CAL_DONE_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 5>;
 #[doc = "Field `adc_done_if` reader - ADC Done Interrupt Flag"]
-pub struct ADC_DONE_IF_R(crate::FieldReader<bool>);
-impl ADC_DONE_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_DONE_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_DONE_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_DONE_IF_R = crate::BitReader<bool>;
 #[doc = "Field `adc_done_if` writer - ADC Done Interrupt Flag"]
-pub struct ADC_DONE_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_DONE_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type ADC_DONE_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 16>;
 #[doc = "Field `adc_ref_ready_if` reader - ADC Reference Ready Interrupt Flag"]
-pub struct ADC_REF_READY_IF_R(crate::FieldReader<bool>);
-impl ADC_REF_READY_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_REF_READY_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_REF_READY_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_REF_READY_IF_R = crate::BitReader<bool>;
 #[doc = "Field `adc_ref_ready_if` writer - ADC Reference Ready Interrupt Flag"]
-pub struct ADC_REF_READY_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_REF_READY_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type ADC_REF_READY_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 17>;
 #[doc = "Field `adc_hi_limit_if` reader - ADC Hi Limit Monitor Interrupt Flag"]
-pub struct ADC_HI_LIMIT_IF_R(crate::FieldReader<bool>);
-impl ADC_HI_LIMIT_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_HI_LIMIT_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_HI_LIMIT_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_HI_LIMIT_IF_R = crate::BitReader<bool>;
 #[doc = "Field `adc_hi_limit_if` writer - ADC Hi Limit Monitor Interrupt Flag"]
-pub struct ADC_HI_LIMIT_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_HI_LIMIT_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type ADC_HI_LIMIT_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 18>;
 #[doc = "Field `adc_lo_limit_if` reader - ADC Lo Limit Monitor Interrupt Flag"]
-pub struct ADC_LO_LIMIT_IF_R(crate::FieldReader<bool>);
-impl ADC_LO_LIMIT_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_LO_LIMIT_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_LO_LIMIT_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_LO_LIMIT_IF_R = crate::BitReader<bool>;
 #[doc = "Field `adc_lo_limit_if` writer - ADC Lo Limit Monitor Interrupt Flag"]
-pub struct ADC_LO_LIMIT_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_LO_LIMIT_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type ADC_LO_LIMIT_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 19>;
 #[doc = "Field `adc_overflow_if` reader - ADC Overflow Interrupt Flag"]
-pub struct ADC_OVERFLOW_IF_R(crate::FieldReader<bool>);
-impl ADC_OVERFLOW_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_OVERFLOW_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_OVERFLOW_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_OVERFLOW_IF_R = crate::BitReader<bool>;
 #[doc = "Field `adc_overflow_if` writer - ADC Overflow Interrupt Flag"]
-pub struct ADC_OVERFLOW_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_OVERFLOW_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type ADC_OVERFLOW_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 20>;
 #[doc = "Field `ro_cal_done_if` reader - RO Cal Done Interrupt Flag"]
-pub struct RO_CAL_DONE_IF_R(crate::FieldReader<bool>);
-impl RO_CAL_DONE_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RO_CAL_DONE_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RO_CAL_DONE_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RO_CAL_DONE_IF_R = crate::BitReader<bool>;
 #[doc = "Field `ro_cal_done_if` writer - RO Cal Done Interrupt Flag"]
-pub struct RO_CAL_DONE_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_CAL_DONE_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type RO_CAL_DONE_IF_W<'a> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, 21>;
 #[doc = "Field `adc_int_pending` reader - ADC Interrupt Pending Status"]
-pub struct ADC_INT_PENDING_R(crate::FieldReader<bool>);
-impl ADC_INT_PENDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_INT_PENDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_INT_PENDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_INT_PENDING_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - ADC Done Interrupt Enable"]
     #[inline(always)]
@@ -564,62 +155,62 @@ impl W {
     #[doc = "Bit 0 - ADC Done Interrupt Enable"]
     #[inline(always)]
     pub fn adc_done_ie(&mut self) -> ADC_DONE_IE_W {
-        ADC_DONE_IE_W { w: self }
+        ADC_DONE_IE_W::new(self)
     }
     #[doc = "Bit 1 - ADC Reference Ready Interrupt Enable"]
     #[inline(always)]
     pub fn adc_ref_ready_ie(&mut self) -> ADC_REF_READY_IE_W {
-        ADC_REF_READY_IE_W { w: self }
+        ADC_REF_READY_IE_W::new(self)
     }
     #[doc = "Bit 2 - ADC Hi Limit Monitor Interrupt Enable"]
     #[inline(always)]
     pub fn adc_hi_limit_ie(&mut self) -> ADC_HI_LIMIT_IE_W {
-        ADC_HI_LIMIT_IE_W { w: self }
+        ADC_HI_LIMIT_IE_W::new(self)
     }
     #[doc = "Bit 3 - ADC Lo Limit Monitor Interrupt Enable"]
     #[inline(always)]
     pub fn adc_lo_limit_ie(&mut self) -> ADC_LO_LIMIT_IE_W {
-        ADC_LO_LIMIT_IE_W { w: self }
+        ADC_LO_LIMIT_IE_W::new(self)
     }
     #[doc = "Bit 4 - ADC Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn adc_overflow_ie(&mut self) -> ADC_OVERFLOW_IE_W {
-        ADC_OVERFLOW_IE_W { w: self }
+        ADC_OVERFLOW_IE_W::new(self)
     }
     #[doc = "Bit 5 - RO Cal Done Interrupt Enable"]
     #[inline(always)]
     pub fn ro_cal_done_ie(&mut self) -> RO_CAL_DONE_IE_W {
-        RO_CAL_DONE_IE_W { w: self }
+        RO_CAL_DONE_IE_W::new(self)
     }
     #[doc = "Bit 16 - ADC Done Interrupt Flag"]
     #[inline(always)]
     pub fn adc_done_if(&mut self) -> ADC_DONE_IF_W {
-        ADC_DONE_IF_W { w: self }
+        ADC_DONE_IF_W::new(self)
     }
     #[doc = "Bit 17 - ADC Reference Ready Interrupt Flag"]
     #[inline(always)]
     pub fn adc_ref_ready_if(&mut self) -> ADC_REF_READY_IF_W {
-        ADC_REF_READY_IF_W { w: self }
+        ADC_REF_READY_IF_W::new(self)
     }
     #[doc = "Bit 18 - ADC Hi Limit Monitor Interrupt Flag"]
     #[inline(always)]
     pub fn adc_hi_limit_if(&mut self) -> ADC_HI_LIMIT_IF_W {
-        ADC_HI_LIMIT_IF_W { w: self }
+        ADC_HI_LIMIT_IF_W::new(self)
     }
     #[doc = "Bit 19 - ADC Lo Limit Monitor Interrupt Flag"]
     #[inline(always)]
     pub fn adc_lo_limit_if(&mut self) -> ADC_LO_LIMIT_IF_W {
-        ADC_LO_LIMIT_IF_W { w: self }
+        ADC_LO_LIMIT_IF_W::new(self)
     }
     #[doc = "Bit 20 - ADC Overflow Interrupt Flag"]
     #[inline(always)]
     pub fn adc_overflow_if(&mut self) -> ADC_OVERFLOW_IF_W {
-        ADC_OVERFLOW_IF_W { w: self }
+        ADC_OVERFLOW_IF_W::new(self)
     }
     #[doc = "Bit 21 - RO Cal Done Interrupt Flag"]
     #[inline(always)]
     pub fn ro_cal_done_if(&mut self) -> RO_CAL_DONE_IF_W {
-        RO_CAL_DONE_IF_W { w: self }
+        RO_CAL_DONE_IF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

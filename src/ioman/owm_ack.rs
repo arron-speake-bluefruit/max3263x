@@ -35,79 +35,13 @@ impl From<crate::W<OWM_ACK_SPEC>> for W {
     }
 }
 #[doc = "Field `mapping_ack` reader - 1-Wire Line I/O Acknowledge"]
-pub struct MAPPING_ACK_R(crate::FieldReader<bool>);
-impl MAPPING_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAPPING_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAPPING_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAPPING_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `mapping_ack` writer - 1-Wire Line I/O Acknowledge"]
-pub struct MAPPING_ACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAPPING_ACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MAPPING_ACK_W<'a> = crate::BitWriter<'a, u32, OWM_ACK_SPEC, bool, 4>;
 #[doc = "Field `epu_io_ack` reader - External Pullup Control Line I/O Acknowledge"]
-pub struct EPU_IO_ACK_R(crate::FieldReader<bool>);
-impl EPU_IO_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EPU_IO_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EPU_IO_ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EPU_IO_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `epu_io_ack` writer - External Pullup Control Line I/O Acknowledge"]
-pub struct EPU_IO_ACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPU_IO_ACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type EPU_IO_ACK_W<'a> = crate::BitWriter<'a, u32, OWM_ACK_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 4 - 1-Wire Line I/O Acknowledge"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 4 - 1-Wire Line I/O Acknowledge"]
     #[inline(always)]
     pub fn mapping_ack(&mut self) -> MAPPING_ACK_W {
-        MAPPING_ACK_W { w: self }
+        MAPPING_ACK_W::new(self)
     }
     #[doc = "Bit 5 - External Pullup Control Line I/O Acknowledge"]
     #[inline(always)]
     pub fn epu_io_ack(&mut self) -> EPU_IO_ACK_W {
-        EPU_IO_ACK_W { w: self }
+        EPU_IO_ACK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

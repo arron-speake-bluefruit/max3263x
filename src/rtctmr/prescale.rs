@@ -35,32 +35,9 @@ impl From<crate::W<PRESCALE_SPEC>> for W {
     }
 }
 #[doc = "Field `width_selection` reader - RTC Timer Prescale Setting"]
-pub struct WIDTH_SELECTION_R(crate::FieldReader<u8>);
-impl WIDTH_SELECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WIDTH_SELECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIDTH_SELECTION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIDTH_SELECTION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `width_selection` writer - RTC Timer Prescale Setting"]
-pub struct WIDTH_SELECTION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIDTH_SELECTION_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type WIDTH_SELECTION_W<'a> = crate::FieldWriter<'a, u32, PRESCALE_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - RTC Timer Prescale Setting"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - RTC Timer Prescale Setting"]
     #[inline(always)]
     pub fn width_selection(&mut self) -> WIDTH_SELECTION_W {
-        WIDTH_SELECTION_W { w: self }
+        WIDTH_SELECTION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

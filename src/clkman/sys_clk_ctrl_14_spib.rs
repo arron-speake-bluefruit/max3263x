@@ -35,32 +35,10 @@ impl From<crate::W<SYS_CLK_CTRL_14_SPIB_SPEC>> for W {
     }
 }
 #[doc = "Field `spib_clk_scale` reader - Control Settings for CLK14 - SPI Bridge Clock"]
-pub struct SPIB_CLK_SCALE_R(crate::FieldReader<u8>);
-impl SPIB_CLK_SCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPIB_CLK_SCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPIB_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPIB_CLK_SCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spib_clk_scale` writer - Control Settings for CLK14 - SPI Bridge Clock"]
-pub struct SPIB_CLK_SCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPIB_CLK_SCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type SPIB_CLK_SCALE_W<'a> =
+    crate::FieldWriter<'a, u32, SYS_CLK_CTRL_14_SPIB_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - Control Settings for CLK14 - SPI Bridge Clock"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:3 - Control Settings for CLK14 - SPI Bridge Clock"]
     #[inline(always)]
     pub fn spib_clk_scale(&mut self) -> SPIB_CLK_SCALE_W {
-        SPIB_CLK_SCALE_W { w: self }
+        SPIB_CLK_SCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

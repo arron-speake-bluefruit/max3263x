@@ -35,79 +35,13 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `timer0` reader - Interrupt Flag for 32-bit Timer / 16-bit Timer 0"]
-pub struct TIMER0_R(crate::FieldReader<bool>);
-impl TIMER0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER0_R = crate::BitReader<bool>;
 #[doc = "Field `timer0` writer - Interrupt Flag for 32-bit Timer / 16-bit Timer 0"]
-pub struct TIMER0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TIMER0_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 0>;
 #[doc = "Field `timer1` reader - Interrupt Flag for 16-bit Timer 1"]
-pub struct TIMER1_R(crate::FieldReader<bool>);
-impl TIMER1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_R = crate::BitReader<bool>;
 #[doc = "Field `timer1` writer - Interrupt Flag for 16-bit Timer 1"]
-pub struct TIMER1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TIMER1_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - Interrupt Flag for 32-bit Timer / 16-bit Timer 0"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - Interrupt Flag for 32-bit Timer / 16-bit Timer 0"]
     #[inline(always)]
     pub fn timer0(&mut self) -> TIMER0_W {
-        TIMER0_W { w: self }
+        TIMER0_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt Flag for 16-bit Timer 1"]
     #[inline(always)]
     pub fn timer1(&mut self) -> TIMER1_W {
-        TIMER1_W { w: self }
+        TIMER1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

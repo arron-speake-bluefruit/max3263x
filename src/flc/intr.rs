@@ -35,168 +35,23 @@ impl From<crate::W<INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `finished_if` reader - Flash Write/Erase Operation Finished"]
-pub struct FINISHED_IF_R(crate::FieldReader<bool>);
-impl FINISHED_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FINISHED_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FINISHED_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FINISHED_IF_R = crate::BitReader<bool>;
 #[doc = "Field `finished_if` writer - Flash Write/Erase Operation Finished"]
-pub struct FINISHED_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FINISHED_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FINISHED_IF_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 0>;
 #[doc = "Field `failed_if` reader - Flash Operation Failed"]
-pub struct FAILED_IF_R(crate::FieldReader<bool>);
-impl FAILED_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAILED_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAILED_IF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAILED_IF_R = crate::BitReader<bool>;
 #[doc = "Field `failed_if` writer - Flash Operation Failed"]
-pub struct FAILED_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FAILED_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type FAILED_IF_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 1>;
 #[doc = "Field `finished_ie` reader - Flash Write/Erase Operation Finished Interrupt Enable"]
-pub struct FINISHED_IE_R(crate::FieldReader<bool>);
-impl FINISHED_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FINISHED_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FINISHED_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FINISHED_IE_R = crate::BitReader<bool>;
 #[doc = "Field `finished_ie` writer - Flash Write/Erase Operation Finished Interrupt Enable"]
-pub struct FINISHED_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FINISHED_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type FINISHED_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 8>;
 #[doc = "Field `failed_ie` reader - Flash Operation Failed Interrupt Enable"]
-pub struct FAILED_IE_R(crate::FieldReader<bool>);
-impl FAILED_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAILED_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAILED_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAILED_IE_R = crate::BitReader<bool>;
 #[doc = "Field `failed_ie` writer - Flash Operation Failed Interrupt Enable"]
-pub struct FAILED_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FAILED_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type FAILED_IE_W<'a> = crate::BitWriter<'a, u32, INTR_SPEC, bool, 9>;
 #[doc = "Field `fail_flags` reader - Flash Operation Failure Details"]
-pub struct FAIL_FLAGS_R(crate::FieldReader<u16>);
-impl FAIL_FLAGS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FAIL_FLAGS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAIL_FLAGS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAIL_FLAGS_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0 - Flash Write/Erase Operation Finished"]
     #[inline(always)]
@@ -228,22 +83,22 @@ impl W {
     #[doc = "Bit 0 - Flash Write/Erase Operation Finished"]
     #[inline(always)]
     pub fn finished_if(&mut self) -> FINISHED_IF_W {
-        FINISHED_IF_W { w: self }
+        FINISHED_IF_W::new(self)
     }
     #[doc = "Bit 1 - Flash Operation Failed"]
     #[inline(always)]
     pub fn failed_if(&mut self) -> FAILED_IF_W {
-        FAILED_IF_W { w: self }
+        FAILED_IF_W::new(self)
     }
     #[doc = "Bit 8 - Flash Write/Erase Operation Finished Interrupt Enable"]
     #[inline(always)]
     pub fn finished_ie(&mut self) -> FINISHED_IE_W {
-        FINISHED_IE_W { w: self }
+        FINISHED_IE_W::new(self)
     }
     #[doc = "Bit 9 - Flash Operation Failed Interrupt Enable"]
     #[inline(always)]
     pub fn failed_ie(&mut self) -> FAILED_IE_W {
-        FAILED_IE_W { w: self }
+        FAILED_IE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

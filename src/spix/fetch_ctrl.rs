@@ -35,32 +35,9 @@ impl From<crate::W<FETCH_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `cmd_value` reader - Command Value"]
-pub struct CMD_VALUE_R(crate::FieldReader<u8>);
-impl CMD_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMD_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_VALUE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_VALUE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `cmd_value` writer - Command Value"]
-pub struct CMD_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMD_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CMD_VALUE_W<'a> = crate::FieldWriter<'a, u32, FETCH_CTRL_SPEC, u8, u8, 8, 0>;
 #[doc = "Command Width\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -79,13 +56,9 @@ impl From<CMD_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `cmd_width` reader - Command Width"]
-pub struct CMD_WIDTH_R(crate::FieldReader<u8>);
+pub type CMD_WIDTH_R = crate::FieldReader<u8, CMD_WIDTH_A>;
 impl CMD_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMD_WIDTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<CMD_WIDTH_A> {
         match self.bits {
@@ -98,36 +71,22 @@ impl CMD_WIDTH_R {
     #[doc = "Checks if the value of the field is `SINGLE`"]
     #[inline(always)]
     pub fn is_single(&self) -> bool {
-        **self == CMD_WIDTH_A::SINGLE
+        *self == CMD_WIDTH_A::SINGLE
     }
     #[doc = "Checks if the value of the field is `DUAL_IO`"]
     #[inline(always)]
     pub fn is_dual_io(&self) -> bool {
-        **self == CMD_WIDTH_A::DUAL_IO
+        *self == CMD_WIDTH_A::DUAL_IO
     }
     #[doc = "Checks if the value of the field is `QUAD_IO`"]
     #[inline(always)]
     pub fn is_quad_io(&self) -> bool {
-        **self == CMD_WIDTH_A::QUAD_IO
-    }
-}
-impl core::ops::Deref for CMD_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CMD_WIDTH_A::QUAD_IO
     }
 }
 #[doc = "Field `cmd_width` writer - Command Width"]
-pub struct CMD_WIDTH_W<'a> {
-    w: &'a mut W,
-}
+pub type CMD_WIDTH_W<'a> = crate::FieldWriter<'a, u32, FETCH_CTRL_SPEC, u8, CMD_WIDTH_A, 2, 8>;
 impl<'a> CMD_WIDTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CMD_WIDTH_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "Single I/O used for Tx/Rx."]
     #[inline(always)]
     pub fn single(self) -> &'a mut W {
@@ -142,12 +101,6 @@ impl<'a> CMD_WIDTH_W<'a> {
     #[inline(always)]
     pub fn quad_io(self) -> &'a mut W {
         self.variant(CMD_WIDTH_A::QUAD_IO)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
     }
 }
 #[doc = "Address Width\n\nValue on reset: 0"]
@@ -168,13 +121,9 @@ impl From<ADDR_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `addr_width` reader - Address Width"]
-pub struct ADDR_WIDTH_R(crate::FieldReader<u8>);
+pub type ADDR_WIDTH_R = crate::FieldReader<u8, ADDR_WIDTH_A>;
 impl ADDR_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADDR_WIDTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<ADDR_WIDTH_A> {
         match self.bits {
@@ -187,36 +136,22 @@ impl ADDR_WIDTH_R {
     #[doc = "Checks if the value of the field is `SINGLE`"]
     #[inline(always)]
     pub fn is_single(&self) -> bool {
-        **self == ADDR_WIDTH_A::SINGLE
+        *self == ADDR_WIDTH_A::SINGLE
     }
     #[doc = "Checks if the value of the field is `DUAL_IO`"]
     #[inline(always)]
     pub fn is_dual_io(&self) -> bool {
-        **self == ADDR_WIDTH_A::DUAL_IO
+        *self == ADDR_WIDTH_A::DUAL_IO
     }
     #[doc = "Checks if the value of the field is `QUAD_IO`"]
     #[inline(always)]
     pub fn is_quad_io(&self) -> bool {
-        **self == ADDR_WIDTH_A::QUAD_IO
-    }
-}
-impl core::ops::Deref for ADDR_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == ADDR_WIDTH_A::QUAD_IO
     }
 }
 #[doc = "Field `addr_width` writer - Address Width"]
-pub struct ADDR_WIDTH_W<'a> {
-    w: &'a mut W,
-}
+pub type ADDR_WIDTH_W<'a> = crate::FieldWriter<'a, u32, FETCH_CTRL_SPEC, u8, ADDR_WIDTH_A, 2, 10>;
 impl<'a> ADDR_WIDTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ADDR_WIDTH_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "Single I/O used for Tx/Rx."]
     #[inline(always)]
     pub fn single(self) -> &'a mut W {
@@ -231,12 +166,6 @@ impl<'a> ADDR_WIDTH_W<'a> {
     #[inline(always)]
     pub fn quad_io(self) -> &'a mut W {
         self.variant(ADDR_WIDTH_A::QUAD_IO)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
     }
 }
 #[doc = "Data Width\n\nValue on reset: 0"]
@@ -257,13 +186,9 @@ impl From<DATA_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `data_width` reader - Data Width"]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
+pub type DATA_WIDTH_R = crate::FieldReader<u8, DATA_WIDTH_A>;
 impl DATA_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_WIDTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<DATA_WIDTH_A> {
         match self.bits {
@@ -276,36 +201,22 @@ impl DATA_WIDTH_R {
     #[doc = "Checks if the value of the field is `SINGLE`"]
     #[inline(always)]
     pub fn is_single(&self) -> bool {
-        **self == DATA_WIDTH_A::SINGLE
+        *self == DATA_WIDTH_A::SINGLE
     }
     #[doc = "Checks if the value of the field is `DUAL_IO`"]
     #[inline(always)]
     pub fn is_dual_io(&self) -> bool {
-        **self == DATA_WIDTH_A::DUAL_IO
+        *self == DATA_WIDTH_A::DUAL_IO
     }
     #[doc = "Checks if the value of the field is `QUAD_IO`"]
     #[inline(always)]
     pub fn is_quad_io(&self) -> bool {
-        **self == DATA_WIDTH_A::QUAD_IO
-    }
-}
-impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DATA_WIDTH_A::QUAD_IO
     }
 }
 #[doc = "Field `data_width` writer - Data Width"]
-pub struct DATA_WIDTH_W<'a> {
-    w: &'a mut W,
-}
+pub type DATA_WIDTH_W<'a> = crate::FieldWriter<'a, u32, FETCH_CTRL_SPEC, u8, DATA_WIDTH_A, 2, 12>;
 impl<'a> DATA_WIDTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DATA_WIDTH_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "Single I/O used for Tx/Rx."]
     #[inline(always)]
     pub fn single(self) -> &'a mut W {
@@ -320,12 +231,6 @@ impl<'a> DATA_WIDTH_W<'a> {
     #[inline(always)]
     pub fn quad_io(self) -> &'a mut W {
         self.variant(DATA_WIDTH_A::QUAD_IO)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
     }
 }
 impl R {
@@ -354,22 +259,22 @@ impl W {
     #[doc = "Bits 0:7 - Command Value"]
     #[inline(always)]
     pub fn cmd_value(&mut self) -> CMD_VALUE_W {
-        CMD_VALUE_W { w: self }
+        CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 8:9 - Command Width"]
     #[inline(always)]
     pub fn cmd_width(&mut self) -> CMD_WIDTH_W {
-        CMD_WIDTH_W { w: self }
+        CMD_WIDTH_W::new(self)
     }
     #[doc = "Bits 10:11 - Address Width"]
     #[inline(always)]
     pub fn addr_width(&mut self) -> ADDR_WIDTH_W {
-        ADDR_WIDTH_W { w: self }
+        ADDR_WIDTH_W::new(self)
     }
     #[doc = "Bits 12:13 - Data Width"]
     #[inline(always)]
     pub fn data_width(&mut self) -> DATA_WIDTH_W {
-        DATA_WIDTH_W { w: self }
+        DATA_WIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

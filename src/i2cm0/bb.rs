@@ -35,124 +35,19 @@ impl From<crate::W<BB_SPEC>> for W {
     }
 }
 #[doc = "Field `bb_scl_out` reader - Bit Bang SCL Output"]
-pub struct BB_SCL_OUT_R(crate::FieldReader<bool>);
-impl BB_SCL_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BB_SCL_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BB_SCL_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BB_SCL_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `bb_scl_out` writer - Bit Bang SCL Output"]
-pub struct BB_SCL_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BB_SCL_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type BB_SCL_OUT_W<'a> = crate::BitWriter<'a, u32, BB_SPEC, bool, 0>;
 #[doc = "Field `bb_sda_out` reader - Bit Bang SDA Output"]
-pub struct BB_SDA_OUT_R(crate::FieldReader<bool>);
-impl BB_SDA_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BB_SDA_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BB_SDA_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BB_SDA_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `bb_sda_out` writer - Bit Bang SDA Output"]
-pub struct BB_SDA_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BB_SDA_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type BB_SDA_OUT_W<'a> = crate::BitWriter<'a, u32, BB_SPEC, bool, 1>;
 #[doc = "Field `bb_scl_in_val` reader - Bit Bang SCL Input Value"]
-pub struct BB_SCL_IN_VAL_R(crate::FieldReader<bool>);
-impl BB_SCL_IN_VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BB_SCL_IN_VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BB_SCL_IN_VAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BB_SCL_IN_VAL_R = crate::BitReader<bool>;
 #[doc = "Field `bb_sda_in_val` reader - Bit Bang SCL Input Value"]
-pub struct BB_SDA_IN_VAL_R(crate::FieldReader<bool>);
-impl BB_SDA_IN_VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BB_SDA_IN_VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BB_SDA_IN_VAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BB_SDA_IN_VAL_R = crate::BitReader<bool>;
 #[doc = "Field `rx_fifo_cnt` reader - Results FIFO Data Received Count"]
-pub struct RX_FIFO_CNT_R(crate::FieldReader<u8>);
-impl RX_FIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_FIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_CNT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Bit Bang SCL Output"]
     #[inline(always)]
@@ -184,12 +79,12 @@ impl W {
     #[doc = "Bit 0 - Bit Bang SCL Output"]
     #[inline(always)]
     pub fn bb_scl_out(&mut self) -> BB_SCL_OUT_W {
-        BB_SCL_OUT_W { w: self }
+        BB_SCL_OUT_W::new(self)
     }
     #[doc = "Bit 1 - Bit Bang SDA Output"]
     #[inline(always)]
     pub fn bb_sda_out(&mut self) -> BB_SDA_OUT_W {
-        BB_SDA_OUT_W { w: self }
+        BB_SDA_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

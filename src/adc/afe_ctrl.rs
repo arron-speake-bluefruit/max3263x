@@ -35,79 +35,13 @@ impl From<crate::W<AFE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `tmon_intbias_en` reader - Enable internal temperature measurement bias generator"]
-pub struct TMON_INTBIAS_EN_R(crate::FieldReader<bool>);
-impl TMON_INTBIAS_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TMON_INTBIAS_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TMON_INTBIAS_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TMON_INTBIAS_EN_R = crate::BitReader<bool>;
 #[doc = "Field `tmon_intbias_en` writer - Enable internal temperature measurement bias generator"]
-pub struct TMON_INTBIAS_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TMON_INTBIAS_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TMON_INTBIAS_EN_W<'a> = crate::BitWriter<'a, u32, AFE_CTRL_SPEC, bool, 8>;
 #[doc = "Field `tmon_extbias_en` reader - Enable external temperature measurement bias generator"]
-pub struct TMON_EXTBIAS_EN_R(crate::FieldReader<bool>);
-impl TMON_EXTBIAS_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TMON_EXTBIAS_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TMON_EXTBIAS_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TMON_EXTBIAS_EN_R = crate::BitReader<bool>;
 #[doc = "Field `tmon_extbias_en` writer - Enable external temperature measurement bias generator"]
-pub struct TMON_EXTBIAS_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TMON_EXTBIAS_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type TMON_EXTBIAS_EN_W<'a> = crate::BitWriter<'a, u32, AFE_CTRL_SPEC, bool, 9>;
 impl R {
     #[doc = "Bit 8 - Enable internal temperature measurement bias generator"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 8 - Enable internal temperature measurement bias generator"]
     #[inline(always)]
     pub fn tmon_intbias_en(&mut self) -> TMON_INTBIAS_EN_W {
-        TMON_INTBIAS_EN_W { w: self }
+        TMON_INTBIAS_EN_W::new(self)
     }
     #[doc = "Bit 9 - Enable external temperature measurement bias generator"]
     #[inline(always)]
     pub fn tmon_extbias_en(&mut self) -> TMON_EXTBIAS_EN_W {
-        TMON_EXTBIAS_EN_W { w: self }
+        TMON_EXTBIAS_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

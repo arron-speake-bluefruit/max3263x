@@ -35,133 +35,21 @@ impl From<crate::W<SPCL_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ss_sample_mode` reader - SS Sample Mode"]
-pub struct SS_SAMPLE_MODE_R(crate::FieldReader<bool>);
-impl SS_SAMPLE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS_SAMPLE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS_SAMPLE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS_SAMPLE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ss_sample_mode` writer - SS Sample Mode"]
-pub struct SS_SAMPLE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS_SAMPLE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SS_SAMPLE_MODE_W<'a> = crate::BitWriter<'a, u32, SPCL_CTRL_SPEC, bool, 0>;
 #[doc = "Field `miso_fc_en` reader - SDIO(1) to SR(0) Mode"]
-pub struct MISO_FC_EN_R(crate::FieldReader<bool>);
-impl MISO_FC_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MISO_FC_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MISO_FC_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MISO_FC_EN_R = crate::BitReader<bool>;
 #[doc = "Field `miso_fc_en` writer - SDIO(1) to SR(0) Mode"]
-pub struct MISO_FC_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MISO_FC_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MISO_FC_EN_W<'a> = crate::BitWriter<'a, u32, SPCL_CTRL_SPEC, bool, 1>;
 #[doc = "Field `ss_sa_sdio_out` reader - SDIO Active Output Value"]
-pub struct SS_SA_SDIO_OUT_R(crate::FieldReader<u8>);
-impl SS_SA_SDIO_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SS_SA_SDIO_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS_SA_SDIO_OUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS_SA_SDIO_OUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ss_sa_sdio_out` writer - SDIO Active Output Value"]
-pub struct SS_SA_SDIO_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS_SA_SDIO_OUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type SS_SA_SDIO_OUT_W<'a> = crate::FieldWriter<'a, u32, SPCL_CTRL_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `ss_sa_sdio_dr_en` reader - SDIO Active Drive Mode"]
-pub struct SS_SA_SDIO_DR_EN_R(crate::FieldReader<u8>);
-impl SS_SA_SDIO_DR_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SS_SA_SDIO_DR_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS_SA_SDIO_DR_EN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS_SA_SDIO_DR_EN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ss_sa_sdio_dr_en` writer - SDIO Active Drive Mode"]
-pub struct SS_SA_SDIO_DR_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS_SA_SDIO_DR_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type SS_SA_SDIO_DR_EN_W<'a> = crate::FieldWriter<'a, u32, SPCL_CTRL_SPEC, u8, u8, 4, 8>;
 impl R {
     #[doc = "Bit 0 - SS Sample Mode"]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - SS Sample Mode"]
     #[inline(always)]
     pub fn ss_sample_mode(&mut self) -> SS_SAMPLE_MODE_W {
-        SS_SAMPLE_MODE_W { w: self }
+        SS_SAMPLE_MODE_W::new(self)
     }
     #[doc = "Bit 1 - SDIO(1) to SR(0) Mode"]
     #[inline(always)]
     pub fn miso_fc_en(&mut self) -> MISO_FC_EN_W {
-        MISO_FC_EN_W { w: self }
+        MISO_FC_EN_W::new(self)
     }
     #[doc = "Bits 4:7 - SDIO Active Output Value"]
     #[inline(always)]
     pub fn ss_sa_sdio_out(&mut self) -> SS_SA_SDIO_OUT_W {
-        SS_SA_SDIO_OUT_W { w: self }
+        SS_SA_SDIO_OUT_W::new(self)
     }
     #[doc = "Bits 8:11 - SDIO Active Drive Mode"]
     #[inline(always)]
     pub fn ss_sa_sdio_dr_en(&mut self) -> SS_SA_SDIO_DR_EN_W {
-        SS_SA_SDIO_DR_EN_W { w: self }
+        SS_SA_SDIO_DR_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

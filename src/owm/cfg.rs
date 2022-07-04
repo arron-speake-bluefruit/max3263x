@@ -35,301 +35,37 @@ impl From<crate::W<CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `long_line_mode` reader - Long Line Mode"]
-pub struct LONG_LINE_MODE_R(crate::FieldReader<bool>);
-impl LONG_LINE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LONG_LINE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LONG_LINE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LONG_LINE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `long_line_mode` writer - Long Line Mode"]
-pub struct LONG_LINE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LONG_LINE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type LONG_LINE_MODE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 0>;
 #[doc = "Field `force_pres_det` reader - Force Line During Presence Detect"]
-pub struct FORCE_PRES_DET_R(crate::FieldReader<bool>);
-impl FORCE_PRES_DET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_PRES_DET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_PRES_DET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_PRES_DET_R = crate::BitReader<bool>;
 #[doc = "Field `force_pres_det` writer - Force Line During Presence Detect"]
-pub struct FORCE_PRES_DET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_PRES_DET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type FORCE_PRES_DET_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 1>;
 #[doc = "Field `bit_bang_en` reader - Bit Bang Enable"]
-pub struct BIT_BANG_EN_R(crate::FieldReader<bool>);
-impl BIT_BANG_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BIT_BANG_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BIT_BANG_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BIT_BANG_EN_R = crate::BitReader<bool>;
 #[doc = "Field `bit_bang_en` writer - Bit Bang Enable"]
-pub struct BIT_BANG_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BIT_BANG_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type BIT_BANG_EN_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 2>;
 #[doc = "Field `ext_pullup_mode` reader - Provide an extra output to control an external pullup."]
-pub struct EXT_PULLUP_MODE_R(crate::FieldReader<bool>);
-impl EXT_PULLUP_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_PULLUP_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_PULLUP_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_PULLUP_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ext_pullup_mode` writer - Provide an extra output to control an external pullup."]
-pub struct EXT_PULLUP_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXT_PULLUP_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type EXT_PULLUP_MODE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 3>;
 #[doc = "Field `ext_pullup_enable` reader - Enable External Pullup"]
-pub struct EXT_PULLUP_ENABLE_R(crate::FieldReader<bool>);
-impl EXT_PULLUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_PULLUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_PULLUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_PULLUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `ext_pullup_enable` writer - Enable External Pullup"]
-pub struct EXT_PULLUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXT_PULLUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type EXT_PULLUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 4>;
 #[doc = "Field `single_bit_mode` reader - Enable Single Bit TX/RX Mode"]
-pub struct SINGLE_BIT_MODE_R(crate::FieldReader<bool>);
-impl SINGLE_BIT_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SINGLE_BIT_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_BIT_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_BIT_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `single_bit_mode` writer - Enable Single Bit TX/RX Mode"]
-pub struct SINGLE_BIT_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGLE_BIT_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SINGLE_BIT_MODE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 5>;
 #[doc = "Field `overdrive` reader - Enables overdrive speed for 1-Wire operations."]
-pub struct OVERDRIVE_R(crate::FieldReader<bool>);
-impl OVERDRIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERDRIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERDRIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVERDRIVE_R = crate::BitReader<bool>;
 #[doc = "Field `overdrive` writer - Enables overdrive speed for 1-Wire operations."]
-pub struct OVERDRIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OVERDRIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type OVERDRIVE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 6>;
 #[doc = "Field `int_pullup_enable` reader - Enable internal pullup."]
-pub struct INT_PULLUP_ENABLE_R(crate::FieldReader<bool>);
-impl INT_PULLUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT_PULLUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_PULLUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_PULLUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `int_pullup_enable` writer - Enable internal pullup."]
-pub struct INT_PULLUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_PULLUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type INT_PULLUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - Long Line Mode"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - Long Line Mode"]
     #[inline(always)]
     pub fn long_line_mode(&mut self) -> LONG_LINE_MODE_W {
-        LONG_LINE_MODE_W { w: self }
+        LONG_LINE_MODE_W::new(self)
     }
     #[doc = "Bit 1 - Force Line During Presence Detect"]
     #[inline(always)]
     pub fn force_pres_det(&mut self) -> FORCE_PRES_DET_W {
-        FORCE_PRES_DET_W { w: self }
+        FORCE_PRES_DET_W::new(self)
     }
     #[doc = "Bit 2 - Bit Bang Enable"]
     #[inline(always)]
     pub fn bit_bang_en(&mut self) -> BIT_BANG_EN_W {
-        BIT_BANG_EN_W { w: self }
+        BIT_BANG_EN_W::new(self)
     }
     #[doc = "Bit 3 - Provide an extra output to control an external pullup."]
     #[inline(always)]
     pub fn ext_pullup_mode(&mut self) -> EXT_PULLUP_MODE_W {
-        EXT_PULLUP_MODE_W { w: self }
+        EXT_PULLUP_MODE_W::new(self)
     }
     #[doc = "Bit 4 - Enable External Pullup"]
     #[inline(always)]
     pub fn ext_pullup_enable(&mut self) -> EXT_PULLUP_ENABLE_W {
-        EXT_PULLUP_ENABLE_W { w: self }
+        EXT_PULLUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 5 - Enable Single Bit TX/RX Mode"]
     #[inline(always)]
     pub fn single_bit_mode(&mut self) -> SINGLE_BIT_MODE_W {
-        SINGLE_BIT_MODE_W { w: self }
+        SINGLE_BIT_MODE_W::new(self)
     }
     #[doc = "Bit 6 - Enables overdrive speed for 1-Wire operations."]
     #[inline(always)]
     pub fn overdrive(&mut self) -> OVERDRIVE_W {
-        OVERDRIVE_W { w: self }
+        OVERDRIVE_W::new(self)
     }
     #[doc = "Bit 7 - Enable internal pullup."]
     #[inline(always)]
     pub fn int_pullup_enable(&mut self) -> INT_PULLUP_ENABLE_W {
-        INT_PULLUP_ENABLE_W { w: self }
+        INT_PULLUP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

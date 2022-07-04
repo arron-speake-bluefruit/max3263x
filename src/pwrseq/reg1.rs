@@ -35,190 +35,25 @@ impl From<crate::W<REG1_SPEC>> for W {
     }
 }
 #[doc = "Field `pwr_clr_io_event_latch` reader - Clear all GPIO Event Seen Latches"]
-pub struct PWR_CLR_IO_EVENT_LATCH_R(crate::FieldReader<bool>);
-impl PWR_CLR_IO_EVENT_LATCH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_CLR_IO_EVENT_LATCH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_CLR_IO_EVENT_LATCH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_CLR_IO_EVENT_LATCH_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_clr_io_event_latch` writer - Clear all GPIO Event Seen Latches"]
-pub struct PWR_CLR_IO_EVENT_LATCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_CLR_IO_EVENT_LATCH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PWR_CLR_IO_EVENT_LATCH_W<'a> = crate::BitWriter<'a, u32, REG1_SPEC, bool, 0>;
 #[doc = "Field `pwr_clr_io_cfg_latch` reader - Clear all GPIO Configuration Latches"]
-pub struct PWR_CLR_IO_CFG_LATCH_R(crate::FieldReader<bool>);
-impl PWR_CLR_IO_CFG_LATCH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_CLR_IO_CFG_LATCH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_CLR_IO_CFG_LATCH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_CLR_IO_CFG_LATCH_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_clr_io_cfg_latch` writer - Clear all GPIO Configuration Latches"]
-pub struct PWR_CLR_IO_CFG_LATCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_CLR_IO_CFG_LATCH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PWR_CLR_IO_CFG_LATCH_W<'a> = crate::BitWriter<'a, u32, REG1_SPEC, bool, 1>;
 #[doc = "Field `pwr_mbus_gate` reader - Freeze GPIO MBus State"]
-pub struct PWR_MBUS_GATE_R(crate::FieldReader<bool>);
-impl PWR_MBUS_GATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_MBUS_GATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_MBUS_GATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_MBUS_GATE_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_mbus_gate` writer - Freeze GPIO MBus State"]
-pub struct PWR_MBUS_GATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_MBUS_GATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PWR_MBUS_GATE_W<'a> = crate::BitWriter<'a, u32, REG1_SPEC, bool, 2>;
 #[doc = "Field `pwr_discharge_en` reader - Enable Flash Discharge During Powerfail Event"]
-pub struct PWR_DISCHARGE_EN_R(crate::FieldReader<bool>);
-impl PWR_DISCHARGE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_DISCHARGE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_DISCHARGE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_DISCHARGE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_discharge_en` writer - Enable Flash Discharge During Powerfail Event"]
-pub struct PWR_DISCHARGE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_DISCHARGE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PWR_DISCHARGE_EN_W<'a> = crate::BitWriter<'a, u32, REG1_SPEC, bool, 3>;
 #[doc = "Field `pwr_tvdd12_well` reader - TVDD12 Well Switch"]
-pub struct PWR_TVDD12_WELL_R(crate::FieldReader<bool>);
-impl PWR_TVDD12_WELL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWR_TVDD12_WELL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_TVDD12_WELL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_TVDD12_WELL_R = crate::BitReader<bool>;
 #[doc = "Field `pwr_tvdd12_well` writer - TVDD12 Well Switch"]
-pub struct PWR_TVDD12_WELL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_TVDD12_WELL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PWR_TVDD12_WELL_W<'a> = crate::BitWriter<'a, u32, REG1_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 0 - Clear all GPIO Event Seen Latches"]
     #[inline(always)]
@@ -250,27 +85,27 @@ impl W {
     #[doc = "Bit 0 - Clear all GPIO Event Seen Latches"]
     #[inline(always)]
     pub fn pwr_clr_io_event_latch(&mut self) -> PWR_CLR_IO_EVENT_LATCH_W {
-        PWR_CLR_IO_EVENT_LATCH_W { w: self }
+        PWR_CLR_IO_EVENT_LATCH_W::new(self)
     }
     #[doc = "Bit 1 - Clear all GPIO Configuration Latches"]
     #[inline(always)]
     pub fn pwr_clr_io_cfg_latch(&mut self) -> PWR_CLR_IO_CFG_LATCH_W {
-        PWR_CLR_IO_CFG_LATCH_W { w: self }
+        PWR_CLR_IO_CFG_LATCH_W::new(self)
     }
     #[doc = "Bit 2 - Freeze GPIO MBus State"]
     #[inline(always)]
     pub fn pwr_mbus_gate(&mut self) -> PWR_MBUS_GATE_W {
-        PWR_MBUS_GATE_W { w: self }
+        PWR_MBUS_GATE_W::new(self)
     }
     #[doc = "Bit 3 - Enable Flash Discharge During Powerfail Event"]
     #[inline(always)]
     pub fn pwr_discharge_en(&mut self) -> PWR_DISCHARGE_EN_W {
-        PWR_DISCHARGE_EN_W { w: self }
+        PWR_DISCHARGE_EN_W::new(self)
     }
     #[doc = "Bit 4 - TVDD12 Well Switch"]
     #[inline(always)]
     pub fn pwr_tvdd12_well(&mut self) -> PWR_TVDD12_WELL_W {
-        PWR_TVDD12_WELL_W { w: self }
+        PWR_TVDD12_WELL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -50,13 +50,9 @@ impl From<SPI_MODE_A> for u8 {
     }
 }
 #[doc = "Field `spi_mode` reader - SPIX Mode"]
-pub struct SPI_MODE_R(crate::FieldReader<u8>);
+pub type SPI_MODE_R = crate::FieldReader<u8, SPI_MODE_A>;
 impl SPI_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<SPI_MODE_A> {
         match self.bits {
@@ -68,31 +64,17 @@ impl SPI_MODE_R {
     #[doc = "Checks if the value of the field is `SCK_HI_SAMPLE_RISING`"]
     #[inline(always)]
     pub fn is_sck_hi_sample_rising(&self) -> bool {
-        **self == SPI_MODE_A::SCK_HI_SAMPLE_RISING
+        *self == SPI_MODE_A::SCK_HI_SAMPLE_RISING
     }
     #[doc = "Checks if the value of the field is `SCK_LO_SAMPLE_FALLING`"]
     #[inline(always)]
     pub fn is_sck_lo_sample_falling(&self) -> bool {
-        **self == SPI_MODE_A::SCK_LO_SAMPLE_FALLING
-    }
-}
-impl core::ops::Deref for SPI_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SPI_MODE_A::SCK_LO_SAMPLE_FALLING
     }
 }
 #[doc = "Field `spi_mode` writer - SPIX Mode"]
-pub struct SPI_MODE_W<'a> {
-    w: &'a mut W,
-}
+pub type SPI_MODE_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, SPI_MODE_A, 2, 0>;
 impl<'a> SPI_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SPI_MODE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "SCK is active high, data is sampled on clock rising edge."]
     #[inline(always)]
     pub fn sck_hi_sample_rising(self) -> &'a mut W {
@@ -102,12 +84,6 @@ impl<'a> SPI_MODE_W<'a> {
     #[inline(always)]
     pub fn sck_lo_sample_falling(self) -> &'a mut W {
         self.variant(SPI_MODE_A::SCK_LO_SAMPLE_FALLING)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
     }
 }
 #[doc = "SPIX Slave Select Polarity\n\nValue on reset: 0"]
@@ -125,13 +101,9 @@ impl From<SS_ACT_LO_A> for bool {
     }
 }
 #[doc = "Field `ss_act_lo` reader - SPIX Slave Select Polarity"]
-pub struct SS_ACT_LO_R(crate::FieldReader<bool>);
+pub type SS_ACT_LO_R = crate::BitReader<SS_ACT_LO_A>;
 impl SS_ACT_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SS_ACT_LO_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SS_ACT_LO_A {
         match self.bits {
@@ -142,31 +114,17 @@ impl SS_ACT_LO_R {
     #[doc = "Checks if the value of the field is `ACTIVE_HIGH`"]
     #[inline(always)]
     pub fn is_active_high(&self) -> bool {
-        **self == SS_ACT_LO_A::ACTIVE_HIGH
+        *self == SS_ACT_LO_A::ACTIVE_HIGH
     }
     #[doc = "Checks if the value of the field is `ACTIVE_LOW`"]
     #[inline(always)]
     pub fn is_active_low(&self) -> bool {
-        **self == SS_ACT_LO_A::ACTIVE_LOW
-    }
-}
-impl core::ops::Deref for SS_ACT_LO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SS_ACT_LO_A::ACTIVE_LOW
     }
 }
 #[doc = "Field `ss_act_lo` writer - SPIX Slave Select Polarity"]
-pub struct SS_ACT_LO_W<'a> {
-    w: &'a mut W,
-}
+pub type SS_ACT_LO_W<'a> = crate::BitWriter<'a, u32, MASTER_CFG_SPEC, SS_ACT_LO_A, 2>;
 impl<'a> SS_ACT_LO_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SS_ACT_LO_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Enabled slave select (SS) is active high."]
     #[inline(always)]
     pub fn active_high(self) -> &'a mut W {
@@ -176,22 +134,6 @@ impl<'a> SS_ACT_LO_W<'a> {
     #[inline(always)]
     pub fn active_low(self) -> &'a mut W {
         self.variant(SS_ACT_LO_A::ACTIVE_LOW)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
     }
 }
 #[doc = "Alternate Timing Mode Enable\n\nValue on reset: 0"]
@@ -209,13 +151,9 @@ impl From<ALT_TIMING_EN_A> for bool {
     }
 }
 #[doc = "Field `alt_timing_en` reader - Alternate Timing Mode Enable"]
-pub struct ALT_TIMING_EN_R(crate::FieldReader<bool>);
+pub type ALT_TIMING_EN_R = crate::BitReader<ALT_TIMING_EN_A>;
 impl ALT_TIMING_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALT_TIMING_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ALT_TIMING_EN_A {
         match self.bits {
@@ -226,31 +164,17 @@ impl ALT_TIMING_EN_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == ALT_TIMING_EN_A::DISABLED
+        *self == ALT_TIMING_EN_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED_AS_NEEDED`"]
     #[inline(always)]
     pub fn is_enabled_as_needed(&self) -> bool {
-        **self == ALT_TIMING_EN_A::ENABLED_AS_NEEDED
-    }
-}
-impl core::ops::Deref for ALT_TIMING_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == ALT_TIMING_EN_A::ENABLED_AS_NEEDED
     }
 }
 #[doc = "Field `alt_timing_en` writer - Alternate Timing Mode Enable"]
-pub struct ALT_TIMING_EN_W<'a> {
-    w: &'a mut W,
-}
+pub type ALT_TIMING_EN_W<'a> = crate::BitWriter<'a, u32, MASTER_CFG_SPEC, ALT_TIMING_EN_A, 3>;
 impl<'a> ALT_TIMING_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ALT_TIMING_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Alternate timing is disabled."]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -261,104 +185,19 @@ impl<'a> ALT_TIMING_EN_W<'a> {
     pub fn enabled_as_needed(self) -> &'a mut W {
         self.variant(ALT_TIMING_EN_A::ENABLED_AS_NEEDED)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
 }
 #[doc = "Field `slave_sel` reader - SPIX Slave Select"]
-pub struct SLAVE_SEL_R(crate::FieldReader<u8>);
-impl SLAVE_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLAVE_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `slave_sel` writer - SPIX Slave Select"]
-pub struct SLAVE_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
-        self.w
-    }
-}
+pub type SLAVE_SEL_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, u8, 3, 4>;
 #[doc = "Field `sck_hi_clk` reader - SCK High Clocks"]
-pub struct SCK_HI_CLK_R(crate::FieldReader<u8>);
-impl SCK_HI_CLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCK_HI_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCK_HI_CLK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCK_HI_CLK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `sck_hi_clk` writer - SCK High Clocks"]
-pub struct SCK_HI_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCK_HI_CLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type SCK_HI_CLK_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, u8, 4, 8>;
 #[doc = "Field `sck_lo_clk` reader - SCK Low Clocks"]
-pub struct SCK_LO_CLK_R(crate::FieldReader<u8>);
-impl SCK_LO_CLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCK_LO_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCK_LO_CLK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCK_LO_CLK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `sck_lo_clk` writer - SCK Low Clocks"]
-pub struct SCK_LO_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCK_LO_CLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type SCK_LO_CLK_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, u8, 4, 12>;
 #[doc = "SS Active Timing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -379,13 +218,9 @@ impl From<ACT_DELAY_A> for u8 {
     }
 }
 #[doc = "Field `act_delay` reader - SS Active Timing"]
-pub struct ACT_DELAY_R(crate::FieldReader<u8>);
+pub type ACT_DELAY_R = crate::FieldReader<u8, ACT_DELAY_A>;
 impl ACT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ACT_DELAY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ACT_DELAY_A {
         match self.bits {
@@ -399,41 +234,27 @@ impl ACT_DELAY_R {
     #[doc = "Checks if the value of the field is `OFF`"]
     #[inline(always)]
     pub fn is_off(&self) -> bool {
-        **self == ACT_DELAY_A::OFF
+        *self == ACT_DELAY_A::OFF
     }
     #[doc = "Checks if the value of the field is `FOR_2_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_2_mod_clk(&self) -> bool {
-        **self == ACT_DELAY_A::FOR_2_MOD_CLK
+        *self == ACT_DELAY_A::FOR_2_MOD_CLK
     }
     #[doc = "Checks if the value of the field is `FOR_4_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_4_mod_clk(&self) -> bool {
-        **self == ACT_DELAY_A::FOR_4_MOD_CLK
+        *self == ACT_DELAY_A::FOR_4_MOD_CLK
     }
     #[doc = "Checks if the value of the field is `FOR_8_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_8_mod_clk(&self) -> bool {
-        **self == ACT_DELAY_A::FOR_8_MOD_CLK
-    }
-}
-impl core::ops::Deref for ACT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == ACT_DELAY_A::FOR_8_MOD_CLK
     }
 }
 #[doc = "Field `act_delay` writer - SS Active Timing"]
-pub struct ACT_DELAY_W<'a> {
-    w: &'a mut W,
-}
+pub type ACT_DELAY_W<'a> = crate::FieldWriterSafe<'a, u32, MASTER_CFG_SPEC, u8, ACT_DELAY_A, 2, 16>;
 impl<'a> ACT_DELAY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ACT_DELAY_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "No SS Active timing delay enabled."]
     #[inline(always)]
     pub fn off(self) -> &'a mut W {
@@ -453,12 +274,6 @@ impl<'a> ACT_DELAY_W<'a> {
     #[inline(always)]
     pub fn for_8_mod_clk(self) -> &'a mut W {
         self.variant(ACT_DELAY_A::FOR_8_MOD_CLK)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
     }
 }
 #[doc = "SS Inactive Timing\n\nValue on reset: 0"]
@@ -481,13 +296,9 @@ impl From<INACT_DELAY_A> for u8 {
     }
 }
 #[doc = "Field `inact_delay` reader - SS Inactive Timing"]
-pub struct INACT_DELAY_R(crate::FieldReader<u8>);
+pub type INACT_DELAY_R = crate::FieldReader<u8, INACT_DELAY_A>;
 impl INACT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INACT_DELAY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> INACT_DELAY_A {
         match self.bits {
@@ -501,41 +312,28 @@ impl INACT_DELAY_R {
     #[doc = "Checks if the value of the field is `OFF`"]
     #[inline(always)]
     pub fn is_off(&self) -> bool {
-        **self == INACT_DELAY_A::OFF
+        *self == INACT_DELAY_A::OFF
     }
     #[doc = "Checks if the value of the field is `FOR_2_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_2_mod_clk(&self) -> bool {
-        **self == INACT_DELAY_A::FOR_2_MOD_CLK
+        *self == INACT_DELAY_A::FOR_2_MOD_CLK
     }
     #[doc = "Checks if the value of the field is `FOR_4_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_4_mod_clk(&self) -> bool {
-        **self == INACT_DELAY_A::FOR_4_MOD_CLK
+        *self == INACT_DELAY_A::FOR_4_MOD_CLK
     }
     #[doc = "Checks if the value of the field is `FOR_8_MOD_CLK`"]
     #[inline(always)]
     pub fn is_for_8_mod_clk(&self) -> bool {
-        **self == INACT_DELAY_A::FOR_8_MOD_CLK
-    }
-}
-impl core::ops::Deref for INACT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == INACT_DELAY_A::FOR_8_MOD_CLK
     }
 }
 #[doc = "Field `inact_delay` writer - SS Inactive Timing"]
-pub struct INACT_DELAY_W<'a> {
-    w: &'a mut W,
-}
+pub type INACT_DELAY_W<'a> =
+    crate::FieldWriterSafe<'a, u32, MASTER_CFG_SPEC, u8, INACT_DELAY_A, 2, 18>;
 impl<'a> INACT_DELAY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: INACT_DELAY_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "No SS Active timing delay enabled."]
     #[inline(always)]
     pub fn off(self) -> &'a mut W {
@@ -556,67 +354,15 @@ impl<'a> INACT_DELAY_W<'a> {
     pub fn for_8_mod_clk(self) -> &'a mut W {
         self.variant(INACT_DELAY_A::FOR_8_MOD_CLK)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
 }
 #[doc = "Field `alt_sck_hi_clk` reader - Alt SCK High Clocks"]
-pub struct ALT_SCK_HI_CLK_R(crate::FieldReader<u8>);
-impl ALT_SCK_HI_CLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALT_SCK_HI_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALT_SCK_HI_CLK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALT_SCK_HI_CLK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `alt_sck_hi_clk` writer - Alt SCK High Clocks"]
-pub struct ALT_SCK_HI_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALT_SCK_HI_CLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type ALT_SCK_HI_CLK_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, u8, 4, 20>;
 #[doc = "Field `alt_sck_lo_clk` reader - Alt SCK Low Clocks"]
-pub struct ALT_SCK_LO_CLK_R(crate::FieldReader<u8>);
-impl ALT_SCK_LO_CLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALT_SCK_LO_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALT_SCK_LO_CLK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALT_SCK_LO_CLK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `alt_sck_lo_clk` writer - Alt SCK Low Clocks"]
-pub struct ALT_SCK_LO_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALT_SCK_LO_CLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type ALT_SCK_LO_CLK_W<'a> = crate::FieldWriter<'a, u32, MASTER_CFG_SPEC, u8, u8, 4, 24>;
 impl R {
     #[doc = "Bits 0:1 - SPIX Mode"]
     #[inline(always)]
@@ -673,52 +419,52 @@ impl W {
     #[doc = "Bits 0:1 - SPIX Mode"]
     #[inline(always)]
     pub fn spi_mode(&mut self) -> SPI_MODE_W {
-        SPI_MODE_W { w: self }
+        SPI_MODE_W::new(self)
     }
     #[doc = "Bit 2 - SPIX Slave Select Polarity"]
     #[inline(always)]
     pub fn ss_act_lo(&mut self) -> SS_ACT_LO_W {
-        SS_ACT_LO_W { w: self }
+        SS_ACT_LO_W::new(self)
     }
     #[doc = "Bit 3 - Alternate Timing Mode Enable"]
     #[inline(always)]
     pub fn alt_timing_en(&mut self) -> ALT_TIMING_EN_W {
-        ALT_TIMING_EN_W { w: self }
+        ALT_TIMING_EN_W::new(self)
     }
     #[doc = "Bits 4:6 - SPIX Slave Select"]
     #[inline(always)]
     pub fn slave_sel(&mut self) -> SLAVE_SEL_W {
-        SLAVE_SEL_W { w: self }
+        SLAVE_SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - SCK High Clocks"]
     #[inline(always)]
     pub fn sck_hi_clk(&mut self) -> SCK_HI_CLK_W {
-        SCK_HI_CLK_W { w: self }
+        SCK_HI_CLK_W::new(self)
     }
     #[doc = "Bits 12:15 - SCK Low Clocks"]
     #[inline(always)]
     pub fn sck_lo_clk(&mut self) -> SCK_LO_CLK_W {
-        SCK_LO_CLK_W { w: self }
+        SCK_LO_CLK_W::new(self)
     }
     #[doc = "Bits 16:17 - SS Active Timing"]
     #[inline(always)]
     pub fn act_delay(&mut self) -> ACT_DELAY_W {
-        ACT_DELAY_W { w: self }
+        ACT_DELAY_W::new(self)
     }
     #[doc = "Bits 18:19 - SS Inactive Timing"]
     #[inline(always)]
     pub fn inact_delay(&mut self) -> INACT_DELAY_W {
-        INACT_DELAY_W { w: self }
+        INACT_DELAY_W::new(self)
     }
     #[doc = "Bits 20:23 - Alt SCK High Clocks"]
     #[inline(always)]
     pub fn alt_sck_hi_clk(&mut self) -> ALT_SCK_HI_CLK_W {
-        ALT_SCK_HI_CLK_W { w: self }
+        ALT_SCK_HI_CLK_W::new(self)
     }
     #[doc = "Bits 24:27 - Alt SCK Low Clocks"]
     #[inline(always)]
     pub fn alt_sck_lo_clk(&mut self) -> ALT_SCK_LO_CLK_W {
-        ALT_SCK_LO_CLK_W { w: self }
+        ALT_SCK_LO_CLK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<EP_BASE_SPEC>> for W {
     }
 }
 #[doc = "Field `ep_base` reader - USB Endpoint Descriptor Table Base Address"]
-pub struct EP_BASE_R(crate::FieldReader<u32>);
-impl EP_BASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        EP_BASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EP_BASE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EP_BASE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ep_base` writer - USB Endpoint Descriptor Table Base Address"]
-pub struct EP_BASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EP_BASE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x007f_ffff << 9)) | ((value as u32 & 0x007f_ffff) << 9);
-        self.w
-    }
-}
+pub type EP_BASE_W<'a> = crate::FieldWriter<'a, u32, EP_BASE_SPEC, u32, u32, 23, 9>;
 impl R {
     #[doc = "Bits 9:31 - USB Endpoint Descriptor Table Base Address"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 9:31 - USB Endpoint Descriptor Table Base Address"]
     #[inline(always)]
     pub fn ep_base(&mut self) -> EP_BASE_W {
-        EP_BASE_W { w: self }
+        EP_BASE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

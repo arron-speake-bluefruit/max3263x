@@ -35,116 +35,17 @@ impl From<crate::W<FLAGS_SPEC>> for W {
     }
 }
 #[doc = "Field `timeout` reader - Watchdog Timeout Interrupt Flag"]
-pub struct TIMEOUT_R(crate::FieldReader<bool>);
-impl TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMEOUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMEOUT_R = crate::BitReader<bool>;
 #[doc = "Field `timeout` writer - Watchdog Timeout Interrupt Flag"]
-pub struct TIMEOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMEOUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TIMEOUT_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 0>;
 #[doc = "Field `pre_win` reader - Watchdog Pre-Window Clear Interrupt Flag"]
-pub struct PRE_WIN_R(crate::FieldReader<bool>);
-impl PRE_WIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRE_WIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRE_WIN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRE_WIN_R = crate::BitReader<bool>;
 #[doc = "Field `pre_win` writer - Watchdog Pre-Window Clear Interrupt Flag"]
-pub struct PRE_WIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRE_WIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRE_WIN_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 1>;
 #[doc = "Field `reset_out` reader - Watchdog Reset Flag"]
-pub struct RESET_OUT_R(crate::FieldReader<bool>);
-impl RESET_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESET_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `reset_out` writer - Watchdog Reset Flag"]
-pub struct RESET_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESET_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RESET_OUT_W<'a> = crate::BitWriter1C<'a, u32, FLAGS_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - Watchdog Timeout Interrupt Flag"]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - Watchdog Timeout Interrupt Flag"]
     #[inline(always)]
     pub fn timeout(&mut self) -> TIMEOUT_W {
-        TIMEOUT_W { w: self }
+        TIMEOUT_W::new(self)
     }
     #[doc = "Bit 1 - Watchdog Pre-Window Clear Interrupt Flag"]
     #[inline(always)]
     pub fn pre_win(&mut self) -> PRE_WIN_W {
-        PRE_WIN_W { w: self }
+        PRE_WIN_W::new(self)
     }
     #[doc = "Bit 2 - Watchdog Reset Flag"]
     #[inline(always)]
     pub fn reset_out(&mut self) -> RESET_OUT_W {
-        RESET_OUT_W { w: self }
+        RESET_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

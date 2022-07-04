@@ -6,15 +6,16 @@ description = "svd2rust generated peripheral crate for the max3263x"
 repository = "https://github.com/arron-speake-bluefruit/max3263x"
 license = "MIT"
 readme = "README.md"
-keywords = ["svd2rust", "no-std", "embedded", "generated"]
+categories = ["embedded"]
+keywords = ["svd2rust", "max32", "api", "no-std", "generated"]
 
 [dependencies]
 cortex-m = "0.7"
-vcell = "^0.1.2"
+vcell = "0.1.2"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "^0.6.13"
+version = "0.6.13"
 
 [features]
 rt = ["cortex-m-rt/device"]

@@ -35,47 +35,11 @@ impl From<crate::W<FCKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fckdiv` reader - Flash Clock Pulse Divisor"]
-pub struct FCKDIV_R(crate::FieldReader<u8>);
-impl FCKDIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FCKDIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FCKDIV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FCKDIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fckdiv` writer - Flash Clock Pulse Divisor"]
-pub struct FCKDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FCKDIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type FCKDIV_W<'a> = crate::FieldWriter<'a, u32, FCKDIV_SPEC, u8, u8, 7, 0>;
 #[doc = "Field `auto_fckdiv_result` reader - Auto FCKDIV Calculation Result"]
-pub struct AUTO_FCKDIV_RESULT_R(crate::FieldReader<u16>);
-impl AUTO_FCKDIV_RESULT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        AUTO_FCKDIV_RESULT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_FCKDIV_RESULT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_FCKDIV_RESULT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:6 - Flash Clock Pulse Divisor"]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 0:6 - Flash Clock Pulse Divisor"]
     #[inline(always)]
     pub fn fckdiv(&mut self) -> FCKDIV_W {
-        FCKDIV_W { w: self }
+        FCKDIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

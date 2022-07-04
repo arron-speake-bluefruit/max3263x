@@ -35,69 +35,13 @@ impl From<crate::W<TRIM_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `trim_value` reader - Trim PPM Value"]
-pub struct TRIM_VALUE_R(crate::FieldReader<u32>);
-impl TRIM_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TRIM_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_VALUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `trim_value` writer - Trim PPM Value"]
-pub struct TRIM_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0003_ffff) | (value as u32 & 0x0003_ffff);
-        self.w
-    }
-}
+pub type TRIM_VALUE_W<'a> = crate::FieldWriter<'a, u32, TRIM_VALUE_SPEC, u32, u32, 18, 0>;
 #[doc = "Field `trim_control` reader - Trim Direction"]
-pub struct TRIM_CONTROL_R(crate::FieldReader<bool>);
-impl TRIM_CONTROL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_CONTROL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_CONTROL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_CONTROL_R = crate::BitReader<bool>;
 #[doc = "Field `trim_control` writer - Trim Direction"]
-pub struct TRIM_CONTROL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIM_CONTROL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type TRIM_CONTROL_W<'a> = crate::BitWriter<'a, u32, TRIM_VALUE_SPEC, bool, 18>;
 impl R {
     #[doc = "Bits 0:17 - Trim PPM Value"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:17 - Trim PPM Value"]
     #[inline(always)]
     pub fn trim_value(&mut self) -> TRIM_VALUE_W {
-        TRIM_VALUE_W { w: self }
+        TRIM_VALUE_W::new(self)
     }
     #[doc = "Bit 18 - Trim Direction"]
     #[inline(always)]
     pub fn trim_control(&mut self) -> TRIM_CONTROL_W {
-        TRIM_CONTROL_W { w: self }
+        TRIM_CONTROL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,123 +35,21 @@ impl From<crate::W<MARGIN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `extra_margin` reader - Extra Margin Adjustment"]
-pub struct EXTRA_MARGIN_R(crate::FieldReader<u8>);
-impl EXTRA_MARGIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTRA_MARGIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTRA_MARGIN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTRA_MARGIN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `extra_margin` writer - Extra Margin Adjustment"]
-pub struct EXTRA_MARGIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTRA_MARGIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type EXTRA_MARGIN_W<'a> = crate::FieldWriter<'a, u32, MARGIN_CTRL_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `extra_write_margin` reader - Extra Write Margin Adjustment"]
-pub struct EXTRA_WRITE_MARGIN_R(crate::FieldReader<u8>);
-impl EXTRA_WRITE_MARGIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTRA_WRITE_MARGIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTRA_WRITE_MARGIN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTRA_WRITE_MARGIN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `extra_write_margin` writer - Extra Write Margin Adjustment"]
-pub struct EXTRA_WRITE_MARGIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTRA_WRITE_MARGIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
-}
+pub type EXTRA_WRITE_MARGIN_W<'a> = crate::FieldWriter<'a, u32, MARGIN_CTRL_SPEC, u8, u8, 2, 3>;
 #[doc = "Field `write_assist_en` reader - Write Assist Enable"]
-pub struct WRITE_ASSIST_EN_R(crate::FieldReader<bool>);
-impl WRITE_ASSIST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WRITE_ASSIST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRITE_ASSIST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WRITE_ASSIST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `write_assist_en` writer - Write Assist Enable"]
-pub struct WRITE_ASSIST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WRITE_ASSIST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type WRITE_ASSIST_EN_W<'a> = crate::BitWriter<'a, u32, MARGIN_CTRL_SPEC, bool, 5>;
 #[doc = "Field `write_assist_margin` reader - Write Assist Margin Adjustment"]
-pub struct WRITE_ASSIST_MARGIN_R(crate::FieldReader<u8>);
-impl WRITE_ASSIST_MARGIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WRITE_ASSIST_MARGIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRITE_ASSIST_MARGIN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WRITE_ASSIST_MARGIN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `write_assist_margin` writer - Write Assist Margin Adjustment"]
-pub struct WRITE_ASSIST_MARGIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WRITE_ASSIST_MARGIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type WRITE_ASSIST_MARGIN_W<'a> = crate::FieldWriter<'a, u32, MARGIN_CTRL_SPEC, u8, u8, 2, 6>;
 impl R {
     #[doc = "Bits 0:2 - Extra Margin Adjustment"]
     #[inline(always)]
@@ -178,22 +76,22 @@ impl W {
     #[doc = "Bits 0:2 - Extra Margin Adjustment"]
     #[inline(always)]
     pub fn extra_margin(&mut self) -> EXTRA_MARGIN_W {
-        EXTRA_MARGIN_W { w: self }
+        EXTRA_MARGIN_W::new(self)
     }
     #[doc = "Bits 3:4 - Extra Write Margin Adjustment"]
     #[inline(always)]
     pub fn extra_write_margin(&mut self) -> EXTRA_WRITE_MARGIN_W {
-        EXTRA_WRITE_MARGIN_W { w: self }
+        EXTRA_WRITE_MARGIN_W::new(self)
     }
     #[doc = "Bit 5 - Write Assist Enable"]
     #[inline(always)]
     pub fn write_assist_en(&mut self) -> WRITE_ASSIST_EN_W {
-        WRITE_ASSIST_EN_W { w: self }
+        WRITE_ASSIST_EN_W::new(self)
     }
     #[doc = "Bits 6:7 - Write Assist Margin Adjustment"]
     #[inline(always)]
     pub fn write_assist_margin(&mut self) -> WRITE_ASSIST_MARGIN_W {
-        WRITE_ASSIST_MARGIN_W { w: self }
+        WRITE_ASSIST_MARGIN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

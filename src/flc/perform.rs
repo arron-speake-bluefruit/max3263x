@@ -35,301 +35,37 @@ impl From<crate::W<PERFORM_SPEC>> for W {
     }
 }
 #[doc = "Field `delay_se_en` reader - Delay SE Enable (Deprecated)"]
-pub struct DELAY_SE_EN_R(crate::FieldReader<bool>);
-impl DELAY_SE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DELAY_SE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DELAY_SE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DELAY_SE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `delay_se_en` writer - Delay SE Enable (Deprecated)"]
-pub struct DELAY_SE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DELAY_SE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DELAY_SE_EN_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 0>;
 #[doc = "Field `fast_read_mode_en` reader - Fast Read Mode Enable (Deprecated)"]
-pub struct FAST_READ_MODE_EN_R(crate::FieldReader<bool>);
-impl FAST_READ_MODE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_READ_MODE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_READ_MODE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FAST_READ_MODE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `fast_read_mode_en` writer - Fast Read Mode Enable (Deprecated)"]
-pub struct FAST_READ_MODE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FAST_READ_MODE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type FAST_READ_MODE_EN_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 8>;
 #[doc = "Field `en_prevent_fail` reader - Prevent Fail Flag Set on FLC Busy"]
-pub struct EN_PREVENT_FAIL_R(crate::FieldReader<bool>);
-impl EN_PREVENT_FAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_PREVENT_FAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_PREVENT_FAIL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_PREVENT_FAIL_R = crate::BitReader<bool>;
 #[doc = "Field `en_prevent_fail` writer - Prevent Fail Flag Set on FLC Busy"]
-pub struct EN_PREVENT_FAIL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_PREVENT_FAIL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type EN_PREVENT_FAIL_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 12>;
 #[doc = "Field `en_back2back_rds` reader - Enable Back To Back Reads"]
-pub struct EN_BACK2BACK_RDS_R(crate::FieldReader<bool>);
-impl EN_BACK2BACK_RDS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_BACK2BACK_RDS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_BACK2BACK_RDS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_BACK2BACK_RDS_R = crate::BitReader<bool>;
 #[doc = "Field `en_back2back_rds` writer - Enable Back To Back Reads"]
-pub struct EN_BACK2BACK_RDS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_BACK2BACK_RDS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type EN_BACK2BACK_RDS_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 16>;
 #[doc = "Field `en_back2back_wrs` reader - Enable Back To Back Writes"]
-pub struct EN_BACK2BACK_WRS_R(crate::FieldReader<bool>);
-impl EN_BACK2BACK_WRS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_BACK2BACK_WRS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_BACK2BACK_WRS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_BACK2BACK_WRS_R = crate::BitReader<bool>;
 #[doc = "Field `en_back2back_wrs` writer - Enable Back To Back Writes"]
-pub struct EN_BACK2BACK_WRS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_BACK2BACK_WRS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type EN_BACK2BACK_WRS_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 20>;
 #[doc = "Field `en_merge_grab_gnt` reader - Enable Merge Grab GNT"]
-pub struct EN_MERGE_GRAB_GNT_R(crate::FieldReader<bool>);
-impl EN_MERGE_GRAB_GNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_MERGE_GRAB_GNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_MERGE_GRAB_GNT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_MERGE_GRAB_GNT_R = crate::BitReader<bool>;
 #[doc = "Field `en_merge_grab_gnt` writer - Enable Merge Grab GNT"]
-pub struct EN_MERGE_GRAB_GNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_MERGE_GRAB_GNT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type EN_MERGE_GRAB_GNT_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 24>;
 #[doc = "Field `auto_tacc` reader - Auto TACC"]
-pub struct AUTO_TACC_R(crate::FieldReader<bool>);
-impl AUTO_TACC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_TACC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_TACC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_TACC_R = crate::BitReader<bool>;
 #[doc = "Field `auto_tacc` writer - Auto TACC"]
-pub struct AUTO_TACC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_TACC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type AUTO_TACC_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 28>;
 #[doc = "Field `auto_clkdiv` reader - Auto CLKDIV"]
-pub struct AUTO_CLKDIV_R(crate::FieldReader<bool>);
-impl AUTO_CLKDIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_CLKDIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_CLKDIV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_CLKDIV_R = crate::BitReader<bool>;
 #[doc = "Field `auto_clkdiv` writer - Auto CLKDIV"]
-pub struct AUTO_CLKDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_CLKDIV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type AUTO_CLKDIV_W<'a> = crate::BitWriter<'a, u32, PERFORM_SPEC, bool, 29>;
 impl R {
     #[doc = "Bit 0 - Delay SE Enable (Deprecated)"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - Delay SE Enable (Deprecated)"]
     #[inline(always)]
     pub fn delay_se_en(&mut self) -> DELAY_SE_EN_W {
-        DELAY_SE_EN_W { w: self }
+        DELAY_SE_EN_W::new(self)
     }
     #[doc = "Bit 8 - Fast Read Mode Enable (Deprecated)"]
     #[inline(always)]
     pub fn fast_read_mode_en(&mut self) -> FAST_READ_MODE_EN_W {
-        FAST_READ_MODE_EN_W { w: self }
+        FAST_READ_MODE_EN_W::new(self)
     }
     #[doc = "Bit 12 - Prevent Fail Flag Set on FLC Busy"]
     #[inline(always)]
     pub fn en_prevent_fail(&mut self) -> EN_PREVENT_FAIL_W {
-        EN_PREVENT_FAIL_W { w: self }
+        EN_PREVENT_FAIL_W::new(self)
     }
     #[doc = "Bit 16 - Enable Back To Back Reads"]
     #[inline(always)]
     pub fn en_back2back_rds(&mut self) -> EN_BACK2BACK_RDS_W {
-        EN_BACK2BACK_RDS_W { w: self }
+        EN_BACK2BACK_RDS_W::new(self)
     }
     #[doc = "Bit 20 - Enable Back To Back Writes"]
     #[inline(always)]
     pub fn en_back2back_wrs(&mut self) -> EN_BACK2BACK_WRS_W {
-        EN_BACK2BACK_WRS_W { w: self }
+        EN_BACK2BACK_WRS_W::new(self)
     }
     #[doc = "Bit 24 - Enable Merge Grab GNT"]
     #[inline(always)]
     pub fn en_merge_grab_gnt(&mut self) -> EN_MERGE_GRAB_GNT_W {
-        EN_MERGE_GRAB_GNT_W { w: self }
+        EN_MERGE_GRAB_GNT_W::new(self)
     }
     #[doc = "Bit 28 - Auto TACC"]
     #[inline(always)]
     pub fn auto_tacc(&mut self) -> AUTO_TACC_W {
-        AUTO_TACC_W { w: self }
+        AUTO_TACC_W::new(self)
     }
     #[doc = "Bit 29 - Auto CLKDIV"]
     #[inline(always)]
     pub fn auto_clkdiv(&mut self) -> AUTO_CLKDIV_W {
-        AUTO_CLKDIV_W { w: self }
+        AUTO_CLKDIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

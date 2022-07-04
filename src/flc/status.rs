@@ -35,80 +35,15 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `jtag_lock_window` reader - Debug Locked - Hardware Window"]
-pub struct JTAG_LOCK_WINDOW_R(crate::FieldReader<bool>);
-impl JTAG_LOCK_WINDOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JTAG_LOCK_WINDOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_LOCK_WINDOW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_LOCK_WINDOW_R = crate::BitReader<bool>;
 #[doc = "Field `jtag_lock_static` reader - Debug Locked - Firmware Lockout"]
-pub struct JTAG_LOCK_STATIC_R(crate::FieldReader<bool>);
-impl JTAG_LOCK_STATIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JTAG_LOCK_STATIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_LOCK_STATIC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_LOCK_STATIC_R = crate::BitReader<bool>;
 #[doc = "Field `auto_lock` reader - Debug Locked - Auto Lock"]
-pub struct AUTO_LOCK_R(crate::FieldReader<bool>);
-impl AUTO_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `trim_update_done` reader - Trim Update Done"]
-pub struct TRIM_UPDATE_DONE_R(crate::FieldReader<bool>);
-impl TRIM_UPDATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRIM_UPDATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIM_UPDATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIM_UPDATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `info_block_valid` reader - Info Block Valid"]
-pub struct INFO_BLOCK_VALID_R(crate::FieldReader<bool>);
-impl INFO_BLOCK_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFO_BLOCK_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFO_BLOCK_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFO_BLOCK_VALID_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Debug Locked - Hardware Window"]
     #[inline(always)]

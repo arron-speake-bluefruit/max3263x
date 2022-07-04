@@ -35,59 +35,13 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `flash_lve` reader - Flash LVE Enable"]
-pub struct FLASH_LVE_R(crate::FieldReader<u8>);
-impl FLASH_LVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLASH_LVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_LVE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_LVE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `flash_lve` writer - Flash LVE Enable"]
-pub struct FLASH_LVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_LVE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type FLASH_LVE_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `bypass_ahb_fail` reader - AHB Fail Bypass"]
-pub struct BYPASS_AHB_FAIL_R(crate::FieldReader<u8>);
-impl BYPASS_AHB_FAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BYPASS_AHB_FAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYPASS_AHB_FAIL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYPASS_AHB_FAIL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `bypass_ahb_fail` writer - AHB Fail Bypass"]
-pub struct BYPASS_AHB_FAIL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BYPASS_AHB_FAIL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type BYPASS_AHB_FAIL_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 8, 8>;
 impl R {
     #[doc = "Bits 0:7 - Flash LVE Enable"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:7 - Flash LVE Enable"]
     #[inline(always)]
     pub fn flash_lve(&mut self) -> FLASH_LVE_W {
-        FLASH_LVE_W { w: self }
+        FLASH_LVE_W::new(self)
     }
     #[doc = "Bits 8:15 - AHB Fail Bypass"]
     #[inline(always)]
     pub fn bypass_ahb_fail(&mut self) -> BYPASS_AHB_FAIL_W {
-        BYPASS_AHB_FAIL_W { w: self }
+        BYPASS_AHB_FAIL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

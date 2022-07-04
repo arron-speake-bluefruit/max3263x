@@ -35,32 +35,9 @@ impl From<crate::W<RATE_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `rate_control` reader - Pulse Train Enable/Rate Control"]
-pub struct RATE_CONTROL_R(crate::FieldReader<u32>);
-impl RATE_CONTROL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RATE_CONTROL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RATE_CONTROL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RATE_CONTROL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `rate_control` writer - Pulse Train Enable/Rate Control"]
-pub struct RATE_CONTROL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RATE_CONTROL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff_ffff) | (value as u32 & 0x07ff_ffff);
-        self.w
-    }
-}
+pub type RATE_CONTROL_W<'a> = crate::FieldWriter<'a, u32, RATE_LENGTH_SPEC, u32, u32, 27, 0>;
 #[doc = "Pulse Train Output Mode/Train Length\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -137,13 +114,9 @@ impl From<MODE_A> for u8 {
     }
 }
 #[doc = "Field `mode` reader - Pulse Train Output Mode/Train Length"]
-pub struct MODE_R(crate::FieldReader<u8>);
+pub type MODE_R = crate::FieldReader<u8, MODE_A>;
 impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MODE_A {
         match self.bits {
@@ -185,181 +158,167 @@ impl MODE_R {
     #[doc = "Checks if the value of the field is `_32_BIT`"]
     #[inline(always)]
     pub fn is_32_bit(&self) -> bool {
-        **self == MODE_A::_32_BIT
+        *self == MODE_A::_32_BIT
     }
     #[doc = "Checks if the value of the field is `SQUARE_WAVE`"]
     #[inline(always)]
     pub fn is_square_wave(&self) -> bool {
-        **self == MODE_A::SQUARE_WAVE
+        *self == MODE_A::SQUARE_WAVE
     }
     #[doc = "Checks if the value of the field is `_2_BIT`"]
     #[inline(always)]
     pub fn is_2_bit(&self) -> bool {
-        **self == MODE_A::_2_BIT
+        *self == MODE_A::_2_BIT
     }
     #[doc = "Checks if the value of the field is `_3_BIT`"]
     #[inline(always)]
     pub fn is_3_bit(&self) -> bool {
-        **self == MODE_A::_3_BIT
+        *self == MODE_A::_3_BIT
     }
     #[doc = "Checks if the value of the field is `_4_BIT`"]
     #[inline(always)]
     pub fn is_4_bit(&self) -> bool {
-        **self == MODE_A::_4_BIT
+        *self == MODE_A::_4_BIT
     }
     #[doc = "Checks if the value of the field is `_5_BIT`"]
     #[inline(always)]
     pub fn is_5_bit(&self) -> bool {
-        **self == MODE_A::_5_BIT
+        *self == MODE_A::_5_BIT
     }
     #[doc = "Checks if the value of the field is `_6_BIT`"]
     #[inline(always)]
     pub fn is_6_bit(&self) -> bool {
-        **self == MODE_A::_6_BIT
+        *self == MODE_A::_6_BIT
     }
     #[doc = "Checks if the value of the field is `_7_BIT`"]
     #[inline(always)]
     pub fn is_7_bit(&self) -> bool {
-        **self == MODE_A::_7_BIT
+        *self == MODE_A::_7_BIT
     }
     #[doc = "Checks if the value of the field is `_8_BIT`"]
     #[inline(always)]
     pub fn is_8_bit(&self) -> bool {
-        **self == MODE_A::_8_BIT
+        *self == MODE_A::_8_BIT
     }
     #[doc = "Checks if the value of the field is `_9_BIT`"]
     #[inline(always)]
     pub fn is_9_bit(&self) -> bool {
-        **self == MODE_A::_9_BIT
+        *self == MODE_A::_9_BIT
     }
     #[doc = "Checks if the value of the field is `_10_BIT`"]
     #[inline(always)]
     pub fn is_10_bit(&self) -> bool {
-        **self == MODE_A::_10_BIT
+        *self == MODE_A::_10_BIT
     }
     #[doc = "Checks if the value of the field is `_11_BIT`"]
     #[inline(always)]
     pub fn is_11_bit(&self) -> bool {
-        **self == MODE_A::_11_BIT
+        *self == MODE_A::_11_BIT
     }
     #[doc = "Checks if the value of the field is `_12_BIT`"]
     #[inline(always)]
     pub fn is_12_bit(&self) -> bool {
-        **self == MODE_A::_12_BIT
+        *self == MODE_A::_12_BIT
     }
     #[doc = "Checks if the value of the field is `_13_BIT`"]
     #[inline(always)]
     pub fn is_13_bit(&self) -> bool {
-        **self == MODE_A::_13_BIT
+        *self == MODE_A::_13_BIT
     }
     #[doc = "Checks if the value of the field is `_14_BIT`"]
     #[inline(always)]
     pub fn is_14_bit(&self) -> bool {
-        **self == MODE_A::_14_BIT
+        *self == MODE_A::_14_BIT
     }
     #[doc = "Checks if the value of the field is `_15_BIT`"]
     #[inline(always)]
     pub fn is_15_bit(&self) -> bool {
-        **self == MODE_A::_15_BIT
+        *self == MODE_A::_15_BIT
     }
     #[doc = "Checks if the value of the field is `_16_BIT`"]
     #[inline(always)]
     pub fn is_16_bit(&self) -> bool {
-        **self == MODE_A::_16_BIT
+        *self == MODE_A::_16_BIT
     }
     #[doc = "Checks if the value of the field is `_17_BIT`"]
     #[inline(always)]
     pub fn is_17_bit(&self) -> bool {
-        **self == MODE_A::_17_BIT
+        *self == MODE_A::_17_BIT
     }
     #[doc = "Checks if the value of the field is `_18_BIT`"]
     #[inline(always)]
     pub fn is_18_bit(&self) -> bool {
-        **self == MODE_A::_18_BIT
+        *self == MODE_A::_18_BIT
     }
     #[doc = "Checks if the value of the field is `_19_BIT`"]
     #[inline(always)]
     pub fn is_19_bit(&self) -> bool {
-        **self == MODE_A::_19_BIT
+        *self == MODE_A::_19_BIT
     }
     #[doc = "Checks if the value of the field is `_20_BIT`"]
     #[inline(always)]
     pub fn is_20_bit(&self) -> bool {
-        **self == MODE_A::_20_BIT
+        *self == MODE_A::_20_BIT
     }
     #[doc = "Checks if the value of the field is `_21_BIT`"]
     #[inline(always)]
     pub fn is_21_bit(&self) -> bool {
-        **self == MODE_A::_21_BIT
+        *self == MODE_A::_21_BIT
     }
     #[doc = "Checks if the value of the field is `_22_BIT`"]
     #[inline(always)]
     pub fn is_22_bit(&self) -> bool {
-        **self == MODE_A::_22_BIT
+        *self == MODE_A::_22_BIT
     }
     #[doc = "Checks if the value of the field is `_23_BIT`"]
     #[inline(always)]
     pub fn is_23_bit(&self) -> bool {
-        **self == MODE_A::_23_BIT
+        *self == MODE_A::_23_BIT
     }
     #[doc = "Checks if the value of the field is `_24_BIT`"]
     #[inline(always)]
     pub fn is_24_bit(&self) -> bool {
-        **self == MODE_A::_24_BIT
+        *self == MODE_A::_24_BIT
     }
     #[doc = "Checks if the value of the field is `_25_BIT`"]
     #[inline(always)]
     pub fn is_25_bit(&self) -> bool {
-        **self == MODE_A::_25_BIT
+        *self == MODE_A::_25_BIT
     }
     #[doc = "Checks if the value of the field is `_26_BIT`"]
     #[inline(always)]
     pub fn is_26_bit(&self) -> bool {
-        **self == MODE_A::_26_BIT
+        *self == MODE_A::_26_BIT
     }
     #[doc = "Checks if the value of the field is `_27_BIT`"]
     #[inline(always)]
     pub fn is_27_bit(&self) -> bool {
-        **self == MODE_A::_27_BIT
+        *self == MODE_A::_27_BIT
     }
     #[doc = "Checks if the value of the field is `_28_BIT`"]
     #[inline(always)]
     pub fn is_28_bit(&self) -> bool {
-        **self == MODE_A::_28_BIT
+        *self == MODE_A::_28_BIT
     }
     #[doc = "Checks if the value of the field is `_29_BIT`"]
     #[inline(always)]
     pub fn is_29_bit(&self) -> bool {
-        **self == MODE_A::_29_BIT
+        *self == MODE_A::_29_BIT
     }
     #[doc = "Checks if the value of the field is `_30_BIT`"]
     #[inline(always)]
     pub fn is_30_bit(&self) -> bool {
-        **self == MODE_A::_30_BIT
+        *self == MODE_A::_30_BIT
     }
     #[doc = "Checks if the value of the field is `_31_BIT`"]
     #[inline(always)]
     pub fn is_31_bit(&self) -> bool {
-        **self == MODE_A::_31_BIT
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MODE_A::_31_BIT
     }
 }
 #[doc = "Field `mode` writer - Pulse Train Output Mode/Train Length"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
+pub type MODE_W<'a> = crate::FieldWriterSafe<'a, u32, RATE_LENGTH_SPEC, u8, MODE_A, 5, 27>;
 impl<'a> MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MODE_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "Pulse train, 32 bit pattern."]
     #[inline(always)]
     pub fn _32_bit(self) -> &'a mut W {
@@ -520,12 +479,6 @@ impl<'a> MODE_W<'a> {
     pub fn _31_bit(self) -> &'a mut W {
         self.variant(MODE_A::_31_BIT)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:26 - Pulse Train Enable/Rate Control"]
@@ -543,12 +496,12 @@ impl W {
     #[doc = "Bits 0:26 - Pulse Train Enable/Rate Control"]
     #[inline(always)]
     pub fn rate_control(&mut self) -> RATE_CONTROL_W {
-        RATE_CONTROL_W { w: self }
+        RATE_CONTROL_W::new(self)
     }
     #[doc = "Bits 27:31 - Pulse Train Output Mode/Train Length"]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+        MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

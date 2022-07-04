@@ -35,69 +35,13 @@ impl From<crate::W<MAWS_SPEC>> for W {
     }
 }
 #[doc = "Field `modlen` reader - MAA Word Size"]
-pub struct MODLEN_R(crate::FieldReader<u16>);
-impl MODLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MODLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODLEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `modlen` writer - MAA Word Size"]
-pub struct MODLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type MODLEN_W<'a> = crate::FieldWriter<'a, u32, MAWS_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `byteswap` reader - Big Endian Byte Mode"]
-pub struct BYTESWAP_R(crate::FieldReader<bool>);
-impl BYTESWAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BYTESWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTESWAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTESWAP_R = crate::BitReader<bool>;
 #[doc = "Field `byteswap` writer - Big Endian Byte Mode"]
-pub struct BYTESWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BYTESWAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type BYTESWAP_W<'a> = crate::BitWriter<'a, u32, MAWS_SPEC, bool, 15>;
 impl R {
     #[doc = "Bits 0:9 - MAA Word Size"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:9 - MAA Word Size"]
     #[inline(always)]
     pub fn modlen(&mut self) -> MODLEN_W {
-        MODLEN_W { w: self }
+        MODLEN_W::new(self)
     }
     #[doc = "Bit 15 - Big Endian Byte Mode"]
     #[inline(always)]
     pub fn byteswap(&mut self) -> BYTESWAP_W {
-        BYTESWAP_W { w: self }
+        BYTESWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

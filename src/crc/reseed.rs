@@ -35,190 +35,25 @@ impl From<crate::W<RESEED_SPEC>> for W {
     }
 }
 #[doc = "Field `crc16` reader - Reseed CRC16 Generator"]
-pub struct CRC16_R(crate::FieldReader<bool>);
-impl CRC16_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC16_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC16_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC16_R = crate::BitReader<bool>;
 #[doc = "Field `crc16` writer - Reseed CRC16 Generator"]
-pub struct CRC16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC16_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CRC16_W<'a> = crate::BitWriter1C<'a, u32, RESEED_SPEC, bool, 0>;
 #[doc = "Field `crc32` reader - Reseed CRC32 Generator"]
-pub struct CRC32_R(crate::FieldReader<bool>);
-impl CRC32_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC32_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC32_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC32_R = crate::BitReader<bool>;
 #[doc = "Field `crc32` writer - Reseed CRC32 Generator"]
-pub struct CRC32_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC32_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CRC32_W<'a> = crate::BitWriter1C<'a, u32, RESEED_SPEC, bool, 1>;
 #[doc = "Field `rev_endian16` reader - Reverse Endianness for CRC16"]
-pub struct REV_ENDIAN16_R(crate::FieldReader<bool>);
-impl REV_ENDIAN16_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REV_ENDIAN16_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REV_ENDIAN16_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REV_ENDIAN16_R = crate::BitReader<bool>;
 #[doc = "Field `rev_endian16` writer - Reverse Endianness for CRC16"]
-pub struct REV_ENDIAN16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REV_ENDIAN16_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type REV_ENDIAN16_W<'a> = crate::BitWriter<'a, u32, RESEED_SPEC, bool, 4>;
 #[doc = "Field `rev_endian32` reader - Reverse Endianness for CRC32"]
-pub struct REV_ENDIAN32_R(crate::FieldReader<bool>);
-impl REV_ENDIAN32_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REV_ENDIAN32_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REV_ENDIAN32_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REV_ENDIAN32_R = crate::BitReader<bool>;
 #[doc = "Field `rev_endian32` writer - Reverse Endianness for CRC32"]
-pub struct REV_ENDIAN32_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REV_ENDIAN32_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type REV_ENDIAN32_W<'a> = crate::BitWriter<'a, u32, RESEED_SPEC, bool, 5>;
 #[doc = "Field `ccitt_mode` reader - CRC16-CCITT Mode"]
-pub struct CCITT_MODE_R(crate::FieldReader<bool>);
-impl CCITT_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CCITT_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCITT_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCITT_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ccitt_mode` writer - CRC16-CCITT Mode"]
-pub struct CCITT_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCITT_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CCITT_MODE_W<'a> = crate::BitWriter<'a, u32, RESEED_SPEC, bool, 8>;
 impl R {
     #[doc = "Bit 0 - Reseed CRC16 Generator"]
     #[inline(always)]
@@ -250,27 +85,27 @@ impl W {
     #[doc = "Bit 0 - Reseed CRC16 Generator"]
     #[inline(always)]
     pub fn crc16(&mut self) -> CRC16_W {
-        CRC16_W { w: self }
+        CRC16_W::new(self)
     }
     #[doc = "Bit 1 - Reseed CRC32 Generator"]
     #[inline(always)]
     pub fn crc32(&mut self) -> CRC32_W {
-        CRC32_W { w: self }
+        CRC32_W::new(self)
     }
     #[doc = "Bit 4 - Reverse Endianness for CRC16"]
     #[inline(always)]
     pub fn rev_endian16(&mut self) -> REV_ENDIAN16_W {
-        REV_ENDIAN16_W { w: self }
+        REV_ENDIAN16_W::new(self)
     }
     #[doc = "Bit 5 - Reverse Endianness for CRC32"]
     #[inline(always)]
     pub fn rev_endian32(&mut self) -> REV_ENDIAN32_W {
-        REV_ENDIAN32_W { w: self }
+        REV_ENDIAN32_W::new(self)
     }
     #[doc = "Bit 8 - CRC16-CCITT Mode"]
     #[inline(always)]
     pub fn ccitt_mode(&mut self) -> CCITT_MODE_W {
-        CCITT_MODE_W { w: self }
+        CCITT_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,20 +35,7 @@ impl From<crate::W<DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `adc_data` reader - ADC Converted Sample Data Output"]
-pub struct ADC_DATA_R(crate::FieldReader<u16>);
-impl ADC_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ADC_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_DATA_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_DATA_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - ADC Converted Sample Data Output"]
     #[inline(always)]

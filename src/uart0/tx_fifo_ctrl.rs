@@ -35,47 +35,11 @@ impl From<crate::W<TX_FIFO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `fifo_entry` reader - TX FIFO Entries"]
-pub struct FIFO_ENTRY_R(crate::FieldReader<u8>);
-impl FIFO_ENTRY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFO_ENTRY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_ENTRY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_ENTRY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fifo_ae_lvl` reader - TX FIFO AE Level"]
-pub struct FIFO_AE_LVL_R(crate::FieldReader<u8>);
-impl FIFO_AE_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFO_AE_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_AE_LVL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_AE_LVL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fifo_ae_lvl` writer - TX FIFO AE Level"]
-pub struct FIFO_AE_LVL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIFO_AE_LVL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 16)) | ((value as u32 & 0x3f) << 16);
-        self.w
-    }
-}
+pub type FIFO_AE_LVL_W<'a> = crate::FieldWriter<'a, u32, TX_FIFO_CTRL_SPEC, u8, u8, 6, 16>;
 impl R {
     #[doc = "Bits 0:4 - TX FIFO Entries"]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 16:21 - TX FIFO AE Level"]
     #[inline(always)]
     pub fn fifo_ae_lvl(&mut self) -> FIFO_AE_LVL_W {
-        FIFO_AE_LVL_W { w: self }
+        FIFO_AE_LVL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

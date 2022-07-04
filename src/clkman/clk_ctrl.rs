@@ -35,382 +35,49 @@ impl From<crate::W<CLK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `system_source_select` reader - System Clock Source Select"]
-pub struct SYSTEM_SOURCE_SELECT_R(crate::FieldReader<u8>);
-impl SYSTEM_SOURCE_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SYSTEM_SOURCE_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSTEM_SOURCE_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSTEM_SOURCE_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `system_source_select` writer - System Clock Source Select"]
-pub struct SYSTEM_SOURCE_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSTEM_SOURCE_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type SYSTEM_SOURCE_SELECT_W<'a> = crate::FieldWriter<'a, u32, CLK_CTRL_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `usb_clock_enable` reader - USB Clock Enable"]
-pub struct USB_CLOCK_ENABLE_R(crate::FieldReader<bool>);
-impl USB_CLOCK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_CLOCK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_CLOCK_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `usb_clock_enable` writer - USB Clock Enable"]
-pub struct USB_CLOCK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_CLOCK_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type USB_CLOCK_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 4>;
 #[doc = "Field `usb_clock_select` reader - USB Clock Select"]
-pub struct USB_CLOCK_SELECT_R(crate::FieldReader<bool>);
-impl USB_CLOCK_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_CLOCK_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_CLOCK_SELECT_R = crate::BitReader<bool>;
 #[doc = "Field `usb_clock_select` writer - USB Clock Select"]
-pub struct USB_CLOCK_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_CLOCK_SELECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type USB_CLOCK_SELECT_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 5>;
 #[doc = "Field `crypto_clock_enable` reader - Crypto Clock Enable"]
-pub struct CRYPTO_CLOCK_ENABLE_R(crate::FieldReader<bool>);
-impl CRYPTO_CLOCK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_CLOCK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_CLOCK_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `crypto_clock_enable` writer - Crypto Clock Enable"]
-pub struct CRYPTO_CLOCK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_CLOCK_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CRYPTO_CLOCK_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 8>;
 #[doc = "Field `rtos_mode` reader - Enable RTOS Mode for SysTick Timers"]
-pub struct RTOS_MODE_R(crate::FieldReader<bool>);
-impl RTOS_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTOS_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTOS_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTOS_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `rtos_mode` writer - Enable RTOS Mode for SysTick Timers"]
-pub struct RTOS_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTOS_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type RTOS_MODE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 12>;
 #[doc = "Field `cpu_dynamic_clock` reader - Enable CPU Dynamic Clock Gating"]
-pub struct CPU_DYNAMIC_CLOCK_R(crate::FieldReader<bool>);
-impl CPU_DYNAMIC_CLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CPU_DYNAMIC_CLOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_DYNAMIC_CLOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_DYNAMIC_CLOCK_R = crate::BitReader<bool>;
 #[doc = "Field `cpu_dynamic_clock` writer - Enable CPU Dynamic Clock Gating"]
-pub struct CPU_DYNAMIC_CLOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_DYNAMIC_CLOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type CPU_DYNAMIC_CLOCK_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 13>;
 #[doc = "Field `wdt0_clock_enable` reader - Watchdog 0 Clock Enable"]
-pub struct WDT0_CLOCK_ENABLE_R(crate::FieldReader<bool>);
-impl WDT0_CLOCK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WDT0_CLOCK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT0_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT0_CLOCK_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `wdt0_clock_enable` writer - Watchdog 0 Clock Enable"]
-pub struct WDT0_CLOCK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT0_CLOCK_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type WDT0_CLOCK_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 16>;
 #[doc = "Field `wdt0_clock_select` reader - Watchdog 0 Clock Source Select"]
-pub struct WDT0_CLOCK_SELECT_R(crate::FieldReader<u8>);
-impl WDT0_CLOCK_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WDT0_CLOCK_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT0_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT0_CLOCK_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wdt0_clock_select` writer - Watchdog 0 Clock Source Select"]
-pub struct WDT0_CLOCK_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT0_CLOCK_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
-        self.w
-    }
-}
+pub type WDT0_CLOCK_SELECT_W<'a> = crate::FieldWriter<'a, u32, CLK_CTRL_SPEC, u8, u8, 2, 17>;
 #[doc = "Field `wdt1_clock_enable` reader - Watchdog 1 Clock Enable"]
-pub struct WDT1_CLOCK_ENABLE_R(crate::FieldReader<bool>);
-impl WDT1_CLOCK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WDT1_CLOCK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT1_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT1_CLOCK_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `wdt1_clock_enable` writer - Watchdog 1 Clock Enable"]
-pub struct WDT1_CLOCK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT1_CLOCK_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type WDT1_CLOCK_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 20>;
 #[doc = "Field `wdt1_clock_select` reader - Watchdog 1 Clock Source Select"]
-pub struct WDT1_CLOCK_SELECT_R(crate::FieldReader<u8>);
-impl WDT1_CLOCK_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WDT1_CLOCK_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT1_CLOCK_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT1_CLOCK_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `wdt1_clock_select` writer - Watchdog 1 Clock Source Select"]
-pub struct WDT1_CLOCK_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT1_CLOCK_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
-        self.w
-    }
-}
+pub type WDT1_CLOCK_SELECT_W<'a> = crate::FieldWriter<'a, u32, CLK_CTRL_SPEC, u8, u8, 2, 21>;
 #[doc = "Field `adc_clock_enable` reader - ADC Clock Enable"]
-pub struct ADC_CLOCK_ENABLE_R(crate::FieldReader<bool>);
-impl ADC_CLOCK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_CLOCK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_CLOCK_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_CLOCK_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `adc_clock_enable` writer - ADC Clock Enable"]
-pub struct ADC_CLOCK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_CLOCK_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type ADC_CLOCK_ENABLE_W<'a> = crate::BitWriter<'a, u32, CLK_CTRL_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 0:1 - System Clock Source Select"]
     #[inline(always)]
@@ -472,57 +139,57 @@ impl W {
     #[doc = "Bits 0:1 - System Clock Source Select"]
     #[inline(always)]
     pub fn system_source_select(&mut self) -> SYSTEM_SOURCE_SELECT_W {
-        SYSTEM_SOURCE_SELECT_W { w: self }
+        SYSTEM_SOURCE_SELECT_W::new(self)
     }
     #[doc = "Bit 4 - USB Clock Enable"]
     #[inline(always)]
     pub fn usb_clock_enable(&mut self) -> USB_CLOCK_ENABLE_W {
-        USB_CLOCK_ENABLE_W { w: self }
+        USB_CLOCK_ENABLE_W::new(self)
     }
     #[doc = "Bit 5 - USB Clock Select"]
     #[inline(always)]
     pub fn usb_clock_select(&mut self) -> USB_CLOCK_SELECT_W {
-        USB_CLOCK_SELECT_W { w: self }
+        USB_CLOCK_SELECT_W::new(self)
     }
     #[doc = "Bit 8 - Crypto Clock Enable"]
     #[inline(always)]
     pub fn crypto_clock_enable(&mut self) -> CRYPTO_CLOCK_ENABLE_W {
-        CRYPTO_CLOCK_ENABLE_W { w: self }
+        CRYPTO_CLOCK_ENABLE_W::new(self)
     }
     #[doc = "Bit 12 - Enable RTOS Mode for SysTick Timers"]
     #[inline(always)]
     pub fn rtos_mode(&mut self) -> RTOS_MODE_W {
-        RTOS_MODE_W { w: self }
+        RTOS_MODE_W::new(self)
     }
     #[doc = "Bit 13 - Enable CPU Dynamic Clock Gating"]
     #[inline(always)]
     pub fn cpu_dynamic_clock(&mut self) -> CPU_DYNAMIC_CLOCK_W {
-        CPU_DYNAMIC_CLOCK_W { w: self }
+        CPU_DYNAMIC_CLOCK_W::new(self)
     }
     #[doc = "Bit 16 - Watchdog 0 Clock Enable"]
     #[inline(always)]
     pub fn wdt0_clock_enable(&mut self) -> WDT0_CLOCK_ENABLE_W {
-        WDT0_CLOCK_ENABLE_W { w: self }
+        WDT0_CLOCK_ENABLE_W::new(self)
     }
     #[doc = "Bits 17:18 - Watchdog 0 Clock Source Select"]
     #[inline(always)]
     pub fn wdt0_clock_select(&mut self) -> WDT0_CLOCK_SELECT_W {
-        WDT0_CLOCK_SELECT_W { w: self }
+        WDT0_CLOCK_SELECT_W::new(self)
     }
     #[doc = "Bit 20 - Watchdog 1 Clock Enable"]
     #[inline(always)]
     pub fn wdt1_clock_enable(&mut self) -> WDT1_CLOCK_ENABLE_W {
-        WDT1_CLOCK_ENABLE_W { w: self }
+        WDT1_CLOCK_ENABLE_W::new(self)
     }
     #[doc = "Bits 21:22 - Watchdog 1 Clock Source Select"]
     #[inline(always)]
     pub fn wdt1_clock_select(&mut self) -> WDT1_CLOCK_SELECT_W {
-        WDT1_CLOCK_SELECT_W { w: self }
+        WDT1_CLOCK_SELECT_W::new(self)
     }
     #[doc = "Bit 24 - ADC Clock Enable"]
     #[inline(always)]
     pub fn adc_clock_enable(&mut self) -> ADC_CLOCK_ENABLE_W {
-        ADC_CLOCK_ENABLE_W { w: self }
+        ADC_CLOCK_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

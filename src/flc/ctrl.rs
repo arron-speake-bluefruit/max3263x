@@ -35,267 +35,37 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `write` reader - Start Flash Write Operation"]
-pub struct WRITE_R(crate::FieldReader<bool>);
-impl WRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRITE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WRITE_R = crate::BitReader<bool>;
 #[doc = "Field `write` writer - Start Flash Write Operation"]
-pub struct WRITE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WRITE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type WRITE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
 #[doc = "Field `mass_erase` reader - Start Flash Mass Erase Operation"]
-pub struct MASS_ERASE_R(crate::FieldReader<bool>);
-impl MASS_ERASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASS_ERASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASS_ERASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASS_ERASE_R = crate::BitReader<bool>;
 #[doc = "Field `mass_erase` writer - Start Flash Mass Erase Operation"]
-pub struct MASS_ERASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASS_ERASE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MASS_ERASE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 1>;
 #[doc = "Field `page_erase` reader - Start Flash Page Erase Operation"]
-pub struct PAGE_ERASE_R(crate::FieldReader<bool>);
-impl PAGE_ERASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAGE_ERASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAGE_ERASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAGE_ERASE_R = crate::BitReader<bool>;
 #[doc = "Field `page_erase` writer - Start Flash Page Erase Operation"]
-pub struct PAGE_ERASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAGE_ERASE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PAGE_ERASE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 2>;
 #[doc = "Field `erase_code` reader - Flash Erase Code"]
-pub struct ERASE_CODE_R(crate::FieldReader<u8>);
-impl ERASE_CODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ERASE_CODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERASE_CODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERASE_CODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `erase_code` writer - Flash Erase Code"]
-pub struct ERASE_CODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERASE_CODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type ERASE_CODE_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `info_block_unlock` reader - Flash Info Block Locked"]
-pub struct INFO_BLOCK_UNLOCK_R(crate::FieldReader<bool>);
-impl INFO_BLOCK_UNLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFO_BLOCK_UNLOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFO_BLOCK_UNLOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFO_BLOCK_UNLOCK_R = crate::BitReader<bool>;
 #[doc = "Field `write_enable` reader - Flash Writes Enabled"]
-pub struct WRITE_ENABLE_R(crate::FieldReader<bool>);
-impl WRITE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WRITE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRITE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WRITE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `pending` reader - Flash Controller Status"]
-pub struct PENDING_R(crate::FieldReader<bool>);
-impl PENDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PENDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PENDING_R = crate::BitReader<bool>;
 #[doc = "Field `info_block_valid` reader - Info Block Valid Status"]
-pub struct INFO_BLOCK_VALID_R(crate::FieldReader<bool>);
-impl INFO_BLOCK_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFO_BLOCK_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFO_BLOCK_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFO_BLOCK_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `auto_incre_mode` reader - Address Auto-Increment Mode"]
-pub struct AUTO_INCRE_MODE_R(crate::FieldReader<bool>);
-impl AUTO_INCRE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_INCRE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_INCRE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_INCRE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `auto_incre_mode` writer - Address Auto-Increment Mode"]
-pub struct AUTO_INCRE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_INCRE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type AUTO_INCRE_MODE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 27>;
 #[doc = "Field `flsh_unlock` reader - Flash Write/Erase Enable"]
-pub struct FLSH_UNLOCK_R(crate::FieldReader<u8>);
-impl FLSH_UNLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLSH_UNLOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLSH_UNLOCK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLSH_UNLOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `flsh_unlock` writer - Flash Write/Erase Enable"]
-pub struct FLSH_UNLOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLSH_UNLOCK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type FLSH_UNLOCK_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bit 0 - Start Flash Write Operation"]
     #[inline(always)]
@@ -352,32 +122,32 @@ impl W {
     #[doc = "Bit 0 - Start Flash Write Operation"]
     #[inline(always)]
     pub fn write(&mut self) -> WRITE_W {
-        WRITE_W { w: self }
+        WRITE_W::new(self)
     }
     #[doc = "Bit 1 - Start Flash Mass Erase Operation"]
     #[inline(always)]
     pub fn mass_erase(&mut self) -> MASS_ERASE_W {
-        MASS_ERASE_W { w: self }
+        MASS_ERASE_W::new(self)
     }
     #[doc = "Bit 2 - Start Flash Page Erase Operation"]
     #[inline(always)]
     pub fn page_erase(&mut self) -> PAGE_ERASE_W {
-        PAGE_ERASE_W { w: self }
+        PAGE_ERASE_W::new(self)
     }
     #[doc = "Bits 8:15 - Flash Erase Code"]
     #[inline(always)]
     pub fn erase_code(&mut self) -> ERASE_CODE_W {
-        ERASE_CODE_W { w: self }
+        ERASE_CODE_W::new(self)
     }
     #[doc = "Bit 27 - Address Auto-Increment Mode"]
     #[inline(always)]
     pub fn auto_incre_mode(&mut self) -> AUTO_INCRE_MODE_W {
-        AUTO_INCRE_MODE_W { w: self }
+        AUTO_INCRE_MODE_W::new(self)
     }
     #[doc = "Bits 28:31 - Flash Write/Erase Enable"]
     #[inline(always)]
     pub fn flsh_unlock(&mut self) -> FLSH_UNLOCK_W {
-        FLSH_UNLOCK_W { w: self }
+        FLSH_UNLOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

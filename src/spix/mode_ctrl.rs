@@ -35,69 +35,13 @@ impl From<crate::W<MODE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `mode_clocks` reader - Mode Clocks"]
-pub struct MODE_CLOCKS_R(crate::FieldReader<u8>);
-impl MODE_CLOCKS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_CLOCKS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODE_CLOCKS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODE_CLOCKS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `mode_clocks` writer - Mode Clocks"]
-pub struct MODE_CLOCKS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_CLOCKS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type MODE_CLOCKS_W<'a> = crate::FieldWriter<'a, u32, MODE_CTRL_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `no_cmd_mode` reader - No Command Mode"]
-pub struct NO_CMD_MODE_R(crate::FieldReader<bool>);
-impl NO_CMD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NO_CMD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NO_CMD_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NO_CMD_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `no_cmd_mode` writer - No Command Mode"]
-pub struct NO_CMD_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NO_CMD_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type NO_CMD_MODE_W<'a> = crate::BitWriter<'a, u32, MODE_CTRL_SPEC, bool, 8>;
 impl R {
     #[doc = "Bits 0:3 - Mode Clocks"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:3 - Mode Clocks"]
     #[inline(always)]
     pub fn mode_clocks(&mut self) -> MODE_CLOCKS_W {
-        MODE_CLOCKS_W { w: self }
+        MODE_CLOCKS_W::new(self)
     }
     #[doc = "Bit 8 - No Command Mode"]
     #[inline(always)]
     pub fn no_cmd_mode(&mut self) -> NO_CMD_MODE_W {
-        NO_CMD_MODE_W { w: self }
+        NO_CMD_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -49,13 +49,9 @@ impl From<SPI_SLAVE_EN_A> for bool {
     }
 }
 #[doc = "Field `spi_slave_en` reader - SPI Slave Enable"]
-pub struct SPI_SLAVE_EN_R(crate::FieldReader<bool>);
+pub type SPI_SLAVE_EN_R = crate::BitReader<SPI_SLAVE_EN_A>;
 impl SPI_SLAVE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SLAVE_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SPI_SLAVE_EN_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl SPI_SLAVE_EN_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == SPI_SLAVE_EN_A::DISABLED
+        *self == SPI_SLAVE_EN_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == SPI_SLAVE_EN_A::ENABLED
-    }
-}
-impl core::ops::Deref for SPI_SLAVE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SPI_SLAVE_EN_A::ENABLED
     }
 }
 #[doc = "Field `spi_slave_en` writer - SPI Slave Enable"]
-pub struct SPI_SLAVE_EN_W<'a> {
-    w: &'a mut W,
-}
+pub type SPI_SLAVE_EN_W<'a> = crate::BitWriter<'a, u32, GEN_CTRL_SPEC, SPI_SLAVE_EN_A, 0>;
 impl<'a> SPI_SLAVE_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SPI_SLAVE_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable SPI Slave"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -100,22 +82,6 @@ impl<'a> SPI_SLAVE_EN_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(SPI_SLAVE_EN_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 #[doc = "TX FIFO Enable\n\nValue on reset: 0"]
@@ -133,13 +99,9 @@ impl From<TX_FIFO_EN_A> for bool {
     }
 }
 #[doc = "Field `tx_fifo_en` reader - TX FIFO Enable"]
-pub struct TX_FIFO_EN_R(crate::FieldReader<bool>);
+pub type TX_FIFO_EN_R = crate::BitReader<TX_FIFO_EN_A>;
 impl TX_FIFO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TX_FIFO_EN_A {
         match self.bits {
@@ -150,31 +112,17 @@ impl TX_FIFO_EN_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == TX_FIFO_EN_A::DISABLED
+        *self == TX_FIFO_EN_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == TX_FIFO_EN_A::ENABLED
-    }
-}
-impl core::ops::Deref for TX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TX_FIFO_EN_A::ENABLED
     }
 }
 #[doc = "Field `tx_fifo_en` writer - TX FIFO Enable"]
-pub struct TX_FIFO_EN_W<'a> {
-    w: &'a mut W,
-}
+pub type TX_FIFO_EN_W<'a> = crate::BitWriter<'a, u32, GEN_CTRL_SPEC, TX_FIFO_EN_A, 1>;
 impl<'a> TX_FIFO_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TX_FIFO_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable SPI Slave TX FIFO"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -184,22 +132,6 @@ impl<'a> TX_FIFO_EN_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(TX_FIFO_EN_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
     }
 }
 #[doc = "SPI RX FIFO Enable\n\nValue on reset: 0"]
@@ -217,13 +149,9 @@ impl From<RX_FIFO_EN_A> for bool {
     }
 }
 #[doc = "Field `rx_fifo_en` reader - SPI RX FIFO Enable"]
-pub struct RX_FIFO_EN_R(crate::FieldReader<bool>);
+pub type RX_FIFO_EN_R = crate::BitReader<RX_FIFO_EN_A>;
 impl RX_FIFO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RX_FIFO_EN_A {
         match self.bits {
@@ -234,31 +162,17 @@ impl RX_FIFO_EN_R {
     #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        **self == RX_FIFO_EN_A::DISABLED
+        *self == RX_FIFO_EN_A::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        **self == RX_FIFO_EN_A::ENABLED
-    }
-}
-impl core::ops::Deref for RX_FIFO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == RX_FIFO_EN_A::ENABLED
     }
 }
 #[doc = "Field `rx_fifo_en` writer - SPI RX FIFO Enable"]
-pub struct RX_FIFO_EN_W<'a> {
-    w: &'a mut W,
-}
+pub type RX_FIFO_EN_W<'a> = crate::BitWriter<'a, u32, GEN_CTRL_SPEC, RX_FIFO_EN_A, 2>;
 impl<'a> RX_FIFO_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RX_FIFO_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "Disable SPI Slave RX FIFO"]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -268,22 +182,6 @@ impl<'a> RX_FIFO_EN_W<'a> {
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(RX_FIFO_EN_A::ENABLED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
     }
 }
 #[doc = "Width of SPI Slave Data Transfers\n\nValue on reset: 0"]
@@ -306,13 +204,9 @@ impl From<DATA_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `data_width` reader - Width of SPI Slave Data Transfers"]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
+pub type DATA_WIDTH_R = crate::FieldReader<u8, DATA_WIDTH_A>;
 impl DATA_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_WIDTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DATA_WIDTH_A {
         match self.bits {
@@ -326,41 +220,27 @@ impl DATA_WIDTH_R {
     #[doc = "Checks if the value of the field is `X1`"]
     #[inline(always)]
     pub fn is_x1(&self) -> bool {
-        **self == DATA_WIDTH_A::X1
+        *self == DATA_WIDTH_A::X1
     }
     #[doc = "Checks if the value of the field is `X2`"]
     #[inline(always)]
     pub fn is_x2(&self) -> bool {
-        **self == DATA_WIDTH_A::X2
+        *self == DATA_WIDTH_A::X2
     }
     #[doc = "Checks if the value of the field is `X4`"]
     #[inline(always)]
     pub fn is_x4(&self) -> bool {
-        **self == DATA_WIDTH_A::X4
+        *self == DATA_WIDTH_A::X4
     }
     #[doc = "Checks if the value of the field is `INVALID`"]
     #[inline(always)]
     pub fn is_invalid(&self) -> bool {
-        **self == DATA_WIDTH_A::INVALID
-    }
-}
-impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DATA_WIDTH_A::INVALID
     }
 }
 #[doc = "Field `data_width` writer - Width of SPI Slave Data Transfers"]
-pub struct DATA_WIDTH_W<'a> {
-    w: &'a mut W,
-}
+pub type DATA_WIDTH_W<'a> = crate::FieldWriterSafe<'a, u32, GEN_CTRL_SPEC, u8, DATA_WIDTH_A, 2, 4>;
 impl<'a> DATA_WIDTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DATA_WIDTH_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "1-bit Wide"]
     #[inline(always)]
     pub fn x1(self) -> &'a mut W {
@@ -381,40 +261,11 @@ impl<'a> DATA_WIDTH_W<'a> {
     pub fn invalid(self) -> &'a mut W {
         self.variant(DATA_WIDTH_A::INVALID)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
 }
 #[doc = "Field `spi_mode` reader - Defines Clock Polarity (bit 17) and Clock Phase (bit 16), collectively referred to as SPI Mode."]
-pub struct SPI_MODE_R(crate::FieldReader<u8>);
-impl SPI_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `spi_mode` writer - Defines Clock Polarity (bit 17) and Clock Phase (bit 16), collectively referred to as SPI Mode."]
-pub struct SPI_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type SPI_MODE_W<'a> = crate::FieldWriter<'a, u32, GEN_CTRL_SPEC, u8, u8, 2, 16>;
 #[doc = "Invert TX Clock\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_CLK_INVERT_A {
@@ -430,13 +281,9 @@ impl From<TX_CLK_INVERT_A> for bool {
     }
 }
 #[doc = "Field `tx_clk_invert` reader - Invert TX Clock"]
-pub struct TX_CLK_INVERT_R(crate::FieldReader<bool>);
+pub type TX_CLK_INVERT_R = crate::BitReader<TX_CLK_INVERT_A>;
 impl TX_CLK_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_CLK_INVERT_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TX_CLK_INVERT_A {
         match self.bits {
@@ -447,31 +294,17 @@ impl TX_CLK_INVERT_R {
     #[doc = "Checks if the value of the field is `NO_EFFECT`"]
     #[inline(always)]
     pub fn is_no_effect(&self) -> bool {
-        **self == TX_CLK_INVERT_A::NO_EFFECT
+        *self == TX_CLK_INVERT_A::NO_EFFECT
     }
     #[doc = "Checks if the value of the field is `INVERT`"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
-        **self == TX_CLK_INVERT_A::INVERT
-    }
-}
-impl core::ops::Deref for TX_CLK_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TX_CLK_INVERT_A::INVERT
     }
 }
 #[doc = "Field `tx_clk_invert` writer - Invert TX Clock"]
-pub struct TX_CLK_INVERT_W<'a> {
-    w: &'a mut W,
-}
+pub type TX_CLK_INVERT_W<'a> = crate::BitWriter<'a, u32, GEN_CTRL_SPEC, TX_CLK_INVERT_A, 20>;
 impl<'a> TX_CLK_INVERT_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TX_CLK_INVERT_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "No Effect"]
     #[inline(always)]
     pub fn no_effect(self) -> &'a mut W {
@@ -482,60 +315,11 @@ impl<'a> TX_CLK_INVERT_W<'a> {
     pub fn invert(self) -> &'a mut W {
         self.variant(TX_CLK_INVERT_A::INVERT)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
 }
 #[doc = "Field `disable_parking` reader - Disable automatic resetting of SPI Slave on exit from LP Modes"]
-pub struct DISABLE_PARKING_R(crate::FieldReader<bool>);
-impl DISABLE_PARKING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DISABLE_PARKING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DISABLE_PARKING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DISABLE_PARKING_R = crate::BitReader<bool>;
 #[doc = "Field `disable_parking` writer - Disable automatic resetting of SPI Slave on exit from LP Modes"]
-pub struct DISABLE_PARKING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DISABLE_PARKING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type DISABLE_PARKING_W<'a> = crate::BitWriter<'a, u32, GEN_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - SPI Slave Enable"]
     #[inline(always)]
@@ -577,37 +361,37 @@ impl W {
     #[doc = "Bit 0 - SPI Slave Enable"]
     #[inline(always)]
     pub fn spi_slave_en(&mut self) -> SPI_SLAVE_EN_W {
-        SPI_SLAVE_EN_W { w: self }
+        SPI_SLAVE_EN_W::new(self)
     }
     #[doc = "Bit 1 - TX FIFO Enable"]
     #[inline(always)]
     pub fn tx_fifo_en(&mut self) -> TX_FIFO_EN_W {
-        TX_FIFO_EN_W { w: self }
+        TX_FIFO_EN_W::new(self)
     }
     #[doc = "Bit 2 - SPI RX FIFO Enable"]
     #[inline(always)]
     pub fn rx_fifo_en(&mut self) -> RX_FIFO_EN_W {
-        RX_FIFO_EN_W { w: self }
+        RX_FIFO_EN_W::new(self)
     }
     #[doc = "Bits 4:5 - Width of SPI Slave Data Transfers"]
     #[inline(always)]
     pub fn data_width(&mut self) -> DATA_WIDTH_W {
-        DATA_WIDTH_W { w: self }
+        DATA_WIDTH_W::new(self)
     }
     #[doc = "Bits 16:17 - Defines Clock Polarity (bit 17) and Clock Phase (bit 16), collectively referred to as SPI Mode."]
     #[inline(always)]
     pub fn spi_mode(&mut self) -> SPI_MODE_W {
-        SPI_MODE_W { w: self }
+        SPI_MODE_W::new(self)
     }
     #[doc = "Bit 20 - Invert TX Clock"]
     #[inline(always)]
     pub fn tx_clk_invert(&mut self) -> TX_CLK_INVERT_W {
-        TX_CLK_INVERT_W { w: self }
+        TX_CLK_INVERT_W::new(self)
     }
     #[doc = "Bit 31 - Disable automatic resetting of SPI Slave on exit from LP Modes"]
     #[inline(always)]
     pub fn disable_parking(&mut self) -> DISABLE_PARKING_W {
-        DISABLE_PARKING_W { w: self }
+        DISABLE_PARKING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

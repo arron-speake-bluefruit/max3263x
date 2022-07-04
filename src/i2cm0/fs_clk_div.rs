@@ -35,86 +35,17 @@ impl From<crate::W<FS_CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `fs_filter_clk_div` reader - Full Speed Filter Clock Divisor"]
-pub struct FS_FILTER_CLK_DIV_R(crate::FieldReader<u8>);
-impl FS_FILTER_CLK_DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FS_FILTER_CLK_DIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FS_FILTER_CLK_DIV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FS_FILTER_CLK_DIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fs_filter_clk_div` writer - Full Speed Filter Clock Divisor"]
-pub struct FS_FILTER_CLK_DIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FS_FILTER_CLK_DIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type FS_FILTER_CLK_DIV_W<'a> = crate::FieldWriter<'a, u32, FS_CLK_DIV_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `fs_scl_lo_cnt` reader - Full Speed SCL Low Count"]
-pub struct FS_SCL_LO_CNT_R(crate::FieldReader<u16>);
-impl FS_SCL_LO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FS_SCL_LO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FS_SCL_LO_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FS_SCL_LO_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `fs_scl_lo_cnt` writer - Full Speed SCL Low Count"]
-pub struct FS_SCL_LO_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FS_SCL_LO_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 8)) | ((value as u32 & 0x0fff) << 8);
-        self.w
-    }
-}
+pub type FS_SCL_LO_CNT_W<'a> = crate::FieldWriter<'a, u32, FS_CLK_DIV_SPEC, u16, u16, 12, 8>;
 #[doc = "Field `fs_scl_hi_cnt` reader - Full Speed SCL High Count"]
-pub struct FS_SCL_HI_CNT_R(crate::FieldReader<u16>);
-impl FS_SCL_HI_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FS_SCL_HI_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FS_SCL_HI_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FS_SCL_HI_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `fs_scl_hi_cnt` writer - Full Speed SCL High Count"]
-pub struct FS_SCL_HI_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FS_SCL_HI_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 20)) | ((value as u32 & 0x0fff) << 20);
-        self.w
-    }
-}
+pub type FS_SCL_HI_CNT_W<'a> = crate::FieldWriter<'a, u32, FS_CLK_DIV_SPEC, u16, u16, 12, 20>;
 impl R {
     #[doc = "Bits 0:7 - Full Speed Filter Clock Divisor"]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - Full Speed Filter Clock Divisor"]
     #[inline(always)]
     pub fn fs_filter_clk_div(&mut self) -> FS_FILTER_CLK_DIV_W {
-        FS_FILTER_CLK_DIV_W { w: self }
+        FS_FILTER_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 8:19 - Full Speed SCL Low Count"]
     #[inline(always)]
     pub fn fs_scl_lo_cnt(&mut self) -> FS_SCL_LO_CNT_W {
-        FS_SCL_LO_CNT_W { w: self }
+        FS_SCL_LO_CNT_W::new(self)
     }
     #[doc = "Bits 20:31 - Full Speed SCL High Count"]
     #[inline(always)]
     pub fn fs_scl_hi_cnt(&mut self) -> FS_SCL_HI_CNT_W {
-        FS_SCL_HI_CNT_W { w: self }
+        FS_SCL_HI_CNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

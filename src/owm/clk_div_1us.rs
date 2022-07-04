@@ -35,32 +35,9 @@ impl From<crate::W<CLK_DIV_1US_SPEC>> for W {
     }
 }
 #[doc = "Field `divisor` reader - Clock Divisor for 1MHz"]
-pub struct DIVISOR_R(crate::FieldReader<u8>);
-impl DIVISOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIVISOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIVISOR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIVISOR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `divisor` writer - Clock Divisor for 1MHz"]
-pub struct DIVISOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIVISOR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DIVISOR_W<'a> = crate::FieldWriter<'a, u32, CLK_DIV_1US_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - Clock Divisor for 1MHz"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - Clock Divisor for 1MHz"]
     #[inline(always)]
     pub fn divisor(&mut self) -> DIVISOR_W {
-        DIVISOR_W { w: self }
+        DIVISOR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

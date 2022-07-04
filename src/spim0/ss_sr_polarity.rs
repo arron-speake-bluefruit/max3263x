@@ -35,59 +35,13 @@ impl From<crate::W<SS_SR_POLARITY_SPEC>> for W {
     }
 }
 #[doc = "Field `ss_polarity` reader - SS Signal Polarity"]
-pub struct SS_POLARITY_R(crate::FieldReader<u8>);
-impl SS_POLARITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SS_POLARITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SS_POLARITY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SS_POLARITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ss_polarity` writer - SS Signal Polarity"]
-pub struct SS_POLARITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS_POLARITY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SS_POLARITY_W<'a> = crate::FieldWriter<'a, u32, SS_SR_POLARITY_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `fc_polarity` reader - SR Signal Polarity \\[FC Polarity\\]"]
-pub struct FC_POLARITY_R(crate::FieldReader<u8>);
-impl FC_POLARITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FC_POLARITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FC_POLARITY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FC_POLARITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `fc_polarity` writer - SR Signal Polarity \\[FC Polarity\\]"]
-pub struct FC_POLARITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FC_POLARITY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type FC_POLARITY_W<'a> = crate::FieldWriter<'a, u32, SS_SR_POLARITY_SPEC, u8, u8, 8, 8>;
 impl R {
     #[doc = "Bits 0:7 - SS Signal Polarity"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:7 - SS Signal Polarity"]
     #[inline(always)]
     pub fn ss_polarity(&mut self) -> SS_POLARITY_W {
-        SS_POLARITY_W { w: self }
+        SS_POLARITY_W::new(self)
     }
     #[doc = "Bits 8:15 - SR Signal Polarity \\[FC Polarity\\]"]
     #[inline(always)]
     pub fn fc_polarity(&mut self) -> FC_POLARITY_W {
-        FC_POLARITY_W { w: self }
+        FC_POLARITY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,79 +35,13 @@ impl From<crate::W<INTFL_SPEC>> for W {
     }
 }
 #[doc = "Field `crypto_stable` reader - Crypto Oscillator Stable Interrupt Flag"]
-pub struct CRYPTO_STABLE_R(crate::FieldReader<bool>);
-impl CRYPTO_STABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_STABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_STABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_STABLE_R = crate::BitReader<bool>;
 #[doc = "Field `crypto_stable` writer - Crypto Oscillator Stable Interrupt Flag"]
-pub struct CRYPTO_STABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_STABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CRYPTO_STABLE_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 0>;
 #[doc = "Field `sys_ro_stable` reader - System Oscillator Stable Interrupt Flag"]
-pub struct SYS_RO_STABLE_R(crate::FieldReader<bool>);
-impl SYS_RO_STABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYS_RO_STABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYS_RO_STABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYS_RO_STABLE_R = crate::BitReader<bool>;
 #[doc = "Field `sys_ro_stable` writer - System Oscillator Stable Interrupt Flag"]
-pub struct SYS_RO_STABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYS_RO_STABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SYS_RO_STABLE_W<'a> = crate::BitWriter1C<'a, u32, INTFL_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - Crypto Oscillator Stable Interrupt Flag"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - Crypto Oscillator Stable Interrupt Flag"]
     #[inline(always)]
     pub fn crypto_stable(&mut self) -> CRYPTO_STABLE_W {
-        CRYPTO_STABLE_W { w: self }
+        CRYPTO_STABLE_W::new(self)
     }
     #[doc = "Bit 1 - System Oscillator Stable Interrupt Flag"]
     #[inline(always)]
     pub fn sys_ro_stable(&mut self) -> SYS_RO_STABLE_W {
-        SYS_RO_STABLE_W { w: self }
+        SYS_RO_STABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<SYS_CLK_CTRL_9_I2CM_SPEC>> for W {
     }
 }
 #[doc = "Field `i2cm_clk_scale` reader - Control Settings for CLK9 - Source Clock for All I2C Masters"]
-pub struct I2CM_CLK_SCALE_R(crate::FieldReader<u8>);
-impl I2CM_CLK_SCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2CM_CLK_SCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2CM_CLK_SCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2CM_CLK_SCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `i2cm_clk_scale` writer - Control Settings for CLK9 - Source Clock for All I2C Masters"]
-pub struct I2CM_CLK_SCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2CM_CLK_SCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type I2CM_CLK_SCALE_W<'a> = crate::FieldWriter<'a, u32, SYS_CLK_CTRL_9_I2CM_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - Control Settings for CLK9 - Source Clock for All I2C Masters"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - Control Settings for CLK9 - Source Clock for All I2C Masters"]
     #[inline(always)]
     pub fn i2cm_clk_scale(&mut self) -> I2CM_CLK_SCALE_W {
-        I2CM_CLK_SCALE_W { w: self }
+        I2CM_CLK_SCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

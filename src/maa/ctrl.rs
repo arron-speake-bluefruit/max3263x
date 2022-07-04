@@ -35,42 +35,9 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `start` reader - Start MAA Calculation"]
-pub struct START_R(crate::FieldReader<bool>);
-impl START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_R = crate::BitReader<bool>;
 #[doc = "Field `start` writer - Start MAA Calculation"]
-pub struct START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type START_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
 #[doc = "Select Operation Type\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -95,13 +62,9 @@ impl From<OPSEL_A> for u8 {
     }
 }
 #[doc = "Field `opsel` reader - Select Operation Type"]
-pub struct OPSEL_R(crate::FieldReader<u8>);
+pub type OPSEL_R = crate::FieldReader<u8, OPSEL_A>;
 impl OPSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OPSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<OPSEL_A> {
         match self.bits {
@@ -117,51 +80,37 @@ impl OPSEL_R {
     #[doc = "Checks if the value of the field is `EXP`"]
     #[inline(always)]
     pub fn is_exp(&self) -> bool {
-        **self == OPSEL_A::EXP
+        *self == OPSEL_A::EXP
     }
     #[doc = "Checks if the value of the field is `SQR`"]
     #[inline(always)]
     pub fn is_sqr(&self) -> bool {
-        **self == OPSEL_A::SQR
+        *self == OPSEL_A::SQR
     }
     #[doc = "Checks if the value of the field is `MUL`"]
     #[inline(always)]
     pub fn is_mul(&self) -> bool {
-        **self == OPSEL_A::MUL
+        *self == OPSEL_A::MUL
     }
     #[doc = "Checks if the value of the field is `SQRMUL`"]
     #[inline(always)]
     pub fn is_sqrmul(&self) -> bool {
-        **self == OPSEL_A::SQRMUL
+        *self == OPSEL_A::SQRMUL
     }
     #[doc = "Checks if the value of the field is `ADD`"]
     #[inline(always)]
     pub fn is_add(&self) -> bool {
-        **self == OPSEL_A::ADD
+        *self == OPSEL_A::ADD
     }
     #[doc = "Checks if the value of the field is `SUB`"]
     #[inline(always)]
     pub fn is_sub(&self) -> bool {
-        **self == OPSEL_A::SUB
-    }
-}
-impl core::ops::Deref for OPSEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == OPSEL_A::SUB
     }
 }
 #[doc = "Field `opsel` writer - Select Operation Type"]
-pub struct OPSEL_W<'a> {
-    w: &'a mut W,
-}
+pub type OPSEL_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, OPSEL_A, 3, 1>;
 impl<'a> OPSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: OPSEL_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "Exponentiation."]
     #[inline(always)]
     pub fn exp(self) -> &'a mut W {
@@ -192,377 +141,55 @@ impl<'a> OPSEL_W<'a> {
     pub fn sub(self) -> &'a mut W {
         self.variant(OPSEL_A::SUB)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 1)) | ((value as u32 & 7) << 1);
-        self.w
-    }
 }
 #[doc = "Field `ocalc` reader - Optimized Calculation Control"]
-pub struct OCALC_R(crate::FieldReader<bool>);
-impl OCALC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OCALC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCALC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCALC_R = crate::BitReader<bool>;
 #[doc = "Field `ocalc` writer - Optimized Calculation Control"]
-pub struct OCALC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCALC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type OCALC_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 4>;
 #[doc = "Field `if_done` reader - Interrupt Flag - Calculation Done"]
-pub struct IF_DONE_R(crate::FieldReader<bool>);
-impl IF_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IF_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IF_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IF_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `if_done` writer - Interrupt Flag - Calculation Done"]
-pub struct IF_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IF_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type IF_DONE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 5>;
 #[doc = "Field `inten` reader - MAA Interrupt Enable"]
-pub struct INTEN_R(crate::FieldReader<bool>);
-impl INTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTEN_R = crate::BitReader<bool>;
 #[doc = "Field `inten` writer - MAA Interrupt Enable"]
-pub struct INTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type INTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 6>;
 #[doc = "Field `if_error` reader - Interrupt Flag - Error"]
-pub struct IF_ERROR_R(crate::FieldReader<bool>);
-impl IF_ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IF_ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IF_ERROR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IF_ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `if_error` writer - Interrupt Flag - Error"]
-pub struct IF_ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IF_ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type IF_ERROR_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 7>;
 #[doc = "Field `ofs_a` reader - Operand A Memory Offset Select"]
-pub struct OFS_A_R(crate::FieldReader<u8>);
-impl OFS_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OFS_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OFS_A_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OFS_A_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ofs_a` writer - Operand A Memory Offset Select"]
-pub struct OFS_A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OFS_A_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type OFS_A_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `ofs_b` reader - Operand B Memory Offset Select"]
-pub struct OFS_B_R(crate::FieldReader<u8>);
-impl OFS_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OFS_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OFS_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OFS_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ofs_b` writer - Operand B Memory Offset Select"]
-pub struct OFS_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OFS_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type OFS_B_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `ofs_exp` reader - Exponent Memory Offset Select"]
-pub struct OFS_EXP_R(crate::FieldReader<u8>);
-impl OFS_EXP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OFS_EXP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OFS_EXP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OFS_EXP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ofs_exp` writer - Exponent Memory Offset Select"]
-pub struct OFS_EXP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OFS_EXP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type OFS_EXP_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `ofs_mod` reader - Modulus Memory Select"]
-pub struct OFS_MOD_R(crate::FieldReader<u8>);
-impl OFS_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OFS_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OFS_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OFS_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ofs_mod` writer - Modulus Memory Select"]
-pub struct OFS_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OFS_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type OFS_MOD_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `seg_a` reader - Operand A Memory Segment Select"]
-pub struct SEG_A_R(crate::FieldReader<u8>);
-impl SEG_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEG_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEG_A_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEG_A_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `seg_a` writer - Operand A Memory Segment Select"]
-pub struct SEG_A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEG_A_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type SEG_A_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 16>;
 #[doc = "Field `seg_b` reader - Operand B Memory Segment Select"]
-pub struct SEG_B_R(crate::FieldReader<u8>);
-impl SEG_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEG_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEG_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEG_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `seg_b` writer - Operand B Memory Segment Select"]
-pub struct SEG_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEG_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type SEG_B_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 20>;
 #[doc = "Field `seg_res` reader - Result Memory Segment Select"]
-pub struct SEG_RES_R(crate::FieldReader<u8>);
-impl SEG_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEG_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEG_RES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEG_RES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `seg_res` writer - Result Memory Segment Select"]
-pub struct SEG_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEG_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type SEG_RES_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `seg_tmp` reader - Temporary Memory Segment Select"]
-pub struct SEG_TMP_R(crate::FieldReader<u8>);
-impl SEG_TMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEG_TMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEG_TMP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEG_TMP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `seg_tmp` writer - Temporary Memory Segment Select"]
-pub struct SEG_TMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEG_TMP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type SEG_TMP_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bit 0 - Start MAA Calculation"]
     #[inline(always)]
@@ -639,72 +266,72 @@ impl W {
     #[doc = "Bit 0 - Start MAA Calculation"]
     #[inline(always)]
     pub fn start(&mut self) -> START_W {
-        START_W { w: self }
+        START_W::new(self)
     }
     #[doc = "Bits 1:3 - Select Operation Type"]
     #[inline(always)]
     pub fn opsel(&mut self) -> OPSEL_W {
-        OPSEL_W { w: self }
+        OPSEL_W::new(self)
     }
     #[doc = "Bit 4 - Optimized Calculation Control"]
     #[inline(always)]
     pub fn ocalc(&mut self) -> OCALC_W {
-        OCALC_W { w: self }
+        OCALC_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt Flag - Calculation Done"]
     #[inline(always)]
     pub fn if_done(&mut self) -> IF_DONE_W {
-        IF_DONE_W { w: self }
+        IF_DONE_W::new(self)
     }
     #[doc = "Bit 6 - MAA Interrupt Enable"]
     #[inline(always)]
     pub fn inten(&mut self) -> INTEN_W {
-        INTEN_W { w: self }
+        INTEN_W::new(self)
     }
     #[doc = "Bit 7 - Interrupt Flag - Error"]
     #[inline(always)]
     pub fn if_error(&mut self) -> IF_ERROR_W {
-        IF_ERROR_W { w: self }
+        IF_ERROR_W::new(self)
     }
     #[doc = "Bits 8:9 - Operand A Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_a(&mut self) -> OFS_A_W {
-        OFS_A_W { w: self }
+        OFS_A_W::new(self)
     }
     #[doc = "Bits 10:11 - Operand B Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_b(&mut self) -> OFS_B_W {
-        OFS_B_W { w: self }
+        OFS_B_W::new(self)
     }
     #[doc = "Bits 12:13 - Exponent Memory Offset Select"]
     #[inline(always)]
     pub fn ofs_exp(&mut self) -> OFS_EXP_W {
-        OFS_EXP_W { w: self }
+        OFS_EXP_W::new(self)
     }
     #[doc = "Bits 14:15 - Modulus Memory Select"]
     #[inline(always)]
     pub fn ofs_mod(&mut self) -> OFS_MOD_W {
-        OFS_MOD_W { w: self }
+        OFS_MOD_W::new(self)
     }
     #[doc = "Bits 16:19 - Operand A Memory Segment Select"]
     #[inline(always)]
     pub fn seg_a(&mut self) -> SEG_A_W {
-        SEG_A_W { w: self }
+        SEG_A_W::new(self)
     }
     #[doc = "Bits 20:23 - Operand B Memory Segment Select"]
     #[inline(always)]
     pub fn seg_b(&mut self) -> SEG_B_W {
-        SEG_B_W { w: self }
+        SEG_B_W::new(self)
     }
     #[doc = "Bits 24:27 - Result Memory Segment Select"]
     #[inline(always)]
     pub fn seg_res(&mut self) -> SEG_RES_W {
-        SEG_RES_W { w: self }
+        SEG_RES_W::new(self)
     }
     #[doc = "Bits 28:31 - Temporary Memory Segment Select"]
     #[inline(always)]
     pub fn seg_tmp(&mut self) -> SEG_TMP_W {
-        SEG_TMP_W { w: self }
+        SEG_TMP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

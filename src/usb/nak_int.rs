@@ -35,301 +35,37 @@ impl From<crate::W<NAK_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `nak0` reader - Endpoint 0 NAK Interrupt Flag"]
-pub struct NAK0_R(crate::FieldReader<bool>);
-impl NAK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK0_R = crate::BitReader<bool>;
 #[doc = "Field `nak0` writer - Endpoint 0 NAK Interrupt Flag"]
-pub struct NAK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type NAK0_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 0>;
 #[doc = "Field `nak1` reader - Endpoint 1 NAK Interrupt Flag"]
-pub struct NAK1_R(crate::FieldReader<bool>);
-impl NAK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK1_R = crate::BitReader<bool>;
 #[doc = "Field `nak1` writer - Endpoint 1 NAK Interrupt Flag"]
-pub struct NAK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type NAK1_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 1>;
 #[doc = "Field `nak2` reader - Endpoint 2 NAK Interrupt Flag"]
-pub struct NAK2_R(crate::FieldReader<bool>);
-impl NAK2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK2_R = crate::BitReader<bool>;
 #[doc = "Field `nak2` writer - Endpoint 2 NAK Interrupt Flag"]
-pub struct NAK2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type NAK2_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 2>;
 #[doc = "Field `nak3` reader - Endpoint 3 NAK Interrupt Flag"]
-pub struct NAK3_R(crate::FieldReader<bool>);
-impl NAK3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK3_R = crate::BitReader<bool>;
 #[doc = "Field `nak3` writer - Endpoint 3 NAK Interrupt Flag"]
-pub struct NAK3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type NAK3_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 3>;
 #[doc = "Field `nak4` reader - Endpoint 4 NAK Interrupt Flag"]
-pub struct NAK4_R(crate::FieldReader<bool>);
-impl NAK4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK4_R = crate::BitReader<bool>;
 #[doc = "Field `nak4` writer - Endpoint 4 NAK Interrupt Flag"]
-pub struct NAK4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type NAK4_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 4>;
 #[doc = "Field `nak5` reader - Endpoint 5 NAK Interrupt Flag"]
-pub struct NAK5_R(crate::FieldReader<bool>);
-impl NAK5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK5_R = crate::BitReader<bool>;
 #[doc = "Field `nak5` writer - Endpoint 5 NAK Interrupt Flag"]
-pub struct NAK5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type NAK5_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 5>;
 #[doc = "Field `nak6` reader - Endpoint 6 NAK Interrupt Flag"]
-pub struct NAK6_R(crate::FieldReader<bool>);
-impl NAK6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK6_R = crate::BitReader<bool>;
 #[doc = "Field `nak6` writer - Endpoint 6 NAK Interrupt Flag"]
-pub struct NAK6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type NAK6_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 6>;
 #[doc = "Field `nak7` reader - Endpoint 7 NAK Interrupt Flag"]
-pub struct NAK7_R(crate::FieldReader<bool>);
-impl NAK7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAK7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NAK7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NAK7_R = crate::BitReader<bool>;
 #[doc = "Field `nak7` writer - Endpoint 7 NAK Interrupt Flag"]
-pub struct NAK7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAK7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type NAK7_W<'a> = crate::BitWriter1C<'a, u32, NAK_INT_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - Endpoint 0 NAK Interrupt Flag"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - Endpoint 0 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak0(&mut self) -> NAK0_W {
-        NAK0_W { w: self }
+        NAK0_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint 1 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak1(&mut self) -> NAK1_W {
-        NAK1_W { w: self }
+        NAK1_W::new(self)
     }
     #[doc = "Bit 2 - Endpoint 2 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak2(&mut self) -> NAK2_W {
-        NAK2_W { w: self }
+        NAK2_W::new(self)
     }
     #[doc = "Bit 3 - Endpoint 3 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak3(&mut self) -> NAK3_W {
-        NAK3_W { w: self }
+        NAK3_W::new(self)
     }
     #[doc = "Bit 4 - Endpoint 4 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak4(&mut self) -> NAK4_W {
-        NAK4_W { w: self }
+        NAK4_W::new(self)
     }
     #[doc = "Bit 5 - Endpoint 5 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak5(&mut self) -> NAK5_W {
-        NAK5_W { w: self }
+        NAK5_W::new(self)
     }
     #[doc = "Bit 6 - Endpoint 6 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak6(&mut self) -> NAK6_W {
-        NAK6_W { w: self }
+        NAK6_W::new(self)
     }
     #[doc = "Bit 7 - Endpoint 7 NAK Interrupt Flag"]
     #[inline(always)]
     pub fn nak7(&mut self) -> NAK7_W {
-        NAK7_W { w: self }
+        NAK7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

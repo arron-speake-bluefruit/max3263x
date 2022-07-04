@@ -35,133 +35,21 @@ impl From<crate::W<WUD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `pad_select` reader - Wake-Up Pad Select"]
-pub struct PAD_SELECT_R(crate::FieldReader<u8>);
-impl PAD_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pad_select` writer - Wake-Up Pad Select"]
-pub struct PAD_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type PAD_SELECT_W<'a> = crate::FieldWriter<'a, u32, WUD_CTRL_SPEC, u8, u8, 6, 0>;
 #[doc = "Field `pad_mode` reader - Wake-Up Pad Signal Mode"]
-pub struct PAD_MODE_R(crate::FieldReader<u8>);
-impl PAD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pad_mode` writer - Wake-Up Pad Signal Mode"]
-pub struct PAD_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type PAD_MODE_W<'a> = crate::FieldWriter<'a, u32, WUD_CTRL_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `clear_all` reader - Clear All WUD Pad States"]
-pub struct CLEAR_ALL_R(crate::FieldReader<bool>);
-impl CLEAR_ALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLEAR_ALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLEAR_ALL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLEAR_ALL_R = crate::BitReader<bool>;
 #[doc = "Field `clear_all` writer - Clear All WUD Pad States"]
-pub struct CLEAR_ALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLEAR_ALL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type CLEAR_ALL_W<'a> = crate::BitWriter<'a, u32, WUD_CTRL_SPEC, bool, 12>;
 #[doc = "Field `ctrl_enable` reader - Enable WUD Control Modification"]
-pub struct CTRL_ENABLE_R(crate::FieldReader<bool>);
-impl CTRL_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CTRL_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CTRL_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CTRL_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `ctrl_enable` writer - Enable WUD Control Modification"]
-pub struct CTRL_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTRL_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type CTRL_ENABLE_W<'a> = crate::BitWriter<'a, u32, WUD_CTRL_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:5 - Wake-Up Pad Select"]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bits 0:5 - Wake-Up Pad Select"]
     #[inline(always)]
     pub fn pad_select(&mut self) -> PAD_SELECT_W {
-        PAD_SELECT_W { w: self }
+        PAD_SELECT_W::new(self)
     }
     #[doc = "Bits 8:9 - Wake-Up Pad Signal Mode"]
     #[inline(always)]
     pub fn pad_mode(&mut self) -> PAD_MODE_W {
-        PAD_MODE_W { w: self }
+        PAD_MODE_W::new(self)
     }
     #[doc = "Bit 12 - Clear All WUD Pad States"]
     #[inline(always)]
     pub fn clear_all(&mut self) -> CLEAR_ALL_W {
-        CLEAR_ALL_W { w: self }
+        CLEAR_ALL_W::new(self)
     }
     #[doc = "Bit 16 - Enable WUD Control Modification"]
     #[inline(always)]
     pub fn ctrl_enable(&mut self) -> CTRL_ENABLE_W {
-        CTRL_ENABLE_W { w: self }
+        CTRL_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
