@@ -5,6 +5,8 @@ edition = "2021"
 description = "svd2rust generated peripheral crate for the max3263x"
 repository = "https://github.com/arron-speake-bluefruit/max3263x"
 license = "MIT"
+readme = "README.md"
+keywords = ["svd2rust", "no-std", "embedded", "generated"]
 
 [dependencies]
 cortex-m = "0.7"
